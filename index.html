@@ -1,17 +1,132 @@
-<form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AV Realty & Management</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
 
-    <label for="name">Full Name:</label><br>
-    <input type="text" name="name" required><br><br>
+    .container {
+      background: white;
+      padding: 40px;
+      margin-top: 60px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
 
-    <label for="email">Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" name="phone"><br><br>
+    .logo-container img {
+      max-width: 220px;
+      height: auto;
+    }
 
-    <label for="message">Message:</label><br>
-    <textarea name="message" rows="5" required></textarea><br><br>
+    h1 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 10px;
+    }
 
-    <button type="submit">Submit</button>
-</form>
+    p.description {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #0077cc;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo-container">
+      <img src="logo.png" alt="AV Realty & Management Logo">
+    </div>
+    <h1>AV Realty & Management</h1>
+    <p class="description">Your trusted partner in real estate and property management across Massachusetts.</p>
+
+    <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label for="name">Full Name</label>
+      <input type="text" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" />
+
+      <label for="message">Message</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 AV Realty & Management LLC. All rights reserved.
+  </footer>
+
+</body>
+</html>
