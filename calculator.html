@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mortgage Calculator | AV Realty & Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f5c518;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: black;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #f5c518;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      background: #f5c518;
+      color: black;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f5c518;
+      color: black;
+      font-size: 14px;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mortgage Calculator</h1>
+  </header>
+
+  <div class="container">
+    <h2>Estimate Your Monthly Payment</h2>
+
+    <label for="amount">Loan Amount ($)</label>
+    <input type="number" id="amount" placeholder="e.g., 350000" />
+
+    <label for="interest">Interest Rate (%)</label>
+    <input type="number" id="interest" placeholder="e.g., 6.5" step="0.01" />
+
+    <label for="years">Loan Term (Years)</label>
+    <input type="number" id="years" placeholder="e.g., 30" />
+
+    <label for="tax">Monthly Taxes + Insurance ($)</label>
+    <input type="number" id="tax" placeholder="e.g., 400" />
+
+    <div class="result" id="result">Monthly Payment: $0.00</div>
+
+    <a class="back-link" href="index.html">&larr; Back to Home</a>
+  </div>
+
+  <footer>
+    &copy; 2025 AV Realty & Management LLC
+  </footer>
+
+  <script>
+    const amount = document.getElementById('amount');
+    const interest = document.getElementById('interest');
+    const years = document.getElementById('years');
+    const tax = document.getElementById('tax');
+    const result = document.getElementById('result');
+
+    const inputs = [amount, interest, years, tax];
+    inputs.forEach(input => input.addEventListener('input', calculate));
+
+    function calculate() {
+      const principal = parseFloat(amount.value);
+      const monthlyRate = parseFloat(interest.value) / 100 / 12;
+      const numberOfPayments = parseFloat(years.value) * 12;
+      const monthlyTax = parseFloat(tax.value) || 0;
+
+      if (!principal || !monthlyRate || !numberOfPayments) {
+        result.textContent = "Monthly Payment: $0.00";
+        return;
+      }
+
+      const x = Math.pow(1 + monthlyRate, numberOfPayments);
+      const monthlyPayment = (principal * x * monthlyRate) / (x - 1);
+      const total = monthlyPayment + monthlyTax;
+
+      result.textContent = "Monthly Payment: $" + total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
