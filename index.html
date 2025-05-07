@@ -87,17 +87,46 @@
     }
 
     .service-box {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 160px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      cursor: pointer;
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
       border: 1px solid #f5c518;
       border-radius: 8px;
       padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
       text-align: center;
-      transition: box-shadow 0.3s;
     }
 
-    .service-box:hover {
-      box-shadow: 0 8px 24px rgba(245, 197, 24, 0.3);
-      transform: translateY(-5px);
-      transition: all 0.3s ease-in-out;
+    .card-front {
+      background-color: white;
+      color: black;
+    }
+
+    .card-back {
+      background-color: #f5c518;
+      color: black;
+      transform: rotateY(180deg);
+    }
+
+    .card-inner:hover {
+      transform: rotateY(180deg);
     }
 
     label {
@@ -225,28 +254,40 @@
       <h2>Our Services</h2>
       <div class="services-grid">
         <div class="service-box">
-          <h3>Full-Service Management</h3>
-          <p>We handle every aspect of managing your investment.</p>
+          <div class="card-inner">
+            <div class="card-front"><h3>Full-Service Management</h3></div>
+            <div class="card-back"><p>We handle every aspect of managing your investment.</p></div>
+          </div>
         </div>
         <div class="service-box">
-          <h3>Tenant Screening</h3>
-          <p>Background checks, credit reports, and solid placements.</p>
+          <div class="card-inner">
+            <div class="card-front"><h3>Tenant Screening</h3></div>
+            <div class="card-back"><p>Background checks, credit reports, and solid placements.</p></div>
+          </div>
         </div>
         <div class="service-box">
-          <h3>Rent Collection</h3>
-          <p>Streamlined payment systems and enforcement procedures.</p>
+          <div class="card-inner">
+            <div class="card-front"><h3>Rent Collection</h3></div>
+            <div class="card-back"><p>Streamlined payment systems and enforcement procedures.</p></div>
+          </div>
         </div>
         <div class="service-box">
-          <h3>Maintenance</h3>
-          <p>Repairs, 24/7 coordination, and cost-effective solutions.</p>
+          <div class="card-inner">
+            <div class="card-front"><h3>Maintenance</h3></div>
+            <div class="card-back"><p>Repairs, 24/7 coordination, and cost-effective solutions.</p></div>
+          </div>
         </div>
         <div class="service-box">
-          <h3>Investor Consulting</h3>
-          <p>Maximize ROI with smart acquisitions and positioning.</p>
+          <div class="card-inner">
+            <div class="card-front"><h3>Investor Consulting</h3></div>
+            <div class="card-back"><p>Maximize ROI with smart acquisitions and positioning.</p></div>
+          </div>
         </div>
         <div class="service-box">
-          <h3>Buyer, Seller & Investor Services</h3>
-          <p>We specialize in assisting buyers, sellers, and investors with expert guidance and market insight.</p>
+          <div class="card-inner">
+            <div class="card-front"><h3>Buyer, Seller & Investor Services</h3></div>
+            <div class="card-back"><p>We specialize in assisting buyers, sellers, and investors with expert guidance and market insight.</p></div>
+          </div>
         </div>
       </div>
     </section>
