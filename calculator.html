@@ -149,6 +149,25 @@
       background-color: #e6b800;
       transform: translateX(-5px);
     }
+
+    .floating-contact {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #f5c518;
+      color: black;
+      padding: 12px 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .floating-contact:hover {
+      background-color: #e6b800;
+    }
   </style>
 </head>
 <body>
@@ -210,6 +229,8 @@
     <a href="https://www.facebook.com/avrealtymgmt" target="_blank">Facebook</a>
     <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank">LinkedIn</a>
   </div>
+
+  <a href="index.html#contact" class="floating-contact">Contact</a>
 
   <script>
     const amount = document.getElementById('amount');
