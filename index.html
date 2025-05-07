@@ -99,6 +99,10 @@
       cursor: pointer;
     }
 
+    .card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
     .card-front, .card-back {
       position: absolute;
       width: 100%;
@@ -122,10 +126,6 @@
     .card-back {
       background-color: #f5c518;
       color: black;
-      transform: rotateY(180deg);
-    }
-
-    .card-inner:hover {
       transform: rotateY(180deg);
     }
 
@@ -331,12 +331,12 @@
   <a href="#contact" class="floating-contact">Contact</a>
 
   <script>
+    // Fade-in animation
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px"
     };
-
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -344,9 +344,15 @@
         observer.unobserve(entry.target);
       });
     }, appearOptions);
-
     faders.forEach(fader => {
       appearOnScroll.observe(fader);
+    });
+
+    // Enable tap-to-flip on mobile
+    document.querySelectorAll('.card-inner').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
     });
   </script>
 </body>
