@@ -5,13 +5,18 @@
   <title>Mortgage Calculator | AV Realty & Management</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       background-color: #fdfdfd;
       color: #000;
       margin: 0;
       padding: 0;
+    }
+
+    h1, h2, h3, nav a, .btn, button {
+      font-family: 'Montserrat', sans-serif;
     }
 
     header {
@@ -55,6 +60,7 @@
     label {
       display: block;
       margin: 15px 0 5px;
+      font-weight: bold;
     }
 
     input {
@@ -63,6 +69,7 @@
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      box-sizing: border-box;
     }
 
     .result {
@@ -86,6 +93,7 @@
 
     .email-box h3 {
       margin-top: 0;
+      font-size: 1.1em;
     }
 
     button {
@@ -98,6 +106,11 @@
       font-weight: bold;
       border-radius: 6px;
       cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e6b800;
     }
 
     footer {
@@ -182,6 +195,7 @@
     <a href="index.html#services">Services</a>
     <a href="about.html">About</a>
     <a href="calculator.html">Mortgage Calculator</a>
+    <a href="index.html#listings">Search Listings</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 
