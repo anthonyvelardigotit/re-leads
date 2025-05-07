@@ -63,12 +63,37 @@
       font-weight: bold;
     }
 
+    .email-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .email-box h3 {
+      margin-top: 0;
+    }
+
+    button {
+      margin-top: 15px;
+      background-color: #f5c518;
+      color: black;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       background-color: #f5c518;
       color: black;
       font-size: 14px;
+      margin-top: 50px;
     }
 
     .back-link {
@@ -108,6 +133,21 @@
 
     <div class="result" id="result">Monthly Payment: $0.00</div>
 
+    <div class="email-box">
+      <h3>Want a copy of your result?</h3>
+      <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST" onsubmit="updateHiddenResult()">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Mortgage Calculator Result from Website">
+        <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
+        <input type="hidden" id="hidden-result" name="Calculated Monthly Payment" value="">
+
+        <label for="userEmail">Enter your email address:</label>
+        <input type="email" name="Email Address" id="userEmail" required>
+
+        <button type="submit">Send My Result</button>
+      </form>
+    </div>
+
     <a class="back-link" href="index.html">&larr; Back to Home</a>
   </div>
 
@@ -121,6 +161,7 @@
     const years = document.getElementById('years');
     const tax = document.getElementById('tax');
     const result = document.getElementById('result');
+    const hiddenResult = document.getElementById('hidden-result');
 
     const inputs = [amount, interest, years, tax];
     inputs.forEach(input => input.addEventListener('input', calculate));
@@ -141,6 +182,10 @@
       const total = monthlyPayment + monthlyTax;
 
       result.textContent = "Monthly Payment: $" + total.toFixed(2);
+    }
+
+    function updateHiddenResult() {
+      hiddenResult.value = result.textContent;
     }
   </script>
 </body>
