@@ -217,6 +217,14 @@
       flex-direction: column;
       gap: 10px;
       padding: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: opacity 0.5s ease-in-out, right 0.5s ease-in-out;
+      opacity: 1;
+    }
+
+    .social-bar.hidden {
+      opacity: 0;
+      right: -60px;
     }
 
     .social-bar a {
@@ -237,8 +245,7 @@
   </style>
 </head>
 <body>
-
-  <header>
+    <header>
     <div class="logo-container">
       <img src="logo.png" alt="AV Realty & Management Logo">
     </div>
@@ -316,23 +323,23 @@
     <section id="contact" class="fade-in">
       <h2>Contact Us</h2>
       <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
 
-  <label for="name">Full Name</label>
-  <input type="text" name="name" required>
+        <label for="name">Full Name</label>
+        <input type="text" name="name" required>
 
-  <label for="email">Email Address</label>
-  <input type="email" name="email" required>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" required>
 
-  <label for="phone">Phone Number</label>
-  <input type="tel" name="phone">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone">
 
-  <label for="message">Message</label>
-  <textarea name="message" required></textarea>
+        <label for="message">Message</label>
+        <textarea name="message" required></textarea>
 
-  <button type="submit">Send Message</button>
-</form>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </div>
 
@@ -373,6 +380,28 @@
         card.classList.toggle('flipped');
       });
     });
+
+    // Hide/reveal social bar on scroll (mobile only)
+    const socialBar = document.querySelector('.social-bar');
+    let scrollTimer;
+
+    function hideSocialBar() {
+      socialBar.classList.add('hidden');
+    }
+
+    function showSocialBar() {
+      socialBar.classList.remove('hidden');
+    }
+
+    if (window.innerWidth < 768) {
+      window.addEventListener('scroll', () => {
+        showSocialBar();
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          hideSocialBar();
+        }, 2000); // 2 seconds after scroll stops
+      });
+    }
   </script>
 </body>
 </html>
