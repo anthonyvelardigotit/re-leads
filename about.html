@@ -15,9 +15,9 @@
     }
 
     header {
-      background: #f5c518;
+      background-color: #f5c518;
       color: #000;
-      padding: 60px 20px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
@@ -58,25 +58,6 @@
       font-size: 18px;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f5c518;
-      color: #000;
-      font-size: 14px;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
-
     .headshot {
       display: block;
       margin: 30px auto;
@@ -86,9 +67,47 @@
       border-radius: 50%;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f5c518;
+      color: black;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    .social-bar {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .social-bar a {
+      background-color: #f5c518;
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px 0 0 6px;
+      transition: background-color 0.3s, transform 0.3s;
+      font-size: 14px;
+    }
+
+    .social-bar a:hover {
+      background-color: #e6b800;
+      transform: translateX(-5px);
+    }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="AV Realty Logo">
@@ -98,10 +117,11 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="index.html#services">Services</a>
+    <a href="calculator.html">Mortgage Calculator</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 
-  <div class="container fade-in">
+  <div class="container">
     <h1>Meet the Founder</h1>
     <img src="headshot.jpg" alt="Anthony Velardi" class="headshot">
     <p><strong>Anthony Velardi</strong> founded AV Realty & Management with a mission: to manage properties with integrity and to serve clients the way he wished his own family had been served growing up. Having experienced housing instability as a child, Anthony brings a rare blend of empathy and expertise to every client he works with.</p>
@@ -110,27 +130,14 @@
   </div>
 
   <footer>
-    &copy; 2025 AV Realty & Management LLC. All rights reserved.
+    &copy; 2025 AV Realty & Management LLC
   </footer>
 
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    };
+  <div class="social-bar">
+    <a href="https://www.instagram.com/av.realty/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/avrealtymgmt" target="_blank">Facebook</a>
+    <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank">LinkedIn</a>
+  </div>
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-  </script>
 </body>
 </html>
