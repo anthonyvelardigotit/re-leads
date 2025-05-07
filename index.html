@@ -134,7 +134,43 @@
       color: #000;
       font-size: 14px;
     }
-  </style>
+      .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .floating-contact {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #f5c518;
+      color: black;
+      padding: 12px 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .floating-contact:hover {
+      background-color: #e6b800;
+    }
+
+    header {
+      background: url('hero.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px 40px;
+      text-align: center;
+      border-bottom: 2px solid #f5c518;
+    }
 </head>
 <body>
   <header>
@@ -151,7 +187,7 @@
   </nav>
 
   <div class="container">
-    <section id="services">
+    <section id="services" class="fade-in">
       <h2>Our Services</h2>
       <div class="services-grid">
         <div class="service-box">
@@ -181,11 +217,11 @@
       </div>
     </section>
 
-    <div style="text-align: center;">
+    <div style="text-align: center;" class="fade-in">
       <a href="about.html" class="btn">Meet the Founder</a>
     </div>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
       <h2>Contact Us</h2>
       <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
@@ -210,5 +246,26 @@
   <footer>
     &copy; 2025 AV Realty & Management LLC. All rights reserved.
   </footer>
+  <a href="#contact" class="floating-contact">Contact</a>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
