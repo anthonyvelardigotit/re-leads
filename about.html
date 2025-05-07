@@ -63,6 +63,7 @@
       font-weight: normal;
       font-size: 20px;
       color: #333;
+      margin-bottom: 30px;
     }
 
     p {
@@ -78,23 +79,6 @@
       object-fit: cover;
       border-radius: 50%;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .timeline {
-      margin-top: 40px;
-      padding-left: 20px;
-      border-left: 3px solid #f5c518;
-    }
-
-    .timeline h3 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #000;
-    }
-
-    .timeline p {
-      font-size: 16px;
-      color: #444;
     }
 
     .fade-in {
@@ -186,18 +170,7 @@
     <img src="headshot.jpg" alt="Anthony Velardi" class="headshot">
     <p><strong>Anthony Velardi</strong> is a licensed real estate professional, property manager, and founder of AV Realty & Management. With years of hands-on experience managing multifamily assets, advising investors, and overseeing operations for large residential communities, Anthony launched AV Realty & Management with one goal: to deliver real estate solutions grounded in integrity, strategy, and service.</p>
     <p>Growing up in housing environments where stability wasn’t guaranteed, Anthony developed a deep understanding of how impactful real estate can be in people’s lives. Today, he brings that insight into every transaction — blending technical knowledge with a client-first approach that helps buyers, sellers, and investors move with clarity and confidence.</p>
-    <p>Whether you're a landlord seeking peace of mind, a first-time buyer navigating your next move, or an investor focused on long-term growth, Anthony is committed to providing the guidance and accountability you deserve.</p>
-
-    <div class="timeline">
-      <h3>2015–2018: Leasing Manager</h3>
-      <p>Led leasing efforts for residential communities, helping hundreds of residents find quality homes.</p>
-
-      <h3>2019–2024: Property & Asset Management</h3>
-      <p>Managed large portfolios, directed site operations, and delivered NOI growth while enhancing resident experience.</p>
-
-      <h3>2024–Present: Founder, AV Realty & Management</h3>
-      <p>Launched an independent firm focused on full-service management, consulting, and real estate brokerage with a human-first mission.</p>
-    </div>
+    <p>Whether you're a landlord seeking peace of mind, a first-time buyer navigating your next move, or an investor focused on long-term growth, Anthony is committed to providing the guidance and accountability you deserve. AV Realty & Management was founded on the belief that real estate should empower — and every client should feel seen, supported, and served.</p>
   </div>
 
   <footer>
@@ -218,6 +191,7 @@
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px"
     };
+
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
