@@ -93,7 +93,7 @@
     .card-inner {
       position: relative;
       width: 100%;
-      height: 160px;
+      height: 200px;
       transform-style: preserve-3d;
       transition: transform 0.6s;
       cursor: pointer;
@@ -110,11 +110,11 @@
       backface-visibility: hidden;
       border: 1px solid #f5c518;
       border-radius: 8px;
-      padding: 20px;
+      padding: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
+      font-size: 14px;
       text-align: center;
     }
 
@@ -129,28 +129,7 @@
       transform: rotateY(180deg);
     }
 
-    label {
-      display: block;
-      margin-top: 15px;
-      margin-bottom: 5px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-
-    textarea {
-      resize: vertical;
-      height: 120px;
-    }
-
-    button, .btn {
-      margin-top: 20px;
-      display: inline-block;
+    .btn, button {
       background-color: #f5c518;
       color: black;
       padding: 12px 20px;
@@ -160,18 +139,11 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin-top: 20px;
     }
 
-    button:hover, .btn:hover {
+    .btn:hover, button:hover {
       background-color: #e6b800;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f5c518;
-      color: #000;
-      font-size: 14px;
     }
 
     .fade-in {
@@ -234,7 +206,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="AV Realty & Management Logo">
@@ -254,30 +225,69 @@
     <section id="services" class="fade-in">
       <h2>Our Services</h2>
       <div class="services-grid">
-        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Full-Service Management</h3></div><div class="card-back"><p>We handle every aspect of managing your investment.</p></div></div></div>
-        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Tenant Screening</h3></div><div class="card-back"><p>Background checks, credit reports, and solid placements.</p></div></div></div>
-        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Rent Collection</h3></div><div class="card-back"><p>Streamlined payment systems and enforcement procedures.</p></div></div></div>
-        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Maintenance</h3></div><div class="card-back"><p>Repairs, 24/7 coordination, and cost-effective solutions.</p></div></div></div>
-        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Investor Consulting</h3></div><div class="card-back"><p>Maximize ROI with smart acquisitions and positioning.</p></div></div></div>
-        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Buyer, Seller & Investor Services</h3></div><div class="card-back"><p>We specialize in assisting buyers, sellers, and investors with expert guidance and market insight.</p></div></div></div>
+        <div class="service-box">
+          <div class="card-inner">
+            <div class="card-front"><h3>Full-Service Management</h3></div>
+            <div class="card-back">
+              <p>From leasing to maintenance, we oversee every operational aspect of your rental property. Our team ensures compliance, tenant satisfaction, timely rent collection, financial reporting, and optimal occupancy — so you don’t have to.</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="card-inner">
+            <div class="card-front"><h3>Tenant Screening</h3></div>
+            <div class="card-back">
+              <p>We perform comprehensive background checks, credit analysis, income verification, and rental history reviews to place reliable, respectful tenants — minimizing turnover and protecting your investment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="card-inner">
+            <div class="card-front"><h3>Rent Collection</h3></div>
+            <div class="card-back">
+              <p>Automated payment systems, secure portals, and proven follow-up protocols ensure consistent rent collection and quick resolution of delinquencies — keeping your cash flow steady and stress-free.</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="card-inner">
+            <div class="card-front"><h3>Maintenance Coordination</h3></div>
+            <div class="card-back">
+              <p>We coordinate 24/7 repairs, routine maintenance, inspections, and contractor oversight — balancing quality and cost while preserving property value and tenant satisfaction.</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="card-inner">
+            <div class="card-front"><h3>Investor Consulting</h3></div>
+            <div class="card-back">
+              <p>Whether you're acquiring your first property or expanding your portfolio, we help you analyze deals, estimate ROI, optimize financing strategies, and implement long-term plans for scalable success.</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="card-inner">
+            <div class="card-front"><h3>Buyer, Seller & Investor Services</h3></div>
+            <div class="card-back">
+              <p>We represent buyers, sellers, and real estate investors with diligence and data-driven strategies — from comparative market analysis to offer negotiation and closing support, we guide every step of your journey.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <div style="text-align: center;" class="fade-in">
+        <div style="text-align: center;" class="fade-in">
       <a href="about.html" class="btn">Meet the Founder</a>
     </div>
 
     <section id="listings" class="fade-in">
       <h2>Property Search</h2>
       <p style="text-align: center; max-width: 700px; margin: auto; margin-bottom: 20px;">
-        Explore the latest listings directly from the MLS. Use the search tool below to find properties that fit your needs.
+        View live MLS listings directly through our official search portal. Browse available homes, refine by filters, and connect when you're ready.
       </p>
-      <div style="position: relative; padding-bottom: 65%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-        <iframe src="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-          allowfullscreen=""
-          loading="lazy"
-          title="MLS PIN IDX Search"></iframe>
+      <div style="text-align: center;">
+        <a class="btn" href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank">
+          Launch Property Search
+        </a>
       </div>
     </section>
 
