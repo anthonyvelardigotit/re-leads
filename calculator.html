@@ -108,6 +108,34 @@
     .back-link:hover {
       text-decoration: underline;
     }
+
+    .social-bar {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .social-bar a {
+      background-color: #f5c518;
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px 0 0 6px;
+      transition: background-color 0.3s, transform 0.3s;
+      font-size: 14px;
+    }
+
+    .social-bar a:hover {
+      background-color: #e6b800;
+      transform: translateX(-5px);
+    }
   </style>
 </head>
 <body>
@@ -154,6 +182,12 @@
   <footer>
     &copy; 2025 AV Realty & Management LLC
   </footer>
+
+  <div class="social-bar">
+    <a href="https://www.instagram.com/av.realty/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/avrealtymgmt" target="_blank">Facebook</a>
+    <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank">LinkedIn</a>
+  </div>
 
   <script>
     const amount = document.getElementById('amount');
