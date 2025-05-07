@@ -98,7 +98,7 @@
     .card-inner {
       position: relative;
       width: 100%;
-      height: 160px;
+      height: 140px;
       transform-style: preserve-3d;
       transition: transform 0.6s;
       cursor: pointer;
@@ -111,12 +111,13 @@
       backface-visibility: hidden;
       border: 1px solid #f5c518;
       border-radius: 8px;
-      padding: 20px;
+      padding: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
       text-align: center;
+      font-size: 14px;
     }
 
     .card-front {
@@ -130,10 +131,7 @@
       transform: rotateY(180deg);
     }
 
-    .card-inner:hover {
-      transform: rotateY(180deg);
-    }
-
+    .card-inner:hover,
     .card-inner.flipped {
       transform: rotateY(180deg);
     }
@@ -167,6 +165,20 @@
       background-color: #e6b800;
     }
 
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
     .floating-contact, .call-button {
       position: fixed;
       background: #f5c518;
@@ -193,6 +205,34 @@
     .floating-contact:hover, .call-button:hover {
       background-color: #e6b800;
     }
+
+    .social-bar {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .social-bar a {
+      background-color: #f5c518;
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px 0 0 6px;
+      transition: background-color 0.3s, transform 0.3s;
+      font-size: 14px;
+    }
+
+    .social-bar a:hover {
+      background-color: #e6b800;
+      transform: translateX(-5px);
+    }
   </style>
 </head>
 <body>
@@ -217,49 +257,42 @@
     <section id="services" class="fade-in">
       <h2>Our Services</h2>
       <div class="services-grid">
-
         <div class="service-box">
           <div class="card-inner">
             <div class="card-front"><h3>Full-Service Management</h3></div>
             <div class="card-back"><p>We handle leasing, maintenance, rent collection, inspections, notices, and resident relations so you don’t have to.</p></div>
           </div>
         </div>
-
         <div class="service-box">
           <div class="card-inner">
             <div class="card-front"><h3>Tenant Screening</h3></div>
             <div class="card-back"><p>Background checks, credit reports, landlord history, and income verification ensure we place only the most qualified tenants.</p></div>
           </div>
         </div>
-
         <div class="service-box">
           <div class="card-inner">
             <div class="card-front"><h3>Rent Collection</h3></div>
             <div class="card-back"><p>We offer flexible rent payment systems, pursue late payments professionally, and provide monthly statements and direct deposits.</p></div>
           </div>
         </div>
-
         <div class="service-box">
           <div class="card-inner">
             <div class="card-front"><h3>Maintenance</h3></div>
             <div class="card-back"><p>From minor repairs to emergency services, we coordinate reliable maintenance with 24/7 availability and cost-efficient solutions.</p></div>
           </div>
         </div>
-
         <div class="service-box">
           <div class="card-inner">
             <div class="card-front"><h3>Investor Consulting</h3></div>
             <div class="card-back"><p>We help you source, evaluate, and acquire real estate investments that align with your long-term financial goals and portfolio strategy.</p></div>
           </div>
         </div>
-
         <div class="service-box">
           <div class="card-inner">
             <div class="card-front"><h3>Buyer, Seller & Investor Services</h3></div>
             <div class="card-back"><p>Whether you're buying, selling, or investing, we provide expert representation, analysis, and strategic support through every stage of the process.</p></div>
           </div>
         </div>
-
       </div>
     </section>
         <div style="text-align: center;" class="fade-in">
@@ -332,7 +365,6 @@
       appearOnScroll.observe(fader);
     });
 
-    // Tap-to-flip functionality for mobile
     document.querySelectorAll('.card-inner').forEach(card => {
       card.addEventListener('click', () => {
         card.classList.toggle('flipped');
