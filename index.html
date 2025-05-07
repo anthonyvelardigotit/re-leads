@@ -2,59 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AV Realty & Management</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
+      background: #fdfdfd;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      color: #000;
+    }
+
+    header {
+      background-color: #000;
+      color: #f5c518;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #f5c518;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
       background: white;
-      padding: 40px;
-      margin-top: 60px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 600px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     .logo-container {
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .logo-container img {
-      max-width: 220px;
-      height: auto;
-    }
-
-    h1 {
-      text-align: center;
-      color: #222;
       margin-bottom: 10px;
     }
 
-    p.description {
+    .logo-container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .tagline {
       text-align: center;
-      color: #555;
-      margin-bottom: 30px;
+      font-size: 1.5em;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      color: #f5c518;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .service-box {
+      border: 1px solid #f5c518;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+
+    .service-box:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     label {
       display: block;
       margin-top: 15px;
       margin-bottom: 5px;
-      color: #333;
-      font-weight: 500;
     }
 
     input, textarea {
@@ -63,7 +100,6 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 16px;
-      box-sizing: border-box;
     }
 
     textarea {
@@ -74,53 +110,93 @@
     button {
       margin-top: 20px;
       width: 100%;
-      background-color: #0077cc;
-      color: white;
+      background-color: #f5c518;
+      color: black;
       padding: 12px;
       font-size: 16px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #005fa3;
+      background-color: #e6b800;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      color: #777;
+      background-color: #000;
+      color: #f5c518;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <header>
     <div class="logo-container">
       <img src="logo.png" alt="AV Realty & Management Logo">
     </div>
-    <p class="description">Your trusted partner in real estate and property management across Massachusetts.</p>
+    <p class="tagline">Real Estate. Property Management. Peace of Mind.</p>
+  </header>
 
-    <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-      <label for="name">Full Name</label>
-      <input type="text" name="name" required />
+  <div class="container">
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-box">
+          <h3>Full-Service Management</h3>
+          <p>We handle every aspect of managing your investment.</p>
+        </div>
+        <div class="service-box">
+          <h3>Tenant Screening</h3>
+          <p>Background checks, credit reports, and solid placements.</p>
+        </div>
+        <div class="service-box">
+          <h3>Rent Collection</h3>
+          <p>Streamlined payment systems and enforcement procedures.</p>
+        </div>
+        <div class="service-box">
+          <h3>Maintenance</h3>
+          <p>Repairs, 24/7 coordination, and cost-effective solutions.</p>
+        </div>
+        <div class="service-box">
+          <h3>Investor Consulting</h3>
+          <p>Maximize ROI with smart acquisitions and positioning.</p>
+        </div>
+        <div class="service-box">
+          <h3>Real Estate Sales</h3>
+          <p>Licensed realtors ready to list or locate your next deal.</p>
+        </div>
+      </div>
+    </section>
 
-      <label for="email">Email Address</label>
-      <input type="email" name="email" required />
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" name="phone" />
+        <label for="name">Full Name</label>
+        <input type="text" name="name" required />
 
-      <label for="message">Message</label>
-      <textarea name="message" required></textarea>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" required />
 
-      <button type="submit">Send Message</button>
-    </form>
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" />
+
+        <label for="message">Message</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </div>
 
   <footer>
