@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - AV Realty & Management</title>
-  <link rel="icon" type="image/png" href="favicon.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | AV Realty & Management</title>
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
       margin: 0;
       padding: 0;
-      background: #fdfdfd;
       color: #000;
     }
 
     header {
-      background-color: #fff;
+      background: #f5c518;
       color: #000;
-      padding: 40px 20px 20px;
+      padding: 60px 20px 20px;
       text-align: center;
-      border-bottom: 2px solid #f5c518;
+    }
+
+    .logo-container img {
+      max-width: 160px;
+      height: auto;
     }
 
     nav {
@@ -36,33 +40,22 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 30px auto;
       padding: 20px;
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     h1 {
       color: #f5c518;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .headshot {
-      max-width: 200px;
-      border-radius: 50%;
-      margin: 20px auto;
-      display: block;
+      text-align: center;
     }
 
     p {
-      font-size: 17px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      text-align: left;
+      line-height: 1.7;
+      font-size: 18px;
     }
 
     footer {
@@ -72,34 +65,72 @@
       color: #000;
       font-size: 14px;
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .headshot {
+      display: block;
+      margin: 30px auto;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="AV Realty & Management Logo" style="max-width: 200px; height: auto;">
+      <img src="logo.png" alt="AV Realty Logo">
     </div>
   </header>
 
   <nav>
+    <a href="index.html">Home</a>
     <a href="index.html#services">Services</a>
-    <a href="about.html">About</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 
-  <div class="container">
-    <h1>About AV Realty & Management</h1>
-    <img src="headshot.jpg" alt="Anthony Velardi Headshot" class="headshot">
-    <p><strong>Founded by Anthony Velardi</strong>, AV Realty & Management was built on a passion for helping people and a deep understanding of what it takes to manage property with integrity.</p>
-    <p>As someone who grew up in housing instability and now owns multiple properties, Anthony brings a rare perspective: he knows what it’s like to be both the tenant and the owner.</p>
-    <p>That’s why his company is driven by purpose — to provide honest service, protect your investment, and help families find homes they can trust.</p>
-    <p>Whether you're a first-time buyer, seasoned investor, or landlord looking for peace of mind, you're in the right hands.</p>
+  <div class="container fade-in">
+    <h1>Meet the Founder</h1>
+    <img src="headshot.jpg" alt="Anthony Velardi" class="headshot">
+    <p><strong>Anthony Velardi</strong> founded AV Realty & Management with a mission: to manage properties with integrity and to serve clients the way he wished his own family had been served growing up. Having experienced housing instability as a child, Anthony brings a rare blend of empathy and expertise to every client he works with.</p>
+    <p>Now a licensed real estate agent, investor, and property manager, Anthony has helped dozens of clients find financial peace through real estate. From assisting first-time buyers to advising experienced investors, his mission remains the same: to be honest, transparent, and effective in everything he does.</p>
+    <p>AV Realty & Management is more than a business — it's a purpose-driven brand that prioritizes people over profits. Whether you're renting out a unit or looking to buy your dream home, you're in trusted hands.</p>
   </div>
 
   <footer>
     &copy; 2025 AV Realty & Management LLC. All rights reserved.
   </footer>
 
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
