@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AV Realty & Management</title>
+  <title>About | AV Realty & Management</title>
   <link rel="icon" type="image/jpeg" href="favicon.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
@@ -20,11 +20,15 @@
     }
 
     header {
-      background: url('hero.jpg') no-repeat center center/cover;
-      color: white;
-      padding: 80px 20px 40px;
+      background-color: #f5c518;
+      color: #000;
+      padding: 30px 20px;
       text-align: center;
-      border-bottom: 2px solid #f5c518;
+    }
+
+    .logo-container img {
+      max-width: 160px;
+      height: auto;
     }
 
     nav {
@@ -49,129 +53,48 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
-    .logo-container {
-      text-align: left;
-      margin-bottom: 10px;
-    }
-
-    .logo-container img {
-      max-width: 160px;
-      height: auto;
-    }
-
-    .tagline {
-      background: rgba(255, 255, 255, 0.8);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 1.5em;
-      margin-top: 10px;
-      color: #000;
-    }
-
-    section {
-      margin-bottom: 50px;
+    h1 {
+      color: #f5c518;
+      text-align: center;
     }
 
     h2 {
-      color: #f5c518;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .service-box {
-      perspective: 1000px;
-    }
-
-    .card-inner {
-      position: relative;
-      width: 100%;
-      height: 160px;
-      transform-style: preserve-3d;
-      transition: transform 0.6s;
-      cursor: pointer;
-    }
-
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border: 1px solid #f5c518;
-      border-radius: 8px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
       text-align: center;
+      font-weight: normal;
+      font-size: 20px;
+      color: #333;
     }
 
-    .card-front {
-      background-color: white;
-      color: black;
+    p {
+      line-height: 1.7;
+      font-size: 18px;
     }
 
-    .card-back {
-      background-color: #f5c518;
-      color: black;
-      transform: rotateY(180deg);
-    }
-
-    .card-inner:hover {
-      transform: rotateY(180deg);
-    }
-
-    label {
+    .headshot {
       display: block;
-      margin-top: 15px;
-      margin-bottom: 5px;
+      margin: 30px auto;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
+    .timeline {
+      margin-top: 40px;
+      padding-left: 20px;
+      border-left: 3px solid #f5c518;
     }
 
-    textarea {
-      resize: vertical;
-      height: 120px;
-    }
-
-    button, .btn {
-      margin-top: 20px;
-      display: inline-block;
-      background-color: #f5c518;
-      color: black;
-      padding: 12px 20px;
-      font-size: 16px;
-      text-decoration: none;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover, .btn:hover {
-      background-color: #e6b800;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f5c518;
+    .timeline h3 {
+      margin-top: 0;
+      font-size: 18px;
       color: #000;
-      font-size: 14px;
+    }
+
+    .timeline p {
+      font-size: 16px;
+      color: #444;
     }
 
     .fade-in {
@@ -185,23 +108,13 @@
       transform: none;
     }
 
-    .floating-contact {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #f5c518;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f5c518;
       color: black;
-      padding: 12px 18px;
-      font-weight: bold;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      text-decoration: none;
-      z-index: 1000;
-      transition: background-color 0.3s;
-    }
-
-    .floating-contact:hover {
-      background-color: #e6b800;
+      font-size: 14px;
+      margin-top: 40px;
     }
 
     .social-bar {
@@ -231,15 +144,33 @@
       background-color: #e6b800;
       transform: translateX(-5px);
     }
+
+    .floating-contact {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #f5c518;
+      color: black;
+      padding: 12px 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .floating-contact:hover {
+      background-color: #e6b800;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="AV Realty & Management Logo">
+      <img src="logo.png" alt="AV Realty Logo">
     </div>
-    <p class="tagline">Real Estate. Property Management. Peace of Mind.</p>
   </header>
 
   <nav>
@@ -249,77 +180,28 @@
     <a href="index.html#contact">Contact</a>
   </nav>
 
-  <div class="container">
-    <section id="services" class="fade-in">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Full-Service Management</h3></div>
-            <div class="card-back"><p>We handle every aspect of managing your investment.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Tenant Screening</h3></div>
-            <div class="card-back"><p>Background checks, credit reports, and solid placements.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Rent Collection</h3></div>
-            <div class="card-back"><p>Streamlined payment systems and enforcement procedures.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Maintenance</h3></div>
-            <div class="card-back"><p>Repairs, 24/7 coordination, and cost-effective solutions.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Investor Consulting</h3></div>
-            <div class="card-back"><p>Maximize ROI with smart acquisitions and positioning.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Buyer, Seller & Investor Services</h3></div>
-            <div class="card-back"><p>We specialize in assisting buyers, sellers, and investors with expert guidance and market insight.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="container fade-in">
+    <h1>Meet the Founder</h1>
+    <h2>Empowering people through real estate</h2>
+    <img src="headshot.jpg" alt="Anthony Velardi" class="headshot">
+    <p><strong>Anthony Velardi</strong> is a licensed real estate professional, property manager, and founder of AV Realty & Management. With years of hands-on experience managing multifamily assets, advising investors, and overseeing operations for large residential communities, Anthony launched AV Realty & Management with one goal: to deliver real estate solutions grounded in integrity, strategy, and service.</p>
+    <p>Growing up in housing environments where stability wasn’t guaranteed, Anthony developed a deep understanding of how impactful real estate can be in people’s lives. Today, he brings that insight into every transaction — blending technical knowledge with a client-first approach that helps buyers, sellers, and investors move with clarity and confidence.</p>
+    <p>Whether you're a landlord seeking peace of mind, a first-time buyer navigating your next move, or an investor focused on long-term growth, Anthony is committed to providing the guidance and accountability you deserve.</p>
 
-    <div style="text-align: center;" class="fade-in">
-      <a href="about.html" class="btn">Meet the Founder</a>
+    <div class="timeline">
+      <h3>2015–2018: Leasing Manager</h3>
+      <p>Led leasing efforts for residential communities, helping hundreds of residents find quality homes.</p>
+
+      <h3>2019–2024: Property & Asset Management</h3>
+      <p>Managed large portfolios, directed site operations, and delivered NOI growth while enhancing resident experience.</p>
+
+      <h3>2024–Present: Founder, AV Realty & Management</h3>
+      <p>Launched an independent firm focused on full-service management, consulting, and real estate brokerage with a human-first mission.</p>
     </div>
-
-    <section id="contact" class="fade-in">
-      <h2>Contact Us</h2>
-      <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-
-        <label for="name">Full Name</label>
-        <input type="text" name="name" required />
-
-        <label for="email">Email Address</label>
-        <input type="email" name="email" required />
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" name="phone" />
-
-        <label for="message">Message</label>
-        <textarea name="message" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
   </div>
 
   <footer>
-    &copy; 2025 AV Realty & Management LLC. All rights reserved.
+    &copy; 2025 AV Realty & Management LLC
   </footer>
 
   <div class="social-bar">
@@ -328,7 +210,7 @@
     <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank">LinkedIn</a>
   </div>
 
-  <a href="#contact" class="floating-contact">Contact</a>
+  <a href="index.html#contact" class="floating-contact">Contact</a>
 
   <script>
     const faders = document.querySelectorAll('.fade-in');
@@ -336,7 +218,6 @@
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px"
     };
-
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
