@@ -246,6 +246,7 @@
     <a href="index.html#services">Services</a>
     <a href="about.html">About</a>
     <a href="calculator.html">Mortgage Calculator</a>
+    <a href="index.html#listings">Search Listings</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 
@@ -253,42 +254,12 @@
     <section id="services" class="fade-in">
       <h2>Our Services</h2>
       <div class="services-grid">
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Full-Service Management</h3></div>
-            <div class="card-back"><p>We handle every aspect of managing your investment.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Tenant Screening</h3></div>
-            <div class="card-back"><p>Background checks, credit reports, and solid placements.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Rent Collection</h3></div>
-            <div class="card-back"><p>Streamlined payment systems and enforcement procedures.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Maintenance</h3></div>
-            <div class="card-back"><p>Repairs, 24/7 coordination, and cost-effective solutions.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Investor Consulting</h3></div>
-            <div class="card-back"><p>Maximize ROI with smart acquisitions and positioning.</p></div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="card-inner">
-            <div class="card-front"><h3>Buyer, Seller & Investor Services</h3></div>
-            <div class="card-back"><p>We specialize in assisting buyers, sellers, and investors with expert guidance and market insight.</p></div>
-          </div>
-        </div>
+        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Full-Service Management</h3></div><div class="card-back"><p>We handle every aspect of managing your investment.</p></div></div></div>
+        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Tenant Screening</h3></div><div class="card-back"><p>Background checks, credit reports, and solid placements.</p></div></div></div>
+        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Rent Collection</h3></div><div class="card-back"><p>Streamlined payment systems and enforcement procedures.</p></div></div></div>
+        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Maintenance</h3></div><div class="card-back"><p>Repairs, 24/7 coordination, and cost-effective solutions.</p></div></div></div>
+        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Investor Consulting</h3></div><div class="card-back"><p>Maximize ROI with smart acquisitions and positioning.</p></div></div></div>
+        <div class="service-box"><div class="card-inner"><div class="card-front"><h3>Buyer, Seller & Investor Services</h3></div><div class="card-back"><p>We specialize in assisting buyers, sellers, and investors with expert guidance and market insight.</p></div></div></div>
       </div>
     </section>
 
@@ -296,23 +267,32 @@
       <a href="about.html" class="btn">Meet the Founder</a>
     </div>
 
+    <section id="listings" class="fade-in">
+      <h2>Property Search</h2>
+      <p style="text-align: center; max-width: 700px; margin: auto; margin-bottom: 20px;">
+        Explore the latest listings directly from the MLS. Use the search tool below to find properties that fit your needs.
+      </p>
+      <div style="position: relative; padding-bottom: 65%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <iframe src="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+          allowfullscreen=""
+          loading="lazy"
+          title="MLS PIN IDX Search"></iframe>
+      </div>
+    </section>
+
     <section id="contact" class="fade-in">
       <h2>Contact Us</h2>
       <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
-
         <label for="name">Full Name</label>
         <input type="text" name="name" required />
-
         <label for="email">Email Address</label>
         <input type="email" name="email" required />
-
         <label for="phone">Phone Number</label>
         <input type="tel" name="phone" />
-
         <label for="message">Message</label>
         <textarea name="message" required></textarea>
-
         <button type="submit">Send Message</button>
       </form>
     </section>
