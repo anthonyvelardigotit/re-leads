@@ -400,25 +400,33 @@
     <section id="contact" class="fade-in">
       <h2>Contact Us</h2>
       <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
 
-        <label for="name">Full Name</label>
-        <input type="text" name="name" required>
+  <div style="margin-bottom: 15px;">
+    <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
+    <input type="text" id="name" name="name" required />
+  </div>
 
-        <label for="email">Email Address</label>
-        <input type="email" name="email" required>
+  <div style="margin-bottom: 15px;">
+    <label for="email" style="display: block; font-weight: bold; color: #0033a0;">Email Address</label>
+    <input type="email" id="email" name="email" required />
+  </div>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" name="phone">
+  <div style="margin-bottom: 15px;">
+    <label for="phone" style="display: block; font-weight: bold; color: #0033a0;">Phone Number</label>
+    <input type="tel" id="phone" name="phone" />
+  </div>
 
-        <label for="message">Message</label>
-        <textarea name="message" required></textarea>
+  <div style="margin-bottom: 15px;">
+    <label for="message" style="display: block; font-weight: bold; color: #0033a0;">Message</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
 
-        <div style="text-align: center;">
-          <button type="submit">Send Message</button>
-        </div>
-      </form>
+  <div style="text-align: center;">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
     </section>
   </div>
 
