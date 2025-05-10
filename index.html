@@ -155,21 +155,26 @@
     }
 
     .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border: 1px solid #0033a0;
-      border-radius: 8px;
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      text-align: center;
-      font-size: 14px;
-      box-sizing: border-box;
-    }
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #0033a0;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.card-front:hover, .card-back:hover {
+  box-shadow: 0 0 15px 5px rgba(0, 51, 160, 0.4), 0 0 30px rgba(0, 51, 160, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
 
     .card-front {
       background-color: white;
