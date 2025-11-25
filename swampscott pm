@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Swampscott Property Management | AV Realty & Management</title>
+  <meta name="description" content="Local Swampscott property management for single-family homes, multifamily, and small portfolios. Rent analysis, tenant screening, maintenance, and full-service management by AV Realty & Management.">
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+
+    h1, h2, h3, nav a, .btn, button {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav {
+      background-color: #0033a0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0033a0;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    header {
+      background: url('hero.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px 60px;
+      text-align: center;
+      border-bottom: 2px solid #0033a0;
+    }
+
+    .logo-container img {
+      max-width: 160px;
+      height: auto;
+    }
+
+    .page-tagline {
+      background: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
+
+    .hero-subline {
+      max-width: 650px;
+      margin: 20px auto 0;
+      font-size: 0.98rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: #0033a0;
+      padding: 12px 18px;
+      border-radius: 10px;
+    }
+
+    .btn, button {
+      background-color: #0033a0;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 20px 10px 0;
+      transition: background-color 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover, button:hover {
+      background-color: #00257a;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 30px auto 40px;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+      background: white;
+      border-radius: 12px;
+      padding: 25px 20px 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    h1 {
+      margin-top: 15px;
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: #0033a0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      margin-top: 0;
+      text-align: left;
+    }
+
+    h3 {
+      color: #0033a0;
+      margin-top: 20px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .highlight-box {
+      background: #f5f8ff;
+      border-radius: 10px;
+      padding: 15px 18px;
+      border-left: 4px solid #0033a0;
+      margin-top: 10px;
+    }
+
+    .stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .stat {
+      flex: 1 1 160px;
+      background: #f5f5f5;
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.3rem;
+      color: #0033a0;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+      background-color: white;
+      color: #0033a0;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-row {
+      margin-bottom: 12px;
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 6px;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      padding: 25px 20px;
+      text-align: center;
+      color: #0033a0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #0033a0;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus, button:focus {
+      outline: 2px solid #ffcc00;
+      outline-offset: 2px;
+    }
+  </style>
+
+  <!-- LocalBusiness / Service markup for Swampscott property management -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Swampscott Property Management",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "AV Realty & Management",
+      "image": "https://avrealtymanagement.com/logo-512.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5 Huron Street",
+        "addressLocality": "Swampscott",
+        "addressRegion": "MA",
+        "postalCode": "01907",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-978-277-3435",
+      "url": "https://avrealtymanagement.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Swampscott"
+    },
+    "serviceType": "Residential property management"
+  }
+  </script>
+
+  <!-- FAQ schema for this page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of properties do you manage in Swampscott?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We manage single-family homes, condos, small multifamily buildings, and house-hacks in Swampscott. Whether you own one unit or a small portfolio, we tailor our management to your goals and the specific property."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does property management cost in Swampscott?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on the number of units and the level of service you need, but most Swampscott owners pay a simple percentage of collected rent with no surprise junk fees. We are happy to provide a transparent quote after a quick call and a look at your property."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help place a tenant and then let me self-manage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. For some Swampscott owners, we offer lease-up only services including marketing, showings, screening, and lease execution. After that, you can self-manage, or we can continue with full-service management."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with Section 8 and other housing programs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We have experience working with Section 8 and other local housing programs. We help you navigate inspections, paperwork, and compliance so the process is smoother and more predictable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started with Swampscott property management?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The first step is a free rent and property review. Share your address and a few details about your goals, and we will run the numbers, review your current lease or situation, and outline a management plan tailored to your Swampscott property."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="about.html">About</a>
+      <a href="calculator.html">Mortgage Calculator</a>
+      <a href="#contact">Free Rent Analysis</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logo.png" alt="AV Realty & Management Logo">
+      </a>
+    </div>
+    <h1>Swampscott Property Management</h1>
+    <div class="page-tagline">
+      Local, hands-on management for Swampscott rental properties.
+    </div>
+    <p class="hero-subline">
+      AV Realty & Management is based in Swampscott and actively owns and manages property here.
+      We treat your home like one of our own units, with proactive leasing, careful tenant screening,
+      and systems built from real on-the-ground experience.
+    </p>
+    <a class="btn" href="#contact">Request Your Free Swampscott Rent Analysis</a>
+  </header>
+
+  <main>
+    <section id="overview">
+      <div class="two-column">
+        <div>
+          <h2>Why Swampscott Owners Trust AV Realty & Management</h2>
+          <p>
+            Swampscott is a unique coastal market. Between seasonal demand, commuter access to Boston,
+            and an older housing stock, your property needs management that understands both the numbers
+            and the realities of owning in this town.
+          </p>
+          <p>
+            As a local owner and operator, we focus on protecting your asset, keeping good residents,
+            and making sure the property is performing the way it should.
+          </p>
+
+          <div class="highlight-box">
+            <strong>We help Swampscott owners with:</strong>
+            <ul>
+              <li>Accurate rental pricing and rent increases backed by market data</li>
+              <li>Filling vacancies with qualified residents who respect your home</li>
+              <li>Day-to-day maintenance coordination so you are not on call 24/7</li>
+              <li>Clear accounting, statements, and communication</li>
+            </ul>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat">
+              <strong>Local</strong>
+              <span>Based in Swampscott and active on the North Shore</span>
+            </div>
+            <div class="stat">
+              <strong>Hands-On</strong>
+              <span>Owner-operated, not a distant corporate call center</span>
+            </div>
+            <div class="stat">
+              <strong>Investor Mindset</strong>
+              <span>We own units and think like owners</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2>Free Swampscott Rent Analysis</h2>
+          <p>
+            Share your address and a few details about your property. We will review current market
+            data, your existing lease (if applicable), and send a clear plan for your next step.
+          </p>
+
+          <form id="contact" action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
+            <input type="hidden" name="_subject" value="Swampscott Property Management Lead">
+
+            <div class="form-row">
+              <label for="name"><strong>Full Name</strong></label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email"><strong>Email Address</strong></label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+              <label for="phone"><strong>Phone Number</strong></label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-row">
+              <label for="address"><strong>Property Address (Swampscott)</strong></label>
+              <input type="text" id="address" name="Property Address">
+            </div>
+
+            <div class="form-row">
+              <label for="details"><strong>Tell us about your situation</strong></label>
+              <textarea id="details" name="Message" placeholder="Number of units, current rent, vacancy, goals, or any concerns you have."></textarea>
+            </div>
+
+            <button type="submit">Get My Free Rent Analysis</button>
+          </form>
+
+          <p style="font-size: 0.8rem; color: #666; margin-top: 8px;">
+            No obligation, no pressure. We will not share your information with third parties.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Swampscott Property Management Services</h2>
+      <p>
+        Every property and owner is different. We offer both full-service management and lease-up only
+        options so you can choose the level of support that fits your situation.
+      </p>
+
+      <h3>Full-Service Management</h3>
+      <ul>
+        <li>Rental pricing strategy tailored to Swampscott and your specific street</li>
+        <li>Professional photos and listing placement on major rental sites</li>
+        <li>Pre-screening, showings, and full tenant screening (credit, background, income, housing history)</li>
+        <li>Lease drafting and execution with Massachusetts-compliant documents</li>
+        <li>Online rent collection and enforcement of payment terms</li>
+        <li>Coordination of maintenance, inspections, and seasonal work</li>
+        <li>Lease renewals, rent increase planning, and notice management</li>
+      </ul>
+
+      <h3>Lease-Up Only (Tenant Placement)</h3>
+      <p>
+        Ideal for owners who are comfortable handling maintenance and day-to-day communication but want
+        help finding the right resident.
+      </p>
+      <ul>
+        <li>Marketing and listing setup</li>
+        <li>Showings and application processing</li>
+        <li>Screening and written recommendation</li>
+        <li>Lease preparation and move-in coordination</li>
+      </ul>
+
+      <h3>Consulting for Swampscott Investors</h3>
+      <p>
+        Thinking about buying another property in Swampscott or turning your home into a rental?
+        We can help you review numbers, understand likely rents, and plan upgrades that actually move the needle.
+      </p>
+    </section>
+
+    <section id="local-expertise">
+      <h2>Local Swampscott Expertise</h2>
+      <p>
+        Swampscott is not a generic rental market. You have a mix of long-term residents, commuters, and
+        people attracted to the coastal lifestyle. Small details like parking, basement moisture, and
+        unit finishes can make a big difference in your rent and resident profile.
+      </p>
+      <p>
+        Because we live and operate here, we understand how to position your property to attract the right
+        residents and keep them long-term.
+      </p>
+
+      <div class="highlight-box">
+        <strong>We pay attention to things like:</strong>
+        <ul>
+          <li>Realistic rent ranges by street and building type</li>
+          <li>What upgrades actually add rent versus what is just cosmetic</li>
+          <li>Seasonal timing for leasing along the North Shore</li>
+          <li>Parking, storage, and amenity expectations for Swampscott residents</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2>Our Swampscott Management Process</h2>
+      <h3>1. Conversation and Rent Analysis</h3>
+      <p>
+        We start with a conversation to understand your goals and your current situation. Then we run a
+        rent analysis based on comparable properties, current demand, and the condition of your home.
+      </p>
+
+      <h3>2. Onboarding and Property Walkthrough</h3>
+      <p>
+        If we decide to work together, we review your current lease (if occupied), walk the property,
+        and outline any recommended repairs or improvements before marketing or taking over management.
+      </p>
+
+      <h3>3. Leasing and Screening</h3>
+      <p>
+        We market the unit, manage inquiries and showings, and complete thorough screening before we
+        recommend a resident for approval.
+      </p>
+
+      <h3>4. Day-to-Day Management and Reporting</h3>
+      <p>
+        We handle communication, rent, work orders, and notices while you receive regular statements
+        and updates. You stay informed without being overwhelmed.
+      </p>
+
+      <a class="btn" href="#contact">Talk About Your Swampscott Property</a>
+    </section>
+
+    <section id="faq">
+      <h2>Swampscott Property Management FAQ</h2>
+
+      <div class="faq-item">
+        <h3>What types of properties do you manage in Swampscott?</h3>
+        <p>
+          We manage single-family homes, condos, small multifamily buildings, and house-hack style
+          setups where the owner may live in one unit and rent the others. If you are not sure whether
+          your property is a fit, reach out and we can talk through it.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How much does property management cost in Swampscott?</h3>
+        <p>
+          Most owners pay a percentage of collected rent plus any agreed-upon leasing fees. Pricing is
+          straightforward and transparent so you can see exactly what you are paying for. After we know
+          more about your property and needs, we will provide a written quote.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you help if I already have a tenant in place?</h3>
+        <p>
+          Yes. We can take over mid-lease, review your current lease terms, and work with your resident
+          so the transition is smooth. We will discuss timing together so there is minimal disruption.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you work with Section 8 and other voucher programs?</h3>
+        <p>
+          We do. We are familiar with inspections, paperwork, and communication with local housing
+          authorities and can help you stay organized and compliant.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I get started?</h3>
+        <p>
+          The simplest next step is to request a free rent analysis using the form above. You can also
+          call <a href="tel:19782773435">(978) 277-3435</a> and mention that you are calling about
+          Swampscott property management.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="margin-bottom: 8px; font-weight: 600;">
+      AV Realty & Management
+    </div>
+    <div style="margin-bottom: 4px;">
+      5 Huron Street, Swampscott, MA 01907
+    </div>
+    <div style="margin-bottom: 10px;">
+      <a href="tel:19782773435">(978) 277-3435</a> • <a href="index.html">avrealtymanagement.com</a>
+    </div>
+    <div style="font-size: 13px; color: #555; margin-top: 6px;">
+      Serving Swampscott, Salem, Lynn, Beverly, Marblehead, Peabody, Nahant, Danvers, and the North Shore.
+    </div>
+    <div style="color: #666; font-size: 13px; margin-top: 10px;">
+      &copy; 2025 AV Realty & Management LLC. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
