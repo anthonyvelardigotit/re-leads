@@ -100,7 +100,7 @@
 
     header h1 {
       font-size: 2.4rem;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .tagline {
@@ -201,15 +201,14 @@
     <img src="logo.png" alt="AV Realty & Management Logo">
   </div>
   <h1>North Shore MA Real Estate</h1>
-  <p class="tagline">Your trusted expert for buying, selling, and investing across the North Shore.</p>
+  <p class="tagline">Buying, selling & investing made simple. Local expertise that gives you the edge.</p>
 </header>
 
 <div class="container">
 
   <h2 style="text-align:center;">Your Local North Shore Real Estate Specialist</h2>
   <p style="margin-top:15px; font-size:1rem; line-height:1.6;">
-    Whether you're buying your dream home, selling for maximum value, or investing in income-producing real estate, AV Realty & Management delivers unmatched local expertise across every North Shore community.
-    Our deep market knowledge, negotiation skill, and data-driven approach help you make confident, profitable decisions.
+    Whether you're buying your dream home, selling for maximum value, or investing in income-producing property, AV Realty & Management delivers unmatched local expertise across every North Shore community.
   </p>
 
   <h2 style="text-align:center; margin-top:40px;">Areas We Serve</h2>
@@ -237,28 +236,32 @@
     If it's in the North Shore — we cover it.
   </p>
 
+  <!-- LEAD FORM -->
   <div class="lead-form">
     <h2 style="text-align:center; color:#0033a0;">Get Your Free North Shore Real Estate Consultation</h2>
-    <p style="text-align:center; margin-top:10px;">No pressure. No obligation. Local expertise that helps you win.</p>
+    <p style="text-align:center; margin-top:10px;">No pressure. No obligation. Just real expertise.</p>
 
     <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
 
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <!-- Honeypot -->
+      <input type="text" name="_honey" style="display:none">
+
+      <!-- FormSubmit Settings -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="New North Shore Real Estate Lead">
       <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
 
-      <label>Full Name</label>
-      <input type="text" name="name" required>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
 
-      <label>Email Address</label>
-      <input type="email" name="email" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
 
-      <label>Phone Number</label>
-      <input type="tel" name="phone">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone">
 
-      <label>What are you looking to do?</label>
-      <textarea name="message" placeholder="Buying? Selling? Investing? Which town(s) are you interested in?"></textarea>
+      <label for="message">What are you looking to do?</label>
+      <textarea id="message" name="message" placeholder="Buying? Selling? Investing? Which town(s) are you interested in?"></textarea>
 
       <div style="text-align:center;">
         <button type="submit">Request Your Consultation</button>
