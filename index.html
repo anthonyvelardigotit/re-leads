@@ -460,9 +460,15 @@
       <section id="contact" class="fade-in">
         <h2>Contact Us</h2>
         <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
+          <!-- Spam protection -->
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- FormSubmit config -->
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-          <input type="hidden" name="_subject" value="New Lead from AVRealtyManagement.com">
+          <input type="hidden" name="_subject" value="New Lead from AVRealtyManagement.com - Contact Form">
+          <input type="hidden" name="form_source" value="Contact Form">
 
           <div style="margin-bottom: 15px;">
             <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
@@ -587,10 +593,29 @@ background:white; border-radius:12px; padding:24px; box-shadow:0 4px 12px rgba(0
       You may also receive occasional tips on North Shore real estate and property management. You can unsubscribe at any time.
     </p>
     <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST" onsubmit="handleGuideSubmit()">
+      <!-- Spam protection -->
+      <input type="text" name="_honey" style="display:none">
+
+      <!-- FormSubmit config -->
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-      <input type="email" name="email" required placeholder="Enter your email" style="width:100%; padding:10px; margin-top:10px; border:1px solid #ccc; border-radius:6px;">
-      <button type="submit" style="margin-top:15px; width:100%; background:#0033a0; color:white; padding:10px; border:none; border-radius:6px; font-weight:bold;">Send Me the Guide</button>
+      <input type="hidden" name="_subject" value="New Multifamily Guide Request - AVRealtyManagement.com">
+      <input type="hidden" name="form_source" value="Multifamily Guide Popup">
+
+      <input 
+        type="email" 
+        name="email" 
+        required 
+        placeholder="Enter your email" 
+        style="width:100%; padding:10px; margin-top:10px; border:1px solid #ccc; border-radius:6px;"
+      >
+      <button 
+        type="submit" 
+        style="margin-top:15px; width:100%; background:#0033a0; color:white; padding:10px; border:none; border-radius:6px; font-weight:bold;"
+      >
+        Send Me the Guide
+      </button>
     </form>
     <button type="button" onclick="dismissGuidePopup()" style="margin-top:12px; background:none; border:none; color:#666; font-size:0.85rem; text-decoration:underline; cursor:pointer;">No thanks</button>
   </div>
