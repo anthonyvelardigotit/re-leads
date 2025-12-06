@@ -252,8 +252,13 @@
         <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
         <input type="hidden" name="form_source" value="Mortgage Calculator Page">
 
-        <!-- Calculated result -->
+        <!-- Hidden fields for all calculator details -->
         <input type="hidden" id="hidden-result" name="calculated_monthly_payment" value="">
+        <input type="hidden" id="hidden-amount" name="loan_amount" value="">
+        <input type="hidden" id="hidden-interest" name="interest_rate_percent" value="">
+        <input type="hidden" id="hidden-years" name="loan_term_years" value="">
+        <input type="hidden" id="hidden-tax" name="monthly_taxes_insurance" value="">
+        <input type="hidden" id="hidden-summary" name="calculation_summary" value="">
 
         <!-- Spam honeypot -->
         <input type="checkbox" name="botcheck" style="display:none;">
@@ -286,7 +291,13 @@
     const years = document.getElementById('years');
     const tax = document.getElementById('tax');
     const result = document.getElementById('result');
+
     const hiddenResult = document.getElementById('hidden-result');
+    const hiddenAmount = document.getElementById('hidden-amount');
+    const hiddenInterest = document.getElementById('hidden-interest');
+    const hiddenYears = document.getElementById('hidden-years');
+    const hiddenTax = document.getElementById('hidden-tax');
+    const hiddenSummary = document.getElementById('hidden-summary');
 
     const inputs = [amount, interest, years, tax];
     inputs.forEach(input => input.addEventListener('input', calculate));
@@ -310,7 +321,21 @@
     }
 
     function updateHiddenResult() {
+      const amt = amount.value || "0";
+      const rate = interest.value || "0";
+      const yrs = years.value || "0";
+      const tx = tax.value || "0";
+
       hiddenResult.value = result.textContent;
+      hiddenAmount.value = amt;
+      hiddenInterest.value = rate;
+      hiddenYears.value = yrs;
+      hiddenTax.value = tx;
+
+      hiddenSummary.value =
+        "Loan Amount: $" + amt +
+        ", Interest Rate: " + rate + "%, Term: " + yrs + " years, " +
+        "Taxes + Insurance: $" + tx + ", " + result.textContent;
     }
 
     // Hide/reveal social bar on scroll for mobile only
