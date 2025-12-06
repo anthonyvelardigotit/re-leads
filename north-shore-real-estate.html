@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>North Shore MA Real Estate | Buying, Selling & Investing | AV Realty & Management</title>
+  <meta name="description" content="Your trusted real estate expert for the entire North Shore of Massachusetts. Swampscott, Salem, Lynn, Beverly, Marblehead, Peabody, Danvers, Nahant, and more. Buy, sell, or invest with a local specialist. Get a free consultation today.">
+  <meta name="keywords" content="North Shore MA real estate, Swampscott real estate agent, Salem homes for sale, Lynn Realtor, Beverly MA property, Marblehead real estate, buy home North Shore, sell home North Shore, AV Realty">
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #000;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, nav a, .btn, button {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav {
+      background-color: #0033a0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0033a0;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    header {
+      background: url('hero.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+      border-bottom: 2px solid #0033a0;
+    }
+
+    .logo-container img {
+      max-width: 160px;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .town-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .town-box {
+      background: #f0f4ff;
+      border: 1px solid #0033a0;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      font-weight: 600;
+      color: #0033a0;
+    }
+
+    .lead-form {
+      margin-top: 40px;
+      padding: 25px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #0033a0;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #00257a;
+    }
+
+    footer {
+      background: #f5f5f5;
+      padding: 30px 20px;
+      text-align: center;
+      color: #0033a0;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#services">Services</a>
+    <a href="about.html">About</a>
+    <a href="calculator.html">Mortgage Calculator</a>
+    <a href="index.html#listings">Search Listings</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="AV Realty & Management Logo">
+  </div>
+  <h1>North Shore MA Real Estate</h1>
+  <p class="tagline">Your trusted expert for buying, selling, and investing across the North Shore.</p>
+</header>
+
+<div class="container">
+
+  <h2 style="text-align:center;">Your Local North Shore Real Estate Specialist</h2>
+  <p style="margin-top:15px; font-size:1rem; line-height:1.6;">
+    Whether you're buying your dream home, selling for maximum value, or investing in income-producing real estate, AV Realty & Management delivers unmatched local expertise across every North Shore community.
+    Our deep market knowledge, negotiation skill, and data-driven approach help you make confident, profitable decisions.
+  </p>
+
+  <h2 style="text-align:center; margin-top:40px;">Areas We Serve</h2>
+
+  <div class="town-grid">
+    <div class="town-box">Swampscott</div>
+    <div class="town-box">Salem</div>
+    <div class="town-box">Marblehead</div>
+    <div class="town-box">Beverly</div>
+    <div class="town-box">Lynn</div>
+    <div class="town-box">Nahant</div>
+    <div class="town-box">Peabody</div>
+    <div class="town-box">Danvers</div>
+    <div class="town-box">Saugus</div>
+    <div class="town-box">Revere</div>
+    <div class="town-box">Winthrop</div>
+    <div class="town-box">Woburn</div>
+    <div class="town-box">Wakefield</div>
+    <div class="town-box">Reading</div>
+    <div class="town-box">Hamilton / Wenham</div>
+    <div class="town-box">Ipswich</div>
+  </div>
+
+  <p style="margin-top:20px; text-align:center; font-size:1rem; color:#333;">
+    If it's in the North Shore — we cover it.
+  </p>
+
+  <div class="lead-form">
+    <h2 style="text-align:center; color:#0033a0;">Get Your Free North Shore Real Estate Consultation</h2>
+    <p style="text-align:center; margin-top:10px;">No pressure. No obligation. Local expertise that helps you win.</p>
+
+    <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
+
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New North Shore Real Estate Lead">
+      <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
+
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email Address</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone">
+
+      <label>What are you looking to do?</label>
+      <textarea name="message" placeholder="Buying? Selling? Investing? Which town(s) are you interested in?"></textarea>
+
+      <div style="text-align:center;">
+        <button type="submit">Request Your Consultation</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <div>AV Realty & Management</div>
+  <div>5 Huron Street, Swampscott, MA 01907</div>
+  <div><a href="tel:9782773435">(978) 277-3435</a></div>
+  <div style="margin-top:10px; font-size:13px;">&copy; 2025 AV Realty & Management LLC. All rights reserved.</div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
