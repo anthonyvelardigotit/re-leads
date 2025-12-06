@@ -459,41 +459,44 @@
 
       <section id="contact" class="fade-in">
         <h2>Contact Us</h2>
-        <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-          <!-- Spam protection -->
-          <input type="text" name="_honey" style="display:none">
+        <form action="https://api.web3forms.com/submit" method="POST">
+  <!-- REQUIRED: Web3Forms access key -->
+  <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
 
-          <!-- FormSubmit config -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-          <input type="hidden" name="_subject" value="New Lead from AVRealtyManagement.com - Contact Form">
-          <input type="hidden" name="form_source" value="Contact Form">
+  <!-- OPTIONAL: email metadata -->
+  <input type="hidden" name="subject" value="New Lead from AVRealtyManagement.com - Contact Form">
+  <input type="hidden" name="from_name" value="AV Realty & Management Website">
+  <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+  <input type="hidden" name="form_source" value="Contact Form">
 
-          <div style="margin-bottom: 15px;">
-            <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
+  <!-- Honeypot spam protection (Web3Forms docs) -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-          <div style="margin-bottom: 15px;">
-            <label for="email" style="display: block; font-weight: bold; color: #0033a0;">Email Address</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+  <div style="margin-bottom: 15px;">
+    <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
+    <input type="text" id="name" name="name" required />
+  </div>
 
-          <div style="margin-bottom: 15px;">
-            <label for="phone" style="display: block; font-weight: bold; color: #0033a0;">Phone Number</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
+  <div style="margin-bottom: 15px;">
+    <label for="email" style="display: block; font-weight: bold; color: #0033a0;">Email Address</label>
+    <input type="email" id="email" name="email" required />
+  </div>
 
-          <div style="margin-bottom: 15px;">
-            <label for="message" style="display: block; font-weight: bold; color: #0033a0;">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
+  <div style="margin-bottom: 15px;">
+    <label for="phone" style="display: block; font-weight: bold; color: #0033a0;">Phone Number</label>
+    <input type="tel" id="phone" name="phone" />
+  </div>
 
-          <div style="text-align: center;">
-            <button type="submit">Send Message</button>
-          </div>
-        </form>
+  <div style="margin-bottom: 15px;">
+    <label for="message" style="display: block; font-weight: bold; color: #0033a0;">Message</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+
+  <div style="text-align: center;">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+
       </section>
     </div>
 
