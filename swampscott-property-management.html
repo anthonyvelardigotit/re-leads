@@ -425,10 +425,19 @@
             data, your existing lease (if applicable), and send a clear plan for your next step.
           </p>
 
-          <form id="contact" action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-            <input type="hidden" name="_subject" value="Swampscott Property Management Lead">
+          <!-- UPDATED FORM: Web3Forms integration -->
+          <form id="contact" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Required Web3Forms access key -->
+            <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+
+            <!-- Form settings -->
+            <input type="hidden" name="subject" value="Swampscott Property Management Lead - Website Form">
+            <input type="hidden" name="from_name" value="AV Realty & Management Website">
+            <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+            <input type="hidden" name="form_source" value="Swampscott Property Management Page">
+
+            <!-- Spam honeypot -->
+            <input type="checkbox" name="botcheck" style="display:none;">
 
             <div class="form-row">
               <label for="name"><strong>Full Name</strong></label>
@@ -447,12 +456,12 @@
 
             <div class="form-row">
               <label for="address"><strong>Property Address (Swampscott)</strong></label>
-              <input type="text" id="address" name="Property Address">
+              <input type="text" id="address" name="property_address">
             </div>
 
             <div class="form-row">
               <label for="details"><strong>Tell us about your situation</strong></label>
-              <textarea id="details" name="Message" placeholder="Number of units, current rent, vacancy, goals, or any concerns you have."></textarea>
+              <textarea id="details" name="message" placeholder="Number of units, current rent, vacancy, goals, or any concerns you have."></textarea>
             </div>
 
             <button type="submit">Get My Free Rent Analysis</button>
