@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>North Shore MA Real Estate | Buying, Selling & Investing | AV Realty & Management</title>
-  <meta name="description" content="Your trusted real estate expert for the entire North Shore of Massachusetts. Swampscott, Salem, Lynn, Beverly, Marblehead, Peabody, Danvers, Nahant, and more. Buy, sell, or invest with a local specialist. Get a free consultation today.">
-  <meta name="keywords" content="North Shore MA real estate, Swampscott real estate agent, Salem homes for sale, Lynn Realtor, Beverly MA property, Marblehead real estate, buy home North Shore, sell home North Shore, AV Realty">
+  <title>North Shore MA Real Estate | AV Realty & Management</title>
+  <meta name="description" content="North Shore MA real estate expert. Serving Swampscott, Salem, Marblehead, Beverly, Lynn, Peabody, Danvers, Nahant, and more. Buy, sell, or invest confidently with local guidance. Free consultation.">
+  <meta name="keywords" content="North Shore real estate, Swampscott real estate, Salem MA realtor, Beverly MA homes, Marblehead real estate agent, Lynn MA homes, Peabody MA real estate">
 
   <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
@@ -25,10 +25,11 @@
       overflow-x: hidden;
     }
 
-    h1, h2, h3, nav a, .btn, button {
+    h1, h2, h3, nav a, button {
       font-family: 'Montserrat', sans-serif;
     }
 
+    /* NAVIGATION */
     nav {
       background-color: #0033a0;
       position: sticky;
@@ -48,7 +49,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .hamburger {
@@ -62,29 +63,25 @@
       height: 3px;
       background: white;
       margin: 4px 0;
+      transition: .3s;
     }
 
     @media (max-width: 768px) {
       .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
         background-color: #0033a0;
         position: absolute;
         top: 55px;
         left: 0;
+        width: 100%;
         padding: 10px 0;
       }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
+      .nav-links.active { display: flex; }
+      .hamburger { display: flex; }
     }
 
+    /* HEADER */
     header {
       background: url('hero.jpg') no-repeat center center/cover;
       color: white;
@@ -99,18 +96,20 @@
     }
 
     header h1 {
-      font-size: 2.4rem;
-      margin-bottom: 12px;
+      font-size: 2.3rem;
+      margin-top: 12px;
+      margin-bottom: 10px;
     }
 
     .tagline {
-      font-size: 1.2rem;
       background: rgba(0,0,0,0.5);
       display: inline-block;
       padding: 8px 16px;
       border-radius: 6px;
+      font-size: 1.1rem;
     }
 
+    /* MAIN CONTENT */
     .container {
       max-width: 1100px;
       margin: 40px auto;
@@ -128,7 +127,7 @@
     }
 
     .town-box {
-      background: #f0f4ff;
+      background: #eef3ff;
       border: 1px solid #0033a0;
       border-radius: 8px;
       padding: 10px;
@@ -137,12 +136,13 @@
       color: #0033a0;
     }
 
+    /* FORM */
     .lead-form {
       margin-top: 40px;
       padding: 25px;
       background: #f9f9f9;
-      border-radius: 10px;
       border: 1px solid #ddd;
+      border-radius: 10px;
     }
 
     input, textarea {
@@ -152,6 +152,11 @@
       border-radius: 6px;
       font-size: 16px;
       margin-top: 10px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
     }
 
     button {
@@ -169,6 +174,7 @@
       background-color: #00257a;
     }
 
+    /* FOOTER */
     footer {
       background: #f5f5f5;
       padding: 30px 20px;
@@ -201,14 +207,16 @@
     <img src="logo.png" alt="AV Realty & Management Logo">
   </div>
   <h1>North Shore MA Real Estate</h1>
-  <p class="tagline">Buying, selling & investing made simple. Local expertise that gives you the edge.</p>
+  <p class="tagline">Helping you buy, sell, and invest with confidence.</p>
 </header>
 
 <div class="container">
 
-  <h2 style="text-align:center;">Your Local North Shore Real Estate Specialist</h2>
+  <h2 style="text-align:center;">Your Trusted North Shore Real Estate Specialist</h2>
+
   <p style="margin-top:15px; font-size:1rem; line-height:1.6;">
-    Whether you're buying your dream home, selling for maximum value, or investing in income-producing property, AV Realty & Management delivers unmatched local expertise across every North Shore community.
+    Whether you're buying a home, selling for top dollar, or investing in income-generating property, our deep North Shore expertise gives you the competitive edge.
+    From Swampscott to Salem, Marblehead to Beverly — we know every neighborhood, every trend, every opportunity.
   </p>
 
   <h2 style="text-align:center; margin-top:40px;">Areas We Serve</h2>
@@ -219,9 +227,9 @@
     <div class="town-box">Marblehead</div>
     <div class="town-box">Beverly</div>
     <div class="town-box">Lynn</div>
-    <div class="town-box">Nahant</div>
     <div class="town-box">Peabody</div>
     <div class="town-box">Danvers</div>
+    <div class="town-box">Nahant</div>
     <div class="town-box">Saugus</div>
     <div class="town-box">Revere</div>
     <div class="town-box">Winthrop</div>
@@ -232,25 +240,26 @@
     <div class="town-box">Ipswich</div>
   </div>
 
-  <p style="margin-top:20px; text-align:center; font-size:1rem; color:#333;">
+  <p style="text-align:center; margin-top:20px; color:#444;">
     If it's in the North Shore — we cover it.
   </p>
 
   <!-- LEAD FORM -->
   <div class="lead-form">
     <h2 style="text-align:center; color:#0033a0;">Get Your Free North Shore Real Estate Consultation</h2>
-    <p style="text-align:center; margin-top:10px;">No pressure. No obligation. Just real expertise.</p>
+    <p style="text-align:center;">No pressure. No obligation. Just expert guidance.</p>
 
     <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
 
-      <!-- Honeypot -->
-      <input type="text" name="_honey" style="display:none">
-
-      <!-- FormSubmit Settings -->
+      <!-- Required FormSubmit fields -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="New North Shore Real Estate Lead">
       <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
 
+      <!-- Honeypot -->
+      <input type="text" name="_honey" style="display:none">
+
+      <!-- Actual Inputs -->
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
 
