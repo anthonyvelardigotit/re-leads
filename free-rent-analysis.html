@@ -239,11 +239,20 @@
 
     <h2 style="text-align:center; margin-top:40px;">Request Your Free Report</h2>
 
-    <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST" style="margin-top:20px;">
+    <!-- UPDATED FORM: Web3Forms -->
+    <form action="https://api.web3forms.com/submit" method="POST" style="margin-top:20px;">
 
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Rent Analysis Request">
-      <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
+      <!-- Required Web3Forms access key -->
+      <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+
+      <!-- Form settings -->
+      <input type="hidden" name="subject" value="New Rent Analysis Request - AVRealtyManagement.com">
+      <input type="hidden" name="from_name" value="AV Realty & Management Website">
+      <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+      <input type="hidden" name="form_source" value="Free Rent Analysis Page">
+
+      <!-- Spam honeypot -->
+      <input type="checkbox" name="botcheck" style="display:none;">
 
       <label>Full Name</label>
       <input type="text" name="name" required>
