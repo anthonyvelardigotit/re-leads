@@ -152,6 +152,7 @@
       border-radius: 6px;
       font-size: 16px;
       margin-top: 10px;
+      box-sizing: border-box;
     }
 
     textarea {
@@ -174,7 +175,6 @@
       background-color: #00257a;
     }
 
-    /* FOOTER */
     footer {
       background: #f5f5f5;
       padding: 30px 20px;
@@ -244,35 +244,37 @@
     If it's in the North Shore — we cover it.
   </p>
 
-  <!-- LEAD FORM -->
   <div class="lead-form">
     <h2 style="text-align:center; color:#0033a0;">Get Your Free North Shore Real Estate Consultation</h2>
-    <p style="text-align:center;">No pressure. No obligation. Just expert guidance.</p>
+    <p style="text-align:center; margin-top:10px;">No pressure. No obligation. Just expert guidance.</p>
 
     <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-
-      <!-- Required FormSubmit fields -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New North Shore Real Estate Lead">
-      <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-
-      <!-- Honeypot -->
       <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
+      <input type="hidden" name="_subject" value="New North Shore Lead from AVRealtyManagement.com">
 
-      <!-- Actual Inputs -->
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+      <div style="margin-bottom: 15px;">
+        <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
+      <div style="margin-bottom: 15px;">
+        <label for="email" style="display: block; font-weight: bold; color: #0033a0;">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone">
+      <div style="margin-bottom: 15px;">
+        <label for="phone" style="display: block; font-weight: bold; color: #0033a0;">Phone Number</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
 
-      <label for="message">What are you looking to do?</label>
-      <textarea id="message" name="message" placeholder="Buying? Selling? Investing? Which town(s) are you interested in?"></textarea>
+      <div style="margin-bottom: 15px;">
+        <label for="message" style="display: block; font-weight: bold; color: #0033a0;">What are you looking to do?</label>
+        <textarea id="message" name="message" placeholder="Buying? Selling? Investing? Which town(s) are you interested in?"></textarea>
+      </div>
 
-      <div style="text-align:center;">
+      <div style="text-align: center;">
         <button type="submit">Request Your Consultation</button>
       </div>
     </form>
