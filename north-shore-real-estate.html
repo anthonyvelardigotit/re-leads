@@ -183,6 +183,15 @@
       font-size: 14px;
       margin-top: 40px;
     }
+
+    footer a {
+      color: #0033a0;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -248,10 +257,19 @@
     <h2 style="text-align:center; color:#0033a0;">Get Your Free North Shore Real Estate Consultation</h2>
     <p style="text-align:center; margin-top:10px;">No pressure. No obligation. Just expert guidance.</p>
 
-    <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-      <input type="hidden" name="_subject" value="New North Shore Lead from AVRealtyManagement.com">
+    <!-- UPDATED FORM: Web3Forms -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Required access key -->
+      <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+
+      <!-- Form settings -->
+      <input type="hidden" name="subject" value="New North Shore Lead from AVRealtyManagement.com">
+      <input type="hidden" name="from_name" value="AV Realty & Management Website">
+      <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+      <input type="hidden" name="form_source" value="North Shore Real Estate Page">
+
+      <!-- Spam honeypot -->
+      <input type="checkbox" name="botcheck" style="display:none;">
 
       <div style="margin-bottom: 15px;">
         <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
