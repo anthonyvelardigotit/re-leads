@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <title>Mortgage Calculator | AV Realty & Management</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Free North Shore MA mortgage calculator from AV Realty & Management. Estimate your monthly mortgage payment including principal, interest, taxes, and insurance for homes and investment properties.">
+  <meta name="keywords" content="mortgage calculator North Shore MA, home loan payment estimate, AV Realty & Management calculator, monthly mortgage payment, Boston North Shore real estate">
+
   <link rel="icon" type="image/jpeg" href="favicon.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
@@ -53,10 +58,18 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
+    h1 {
+      text-align: center;
+      color: #0033a0;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
     h2 {
       text-align: center;
       color: #0033a0;
       margin-bottom: 30px;
+      font-size: 1.2rem;
     }
 
     label {
@@ -209,6 +222,7 @@
   </nav>
 
   <div class="container">
+    <h1>Mortgage Payment Calculator</h1>
     <h2>Estimate Your Monthly Payment</h2>
 
     <label for="amount">Loan Amount ($)</label>
@@ -227,15 +241,25 @@
 
     <div class="email-box">
       <h3>Want a copy of your result?</h3>
-      <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST" onsubmit="updateHiddenResult()">
-        <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Mortgage Calculator Result from Website">
-        <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-        <input type="hidden" id="hidden-result" name="Calculated Monthly Payment" value="">
+      <!-- UPDATED FORM: Web3Forms -->
+      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="updateHiddenResult()">
+        <!-- Required Web3Forms access key -->
+        <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+
+        <!-- Form settings -->
+        <input type="hidden" name="subject" value="Mortgage Calculator Result from Website">
+        <input type="hidden" name="from_name" value="AV Realty & Management Website">
+        <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+        <input type="hidden" name="form_source" value="Mortgage Calculator Page">
+
+        <!-- Calculated result -->
+        <input type="hidden" id="hidden-result" name="calculated_monthly_payment" value="">
+
+        <!-- Spam honeypot -->
+        <input type="checkbox" name="botcheck" style="display:none;">
 
         <label for="userEmail">Enter your email address:</label>
-        <input type="email" name="Email Address" id="userEmail" required>
+        <input type="email" name="email" id="userEmail" required>
 
         <button type="submit">Send My Result</button>
       </form>
