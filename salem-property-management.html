@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Salem MA Property Management | Full-Service Landlord Solutions</title>
+  <meta name="description" content="Full-service Salem MA property management for single-family homes, condos, and multifamily rentals. Local North Shore property manager handling leasing, rent collection, maintenance, inspections, and compliance. Free rent analysis.">
+  <meta name="keywords" content="Salem property management, Salem MA property manager, Salem landlord services, Salem rental management, North Shore property management, rent my house Salem MA">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #000;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background-color: #0033a0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    nav a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0033a0;
+        width: 100%;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        padding: 10px 0;
+      }
+      .nav-links.active { display: flex; }
+    }
+
+    /* HEADER */
+    header {
+      background: url('hero.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+      border-bottom: 2px solid #0033a0;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      background: rgba(0,0,0,0.5);
+      padding: 8px 14px;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 1.1rem;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .two-column { grid-template-columns: 1fr; }
+    }
+
+    .list-check {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .list-check li {
+      padding-left: 20px;
+      margin-bottom: 10px;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .list-check li::before {
+      content: "✔";
+      color: #ffcc00;
+      position: absolute;
+      left: 0;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      background: #eef3ff;
+      border: 1px solid #0033a0;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .service-card h3 {
+      color: #0033a0;
+      margin-top: 0;
+    }
+
+    .lead-form {
+      margin-top: 40px;
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0033a0;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #00257a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #0033a0;
+      font-size: 14px;
+      background: #f5f5f5;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#services">Services</a>
+    <a href="about.html">About</a>
+    <a href="calculator.html">Mortgage Calculator</a>
+    <a href="index.html#listings">Search Listings</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Salem MA Property Management</h1>
+  <p class="tagline">Professional, transparent, full-service management for Salem landlords & investors.</p>
+</header>
+
+<div class="container">
+
+  <h2 style="text-align:center; color:#0033a0;">Full-Service Property Management in Salem, Massachusetts</h2>
+
+  <p style="font-size:1rem; line-height:1.7; margin-top:15px;">
+    Salem is one of the most in-demand North Shore rental markets — high tenant demand, strong rental rates, and constant turnover driven by city attractions, schools, and commuters.  
+    Whether you own a single-family home, condo, or multi-family building, AV Realty &amp; Management provides **complete Salem property management** to protect your investment, reduce your workload, and maximize long-term returns.
+  </p>
+
+  <div class="two-column" style="margin-top:30px;">
+    <div>
+      <h2>Who We Help</h2>
+      <ul class="list-check">
+        <li>Local Salem landlords seeking hands-off management.</li>
+        <li>Investors with multi-family rental portfolios.</li>
+        <li>Out-of-state owners needing trusted boots-on-the-ground.</li>
+        <li>Homeowners moving but wanting to keep their Salem property as a rental.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>What Makes Salem Unique</h2>
+      <ul class="list-check">
+        <li>High demand from young professionals & students.</li>
+        <li>Consistent year-round rental market.</li>
+        <li>Strong ROI for multi-family buildings.</li>
+        <li>High tourism drives premium short & mid-term rental potential.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="text-align:center; margin-top:45px; color:#0033a0;">Salem Property Management Services</h2>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>Leasing & Marketing</h3>
+      <p>Professional photos, listing syndication, showings, and placement of qualified tenants.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Tenant Screening</h3>
+      <p>Credit, background, employment, landlord history, eviction reports — we select only strong applicants.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Rent Collection</h3>
+      <p>Systematic rent collection, late notices, and direct deposits to keep your income predictable.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Maintenance Coordination</h3>
+      <p>Reliable contractors, transparent communication, and proactive upkeep to protect your asset.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Lease Enforcement & Notices</h3>
+      <p>We ensure compliance with Massachusetts landlord-tenant law and handle all required paperwork.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Financial Reporting</h3>
+      <p>Clear monthly and annual statements for tax purposes and performance tracking.</p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:25px;">
+    <a href="free-rent-analysis.html" class="btn" style="display:inline-block; padding:14px 22px;">Request a Free Salem Rent Analysis</a>
+  </div>
+
+  <div class="lead-form">
+    <h2 style="text-align:center; color:#0033a0;">Speak with a Salem Property Management Expert</h2>
+    <p style="text-align:center; margin-top:10px;">Tell us about your rental — we’ll build a custom plan for your property.</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+      <input type="hidden" name="subject" value="New Salem Property Management Lead - AVRealtyManagement.com">
+      <input type="hidden" name="from_name" value="AV Realty & Management Website">
+      <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+      <input type="hidden" name="form_source" value="Salem Property Management Page">
+
+      <input type="checkbox" name="botcheck" style="display:none;">
+
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email Address</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone">
+
+      <label>Tell us about your Salem property</label>
+      <textarea name="message" placeholder="Single-family, condo, or multi-family? Current rent? Any issues you're facing?"></textarea>
+
+      <button type="submit">Request Your Consultation</button>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <div>AV Realty &amp; Management</div>
+  <div>5 Huron Street, Swampscott, MA 01907</div>
+  <div><a href="tel:9782773435">(978) 277-3435</a></div>
+  <div style="margin-top:10px; font-size:13px;">&copy; 2025 AV Realty &amp; Management LLC</div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
