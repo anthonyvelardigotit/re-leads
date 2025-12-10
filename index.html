@@ -285,6 +285,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       transition: opacity 0.5s ease-in-out, right 0.5s ease-in-out;
       opacity: 1;
+      background: transparent;
     }
 
     .social-bar.hidden {
@@ -308,10 +309,54 @@
       transform: translateX(-5px);
     }
 
+    /* Mobile footer social row (hidden on desktop by default) */
+    .mobile-social-row {
+      display: none;
+    }
+
     /* Accessibility focus outlines */
     a:focus, button:focus {
       outline: 2px solid #ffcc00;
       outline-offset: 2px;
+    }
+
+    /* MOBILE-SPECIFIC SOCIAL BEHAVIOR */
+    @media (max-width: 768px) {
+      /* Hide floating vertical bar on mobile */
+      .social-bar {
+        display: none;
+      }
+
+      .mobile-social-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-top: 1px solid #e0e0e0;
+        font-size: 0.9rem;
+        background: #f5f5f5;
+      }
+
+      .mobile-social-icons {
+        display: flex;
+        gap: 8px;
+      }
+
+      .mobile-social-icons a {
+        background-color: #0033a0;
+        color: #ffffff;
+        padding: 6px 10px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .mobile-social-icons a:hover {
+        background-color: #00257a;
+      }
     }
   </style>
   <script type="application/ld+json">
@@ -381,13 +426,12 @@
     <p class="tagline">Helping you buy, sell, and manage with peace of mind.</p>
     <p class="service-area">Based in Swampscott • Proudly serving Boston and the North Shore</p>
     <div class="header-cta">
-  <a href="north-shore-real-estate.html" class="btn">Explore North Shore Real Estate Services</a>
-</div>
+      <a href="north-shore-real-estate.html" class="btn">Explore North Shore Real Estate Services</a>
+    </div>
 
-<div class="header-cta" style="margin-top: 10px;">
-  <a href="north-shore-property-management.html" class="btn">Explore North Shore Property Management</a>
-</div>
-
+    <div class="header-cta" style="margin-top: 10px;">
+      <a href="north-shore-property-management.html" class="btn">Explore North Shore Property Management</a>
+    </div>
   </header>
 
   <main>
@@ -442,7 +486,6 @@
         <a class="btn" href="swampscott-property-management.html">Swampscott Property Management</a>
       </div>
       
-
       <!-- Elfsight Google Reviews | Untitled Google Reviews -->
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
       <div class="elfsight-app-29ea5bc8-0b12-4a77-a437-288dbe968634" data-elfsight-app-lazy></div>
@@ -465,43 +508,42 @@
       <section id="contact" class="fade-in">
         <h2>Contact Us</h2>
         <form action="https://api.web3forms.com/submit" method="POST">
-  <!-- REQUIRED: Web3Forms access key -->
-  <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+          <!-- REQUIRED: Web3Forms access key -->
+          <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
 
-  <!-- OPTIONAL: email metadata -->
-  <input type="hidden" name="subject" value="New Lead from AVRealtyManagement.com - Contact Form">
-  <input type="hidden" name="from_name" value="AV Realty & Management Website">
-  <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
-  <input type="hidden" name="form_source" value="Contact Form">
+          <!-- OPTIONAL: email metadata -->
+          <input type="hidden" name="subject" value="New Lead from AVRealtyManagement.com - Contact Form">
+          <input type="hidden" name="from_name" value="AV Realty & Management Website">
+          <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+          <input type="hidden" name="form_source" value="Contact Form">
 
-  <!-- Honeypot spam protection (Web3Forms docs) -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+          <!-- Honeypot spam protection (Web3Forms docs) -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-  <div style="margin-bottom: 15px;">
-    <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
-    <input type="text" id="name" name="name" required />
-  </div>
+          <div style="margin-bottom: 15px;">
+            <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
 
-  <div style="margin-bottom: 15px;">
-    <label for="email" style="display: block; font-weight: bold; color: #0033a0;">Email Address</label>
-    <input type="email" id="email" name="email" required />
-  </div>
+          <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; font-weight: bold; color: #0033a0;">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-  <div style="margin-bottom: 15px;">
-    <label for="phone" style="display: block; font-weight: bold; color: #0033a0;">Phone Number</label>
-    <input type="tel" id="phone" name="phone" />
-  </div>
+          <div style="margin-bottom: 15px;">
+            <label for="phone" style="display: block; font-weight: bold; color: #0033a0;">Phone Number</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
 
-  <div style="margin-bottom: 15px;">
-    <label for="message" style="display: block; font-weight: bold; color: #0033a0;">Message</label>
-    <textarea id="message" name="message" required></textarea>
-  </div>
+          <div style="margin-bottom: 15px;">
+            <label for="message" style="display: block; font-weight: bold; color: #0033a0;">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
 
-  <div style="text-align: center;">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-
+          <div style="text-align: center;">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
       </section>
     </div>
 
@@ -529,6 +571,16 @@
     </div>
     <div style="color: #666; font-size: 13px;">
       &copy; 2025 AV Realty & Management LLC. All rights reserved.
+    </div>
+
+    <!-- Mobile-only social row -->
+    <div class="mobile-social-row">
+      <span>Connect with AV Realty:</span>
+      <div class="mobile-social-icons">
+        <a href="https://www.instagram.com/av.realty/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/avrealtymgmt" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </footer>
 
@@ -570,27 +622,6 @@
         card.classList.toggle('flipped');
       });
     });
-
-    const socialBar = document.querySelector('.social-bar');
-    let scrollTimer;
-
-    function hideSocialBar() {
-      socialBar.classList.add('hidden');
-    }
-
-    function showSocialBar() {
-      socialBar.classList.remove('hidden');
-    }
-
-    function handleSocialBarScroll() {
-      showSocialBar();
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(hideSocialBar, 2000);
-    }
-
-    if (window.innerWidth < 768) {
-      window.addEventListener('scroll', handleSocialBarScroll);
-    }
   </script>
 
   <div id="guidePopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
