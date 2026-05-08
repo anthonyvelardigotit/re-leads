@@ -152,20 +152,105 @@
     }
 
     header {
-      position: relative;
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 110px 20px 70px;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(2, 12, 32, 0.88), rgba(0, 51, 160, 0.54)),
-        url('hero.jpg') no-repeat center center/cover;
-      border-bottom: 2px solid var(--gold);
-    }
+  background:
+    linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.45)),
+    url('hero.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 70px 20px 60px;
+  position: relative;
+}
+
+.hero-overlay {
+  max-width: 900px;
+  margin: auto;
+}
+
+.logo-container img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero-label {
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-bottom: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-subtitle {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.92);
+}
+
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.hero-badges span {
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.header-cta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #0033a0;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 55px 20px 45px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-badges span {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
 
     header::before {
       content: '';
@@ -921,23 +1006,42 @@
   </nav>
 
   <header>
-    <div class="hero-content">
-      <div class="logo-container">
-        <img src="logo.png" alt="AV Realty & Management Logo">
-      </div>
-      <div class="eyebrow">Boutique Real Estate • Elevated Management • North Shore MA</div>
-      <h1>Luxury-Level Service for Real Estate That Matters</h1>
-      <p class="tagline">
-        AV Realty & Management brings a polished, strategic, and hands-on approach to buying, selling, investing, and managing property across Boston and the North Shore.
-      </p>
-      <p class="service-area">Based in Swampscott • Serving Salem, Beverly, Lynn, Boston, and the North Shore</p>
-      <div class="header-cta">
-        <a href="north-shore-real-estate.html" class="btn btn-gold">Explore Real Estate Services</a>
-        <a href="north-shore-property-management.html" class="btn">Explore Property Management</a>
-        <a href="#contact" class="btn">Request a Private Consultation</a>
-      </div>
+  <div class="hero-overlay">
+    <div class="logo-container">
+      <img src="logo.png" alt="AV Realty & Management Logo">
     </div>
-  </header>
+
+    <p class="hero-label">
+      FULL SERVICE REAL ESTATE BROKERAGE
+    </p>
+
+    <h1 class="hero-title">
+      Real Estate & Property Management<br>
+      Across Boston’s North Shore
+    </h1>
+
+    <p class="hero-subtitle">
+      Helping homeowners, investors, landlords, and buyers maximize value through professional real estate brokerage and property management services.
+    </p>
+
+    <div class="hero-badges">
+      <span>Buy</span>
+      <span>Sell</span>
+      <span>Invest</span>
+      <span>Property Management</span>
+    </div>
+
+    <div class="header-cta">
+      <a href="north-shore-real-estate.html" class="btn">
+        Explore Real Estate Services
+      </a>
+
+      <a href="north-shore-property-management.html" class="btn secondary-btn">
+        Explore Property Management
+      </a>
+    </div>
+  </div>
+</header>
 
   <main>
     <div class="container">
