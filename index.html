@@ -3,500 +3,407 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>AV Realty & Management | Luxury North Shore MA Real Estate & Property Management</title>
-  <meta name="description" content="AV Realty & Management delivers elevated real estate, investment, and property management services across Swampscott, Salem, Beverly, Lynn, Boston, and the North Shore of Massachusetts.">
-  <meta name="keywords" content="AV Realty, AV Realty & Management, luxury real estate North Shore MA, Swampscott real estate broker, North Shore property management, Salem property manager, Beverly MA real estate, Lynn MA housing, Boston North Shore real estate, Massachusetts landlord services, investment property MA">
+  
+  <title>AV Realty & Management | North Shore MA Real Estate & Property Management</title>
+  <meta name="description" content="AV Realty & Management is a full service real estate brokerage specializing in property management, buying, selling, and investment strategy across Boston's North Shore, including Swampscott, Salem, Beverly, and Lynn.">
+  <meta name="keywords" content="AV Realty, AV Realty & Management, real estate North Shore MA, full service real estate brokerage, property management North Shore MA, Swampscott property manager, Salem property management, Beverly MA real estate, Lynn MA housing, Massachusetts landlord services, investment property MA">
 
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --royal: #0033a0;
-      --royal-dark: #001f66;
-      --midnight: #06132f;
-      --ink: #0a1020;
-      --gold: #c9a24a;
-      --gold-light: #f4d783;
-      --cream: #fbf8ef;
-      --stone: #f4f5f8;
+      --deep-blue: #001b55;
+      --navy: #061329;
+      --gold: #d4af37;
+      --light-gold: #f2dc87;
+      --soft-bg: #f5f7fb;
+      --text: #121212;
+      --muted: #666;
       --white: #ffffff;
-      --shadow: 0 24px 70px rgba(0, 20, 70, 0.18);
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     html, body {
       max-width: 100%;
       overflow-x: hidden;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Open Sans', sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(201, 162, 74, 0.16), transparent 34%),
-        linear-gradient(135deg, #ffffff 0%, #f5f7fb 45%, #eef2fb 100%);
+        radial-gradient(circle at top left, rgba(0,51,160,0.08), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
       margin: 0;
-      color: var(--ink);
+      padding: 0;
+      color: var(--text);
     }
 
-    h1, h2, h3, nav a, .btn, button, .eyebrow, .stat-number {
+    h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow {
       font-family: 'Montserrat', sans-serif;
     }
 
-    h1, .luxury-title {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 0.02em;
-    }
-
-    a {
-      color: inherit;
-    }
-
     nav {
-      background: rgba(6, 19, 47, 0.9);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      background: rgba(0, 31, 92, 0.94);
+      backdrop-filter: blur(14px);
       position: sticky;
       top: 0;
       z-index: 1000;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 13px 24px;
-      border-bottom: 1px solid rgba(244, 215, 131, 0.28);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .nav-shell {
-      width: min(1180px, 100%);
-      display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
-    }
-
-    .nav-brand {
-      color: var(--white);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.82rem;
-      white-space: nowrap;
+      align-items: center;
+      padding: 12px 22px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
       gap: 18px;
+      width: 100%;
+      justify-content: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 700;
-      font-size: 0.88rem;
-      position: relative;
-      transition: color 0.25s ease;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -7px;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-light));
-      transition: width 0.3s ease;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     nav a:hover {
-      color: var(--gold-light);
-    }
-
-    nav a:hover::after {
-      width: 100%;
+      color: var(--light-gold);
+      transform: translateY(-1px);
     }
 
     .portal-btn {
-      background: linear-gradient(135deg, var(--gold), #f0cf75);
-      color: var(--midnight) !important;
-      padding: 10px 14px;
-      border-radius: 999px;
-      box-shadow: 0 8px 24px rgba(201, 162, 74, 0.28);
-    }
-
-    .portal-btn::after {
-      display: none;
+      border: 1px solid rgba(212,175,55,0.7);
+      border-radius: 30px;
+      padding: 8px 14px;
     }
 
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 5px;
     }
 
     .hamburger div {
-      width: 28px;
+      width: 25px;
       height: 3px;
       background: white;
-      border-radius: 99px;
+      margin: 4px 0;
       transition: 0.4s;
     }
 
     header {
-  background:
-    linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.45)),
-    url('hero.jpg') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 70px 20px 60px;
-  position: relative;
-}
-
-.hero-overlay {
-  max-width: 900px;
-  margin: auto;
-}
-
-.logo-container img {
-  max-width: 120px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.hero-label {
-  letter-spacing: 3px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #d4af37;
-  margin-bottom: 14px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.hero-title {
-  font-size: 2.6rem;
-  line-height: 1.15;
-  margin-bottom: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.hero-subtitle {
-  max-width: 760px;
-  margin: 0 auto 28px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.92);
-}
-
-.hero-badges {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 30px;
-}
-
-.hero-badges span {
-  border: 1px solid rgba(255,255,255,0.25);
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.header-cta {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.secondary-btn {
-  background: transparent;
-  border: 1px solid white;
-}
-
-.secondary-btn:hover {
-  background: white;
-  color: #0033a0;
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 55px 20px 45px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .hero-badges span {
-    font-size: 0.8rem;
-    padding: 8px 14px;
-  }
-}
-
-    header::before {
-      content: '';
-      position: absolute;
-      width: 720px;
-      height: 720px;
-      top: -220px;
-      right: -200px;
-      background: radial-gradient(circle, rgba(244, 215, 131, 0.22), transparent 62%);
-      animation: pulseGlow 7s ease-in-out infinite alternate;
+      background:
+        linear-gradient(rgba(0, 16, 52, 0.66), rgba(0, 22, 70, 0.54)),
+        url('hero.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 64px 20px 58px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(212,175,55,0.5);
     }
 
-    header::after {
-      content: '';
+    header::before {
+      content: "";
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-      background-size: 44px 44px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 80%);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 36%),
+        linear-gradient(90deg, rgba(0,51,160,0.18), transparent, rgba(0,51,160,0.18));
       pointer-events: none;
     }
 
-    @keyframes pulseGlow {
-      from { transform: scale(0.95); opacity: 0.65; }
-      to { transform: scale(1.08); opacity: 1; }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.12) 45%, transparent 70%);
+      transform: translateX(-100%);
+      animation: luxurySweep 5s ease-in-out infinite;
+      pointer-events: none;
     }
 
-    .hero-content {
+    .hero-overlay {
+      max-width: 980px;
+      margin: auto;
       position: relative;
-      z-index: 2;
-      max-width: 1040px;
-      animation: riseIn 900ms ease both;
-    }
-
-    @keyframes riseIn {
-      from { opacity: 0; transform: translateY(26px); }
-      to { opacity: 1; transform: translateY(0); }
+      z-index: 1;
     }
 
     .logo-container img {
-      max-width: 175px;
+      max-width: 112px;
       height: auto;
-      filter: drop-shadow(0 18px 35px rgba(0,0,0,0.35));
       margin-bottom: 18px;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 9px 18px;
-      border: 1px solid rgba(244, 215, 131, 0.6);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      color: var(--gold-light);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+    .hero-label {
+      letter-spacing: 3.5px;
+      font-size: 0.78rem;
       font-weight: 700;
-      margin-bottom: 20px;
+      color: var(--light-gold);
+      margin: 0 0 13px;
+      text-transform: uppercase;
     }
 
-    h1 {
-      font-size: clamp(2.55rem, 7vw, 5.8rem);
-      line-height: 1.03;
-      margin: 0;
-      text-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.12;
+      margin: 0 auto 18px;
+      font-weight: 800;
+      color: #ffffff;
+      max-width: 850px;
+      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
     }
 
-    .tagline {
-      max-width: 820px;
-      margin: 24px auto 0;
-      font-size: clamp(1.08rem, 2vw, 1.35rem);
-      line-height: 1.7;
-      color: rgba(255,255,255,0.92);
+    .hero-subtitle {
+      max-width: 760px;
+      margin: 0 auto 26px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.94);
     }
 
-    .service-area {
-      display: inline-block;
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badges span {
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
       padding: 10px 18px;
-      margin-top: 22px;
-      border-radius: 999px;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255,255,255,0.24);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.35s ease;
+    }
+
+    .hero-badges span:hover {
+      background: rgba(212,175,55,0.18);
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(212,175,55,0.25);
     }
 
     .header-cta {
       display: flex;
       justify-content: center;
+      gap: 15px;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 30px;
+    }
+
+    .logo-container,
+    .hero-label,
+    .hero-title,
+    .hero-subtitle,
+    .hero-badges,
+    .header-cta {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: heroFadeUp 0.9s ease forwards;
+    }
+
+    .logo-container { animation-delay: 0.1s; }
+    .hero-label { animation-delay: 0.25s; }
+    .hero-title { animation-delay: 0.4s; }
+    .hero-subtitle { animation-delay: 0.55s; }
+    .hero-badges { animation-delay: 0.7s; }
+    .header-cta { animation-delay: 0.85s; }
+
+    @keyframes heroFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes luxurySweep {
+      0%, 45% { transform: translateX(-100%); }
+      75%, 100% { transform: translateX(100%); }
     }
 
     .btn, button {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, var(--royal), var(--royal-dark));
+      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
       color: white;
-      padding: 14px 22px;
+      padding: 12px 20px;
       font-size: 15px;
       text-decoration: none;
       border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin: 10px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s;
-      border: 1px solid rgba(255,255,255,0.14);
+      display: inline-block;
+      margin: 10px 6px 0;
+      transition: all 0.35s ease;
+      border: none;
       cursor: pointer;
-      box-shadow: 0 12px 35px rgba(0, 51, 160, 0.28);
       font-weight: 700;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 51, 160, 0.24);
     }
 
-    .btn::before, button::before {
-      content: '';
+    .btn::before,
+    button::before {
+      content: "";
       position: absolute;
       top: 0;
-      left: -90%;
-      width: 70%;
+      left: -120%;
+      width: 80%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.38), transparent);
-      transform: skewX(-18deg);
-      transition: left 0.7s ease;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+      transition: 0.6s;
     }
 
-    .btn:hover, button:hover {
+    .btn:hover::before,
+    button:hover::before {
+      left: 120%;
+    }
+
+    .btn:hover,
+    button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 18px 42px rgba(0, 51, 160, 0.36);
+      box-shadow: 0 14px 35px rgba(0, 51, 160, 0.34);
+      background: linear-gradient(135deg, #00257a, #00143f);
     }
 
-    .btn:hover::before, button:hover::before {
-      left: 125%;
+    .secondary-btn {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
     }
 
-    .btn-gold {
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: var(--midnight);
-      box-shadow: 0 14px 38px rgba(201, 162, 74, 0.34);
+    .secondary-btn:hover {
+      background: white;
+      color: var(--royal);
     }
 
     .container {
-      width: min(1100px, calc(100% - 36px));
-      margin: -50px auto 42px;
-      padding: 34px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(201, 162, 74, 0.22);
-      border-radius: 26px;
+      max-width: 1040px;
+      margin: 34px auto;
+      padding: 28px;
+      background: rgba(255,255,255,0.94);
+      border-radius: 22px;
       box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-      position: relative;
-      z-index: 5;
+      border: 1px solid rgba(0,51,160,0.08);
+      animation: softRise 1s ease both;
+    }
+
+    @keyframes softRise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     section {
-      margin-bottom: 62px;
+      margin-bottom: 56px;
     }
 
     h2 {
       color: var(--royal);
+      padding-bottom: 12px;
       text-align: center;
-      font-size: clamp(1.75rem, 3vw, 2.65rem);
-      margin: 0 0 16px;
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      margin-bottom: 14px;
       position: relative;
-      padding-bottom: 18px;
     }
 
     h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 92px;
+      content: "";
+      display: block;
+      width: 88px;
       height: 3px;
-      border-radius: 999px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 13px auto 0;
+      border-radius: 3px;
     }
 
     .section-intro {
       text-align: center;
+      color: var(--muted);
       max-width: 760px;
-      margin: 0 auto 26px;
-      line-height: 1.75;
-      color: #4c556c;
-      font-size: 1.02rem;
+      margin: 0 auto 24px;
+      line-height: 1.7;
     }
 
-    .stats-strip {
+    .trust-strip {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
-      margin: 34px 0 55px;
+      max-width: 1040px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
     }
 
-    .stat-card {
-      background: linear-gradient(145deg, #ffffff, #f6f8fd);
-      border: 1px solid rgba(0, 51, 160, 0.12);
-      border-radius: 20px;
-      padding: 22px;
+    .trust-card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.08);
       text-align: center;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
-    .stat-card:hover {
+    .trust-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 22px 45px rgba(0, 51, 160, 0.14);
+      box-shadow: 0 20px 45px rgba(0,51,160,0.18);
     }
 
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
+    .trust-card strong {
+      display: block;
       color: var(--royal);
-      margin-bottom: 5px;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 6px;
+      font-size: 0.98rem;
     }
 
-    .stat-label {
-      color: #566075;
-      font-size: 0.92rem;
-      font-weight: 700;
+    .trust-card span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 22px;
-      margin-top: 28px;
+      margin-top: 26px;
     }
 
     .service-box {
-      min-height: 210px;
-      perspective: 1200px;
+      height: 178px;
+      perspective: 1000px;
+      transition: transform 0.35s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-8px);
     }
 
     .card-inner {
       position: relative;
       width: 100%;
       height: 100%;
-      min-height: 210px;
       transform-style: preserve-3d;
       transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
       cursor: pointer;
@@ -504,229 +411,144 @@
 
     .card-front, .card-back {
       position: absolute;
-      inset: 0;
+      width: 100%;
+      height: 100%;
       backface-visibility: hidden;
-      border-radius: 20px;
-      padding: 22px;
+      border: 1px solid rgba(0,51,160,0.25);
+      border-radius: 16px;
+      padding: 18px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-weight: bold;
       text-align: center;
+      font-size: 14px;
       box-sizing: border-box;
-      border: 1px solid rgba(201, 162, 74, 0.34);
-      box-shadow: 0 18px 38px rgba(0,0,0,0.08);
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .card-front::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(244,215,131,.7), rgba(0,51,160,.35), transparent);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .card-front:hover, .card-back:hover {
-      box-shadow: 0 0 28px rgba(201, 162, 74, 0.25), 0 24px 55px rgba(0, 51, 160, 0.18);
+      overflow: hidden;
+      transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
     }
 
     .card-front {
-      background:
-        radial-gradient(circle at top right, rgba(201, 162, 74, 0.18), transparent 38%),
-        linear-gradient(145deg, #ffffff, #f8faff);
+      background: linear-gradient(145deg, #ffffff, #f7f9ff);
       color: var(--royal);
+      box-shadow: 0 12px 30px rgba(0,51,160,0.08);
     }
 
     .card-front h3 {
-      margin: 12px 0 0;
-      font-size: 1.08rem;
+      font-size: 1.04rem;
       line-height: 1.35;
-    }
-
-    .service-icon {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--royal), var(--royal-dark));
-      color: var(--gold-light);
-      font-size: 1.35rem;
-      box-shadow: 0 12px 26px rgba(0,51,160,0.22);
+      margin: 0;
     }
 
     .card-back {
-      background: linear-gradient(145deg, var(--midnight), var(--royal));
+      background: linear-gradient(145deg, var(--royal), var(--deep-blue));
       color: white;
       transform: rotateY(180deg);
+      line-height: 1.55;
+      font-weight: 600;
     }
 
-    .card-back p {
-      margin: 0;
-      line-height: 1.65;
-      font-size: 0.95rem;
+    .card-front::after,
+    .card-back::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(212,175,55,0.25), transparent 35%, rgba(255,255,255,0.08));
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .card-front:hover,
+    .card-back:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 18px rgba(212,175,55,0.28), 0 18px 42px rgba(0,51,160,0.18);
+    }
+
+    .card-front:hover::after,
+    .card-back:hover::after {
+      opacity: 1;
     }
 
     .card-inner.flipped {
       transform: rotateY(180deg);
     }
 
-    .split-feature {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 24px;
-      align-items: stretch;
-      margin: 48px 0;
-    }
-
-    .feature-panel {
-      border-radius: 24px;
-      padding: 30px;
-      background: linear-gradient(145deg, var(--midnight), #082a73);
-      color: white;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .feature-panel::after {
-      content: '';
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      right: -80px;
-      bottom: -100px;
-      background: radial-gradient(circle, rgba(244,215,131,.24), transparent 62%);
-    }
-
-    .feature-panel h3 {
-      margin-top: 0;
-      font-size: 1.55rem;
-      color: var(--gold-light);
-    }
-
-    .feature-panel p, .feature-panel li {
-      line-height: 1.7;
-      color: rgba(255,255,255,0.88);
-    }
-
-    .feature-panel ul {
-      margin: 18px 0 0;
-      padding-left: 20px;
-    }
-
-    .light-panel {
-      border-radius: 24px;
-      padding: 30px;
-      background: linear-gradient(145deg, #ffffff, #f7f9ff);
-      border: 1px solid rgba(0,51,160,0.12);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.07);
-    }
-
-    .light-panel h3 {
-      color: var(--royal);
-      margin-top: 0;
-      font-size: 1.45rem;
-    }
-
-    .light-panel p {
-      line-height: 1.7;
-      color: #4c556c;
-    }
-
-    .cta-band {
+    .cta-panel {
       background:
-        linear-gradient(135deg, rgba(0, 51, 160, 0.96), rgba(6, 19, 47, 0.98)),
-        radial-gradient(circle at 20% 20%, rgba(244,215,131,.35), transparent 35%);
-      border-radius: 26px;
-      padding: 34px;
-      color: white;
+        linear-gradient(135deg, rgba(0,51,160,0.96), rgba(0,21,70,0.98)),
+        radial-gradient(circle at top right, rgba(212,175,55,0.25), transparent 35%);
+      border-radius: 22px;
+      padding: 30px 22px;
       text-align: center;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(244,215,131,.25);
-    }
-
-    .cta-band h2 {
       color: white;
+      box-shadow: 0 20px 50px rgba(0,51,160,0.25);
+      border: 1px solid rgba(212,175,55,0.4);
+      margin: 30px 0;
     }
 
-    .cta-band p {
-      max-width: 780px;
-      margin: 0 auto 16px;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.88);
+    .cta-panel h2 {
+      color: white;
+      margin-top: 0;
     }
 
-    .luxury-search-box {
-      max-width: 830px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 24px;
-      background: linear-gradient(145deg, #ffffff, #f7f9ff);
-      box-shadow: 0 18px 42px rgba(0,0,0,0.08);
-      border: 1px solid rgba(201,162,74,.26);
-      text-align: center;
+    .cta-panel p {
+      max-width: 720px;
+      margin: 0 auto 10px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.7;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(35px) scale(0.98);
+      filter: blur(4px);
+      transition: opacity 0.85s ease, transform 0.85s ease, filter 0.85s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
     }
 
     input, textarea {
       width: 100%;
-      padding: 15px 16px;
-      border: 1px solid rgba(0, 51, 160, 0.18);
+      padding: 14px;
+      border: 1px solid #d7ddea;
       border-radius: 12px;
       font-size: 16px;
       box-sizing: border-box;
       background-color: white;
-      color: var(--ink);
-      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+      color: var(--royal);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
-    input:focus, textarea:focus {
+    input:focus,
+    textarea:focus {
       outline: none;
-      border-color: var(--gold);
-      box-shadow: 0 0 0 4px rgba(201,162,74,.16);
-      transform: translateY(-1px);
+      border-color: var(--royal);
+      box-shadow: 0 0 0 4px rgba(0,51,160,0.10);
     }
 
     textarea {
       resize: vertical;
-      height: 130px;
-    }
-
-    label {
-      display: block;
-      font-weight: 800;
-      color: var(--royal);
-      margin-bottom: 7px;
-      font-size: 0.92rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .form-field {
-      margin-bottom: 15px;
+      height: 120px;
     }
 
     .floating-contact, .call-button {
       position: fixed;
-      background: linear-gradient(135deg, var(--royal), var(--royal-dark));
+      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
       color: white;
-      padding: 13px 18px;
+      padding: 12px 18px;
       font-weight: bold;
       border-radius: 30px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       text-decoration: none;
       z-index: 1000;
-      transition: transform 0.3s ease, background-color 0.3s;
+      transition: all 0.3s ease;
+      animation: subtlePulse 3s ease-in-out infinite;
     }
 
     .floating-contact {
@@ -735,14 +557,18 @@
     }
 
     .call-button {
-      bottom: 78px;
+      bottom: 80px;
       right: 20px;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: var(--midnight);
     }
 
     .floating-contact:hover, .call-button:hover {
-      transform: translateY(-4px) scale(1.02);
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #00257a, #00143f);
+    }
+
+    @keyframes subtlePulse {
+      0%, 100% { box-shadow: 0 4px 14px rgba(0,51,160,0.25); }
+      50% { box-shadow: 0 8px 28px rgba(0,51,160,0.45); }
     }
 
     .social-bar {
@@ -762,50 +588,37 @@
 
     .social-bar.hidden {
       opacity: 0;
-      right: -70px;
+      right: -60px;
     }
 
     .social-bar a {
-      background: rgba(6, 19, 47, 0.9);
+      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
       color: white;
-      padding: 11px 14px;
+      padding: 10px 14px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 10px 0 0 10px;
+      border-radius: 6px 0 0 6px;
       transition: background-color 0.3s, transform 0.3s;
       font-size: 14px;
-      border: 1px solid rgba(244,215,131,.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-bar a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+      transform: translateX(-100%);
+      transition: 0.5s ease;
     }
 
     .social-bar a:hover {
-      background: var(--royal);
-      transform: translateX(-6px);
+      transform: translateX(-5px);
     }
 
-    .map-shell {
-      width: min(1100px, calc(100% - 36px));
-      margin: 40px auto;
-      padding: 28px;
-      border-radius: 26px;
-      background: rgba(255,255,255,.88);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(201,162,74,.22);
-    }
-
-    footer {
-      position: relative;
-      background: linear-gradient(135deg, var(--midnight), #071f55);
-      padding: 42px 20px;
-      text-align: center;
-      color: white;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 14px;
-      border-top: 1px solid rgba(244,215,131,.35);
-    }
-
-    footer a {
-      color: var(--gold-light) !important;
-      text-decoration: none;
+    .social-bar a:hover::after {
+      transform: translateX(100%);
     }
 
     .mobile-social-row {
@@ -813,87 +626,83 @@
     }
 
     a:focus, button:focus {
-      outline: 2px solid var(--gold-light);
-      outline-offset: 3px;
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s ease-out, transform 0.75s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
+    footer {
+      background: linear-gradient(180deg, #f5f7fb, #eef2fb);
+      padding: 34px 20px;
+      text-align: center;
+      color: var(--royal);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      border-top: 1px solid rgba(0,51,160,0.08);
     }
 
     #guidePopup {
-      border: 1px solid rgba(201,162,74,.35) !important;
-      box-shadow: 0 35px 90px rgba(0,0,0,0.35) !important;
+      border: 1px solid rgba(212,175,55,0.35) !important;
+      animation: popupFloat 0.5s ease both;
     }
 
-    @media (max-width: 900px) {
-      .stats-strip, .split-feature {
-        grid-template-columns: 1fr;
-      }
-
-      .container {
-        padding: 24px;
-      }
+    @keyframes popupFloat {
+      from { opacity: 0; transform: translate(-50%, -46%) scale(0.96); }
+      to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
     }
 
     @media (max-width: 768px) {
       nav {
-        justify-content: stretch;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .nav-shell {
-        align-items: center;
+        justify-content: flex-start;
+        min-height: 58px;
       }
 
       .nav-links {
         display: none;
         flex-direction: column;
-        align-items: stretch;
         width: 100%;
-        background: rgba(6, 19, 47, 0.98);
+        background-color: rgba(0, 31, 92, 0.98);
         position: absolute;
         top: 58px;
         left: 0;
-        padding: 16px 20px 20px;
-        border-bottom: 1px solid rgba(244,215,131,.22);
+        padding: 15px 0;
       }
 
       .nav-links.active {
         display: flex;
       }
 
-      nav a {
-        padding: 10px 0;
+      .hamburger {
+        display: flex;
       }
 
       header {
-        min-height: 82vh;
-        padding-top: 86px;
+        padding: 52px 18px 44px;
       }
 
-      .container, .map-shell {
-        width: min(100% - 24px, 1100px);
-        padding: 20px;
+      .logo-container img {
+        max-width: 95px;
       }
 
-      .service-box, .card-inner {
-        min-height: 230px;
+      .hero-title {
+        font-size: 2rem;
       }
 
-      .form-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .hero-badges span {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+      }
+
+      .container {
+        margin: 24px 14px;
+        padding: 22px 16px;
+      }
+
+      .service-box {
+        height: 190px;
       }
 
       .social-bar {
@@ -902,37 +711,37 @@
 
       .mobile-social-row {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 12px;
-        padding: 18px 0 0;
-        margin-top: 20px;
-        border-top: 1px solid rgba(244,215,131,.25);
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-top: 1px solid #e0e0e0;
         font-size: 0.9rem;
+        background: #f5f5f5;
+        flex-wrap: wrap;
       }
 
       .mobile-social-icons {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
-        justify-content: center;
       }
 
       .mobile-social-icons a {
-        background: rgba(255,255,255,.12);
-        color: #ffffff !important;
-        padding: 8px 12px;
-        border-radius: 999px;
+        background-color: var(--royal);
+        color: #ffffff;
+        padding: 6px 10px;
+        border-radius: 4px;
         text-decoration: none;
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         white-space: nowrap;
       }
 
-      .floating-contact, .call-button {
-        right: 12px;
-        padding: 11px 14px;
-        font-size: 0.88rem;
+      .floating-contact,
+      .call-button {
+        padding: 10px 14px;
+        font-size: 0.86rem;
       }
     }
 
@@ -940,7 +749,6 @@
       *, *::before, *::after {
         animation: none !important;
         transition: none !important;
-        scroll-behavior: auto !important;
       }
     }
   </style>
@@ -976,210 +784,137 @@
   },
   "url": "https://avrealtymanagement.com",
   "telephone": "+1-978-277-3435",
-  "areaServed": "Swampscott, Salem, Beverly, Lynn, Boston, North Shore MA",
-  "description": "AV Realty & Management is an elevated real estate and property management firm serving Swampscott, Boston, and the North Shore of Massachusetts. We help clients buy, sell, invest, and manage residential properties with refined strategy and dependable execution."
+  "areaServed": "Swampscott, Salem, Beverly, Lynn, North Shore MA",
+  "description": "AV Realty & Management is a full service real estate brokerage specializing in residential brokerage and property management across Swampscott and Boston's North Shore."
 }
   </script>
 </head>
 
 <body>
   <nav>
-    <div class="nav-shell">
-      <div class="nav-brand">AV Realty & Management</div>
-      <div class="hamburger" onclick="toggleMenu()" aria-label="Open navigation menu" role="button" tabindex="0">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="about.html">About</a>
-        <a href="calculator.html">Mortgage Calculator</a>
-        <a href="#listings">Search Listings</a>
-        <a href="#contact">Contact</a>
-        <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">
-          Resident Portal
-        </a>
-      </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="about.html">About</a>
+      <a href="calculator.html">Mortgage Calculator</a>
+      <a href="#listings">Search Listings</a>
+      <a href="#contact">Contact</a>
+      <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">
+        Resident Portal
+      </a>
     </div>
   </nav>
 
   <header>
-  <div class="hero-overlay">
-    <div class="logo-container">
-      <img src="logo.png" alt="AV Realty & Management Logo">
+    <div class="hero-overlay">
+      <div class="logo-container">
+        <img src="logo.png" alt="AV Realty & Management Logo">
+      </div>
+
+      <p class="hero-label">Full Service Real Estate Brokerage</p>
+
+      <h1 class="hero-title">
+        Real Estate & Property Management<br>
+        Across Boston’s North Shore
+      </h1>
+
+      <p class="hero-subtitle">
+        Helping homeowners, investors, landlords, and buyers maximize value through professional brokerage, strategic leasing, and hands-on property management services.
+      </p>
+
+      <div class="hero-badges">
+        <span>Buy</span>
+        <span>Sell</span>
+        <span>Invest</span>
+        <span>Property Management</span>
+      </div>
+
+      <div class="header-cta">
+        <a href="north-shore-real-estate.html" class="btn">Explore Real Estate Services</a>
+        <a href="north-shore-property-management.html" class="btn secondary-btn">Explore Property Management</a>
+      </div>
     </div>
+  </header>
 
-    <p class="hero-label">
-      FULL SERVICE REAL ESTATE BROKERAGE
-    </p>
-
-    <h1 class="hero-title">
-      Real Estate & Property Management<br>
-      Across Boston’s North Shore
-    </h1>
-
-    <p class="hero-subtitle">
-      Helping homeowners, investors, landlords, and buyers maximize value through professional real estate brokerage and property management services.
-    </p>
-
-    <div class="hero-badges">
-      <span>Buy</span>
-      <span>Sell</span>
-      <span>Invest</span>
-      <span>Property Management</span>
+  <div class="trust-strip fade-in">
+    <div class="trust-card">
+      <strong>Licensed Brokerage</strong>
+      <span>Professional real estate representation for buyers, sellers, and investors.</span>
     </div>
-
-    <div class="header-cta">
-      <a href="north-shore-real-estate.html" class="btn">
-        Explore Real Estate Services
-      </a>
-
-      <a href="north-shore-property-management.html" class="btn secondary-btn">
-        Explore Property Management
-      </a>
+    <div class="trust-card">
+      <strong>Management Specialty</strong>
+      <span>Leasing, maintenance coordination, rent collection, and owner support.</span>
+    </div>
+    <div class="trust-card">
+      <strong>Investor Focused</strong>
+      <span>Practical guidance built around income, value, and long-term asset performance.</span>
+    </div>
+    <div class="trust-card">
+      <strong>North Shore Local</strong>
+      <span>Based in Swampscott and serving Boston’s North Shore communities.</span>
     </div>
   </div>
-</header>
 
   <main>
     <div class="container">
-      <section class="fade-in" aria-label="Company highlights">
-        <div class="stats-strip">
-          <div class="stat-card">
-            <div class="stat-number">Local</div>
-            <div class="stat-label">North Shore market insight</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">Full Service</div>
-            <div class="stat-label">Sales, leasing, and management</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">Owner Minded</div>
-            <div class="stat-label">Strategy built around long-term value</div>
-          </div>
-        </div>
-      </section>
-
       <section id="services" class="fade-in">
-        <h2>White-Glove Real Estate Services</h2>
+        <h2>Brokerage & Property Management Services</h2>
         <p class="section-intro">
-          Real estate should feel clear, controlled, and professionally handled. Whether you are buying a home, selling an asset, placing a tenant, or protecting a rental property, AV Realty & Management delivers calm execution with an ownership mindset.
+          AV Realty & Management combines professional real estate brokerage with hands-on property management expertise, giving owners, investors, and clients one trusted partner for every stage of the real estate journey.
         </p>
 
         <div class="services-grid">
           <div class="service-box">
             <div class="card-inner">
-              <div class="card-front">
-                <div class="service-icon">🏛</div>
-                <h3>Full-Service Management</h3>
-              </div>
-              <div class="card-back">
-                <p>Leasing, maintenance coordination, rent collection, inspections, notices, resident communication, and owner reporting handled with professionalism and consistency.</p>
-              </div>
+              <div class="card-front"><h3>Full-Service Property Management</h3></div>
+              <div class="card-back"><p>Leasing, maintenance coordination, rent collection, inspections, notices, vendor communication, and resident relations handled with professionalism.</p></div>
             </div>
           </div>
-
           <div class="service-box">
             <div class="card-inner">
-              <div class="card-front">
-                <div class="service-icon">🔎</div>
-                <h3>Premium Tenant Screening</h3>
-              </div>
-              <div class="card-back">
-                <p>Credit, income, background, rental history, and landlord references reviewed carefully to help protect your property and reduce unnecessary risk.</p>
-              </div>
+              <div class="card-front"><h3>Tenant Placement & Screening</h3></div>
+              <div class="card-back"><p>Marketing, showings, applications, credit review, income verification, background checks, and landlord history review to protect your investment.</p></div>
             </div>
           </div>
-
           <div class="service-box">
             <div class="card-inner">
-              <div class="card-front">
-                <div class="service-icon">💳</div>
-                <h3>Rent Collection & Owner Reporting</h3>
-              </div>
-              <div class="card-back">
-                <p>Structured rent collection, professional follow-up, monthly statements, direct deposits, and clear communication so owners stay informed without being buried in details.</p>
-              </div>
+              <div class="card-front"><h3>Rent Collection & Owner Reporting</h3></div>
+              <div class="card-back"><p>Structured rent collection, late payment follow-up, monthly owner statements, and direct deposits to keep your property organized and accountable.</p></div>
             </div>
           </div>
-
           <div class="service-box">
             <div class="card-inner">
-              <div class="card-front">
-                <div class="service-icon">🛠</div>
-                <h3>Maintenance Coordination</h3>
-              </div>
-              <div class="card-back">
-                <p>Reliable vendor coordination, emergency response, preventative maintenance guidance, and cost-conscious solutions designed to preserve the asset.</p>
-              </div>
+              <div class="card-front"><h3>Maintenance Coordination</h3></div>
+              <div class="card-back"><p>Reliable vendor coordination, emergency response support, repair tracking, and cost-conscious solutions designed to protect the property.</p></div>
             </div>
           </div>
-
           <div class="service-box">
             <div class="card-inner">
-              <div class="card-front">
-                <div class="service-icon">📈</div>
-                <h3>Investor Consulting</h3>
-              </div>
-              <div class="card-back">
-                <p>Acquisition support, rent analysis, expense review, neighborhood insight, and practical guidance for building a stronger long-term real estate portfolio.</p>
-              </div>
+              <div class="card-front"><h3>Buyer, Seller & Investor Representation</h3></div>
+              <div class="card-back"><p>Strategic representation for clients buying, selling, or investing, with a focus on market value, negotiation, and long-term opportunity.</p></div>
             </div>
           </div>
-
           <div class="service-box">
             <div class="card-inner">
-              <div class="card-front">
-                <div class="service-icon">🏡</div>
-                <h3>Buyer, Seller & Investor Representation</h3>
-              </div>
-              <div class="card-back">
-                <p>Strategic pricing, negotiation, offer analysis, showing coordination, transaction support, and real-world guidance from first conversation to closing table.</p>
-              </div>
+              <div class="card-front"><h3>Investment Strategy & Rental Analysis</h3></div>
+              <div class="card-back"><p>Rent projections, market positioning, property evaluation, and practical insight for landlords and investors looking to build income-producing assets.</p></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="split-feature fade-in">
-        <div class="feature-panel">
-          <h3>Built for Owners Who Want Their Property Protected</h3>
-          <p>
-            A rental property is not just a door. It is an investment, a liability, a source of cash flow, and a long-term wealth vehicle. Our management approach is built around protecting income, reducing stress, and preserving property value.
-          </p>
-          <ul>
-            <li>Clear communication with owners and residents</li>
-            <li>Professional leasing and tenant placement</li>
-            <li>Hands-on problem solving before issues become expensive</li>
-            <li>Local insight across Swampscott, Salem, Beverly, Lynn, and nearby markets</li>
-          </ul>
-        </div>
-
-        <div class="light-panel">
-          <h3>A Refined Experience From First Contact</h3>
-          <p>
-            From your first consultation to your next closing, lease signing, or management report, AV Realty & Management is designed to feel sharp, responsive, and dependable.
-          </p>
-          <p>
-            You get boutique-level attention with practical real estate judgment, modern tools, and a commitment to doing the small things correctly.
-          </p>
-          <div style="text-align:center; margin-top: 18px;">
-            <a class="btn btn-gold" href="free-rent-analysis.html">Get a Free Rent Analysis</a>
-            <a class="btn" href="swampscott-property-management.html">Swampscott Property Management</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="fade-in">
-        <div class="cta-band">
-          <h2>Real Estate Guidance With a Higher Standard</h2>
-          <p>
-            Whether you are preparing to list, searching for your next home, analyzing a multifamily, or tired of self-managing, AV Realty & Management gives you a clear path forward.
-          </p>
-          <a href="#contact" class="btn btn-gold">Start the Conversation</a>
-        </div>
+      <section class="cta-panel fade-in">
+        <h2>Built for Owners Who Want More Than a Listing Agent</h2>
+        <p>
+          Whether you are buying your first multifamily, leasing a rental, selling a property, or looking for full-service management, AV Realty & Management brings brokerage knowledge and operational property management experience together under one firm.
+        </p>
+        <a class="btn secondary-btn" href="free-rent-analysis.html">Request a Free Rent Analysis</a>
+        <a class="btn secondary-btn" href="swampscott-property-management.html">Swampscott Property Management</a>
       </section>
 
       <!-- Elfsight Google Reviews | Untitled Google Reviews -->
@@ -1187,26 +922,22 @@
       <div class="elfsight-app-29ea5bc8-0b12-4a77-a437-288dbe968634" data-elfsight-app-lazy></div>
 
       <section id="listings" class="fade-in">
-        <h2>Search the Market With Confidence</h2>
-        <div class="luxury-search-box">
-          <p style="max-width: 720px; margin: 0 auto 18px; line-height: 1.75; color:#4c556c;">
-            Browse live MLS listings through our official property search portal. Refine by location, price, property type, and features, then send us the address when you are ready to tour or run the numbers.
-          </p>
-          <p style="max-width: 720px; margin: 0 auto 22px; line-height: 1.75; color:#4c556c;">
-            For buyers and investors, we can help evaluate pricing, rental potential, resale value, and the broader strategy behind the purchase.
-          </p>
-          <a class="btn btn-gold" href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener">
+        <h2>Search North Shore Listings</h2>
+        <p class="section-intro">
+          View live MLS listings directly through our official search portal. Browse available homes, refine by filters, and connect when you're ready to schedule a showing or run the numbers.
+        </p>
+        <div style="text-align: center;">
+          <a class="btn" href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener">
             Launch Property Search
           </a>
         </div>
       </section>
 
       <section id="contact" class="fade-in">
-        <h2>Request a Private Consultation</h2>
+        <h2>Start the Conversation</h2>
         <p class="section-intro">
-          Tell us what you are working on. Buying, selling, investing, renting, or property management, we will help you identify the next best step.
+          Tell us what you are working on, whether it is buying, selling, investing, renting, or full-service property management.
         </p>
-
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
           <input type="hidden" name="subject" value="New Lead from AVRealtyManagement.com - Contact Form">
@@ -1215,26 +946,24 @@
           <input type="hidden" name="form_source" value="Contact Form">
           <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div class="form-field">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required />
-            </div>
+          <div style="margin-bottom: 15px;">
+            <label for="name" style="display: block; font-weight: bold; color: #0033a0;">Full Name</label>
+            <input type="text" id="name" name="name" required />
           </div>
 
-          <div class="form-field">
-            <label for="phone">Phone Number</label>
+          <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; font-weight: bold; color: #0033a0;">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label for="phone" style="display: block; font-weight: bold; color: #0033a0;">Phone Number</label>
             <input type="tel" id="phone" name="phone" />
           </div>
 
-          <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about the property, your goals, or the service you are interested in." required></textarea>
+          <div style="margin-bottom: 15px;">
+            <label for="message" style="display: block; font-weight: bold; color: #0033a0;">Message</label>
+            <textarea id="message" name="message" required></textarea>
           </div>
 
           <div style="text-align: center;">
@@ -1244,12 +973,12 @@
       </section>
     </div>
 
-    <div class="map-shell">
-      <h2>Find Us</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.9679949971783!2d-70.92617722419632!3d42.47096937118288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e36d30e01e00b9%3A0x9ae17f45d8530d7b!2sAV%20Realty%20%26%20Management!5e0!3m2!1sen!2sus!4v1746841814412!5m2!1sen!2sus"
-        width="100%" height="320" style="border:0; border-radius:18px;"
-        allowfullscreen="" loading="lazy"
+    <div class="fade-in" style="width: 100%; max-width: 1040px; margin: 40px auto; padding: 0 20px;">
+      <h2 style="text-align: center; color: #0033a0; font-family: 'Montserrat', sans-serif;">Find Us</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.9679949971783!2d-70.92617722419632!3d42.47096937118288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e36d30e01e00b9%3A0x9ae17f45d8530d7b!2sAV%20Realty%20%26%20Management!5e0!3m2!1sen!2sus!4v1746841814412!5m2!1sen!2sus" 
+        width="100%" height="300" style="border:0; border-radius:18px; box-shadow: 0 18px 45px rgba(0,0,0,0.12);" 
+        allowfullscreen="" loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade"
         title="Map of AV Realty & Management location in Swampscott, MA">
       </iframe>
@@ -1257,17 +986,17 @@
   </main>
 
   <footer>
-    <div style="margin-bottom: 10px; font-weight: 800; letter-spacing:.08em; text-transform:uppercase;">
+    <div style="margin-bottom: 10px; font-weight: 700; font-family: 'Montserrat', sans-serif;">
       AV Realty & Management
     </div>
-    <div style="margin-bottom: 5px; color:rgba(255,255,255,.82);">
+    <div style="margin-bottom: 5px;">
       5 Huron Street, Swampscott, MA 01907
     </div>
     <div style="margin-bottom: 15px;">
-      <a href="tel:9782773435">(978) 277-3435</a>
+      <a href="tel:9782773435" style="color: #0033a0; text-decoration: none;">(978) 277-3435</a>
     </div>
-    <div style="color: rgba(255,255,255,.58); font-size: 13px;">
-      &copy; 2025 AV Realty & Management LLC. All rights reserved.
+    <div style="color: #666; font-size: 13px;">
+      &copy; 2026 AV Realty & Management LLC. All rights reserved.
     </div>
 
     <div class="mobile-social-row">
@@ -1289,10 +1018,10 @@
   <a href="#contact" class="floating-contact">Email Now</a>
   <a href="tel:9782773435" class="call-button">Call Now</a>
 
-  <div id="guidePopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border-radius:18px; padding:28px; z-index:1001; max-width:440px; width:90%;">
-    <h2 style="margin-top:0; font-family:Cinzel, serif; color:#0033a0; font-size:1.65rem;">Free Multifamily Guide</h2>
-    <p style="font-size:0.98rem; line-height:1.65; color:#333;">Want to learn how to buy your first multifamily property? Get our step-by-step guide for free.</p>
-    <p style="font-size:0.82rem; color:#666; margin-top:8px; line-height:1.55;">
+  <div id="guidePopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border-radius:18px; padding:24px; box-shadow:0 18px 55px rgba(0,0,0,0.25); z-index:1001; max-width:420px; width:90%;">
+    <h2 style="margin-top:0; font-family:Montserrat, sans-serif; color:#0033a0;">Free Multifamily Guide</h2>
+    <p style="font-size:0.95rem; color:#333; line-height:1.6;">Want to learn how to buy your first multifamily property? Get our step-by-step guide for free.</p>
+    <p style="font-size:0.8rem; color:#666; margin-top:8px; line-height:1.5;">
       You may also receive occasional tips on North Shore real estate and property management. You can unsubscribe at any time.
     </p>
     <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST" onsubmit="handleGuideSubmit()">
@@ -1302,11 +1031,10 @@
       <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
       <input type="hidden" name="_subject" value="New Multifamily Guide Request - AVRealtyManagement.com">
       <input type="hidden" name="form_source" value="Multifamily Guide Popup">
-
       <input type="email" name="email" required placeholder="Enter your email" style="width:100%; padding:12px; margin-top:10px; border:1px solid #ccc; border-radius:10px;">
-      <button type="submit" style="margin:15px 0 0; width:100%;">Send Me the Guide</button>
+      <button type="submit" style="margin-top:15px; width:100%;">Send Me the Guide</button>
     </form>
-    <button type="button" onclick="dismissGuidePopup()" style="margin-top:10px; background:none; box-shadow:none; border:none; color:#666; font-size:0.85rem; text-decoration:underline; cursor:pointer; width:100%;">No thanks</button>
+    <button type="button" onclick="dismissGuidePopup()" style="margin-top:12px; background:none; border:none; color:#666; font-size:0.85rem; text-decoration:underline; cursor:pointer; box-shadow:none;">No thanks</button>
   </div>
 
   <script>
@@ -1315,29 +1043,23 @@
       nav.classList.toggle("active");
     }
 
-    document.querySelector('.hamburger').addEventListener('keydown', function(event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        toggleMenu();
-      }
-    });
-
-    document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('active');
-      });
-    });
-
     const faders = document.querySelectorAll('.fade-in');
+
     const appearOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.15,
+      rootMargin: "0px 0px -60px 0px"
     };
 
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("visible");
+
+        const cards = entry.target.querySelectorAll('.service-box');
+        cards.forEach((card, index) => {
+          card.style.transitionDelay = `${index * 90}ms`;
+        });
+
         observer.unobserve(entry.target);
       });
     }, appearOptions);
@@ -1350,20 +1072,6 @@
       card.addEventListener('click', () => {
         card.classList.toggle('flipped');
       });
-    });
-
-    const socialBar = document.querySelector('.social-bar');
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-      if (!socialBar) return;
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 250) {
-        socialBar.classList.add('hidden');
-      } else {
-        socialBar.classList.remove('hidden');
-      }
-      lastScrollY = currentScrollY;
     });
 
     function showGuidePopup() {
@@ -1383,10 +1091,12 @@
 
     setTimeout(showGuidePopup, 10000);
 
+    let popupShownByScroll = false;
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (pageHeight > 0 && (scrollY / pageHeight) > 0.5) {
+      if (!popupShownByScroll && pageHeight > 0 && (scrollY / pageHeight) > 0.5) {
+        popupShownByScroll = true;
         showGuidePopup();
       }
     });
