@@ -46,6 +46,7 @@
       margin: 0;
       padding: 0;
       color: var(--text);
+      padding-top: 58px;
     }
 
     h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow {
@@ -53,10 +54,13 @@
     }
 
     nav {
-      background: rgba(0, 31, 92, 0.94);
+      background: rgba(0, 31, 92, 0.96);
       backdrop-filter: blur(14px);
-      position: sticky;
+      -webkit-backdrop-filter: blur(14px);
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
       z-index: 1000;
       display: flex;
       justify-content: space-between;
