@@ -25,12 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIINfQ3ynQByHHnOuLMICrWWUPkP3xmJ0V0="
-    crossorigin=""
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
 
   <style>
     :root {
@@ -553,173 +548,209 @@
       line-height: 1.55;
     }
 
-    /* MAP */
-    .map-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 24px;
+
+
+    /* Leaflet base safeguards */
+    .leaflet-container {
+      position: relative;
       overflow: hidden;
-      box-shadow: var(--shadow);
-      background: #fff;
+      outline: 0;
+      background: #dfe6ee;
+      font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+
+    .leaflet-pane,
+    .leaflet-tile,
+    .leaflet-marker-icon,
+    .leaflet-marker-shadow,
+    .leaflet-tile-container,
+    .leaflet-pane > svg,
+    .leaflet-pane > canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .leaflet-tile {
+      filter: inherit;
+      visibility: hidden;
+    }
+
+    .leaflet-tile-loaded {
+      visibility: inherit;
+    }
+
+    .leaflet-zoom-box {
+      width: 0;
+      height: 0;
+      box-sizing: border-box;
+      z-index: 800;
+    }
+
+    /* AVAILABLE RENTALS MAP */
+    .rentals-map-wrap {
+      max-width: 1040px;
+      margin: 0 auto;
     }
 
     #available-rentals-map {
-      min-height: 560px;
       width: 100%;
+      height: 440px;
+      border-radius: 22px;
+      border: 1px solid rgba(0,51,160,0.10);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.10);
+      overflow: hidden;
       background: #e9eef5;
     }
 
-    .property-sidebar {
-      padding: 22px;
-      border-left: 1px solid rgba(0,51,160,0.10);
+    .rental-property-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .rental-property-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 20px;
       background: #fff;
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .property-sidebar h3 {
-      margin: 0 0 6px;
+    .rental-property-card:hover,
+    .rental-property-card.is-selected {
+      transform: translateY(-2px);
+      border-color: rgba(0,51,160,0.32);
+      box-shadow: 0 14px 30px rgba(0,51,160,0.10);
+    }
+
+    .rental-property-copy {
+      min-width: 0;
+    }
+
+    .rental-property-city {
+      margin: 0 0 4px;
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.70rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .rental-property-card h3 {
+      margin: 0 0 5px;
       color: var(--deep-blue);
-      font-size: 1.1rem;
+      font-size: 1.02rem;
     }
 
-    .property-sidebar > p {
-      margin: 0 0 16px;
+    .rental-property-card p {
+      margin: 0;
       color: var(--muted);
-      font-size: .84rem;
+      font-size: 0.82rem;
       line-height: 1.5;
     }
 
-    .property-card {
-      border: 1px solid rgba(0,51,160,0.12);
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 12px;
-      background: linear-gradient(180deg, #fff, #f9fbff);
-      transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
-    }
-
-    .property-card:hover,
-    .property-card.active {
-      border-color: rgba(0,51,160,.45);
-      transform: translateY(-1px);
-      box-shadow: 0 12px 26px rgba(0,51,160,.10);
-    }
-
-    .property-card .city {
-      color: var(--gold);
-      text-transform: uppercase;
-      font-size: .68rem;
-      letter-spacing: .08em;
-      font-weight: 800;
-    }
-
-    .property-card h4 {
-      font-family: 'Montserrat', sans-serif;
-      margin: 4px 0 6px;
-      color: var(--deep-blue);
-      font-size: 1rem;
-    }
-
-    .property-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .82rem;
-      line-height: 1.45;
-    }
-
-    .property-card .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 9px;
-      color: var(--success);
-      font-size: .78rem;
-      font-weight: 800;
-    }
-
-    .property-card .status::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--success);
-    }
-
-    .property-actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-
-    .property-actions button {
-      width: 100%;
-      border-radius: 10px;
-      padding: 11px 13px;
-      font-size: .82rem;
-    }
-
-    .map-marker {
-      width: 38px;
-      height: 38px;
-      border-radius: 50% 50% 50% 8px;
-      transform: rotate(-45deg);
-      background: var(--royal);
-      border: 3px solid white;
-      box-shadow: 0 5px 14px rgba(0,0,0,.28);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .map-marker span {
-      transform: rotate(45deg);
-      color: #fff;
-      font-weight: 900;
-      font-size: 13px;
-      font-family: 'Montserrat', sans-serif;
+    .rental-property-card .property-select-btn {
+      flex: 0 0 auto;
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      box-shadow: none;
+      white-space: nowrap;
     }
 
     .selected-property-banner {
       display: none;
-      margin: 0 auto 20px;
       max-width: 900px;
-      padding: 16px 18px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,122,74,.25);
-      background: rgba(13,122,74,.07);
-      color: #22503d;
+      margin: 0 auto 18px;
+      padding: 13px 16px;
+      border: 1px solid rgba(0,51,160,0.16);
+      border-radius: 12px;
+      background: #f7f9ff;
+      color: #46536a;
+      font-size: 0.86rem;
       line-height: 1.45;
     }
 
-    .selected-property-banner.show { display: block; }
+    .selected-property-banner.show {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
 
     .selected-property-banner strong {
-      display: block;
+      color: var(--deep-blue);
       font-family: 'Montserrat', sans-serif;
-      color: var(--success);
-      margin-bottom: 3px;
     }
 
     .selected-property-banner button {
-      margin-top: 10px;
-      padding: 8px 13px;
-      font-size: .76rem;
+      flex: 0 0 auto;
+      padding: 7px 11px;
       border-radius: 999px;
+      font-size: 0.72rem;
       box-shadow: none;
     }
 
-    .leaflet-popup-content-wrapper { border-radius: 14px; }
-    .leaflet-popup-content { min-width: 215px; }
-    .popup-city { color: var(--gold); text-transform: uppercase; font-size: .68rem; letter-spacing: .07em; font-weight: 800; }
-    .popup-address { font-family: 'Montserrat', sans-serif; font-weight: 800; color: var(--deep-blue); margin: 4px 0 7px; }
-    .popup-text { color: var(--muted); font-size: .82rem; line-height: 1.45; }
-    .popup-interest {
+    .leaflet-popup-content-wrapper {
+      border-radius: 14px;
+    }
+
+    .leaflet-popup-content {
+      margin: 15px 17px;
+      min-width: 200px;
+    }
+
+    .map-popup-city {
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .map-popup-address {
+      margin: 3px 0 6px;
+      color: var(--deep-blue);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+    }
+
+    .map-popup-text {
+      color: var(--muted);
+      font-size: 0.80rem;
+      line-height: 1.45;
+    }
+
+    .map-popup-btn {
       width: 100%;
       margin-top: 10px;
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: .8rem;
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      box-shadow: none;
+    }
+
+    .av-map-dot {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--royal);
+      border: 3px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
     }
 
     .faq-list {
@@ -846,8 +877,6 @@
       .trust-strip { grid-template-columns: repeat(2, 1fr); }
       .city-grid, .steps { grid-template-columns: repeat(2, 1fr); }
       .search-layout { grid-template-columns: 1fr; }
-      .map-shell { grid-template-columns: 1fr; }
-      .property-sidebar { border-left: 0; border-top: 1px solid rgba(0,51,160,.10); }
     }
 
     @media (max-width: 760px) {
@@ -880,7 +909,11 @@
       .full-form-wrap { padding: 23px 17px; }
       .cta-panel { margin: 0 16px 60px; padding: 30px 18px; }
       .floating-contact, .call-button { right: 12px; padding: 9px 12px; font-size: 0.75rem; }
-      #available-rentals-map { min-height: 420px; }
+      #available-rentals-map { height: 360px; }
+      .rental-property-grid { grid-template-columns: 1fr; }
+      .rental-property-card { align-items: flex-start; }
+      .rental-property-card .property-select-btn { flex: 0 0 auto; }
+      .selected-property-banner.show { align-items: flex-start; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1056,21 +1089,36 @@
 
   <main>
 
+
     <section class="section fade-in" id="available-rentals">
-      <p class="eyebrow">Available & Upcoming Rentals</p>
-      <h2>Explore AV Realty & Management Properties</h2>
+      <p class="eyebrow">AV Realty Managed Rentals</p>
+      <h2>Available Properties</h2>
       <p class="section-intro">
-        Select a property on the map or from the property list. When you choose a property, it will be attached automatically to your rental inquiry.
+        Explore our managed rental properties below. Select a property you are interested in and we will attach it automatically to your rental inquiry.
       </p>
 
-      <div class="map-shell">
-        <div id="available-rentals-map" aria-label="Interactive map of available AV Realty & Management rental properties"></div>
+      <div class="rentals-map-wrap">
+        <div id="available-rentals-map" aria-label="Interactive map of AV Realty & Management rental properties"></div>
 
-        <aside class="property-sidebar">
-          <h3>Properties</h3>
-          <p>Choose the property you are interested in to continue to the renter intake form.</p>
-          <div id="property-list"></div>
-        </aside>
+        <div class="rental-property-grid">
+          <article class="rental-property-card" data-property-id="94-greenwood-ave-swampscott-ma">
+            <div class="rental-property-copy">
+              <p class="rental-property-city">Swampscott, MA</p>
+              <h3>94 Greenwood Ave</h3>
+              <p>Select this property to inquire about current or upcoming availability.</p>
+            </div>
+            <button class="property-select-btn" type="button" data-select-property="94-greenwood-ave-swampscott-ma">I'm Interested</button>
+          </article>
+
+          <article class="rental-property-card" data-property-id="34-maple-ave-nahant-ma">
+            <div class="rental-property-copy">
+              <p class="rental-property-city">Nahant, MA</p>
+              <h3>34 Maple Ave</h3>
+              <p>Select this property to inquire about current or upcoming availability.</p>
+            </div>
+            <button class="property-select-btn" type="button" data-select-property="34-maple-ave-nahant-ma">I'm Interested</button>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1143,9 +1191,8 @@
         </p>
 
         <div id="selected-property-banner" class="selected-property-banner" aria-live="polite">
-          <strong>Selected Property</strong>
-          <span id="selected-property-text"></span>
-          <button type="button" id="clear-property">Clear Property Selection</button>
+          <span><strong>Property selected:</strong> <span id="selected-property-text"></span></span>
+          <button type="button" id="clear-property">Clear</button>
         </div>
 
         <div class="full-form-wrap">
@@ -1320,11 +1367,7 @@
   <a href="#rental-search" class="floating-contact">Rental Form</a>
   <a href="tel:9782773435" class="call-button">Call Now</a>
 
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin="">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
     function toggleMenu() {
@@ -1362,6 +1405,7 @@
       });
     });
 
+
     const properties = [
       {
         id: '94-greenwood-ave-swampscott-ma',
@@ -1369,8 +1413,6 @@
         city: 'Swampscott',
         state: 'MA',
         zip: '01907',
-        status: 'Inquire for Availability',
-        description: 'AV Realty & Management rental property',
         lat: 42.4707623,
         lng: -70.9112803
       },
@@ -1380,43 +1422,19 @@
         city: 'Nahant',
         state: 'MA',
         zip: '01908',
-        status: 'Inquire for Availability',
-        description: 'AV Realty & Management rental property',
         lat: 42.42665,
         lng: -70.92378
       }
     ];
 
-    const map = L.map('available-rentals-map', {
-      scrollWheelZoom: false,
-      zoomControl: true
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    const markerMap = new Map();
-
-    function markerIcon(number) {
-      return L.divIcon({
-        className: '',
-        html: '<div class="map-marker"><span>' + number + '</span></div>',
-        iconSize: [42, 42],
-        iconAnchor: [20, 39],
-        popupAnchor: [1, -36]
-      });
-    }
+    const propertyById = Object.fromEntries(properties.map(property => [property.id, property]));
 
     function fullAddress(property) {
       return `${property.address}, ${property.city}, ${property.state} ${property.zip}`;
     }
 
-    function updateFormsForProperty(property) {
+    function setProperty(property) {
       const address = fullAddress(property);
-      const banner = document.getElementById('selected-property-banner');
-      const bannerText = document.getElementById('selected-property-text');
 
       document.querySelectorAll('input[name="property_of_interest"]').forEach(input => {
         input.value = address;
@@ -1430,106 +1448,94 @@
       if (fullCities) fullCities.value = property.city;
 
       const quickCity = document.getElementById('quick-city');
-      if (quickCity && [...quickCity.options].some(o => o.value === property.city || o.text === property.city)) {
-        quickCity.value = property.city;
-      }
+      if (quickCity) quickCity.value = property.city;
 
-      bannerText.textContent = address;
-      banner.classList.add('show');
+      document.getElementById('selected-property-text').textContent = address;
+      document.getElementById('selected-property-banner').classList.add('show');
 
-      document.querySelectorAll('.property-card').forEach(card => {
-        card.classList.toggle('active', card.dataset.propertyId === property.id);
+      document.querySelectorAll('.rental-property-card').forEach(card => {
+        card.classList.toggle('is-selected', card.dataset.propertyId === property.id);
       });
 
-      const url = new URL(window.location.href);
-      url.searchParams.set('property', property.id);
-      history.replaceState({}, '', url);
-
-      document.getElementById('rental-search').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('rental-search').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
 
-    function clearPropertySelection() {
-      document.querySelectorAll('input[name="property_of_interest"]').forEach(input => input.value = '');
-      document.querySelectorAll('input[name="lead_type"]').forEach(input => input.value = 'General North Shore Rental Search');
+    function clearProperty() {
+      document.querySelectorAll('input[name="property_of_interest"]').forEach(input => {
+        input.value = '';
+      });
 
-      document.getElementById('selected-property-banner').classList.remove('show');
+      document.querySelectorAll('input[name="lead_type"]').forEach(input => {
+        input.value = 'General North Shore Rental Search';
+      });
+
       document.getElementById('selected-property-text').textContent = '';
-      document.querySelectorAll('.property-card').forEach(card => card.classList.remove('active'));
+      document.getElementById('selected-property-banner').classList.remove('show');
 
-      const url = new URL(window.location.href);
-      url.searchParams.delete('property');
-      history.replaceState({}, '', url.pathname + url.search + url.hash);
+      document.querySelectorAll('.rental-property-card').forEach(card => {
+        card.classList.remove('is-selected');
+      });
     }
 
-    document.getElementById('clear-property').addEventListener('click', clearPropertySelection);
-
-    function popupHtml(property) {
-      return `
-        <div class="popup-city">${property.city}, ${property.state}</div>
-        <div class="popup-address">${property.address}</div>
-        <div class="popup-text">${property.description}<br>${property.status}</div>
-        <button type="button" class="popup-interest" data-property-id="${property.id}">I'm Interested</button>
-      `;
-    }
-
-    const list = document.getElementById('property-list');
-
-    properties.forEach((property, index) => {
-      const marker = L.marker([property.lat, property.lng], {
-        icon: markerIcon(index + 1),
-        title: fullAddress(property)
-      }).addTo(map).bindPopup(popupHtml(property));
-
-      marker.on('popupopen', () => {
-        const button = document.querySelector(`.popup-interest[data-property-id="${property.id}"]`);
-        if (button) button.addEventListener('click', () => updateFormsForProperty(property), { once: true });
+    document.querySelectorAll('[data-select-property]').forEach(button => {
+      button.addEventListener('click', () => {
+        const property = propertyById[button.dataset.selectProperty];
+        if (property) setProperty(property);
       });
-
-      markerMap.set(property.id, marker);
-
-      const card = document.createElement('article');
-      card.className = 'property-card';
-      card.dataset.propertyId = property.id;
-      card.innerHTML = `
-        <div class="city">${property.city}, ${property.state}</div>
-        <h4>${property.address}</h4>
-        <p>${property.description}</p>
-        <div class="status">${property.status}</div>
-        <div class="property-actions">
-          <button type="button" data-action="select">I'm Interested</button>
-        </div>
-      `;
-
-      card.addEventListener('click', event => {
-        if (event.target.matches('button[data-action="select"]')) {
-          updateFormsForProperty(property);
-          return;
-        }
-
-        map.flyTo([property.lat, property.lng], 15, { duration: 0.6 });
-        marker.openPopup();
-      });
-
-      list.appendChild(card);
     });
 
-    const bounds = L.latLngBounds(properties.map(p => [p.lat, p.lng]));
-    map.fitBounds(bounds, { padding: [45, 45], maxZoom: 13 });
+    document.getElementById('clear-property').addEventListener('click', clearProperty);
 
-    map.on('click', () => map.scrollWheelZoom.enable());
+    const map = L.map('available-rentals-map', {
+      scrollWheelZoom: false,
+      zoomControl: true
+    });
 
-    const params = new URLSearchParams(window.location.search);
-    const selectedPropertyId = params.get('property');
-    const selectedProperty = properties.find(p => p.id === selectedPropertyId);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
-    if (selectedProperty) {
-      updateFormsForProperty(selectedProperty);
-      const marker = markerMap.get(selectedProperty.id);
-      if (marker) {
-        map.flyTo([selectedProperty.lat, selectedProperty.lng], 15, { duration: 0.6 });
-        marker.openPopup();
-      }
-    }
+    properties.forEach((property, index) => {
+      const icon = L.divIcon({
+        className: '',
+        html: `<div class="av-map-dot">${index + 1}</div>`,
+        iconSize: [34, 34],
+        iconAnchor: [17, 17]
+      });
+
+      const popup = `
+        <div class="map-popup-city">${property.city}, ${property.state}</div>
+        <div class="map-popup-address">${property.address}</div>
+        <div class="map-popup-text">AV Realty & Management rental property</div>
+        <button class="map-popup-btn" type="button" data-map-property="${property.id}">I'm Interested</button>
+      `;
+
+      const marker = L.marker([property.lat, property.lng], {
+        icon,
+        title: fullAddress(property)
+      }).addTo(map).bindPopup(popup);
+
+      marker.on('popupopen', () => {
+        const button = document.querySelector(`[data-map-property="${property.id}"]`);
+        if (button) {
+          button.addEventListener('click', () => setProperty(property), { once: true });
+        }
+      });
+    });
+
+    map.fitBounds(
+      L.latLngBounds(properties.map(property => [property.lat, property.lng])),
+      { padding: [44, 44], maxZoom: 13 }
+    );
+
+    // Ensure the map calculates its dimensions correctly after the page layout finishes.
+    window.addEventListener('load', () => {
+      setTimeout(() => map.invalidateSize(), 100);
+    });
   </script>
 </body>
 </html>
