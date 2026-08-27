@@ -2,363 +2,880 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mortgage Calculator | AV Realty & Management</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <meta name="description" content="Free North Shore MA mortgage calculator from AV Realty & Management. Estimate your monthly mortgage payment including principal, interest, taxes, and insurance for homes and investment properties.">
-  <meta name="keywords" content="mortgage calculator North Shore MA, home loan payment estimate, AV Realty & Management calculator, monthly mortgage payment, Boston North Shore real estate">
+  <title>Mortgage Calculator North Shore MA | AV Realty & Management</title>
+  <meta name="description" content="Use AV Realty & Management's free North Shore MA mortgage calculator to estimate principal, interest, property taxes, insurance, HOA, and monthly housing costs for homes and investment properties." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://avrealtymanagement.com/calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mortgage Calculator North Shore MA | AV Realty & Management" />
+  <meta property="og:description" content="Estimate your monthly mortgage payment and total housing costs for a North Shore Massachusetts property." />
+  <meta property="og:url" content="https://avrealtymanagement.com/calculator.html" />
+  <meta property="og:image" content="https://avrealtymanagement.com/hero.jpg" />
+  <meta property="og:site_name" content="AV Realty & Management" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mortgage Calculator North Shore MA" />
+  <meta name="twitter:description" content="Estimate principal, interest, taxes, insurance, HOA, and monthly payment." />
+  <meta name="twitter:image" content="https://avrealtymanagement.com/hero.jpg" />
 
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f5f5f5;
-      color: #000;
-      margin: 0;
-      padding: 0;
+    :root {
+      --royal: #0033a0;
+      --deep-blue: #001b55;
+      --gold: #d4af37;
+      --light-gold: #f2dc87;
+      --soft-bg: #f5f7fb;
+      --text: #121212;
+      --muted: #666;
+      --shadow: 0 18px 45px rgba(0,0,0,0.12);
     }
 
-    h1, h2, h3, nav a, .btn, button {
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 58px;
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(0,51,160,0.08), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+    }
+
+    h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow, .metric-value {
       font-family: 'Montserrat', sans-serif;
     }
 
-    header {
-      background-color: #0033a0;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #00257a;
-    }
-
-    .logo-container img {
-      max-width: 160px;
-      height: auto;
-    }
-
     nav {
-      background-color: #0033a0;
-      text-align: center;
-      padding: 10px;
+      background: rgba(0,31,92,0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 58px;
+      padding: 12px 22px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+      justify-content: center;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    nav a:hover { color: var(--light-gold); }
+
+    .portal-btn {
+      border: 1px solid rgba(212,175,55,0.7);
+      border-radius: 30px;
+      padding: 8px 14px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    header {
+      background:
+        linear-gradient(rgba(0,16,52,0.74), rgba(0,22,70,0.64)),
+        url('hero.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 72px 20px 58px;
+      position: relative;
+      border-bottom: 1px solid rgba(212,175,55,0.5);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 36%),
+        linear-gradient(90deg, rgba(0,51,160,0.18), transparent, rgba(0,51,160,0.18));
+      pointer-events: none;
+    }
+
+    .hero-overlay {
+      max-width: 940px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-container img {
+      max-width: 108px;
+      height: auto;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+    }
+
+    .hero-label {
+      color: var(--light-gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      margin: 0 0 12px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.35rem);
+      line-height: 1.08;
+      margin: 0 auto 18px;
+      max-width: 880px;
+      font-weight: 800;
+      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
+    }
+
+    .hero-subtitle {
+      max-width: 780px;
+      margin: 0 auto 22px;
+      font-size: 1.03rem;
+      line-height: 1.72;
+      color: rgba(255,255,255,0.94);
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn, button {
+      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
+      color: white;
+      padding: 12px 20px;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 999px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,51,160,0.24);
+    }
+
+    .btn:hover, button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(0,51,160,0.34);
+      background: linear-gradient(135deg, #00257a, #00143f);
+    }
+
+    .secondary-btn {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.72);
+      box-shadow: none;
+    }
+
+    .secondary-btn:hover {
+      background: white;
+      color: var(--royal);
     }
 
     .container {
-      max-width: 600px;
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: 34px auto;
       padding: 30px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.96);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,51,160,0.08);
     }
 
-    h1 {
+    .eyebrow {
       text-align: center;
-      color: #0033a0;
-      margin-bottom: 10px;
-      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 800;
+      margin: 0 0 6px;
     }
 
     h2 {
+      color: var(--royal);
       text-align: center;
-      color: #0033a0;
-      margin-bottom: 30px;
-      font-size: 1.2rem;
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      margin-bottom: 14px;
     }
+
+    .section-intro {
+      text-align: center;
+      color: var(--muted);
+      max-width: 800px;
+      margin: 0 auto 28px;
+      line-height: 1.75;
+    }
+
+    .calculator-layout {
+      display: grid;
+      grid-template-columns: minmax(0,1.05fr) minmax(360px,0.95fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .calculator-panel,
+    .results-panel {
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 20px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.07);
+    }
+
+    .calculator-panel {
+      background: #fff;
+      padding: 24px;
+    }
+
+    .results-panel {
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.18), transparent 34%),
+        linear-gradient(145deg, #f8faff, #ffffff);
+      padding: 24px;
+      position: sticky;
+      top: 88px;
+    }
+
+    .section-title-small {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--deep-blue);
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin: 0 0 15px;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 13px;
+    }
+
+    .full-width { grid-column: 1 / -1; }
 
     label {
       display: block;
-      margin: 15px 0 5px;
-      font-weight: bold;
+      margin-bottom: 6px;
+      font-weight: 700;
+      color: var(--deep-blue);
+      font-size: 0.84rem;
     }
 
-    input {
+    input, select {
       width: 100%;
-      padding: 12px;
+      padding: 12px 13px;
+      border: 1px solid #d7ddea;
+      border-radius: 11px;
       font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
+      background: white;
+      color: #1c2841;
+      font-family: 'Open Sans', sans-serif;
     }
 
-    .result {
-      margin-top: 25px;
-      padding: 15px;
-      background: #0033a0;
-      color: white;
-      border-radius: 8px;
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--royal);
+      box-shadow: 0 0 0 4px rgba(0,51,160,0.10);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 13px;
+    }
+
+    .metric {
+      background: white;
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 15px;
+      padding: 16px;
       text-align: center;
-      font-size: 1.2em;
-      font-weight: bold;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.4;
+      min-height: 34px;
+    }
+
+    .metric-value {
+      color: var(--royal);
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    .breakdown {
+      margin-top: 18px;
+      background: white;
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 15px;
+      padding: 16px;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid #edf0f6;
+      color: #4c586b;
+      font-size: 0.88rem;
+    }
+
+    .breakdown-row:last-child { border-bottom: 0; }
+
+    .analysis-note {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 14px;
+      background: #fff;
+      border-left: 4px solid var(--gold);
+      color: #4c586b;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    .lead-cta {
+      margin-top: 20px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(0,51,160,0.10);
+    }
+
+    .lead-cta p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.9rem;
     }
 
     .email-box {
-      margin-top: 30px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #fafafa;
+      margin-top: 26px;
+      padding: 22px;
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 18px;
+      background: #f8faff;
     }
 
     .email-box h3 {
-      margin-top: 0;
-      font-size: 1.1em;
+      margin: 0 0 8px;
+      color: var(--deep-blue);
     }
 
-    button {
-      margin-top: 15px;
-      background-color: #0033a0;
+    .email-box p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .info-card {
+      background: linear-gradient(145deg, #ffffff, #f8faff);
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px;
+      color: var(--deep-blue);
+      font-size: 1rem;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.89rem;
+    }
+
+    .cta-panel {
+      margin-top: 56px;
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.22), transparent 35%),
+        linear-gradient(135deg, rgba(0,51,160,0.98), rgba(0,21,70,0.98));
+      border-radius: 22px;
+      padding: 32px 24px;
       color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #00257a;
-    }
-
-    .back-link {
-      display: block;
       text-align: center;
-      margin-top: 30px;
-      text-decoration: none;
-      color: #0033a0;
-      font-weight: bold;
+      box-shadow: 0 20px 50px rgba(0,51,160,0.24);
+      border: 1px solid rgba(212,175,55,0.35);
     }
 
-    .back-link:hover {
-      text-decoration: underline;
+    .cta-panel h2 { color: white; margin-top: 0; }
+
+    .cta-panel p {
+      max-width: 760px;
+      margin: 0 auto 16px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.7;
     }
 
     footer {
+      background: linear-gradient(180deg, #f5f7fb, #eef2fb);
+      padding: 34px 20px;
       text-align: center;
-      padding: 20px;
-      background-color: #0033a0;
-      color: white;
+      color: var(--royal);
       font-size: 14px;
-      margin-top: 50px;
+      border-top: 1px solid rgba(0,51,160,0.08);
     }
 
-    .social-bar {
-      position: fixed;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      z-index: 999;
+    .footer-links {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      transition: opacity 0.5s ease-in-out, right 0.5s ease-in-out;
-      opacity: 1;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 12px 0 14px;
     }
 
-    .social-bar.hidden {
-      opacity: 0;
-      right: -60px;
-    }
-
-    .social-bar a {
-      background-color: #0033a0;
-      color: white;
-      padding: 10px 14px;
+    .footer-links a {
+      color: var(--royal);
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px 0 0 6px;
-      transition: background-color 0.3s, transform 0.3s;
-      font-size: 14px;
+      font-weight: 700;
     }
 
-    .social-bar a:hover {
-      background-color: #00257a;
-      transform: translateX(-5px);
+    @media (max-width: 980px) {
+      .calculator-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .results-panel {
+        position: static;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .floating-contact {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0033a0;
-      color: white;
-      padding: 12px 18px;
-      font-weight: bold;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      text-decoration: none;
-      z-index: 1000;
-      transition: background-color 0.3s;
-    }
+    @media (max-width: 768px) {
+      nav {
+        justify-content: flex-start;
+        min-height: 58px;
+      }
 
-    .floating-contact:hover {
-      background-color: #00257a;
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0,31,92,0.98);
+        position: absolute;
+        top: 58px;
+        left: 0;
+        padding: 15px 0;
+      }
+
+      .nav-links.active { display: flex; }
+      .hamburger { display: flex; }
+
+      header { padding: 54px 18px 46px; }
+      .hero-title { font-size: 2.05rem; }
+      .hero-subtitle { font-size: 0.95rem; }
+
+      .container {
+        margin: 24px 14px;
+        padding: 20px 15px;
+      }
+
+      .input-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width { grid-column: auto; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Mortgage Calculator",
+    "url": "https://avrealtymanagement.com/calculator.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "isAccessibleForFree": true,
+    "provider": {
+      "@type": "RealEstateAgent",
+      "name": "AV Realty & Management",
+      "url": "https://avrealtymanagement.com/"
+    },
+    "description": "Free mortgage calculator for estimating principal, interest, taxes, insurance, HOA, and total monthly housing costs."
+  }
+  </script>
 </head>
+
 <body>
+
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="north-shore-real-estate.html">Real Estate</a>
+      <a href="north-shore-property-management.html">Property Management</a>
+      <a href="north-shore-ma-apartments.html">Apartments</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Resident Portal</a>
+    </div>
+  </nav>
+
   <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="AV Realty Logo">
+    <div class="hero-overlay">
+      <div class="logo-container">
+        <a href="index.html"><img src="logo.png" alt="AV Realty & Management Logo"></a>
+      </div>
+
+      <p class="hero-label">Free Buyer & Investor Tool</p>
+      <h1 class="hero-title">North Shore MA Mortgage Calculator</h1>
+      <p class="hero-subtitle">
+        Estimate your monthly mortgage payment, principal and interest, property taxes, insurance, HOA, and total monthly housing cost before you make an offer or compare financing scenarios.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#calculator" class="btn">Calculate a Payment</a>
+        <a href="rental-property-calculator.html" class="btn secondary-btn">Analyze a Rental Property</a>
+      </div>
     </div>
   </header>
 
-  <nav>
-    <a href="index.html#services">Services</a>
-    <a href="about.html">About</a>
-    <a href="calculator.html">Mortgage Calculator</a>
-    <a href="index.html#listings">Search Listings</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+  <main>
+    <div class="container" id="calculator">
+      <p class="eyebrow">Mortgage Payment Estimate</p>
+      <h2>See the Monthly Cost Before You Buy</h2>
+      <p class="section-intro">
+        Enter your financing assumptions below. The calculator updates automatically as you adjust the purchase price, down payment, interest rate, term, taxes, insurance, and HOA.
+      </p>
 
-  <div class="container">
-    <h1>Mortgage Payment Calculator</h1>
-    <h2>Estimate Your Monthly Payment</h2>
+      <div class="calculator-layout">
 
-    <label for="amount">Loan Amount ($)</label>
-    <input type="number" id="amount" placeholder="e.g., 350000" />
+        <section class="calculator-panel">
+          <div class="section-title-small">Property & Financing</div>
 
-    <label for="interest">Interest Rate (%)</label>
-    <input type="number" id="interest" placeholder="e.g., 6.5" step="0.01" />
+          <div class="input-grid">
+            <div>
+              <label for="purchasePrice">Purchase Price</label>
+              <input type="number" id="purchasePrice" value="600000" min="0" step="1000">
+            </div>
 
-    <label for="years">Loan Term (Years)</label>
-    <input type="number" id="years" placeholder="e.g., 30" />
+            <div>
+              <label for="downPaymentPct">Down Payment (%)</label>
+              <input type="number" id="downPaymentPct" value="20" min="0" max="100" step="0.1">
+            </div>
 
-    <label for="tax">Monthly Taxes + Insurance ($)</label>
-    <input type="number" id="tax" placeholder="e.g., 400" />
+            <div>
+              <label for="interest">Interest Rate (%)</label>
+              <input type="number" id="interest" value="6.75" min="0" step="0.01">
+            </div>
 
-    <div class="result" id="result">Monthly Payment: $0.00</div>
+            <div>
+              <label for="years">Loan Term (Years)</label>
+              <select id="years">
+                <option>30</option>
+                <option>20</option>
+                <option>15</option>
+                <option>10</option>
+              </select>
+            </div>
 
-    <div class="email-box">
-      <h3>Want a copy of your result?</h3>
-      <!-- UPDATED FORM: Web3Forms -->
-      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="updateHiddenResult()">
-        <!-- Required Web3Forms access key -->
-        <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+            <div>
+              <label for="annualTaxes">Annual Property Taxes</label>
+              <input type="number" id="annualTaxes" value="7200" min="0" step="100">
+            </div>
 
-        <!-- Form settings -->
-        <input type="hidden" name="subject" value="Mortgage Calculator Result from Website">
-        <input type="hidden" name="from_name" value="AV Realty & Management Website">
-        <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
-        <input type="hidden" name="form_source" value="Mortgage Calculator Page">
+            <div>
+              <label for="annualInsurance">Annual Homeowners Insurance</label>
+              <input type="number" id="annualInsurance" value="2400" min="0" step="100">
+            </div>
 
-        <!-- Hidden fields for all calculator details -->
-        <input type="hidden" id="hidden-result" name="calculated_monthly_payment" value="">
-        <input type="hidden" id="hidden-amount" name="loan_amount" value="">
-        <input type="hidden" id="hidden-interest" name="interest_rate_percent" value="">
-        <input type="hidden" id="hidden-years" name="loan_term_years" value="">
-        <input type="hidden" id="hidden-tax" name="monthly_taxes_insurance" value="">
-        <input type="hidden" id="hidden-summary" name="calculation_summary" value="">
+            <div>
+              <label for="monthlyHoa">Monthly HOA / Condo Fee</label>
+              <input type="number" id="monthlyHoa" value="0" min="0" step="10">
+            </div>
 
-        <!-- Spam honeypot -->
-        <input type="checkbox" name="botcheck" style="display:none;">
+            <div>
+              <label for="monthlyPmi">Monthly PMI / Mortgage Insurance</label>
+              <input type="number" id="monthlyPmi" value="0" min="0" step="10">
+            </div>
+          </div>
 
-        <label for="userEmail">Enter your email address:</label>
-        <input type="email" name="email" id="userEmail" required>
+          <button type="button" style="width:100%; margin-top:20px;" onclick="calculate()">Update Payment</button>
 
-        <button type="submit">Send My Result</button>
-      </form>
+          <div class="email-box">
+            <h3>Want a Copy of Your Estimate?</h3>
+            <p>Send the current calculation to your email and keep the financing assumptions for reference.</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST" onsubmit="updateHiddenResult()">
+              <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+              <input type="hidden" name="subject" value="Mortgage Calculator Result from Website">
+              <input type="hidden" name="from_name" value="AV Realty & Management Website">
+              <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+              <input type="hidden" name="form_source" value="Mortgage Calculator Page">
+
+              <input type="hidden" id="hidden-result" name="calculated_monthly_payment" value="">
+              <input type="hidden" id="hidden-purchase" name="purchase_price" value="">
+              <input type="hidden" id="hidden-down" name="down_payment_percent" value="">
+              <input type="hidden" id="hidden-loan" name="loan_amount" value="">
+              <input type="hidden" id="hidden-interest" name="interest_rate_percent" value="">
+              <input type="hidden" id="hidden-years" name="loan_term_years" value="">
+              <input type="hidden" id="hidden-tax" name="annual_property_taxes" value="">
+              <input type="hidden" id="hidden-insurance" name="annual_insurance" value="">
+              <input type="hidden" id="hidden-hoa" name="monthly_hoa" value="">
+              <input type="hidden" id="hidden-pmi" name="monthly_pmi" value="">
+              <input type="hidden" id="hidden-summary" name="calculation_summary" value="">
+              <input type="checkbox" name="botcheck" style="display:none;">
+
+              <label for="userEmail">Email Address</label>
+              <input type="email" name="email" id="userEmail" autocomplete="email" required>
+              <button type="submit" style="width:100%; margin-top:14px;">Send My Estimate</button>
+            </form>
+          </div>
+        </section>
+
+        <aside class="results-panel">
+          <div class="section-title-small">Estimated Monthly Cost</div>
+
+          <div class="metrics-grid">
+            <div class="metric">
+              <div class="metric-label">Total Monthly Payment</div>
+              <div class="metric-value" id="totalPayment">$0</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-label">Principal & Interest</div>
+              <div class="metric-value" id="piPayment">$0</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-label">Estimated Loan Amount</div>
+              <div class="metric-value" id="loanAmount">$0</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-label">Down Payment</div>
+              <div class="metric-value" id="downPayment">$0</div>
+            </div>
+          </div>
+
+          <div class="breakdown">
+            <div class="breakdown-row"><span>Property Taxes</span><strong id="taxMonthly">$0/mo</strong></div>
+            <div class="breakdown-row"><span>Insurance</span><strong id="insuranceMonthly">$0/mo</strong></div>
+            <div class="breakdown-row"><span>HOA / Condo</span><strong id="hoaMonthly">$0/mo</strong></div>
+            <div class="breakdown-row"><span>PMI / Mortgage Insurance</span><strong id="pmiMonthly">$0/mo</strong></div>
+          </div>
+
+          <div class="analysis-note">
+            This is a preliminary estimate only. Actual mortgage payments can differ based on lender terms, escrow requirements, insurance, taxes, mortgage insurance, fees, and loan program.
+          </div>
+
+          <div class="lead-cta">
+            <p><strong>Buying on the North Shore?</strong><br>AV Realty & Management can help you evaluate homes, compare properties, and navigate the purchase process.</p>
+            <a href="north-shore-real-estate.html" class="btn">Explore Real Estate Services</a>
+          </div>
+        </aside>
+      </div>
+
+      <section style="margin-top:58px;">
+        <p class="eyebrow">Useful Next Steps</p>
+        <h2>More Tools for Buyers, Landlords & Investors</h2>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Rental Property Calculator</h3>
+            <p>Evaluating an investment property? Estimate cash flow, NOI, cap rate, cash-on-cash return, and DSCR.</p>
+            <a href="rental-property-calculator.html" class="btn" style="margin-top:14px;">Analyze a Rental Property</a>
+          </article>
+
+          <article class="info-card">
+            <h3>Free Rent Analysis</h3>
+            <p>Own a rental property? Get a local estimate of what your North Shore property may rent for.</p>
+            <a href="free-rent-analysis.html" class="btn" style="margin-top:14px;">Estimate My Rent</a>
+          </article>
+
+          <article class="info-card">
+            <h3>Search North Shore Homes</h3>
+            <p>Browse live MLS listings and compare available homes before refining your financing assumptions.</p>
+            <a href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener" class="btn" style="margin-top:14px;">Search Homes for Sale</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-panel">
+        <h2>Need Help Turning the Payment Into a Real Buying Strategy?</h2>
+        <p>
+          A monthly-payment estimate is only one part of the decision. AV Realty & Management can help you compare properties, understand value, evaluate investment potential, and make a more informed North Shore real estate decision.
+        </p>
+        <a href="index.html#contact" class="btn secondary-btn">Start a Conversation</a>
+      </section>
+
     </div>
-
-    <a class="back-link" href="index.html">&larr; Back to Home</a>
-  </div>
+  </main>
 
   <footer>
-    &copy; 2025 AV Realty & Management LLC
+    <div style="font-family:'Montserrat',sans-serif;font-weight:800;">AV Realty & Management</div>
+    <div style="margin-top:6px;">5 Huron Street, Swampscott, MA 01907</div>
+    <div style="margin-top:5px;"><a href="tel:9782773435" style="color:#0033a0;text-decoration:none;">(978) 277-3435</a></div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="north-shore-real-estate.html">Real Estate</a>
+      <a href="rental-property-calculator.html">Rental Property Calculator</a>
+      <a href="free-rent-analysis.html">Free Rent Analysis</a>
+    </div>
+
+    <div style="color:#666;font-size:13px;">&copy; 2026 AV Realty & Management LLC. All rights reserved.</div>
   </footer>
 
-  <div class="social-bar">
-    <a href="https://www.instagram.com/av.realty/" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/avrealtymgmt" target="_blank">Facebook</a>
-    <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank">LinkedIn</a>
-  </div>
-
-  <a href="index.html#contact" class="floating-contact">Contact</a>
-
   <script>
-    const amount = document.getElementById('amount');
-    const interest = document.getElementById('interest');
-    const years = document.getElementById('years');
-    const tax = document.getElementById('tax');
-    const result = document.getElementById('result');
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
 
-    const hiddenResult = document.getElementById('hidden-result');
-    const hiddenAmount = document.getElementById('hidden-amount');
-    const hiddenInterest = document.getElementById('hidden-interest');
-    const hiddenYears = document.getElementById('hidden-years');
-    const hiddenTax = document.getElementById('hidden-tax');
-    const hiddenSummary = document.getElementById('hidden-summary');
+    function money(value) {
+      if (!isFinite(value)) return "$0";
+      return value.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 0
+      });
+    }
 
-    const inputs = [amount, interest, years, tax];
-    inputs.forEach(input => input.addEventListener('input', calculate));
+    function num(id) {
+      return parseFloat(document.getElementById(id).value) || 0;
+    }
 
     function calculate() {
-      const principal = parseFloat(amount.value);
-      const monthlyRate = parseFloat(interest.value) / 100 / 12;
-      const numberOfPayments = parseFloat(years.value) * 12;
-      const monthlyTax = parseFloat(tax.value) || 0;
+      const purchasePrice = num("purchasePrice");
+      const downPct = num("downPaymentPct");
+      const rate = num("interest");
+      const years = num("years");
+      const annualTaxes = num("annualTaxes");
+      const annualInsurance = num("annualInsurance");
+      const monthlyHoa = num("monthlyHoa");
+      const monthlyPmi = num("monthlyPmi");
 
-      if (!principal || !monthlyRate || !numberOfPayments) {
-        result.textContent = "Monthly Payment: $0.00";
-        return;
+      const downPayment = purchasePrice * (downPct / 100);
+      const loan = Math.max(purchasePrice - downPayment, 0);
+
+      const monthlyRate = rate / 100 / 12;
+      const n = years * 12;
+
+      let pi = 0;
+
+      if (loan > 0 && n > 0) {
+        if (monthlyRate === 0) {
+          pi = loan / n;
+        } else {
+          const x = Math.pow(1 + monthlyRate, n);
+          pi = (loan * x * monthlyRate) / (x - 1);
+        }
       }
 
-      const x = Math.pow(1 + monthlyRate, numberOfPayments);
-      const monthlyPayment = (principal * x * monthlyRate) / (x - 1);
-      const total = monthlyPayment + monthlyTax;
+      const taxesMonthly = annualTaxes / 12;
+      const insuranceMonthly = annualInsurance / 12;
+      const total = pi + taxesMonthly + insuranceMonthly + monthlyHoa + monthlyPmi;
 
-      result.textContent = "Monthly Payment: $" + total.toFixed(2);
+      document.getElementById("totalPayment").textContent = money(total);
+      document.getElementById("piPayment").textContent = money(pi);
+      document.getElementById("loanAmount").textContent = money(loan);
+      document.getElementById("downPayment").textContent = money(downPayment);
+
+      document.getElementById("taxMonthly").textContent = money(taxesMonthly) + "/mo";
+      document.getElementById("insuranceMonthly").textContent = money(insuranceMonthly) + "/mo";
+      document.getElementById("hoaMonthly").textContent = money(monthlyHoa) + "/mo";
+      document.getElementById("pmiMonthly").textContent = money(monthlyPmi) + "/mo";
     }
 
     function updateHiddenResult() {
-      const amt = amount.value || "0";
-      const rate = interest.value || "0";
-      const yrs = years.value || "0";
-      const tx = tax.value || "0";
+      const purchasePrice = num("purchasePrice");
+      const downPct = num("downPaymentPct");
+      const rate = num("interest");
+      const years = num("years");
+      const annualTaxes = num("annualTaxes");
+      const annualInsurance = num("annualInsurance");
+      const monthlyHoa = num("monthlyHoa");
+      const monthlyPmi = num("monthlyPmi");
 
-      hiddenResult.value = result.textContent;
-      hiddenAmount.value = amt;
-      hiddenInterest.value = rate;
-      hiddenYears.value = yrs;
-      hiddenTax.value = tx;
+      const downPayment = purchasePrice * (downPct / 100);
+      const loan = Math.max(purchasePrice - downPayment, 0);
 
-      hiddenSummary.value =
-        "Loan Amount: $" + amt +
-        ", Interest Rate: " + rate + "%, Term: " + yrs + " years, " +
-        "Taxes + Insurance: $" + tx + ", " + result.textContent;
+      document.getElementById("hidden-result").value = document.getElementById("totalPayment").textContent;
+      document.getElementById("hidden-purchase").value = purchasePrice;
+      document.getElementById("hidden-down").value = downPct;
+      document.getElementById("hidden-loan").value = loan;
+      document.getElementById("hidden-interest").value = rate;
+      document.getElementById("hidden-years").value = years;
+      document.getElementById("hidden-tax").value = annualTaxes;
+      document.getElementById("hidden-insurance").value = annualInsurance;
+      document.getElementById("hidden-hoa").value = monthlyHoa;
+      document.getElementById("hidden-pmi").value = monthlyPmi;
+
+      document.getElementById("hidden-summary").value =
+        `Purchase Price: ${purchasePrice}, Down Payment: ${downPct}%, Loan Amount: ${loan}, Interest Rate: ${rate}%, Term: ${years} years, Annual Taxes: ${annualTaxes}, Annual Insurance: ${annualInsurance}, Monthly HOA: ${monthlyHoa}, Monthly PMI: ${monthlyPmi}, Estimated Total Monthly Payment: ${document.getElementById("totalPayment").textContent}`;
     }
 
-    // Hide/reveal social bar on scroll for mobile only
-    const socialBar = document.querySelector('.social-bar');
-    let scrollTimer;
+    document.querySelectorAll("input, select").forEach(el => {
+      el.addEventListener("input", calculate);
+      el.addEventListener("change", calculate);
+    });
 
-    function hideSocialBar() {
-      socialBar.classList.add('hidden');
-    }
-
-    function showSocialBar() {
-      socialBar.classList.remove('hidden');
-    }
-
-    if (window.innerWidth < 768) {
-      window.addEventListener('scroll', () => {
-        showSocialBar();
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-          hideSocialBar();
-        }, 2000); // Hide after 2 seconds
-      });
-    }
+    calculate();
   </script>
+
 </body>
 </html>
