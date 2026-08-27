@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>AV Realty & Management | North Shore MA Real Estate & Property Management</title>
-  <meta name="description" content="AV Realty & Management is a full service real estate brokerage specializing in property management, buying, selling, and investment strategy across Boston's North Shore, including Swampscott, Salem, Beverly, and Lynn.">
+  <meta name="description" content="AV Realty & Management is a North Shore MA real estate brokerage and property management firm serving buyers, sellers, landlords, renters, and investors with local expertise, rental analysis, and free real estate tools.">
   <meta name="keywords" content="AV Realty, AV Realty & Management, real estate North Shore MA, full service real estate brokerage, property management North Shore MA, Swampscott property manager, Salem property management, Beverly MA real estate, Lynn MA housing, Massachusetts landlord services, investment property MA">
 
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -451,6 +451,104 @@
       transform: rotateY(180deg);
     }
 
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 26px;
+    }
+
+    .tool-card {
+      background: linear-gradient(145deg, #ffffff, #f7f9ff);
+      border: 1px solid rgba(0,51,160,0.12);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,51,160,0.08);
+      text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0.14), transparent 35%, rgba(255,255,255,0.08));
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0,51,160,0.16);
+      border-color: rgba(212,175,55,0.5);
+    }
+
+    .tool-card:hover::after {
+      opacity: 1;
+    }
+
+    .tool-card h3 {
+      margin: 0 0 10px;
+      color: var(--deep-blue);
+      font-size: 1.08rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tool-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tool-card .btn {
+      position: relative;
+      z-index: 1;
+      margin-top: 4px;
+    }
+
+    .tool-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(0,51,160,0.08);
+      color: var(--royal);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-resource-links {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      font-size: 0.86rem;
+    }
+
+    .footer-resource-links a {
+      color: var(--royal);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .footer-resource-links a:hover {
+      text-decoration: underline;
+    }
+
     .cta-panel {
       background:
         linear-gradient(135deg, rgba(0,51,160,0.96), rgba(0,21,70,0.98)),
@@ -756,7 +854,7 @@
   "url": "https://avrealtymanagement.com",
   "telephone": "+1-978-277-3435",
   "areaServed": "Swampscott, Salem, Beverly, Lynn, North Shore MA",
-  "description": "AV Realty & Management is a full service real estate brokerage specializing in residential brokerage and property management across Swampscott and Boston's North Shore."
+  "description": "AV Realty & Management is a full service real estate brokerage specializing in residential brokerage, property management, rental analysis, and investor-focused real estate services across Swampscott and Boston's North Shore."
 }
   </script>
 </head>
@@ -878,7 +976,47 @@
           Whether you are buying your first multifamily, leasing a rental, selling a property, or looking for full-service management, AV Realty & Management brings brokerage knowledge and operational property management experience together under one firm.
         </p>
         <a class="btn secondary-btn" href="free-rent-analysis.html">Request a Free Rent Analysis</a>
+        <a class="btn secondary-btn" href="rental-property-calculator.html">Analyze a Rental Property</a>
         <a class="btn secondary-btn" href="swampscott-property-management.html">Swampscott Property Management</a>
+      </section>
+
+
+      <section id="tools" class="fade-in">
+        <p class="eyebrow">Free Real Estate & Investor Tools</p>
+        <h2>Run the Numbers Before You Make Your Next Move</h2>
+        <p class="section-intro">
+          Use AV Realty & Management's free tools and resources to evaluate a rental property, estimate market rent, understand financing, or learn the fundamentals of multifamily investing.
+        </p>
+
+        <div class="tools-grid">
+          <div class="tool-card">
+            <span class="tool-kicker">Investor Tool</span>
+            <h3>Rental Property Calculator</h3>
+            <p>Estimate cash flow, NOI, cap rate, cash-on-cash return, DSCR, mortgage debt service, and projected annual profit.</p>
+            <a class="btn" href="rental-property-calculator.html">Analyze a Property</a>
+          </div>
+
+          <div class="tool-card">
+            <span class="tool-kicker">Landlord Tool</span>
+            <h3>Free Rent Analysis</h3>
+            <p>Get a property-specific rental value estimate and pricing guidance for a North Shore single-family, condo, or multifamily property.</p>
+            <a class="btn" href="free-rent-analysis.html">Estimate My Rent</a>
+          </div>
+
+          <div class="tool-card">
+            <span class="tool-kicker">Buyer Tool</span>
+            <h3>Mortgage Calculator</h3>
+            <p>Estimate principal and interest, financing scenarios, and monthly payment considerations before you begin or refine your home search.</p>
+            <a class="btn" href="calculator.html">Calculate a Payment</a>
+          </div>
+
+          <div class="tool-card">
+            <span class="tool-kicker">Free Guide</span>
+            <h3>Multifamily Investing Guide</h3>
+            <p>Learn the building blocks of buying and evaluating a multifamily property, from financing and rental income to operations and long-term strategy.</p>
+            <button type="button" onclick="showGuidePopup()">Get the Free Guide</button>
+          </div>
+        </div>
       </section>
 
       <!-- Elfsight Google Reviews | Untitled Google Reviews -->
@@ -893,6 +1031,9 @@
         <div style="text-align: center;">
           <a class="btn" href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener">
             Search Homes for Sale
+          </a>
+          <a class="btn" href="rental-property-calculator.html">
+            Analyze an Investment Property
           </a>
           <a class="btn" href="north-shore-ma-apartments.html">
             Find a North Shore Apartment
@@ -962,7 +1103,14 @@
     <div style="margin-bottom: 15px;">
       <a href="tel:9782773435" style="color: #0033a0; text-decoration: none;">(978) 277-3435</a>
     </div>
-    <div style="color: #666; font-size: 13px;">
+    <div class="footer-resource-links" aria-label="Free tools and resources">
+      <a href="rental-property-calculator.html">Rental Property Calculator</a>
+      <a href="free-rent-analysis.html">Free Rent Analysis</a>
+      <a href="calculator.html">Mortgage Calculator</a>
+      <a href="#guidePopup" onclick="showGuidePopup(); return false;">Multifamily Guide</a>
+    </div>
+
+    <div style="color: #666; font-size: 13px; margin-top: 14px;">
       &copy; 2026 AV Realty & Management LLC. All rights reserved.
     </div>
 
