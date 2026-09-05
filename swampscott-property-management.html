@@ -3,637 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Swampscott Property Management | AV Realty & Management</title>
-  <meta name="description" content="Local Swampscott property management for single-family homes, multifamily, and small portfolios. Rent analysis, tenant screening, maintenance, and full-service management by AV Realty & Management.">
-
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
-
+  <meta name="description" content="Local Swampscott property management for single-family homes, condos, and multifamily rentals. Leasing, rent collection, maintenance coordination, owner reporting, and hands-on local support from AV Realty & Management.">
+  <link rel="canonical" href="https://avrealtymanagement.com/swampscott-property-management.html">
+  <meta property="og:title" content="Swampscott Property Management | AV Realty & Management">
+  <meta property="og:description" content="Hands-on local property management for Swampscott landlords, investors, inherited-property owners, and out-of-area owners.">
+  <meta property="og:url" content="https://avrealtymanagement.com/swampscott-property-management.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avrealtymanagement.com/logo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      color: #000;
-    }
-
-    h1, h2, h3, nav a, .btn, button {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    nav {
-      background-color: #0033a0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-      transition: 0.4s;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #0033a0;
-        position: absolute;
-        top: 55px;
-        left: 0;
-        padding: 10px 0;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-
-    header {
-      background: url('hero.jpg') no-repeat center center/cover;
-      color: white;
-      padding: 80px 20px 60px;
-      text-align: center;
-      border-bottom: 2px solid #0033a0;
-    }
-
-    .logo-container img {
-      max-width: 160px;
-      height: auto;
-    }
-
-    .page-tagline {
-      background: rgba(0, 0, 0, 0.6);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-top: 15px;
-      font-size: 1.1rem;
-    }
-
-    .hero-subline {
-      max-width: 650px;
-      margin: 20px auto 0;
-      font-size: 0.98rem;
-      background: rgba(255, 255, 255, 0.9);
-      color: #0033a0;
-      padding: 12px 18px;
-      border-radius: 10px;
-    }
-
-    .btn, button {
-      background-color: #0033a0;
-      color: white;
-      padding: 12px 20px;
-      font-size: 16px;
-      text-decoration: none;
-      border-radius: 6px;
-      display: inline-block;
-      margin: 20px 10px 0;
-      transition: background-color 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn:hover, button:hover {
-      background-color: #00257a;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 30px auto 40px;
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 50px;
-      background: white;
-      border-radius: 12px;
-      padding: 25px 20px 30px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-    }
-
-    h1 {
-      margin-top: 15px;
-      font-size: 2rem;
-    }
-
-    h2 {
-      color: #0033a0;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-      margin-top: 0;
-      text-align: left;
-    }
-
-    h3 {
-      color: #0033a0;
-      margin-top: 20px;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 24px;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 900px) {
-      .two-column {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-top: 8px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    .highlight-box {
-      background: #f5f8ff;
-      border-radius: 10px;
-      padding: 15px 18px;
-      border-left: 4px solid #0033a0;
-      margin-top: 10px;
-    }
-
-    .stat-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .stat {
-      flex: 1 1 160px;
-      background: #f5f5f5;
-      border-radius: 10px;
-      padding: 12px 14px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.3rem;
-      color: #0033a0;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
-      box-sizing: border-box;
-      background-color: white;
-      color: #0033a0;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 110px;
-    }
-
-    .form-row {
-      margin-bottom: 12px;
-    }
-
-    .faq-item {
-      margin-bottom: 18px;
-    }
-
-    .faq-item h3 {
-      margin-bottom: 6px;
-    }
-
-    footer {
-      background-color: #f5f5f5;
-      padding: 25px 20px;
-      text-align: center;
-      color: #0033a0;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #0033a0;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    a:focus, button:focus {
-      outline: 2px solid #ffcc00;
-      outline-offset: 2px;
-    }
+    :root{--royal:#0033a0;--deep:#001b55;--navy:#061329;--gold:#d4af37;--light-gold:#f2dc87;--soft:#f5f7fb;--text:#121212;--muted:#666;--white:#fff;--shadow:0 18px 45px rgba(0,0,0,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}html,body{max-width:100%;overflow-x:hidden}
+    body{margin:0;color:var(--text);font-family:'Open Sans',sans-serif;background:radial-gradient(circle at top left,rgba(0,51,160,.08),transparent 30%),linear-gradient(180deg,#fff 0%,var(--soft) 100%);padding-top:58px}
+    h1,h2,h3,nav a,.btn,button,.eyebrow,.hero-label{font-family:'Montserrat',sans-serif}
+    nav{background:rgba(0,31,92,.96);backdrop-filter:blur(14px);position:fixed;top:0;left:0;width:100%;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:12px 22px;box-shadow:0 8px 28px rgba(0,0,0,.18)}
+    .nav-links{display:flex;align-items:center;justify-content:center;gap:18px;width:100%}nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.02em}.portal-btn{border:1px solid rgba(212,175,55,.7);border-radius:30px;padding:8px 14px}.hamburger{display:none;flex-direction:column;cursor:pointer}.hamburger div{width:25px;height:3px;background:#fff;margin:4px 0}
+    header{background:linear-gradient(rgba(0,16,52,.71),rgba(0,22,70,.62)),url('hero.jpg') no-repeat center center/cover;color:#fff;text-align:center;padding:66px 20px 62px;position:relative;overflow:hidden;border-bottom:1px solid rgba(212,175,55,.5)}
+    header:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(212,175,55,.18),transparent 36%),linear-gradient(90deg,rgba(0,51,160,.18),transparent,rgba(0,51,160,.18));pointer-events:none}
+    .hero-overlay{position:relative;z-index:1;max-width:980px;margin:auto}.logo-container img{max-width:112px;height:auto;margin-bottom:18px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}.hero-label{margin:0 0 13px;color:var(--light-gold);text-transform:uppercase;letter-spacing:3.5px;font-size:.78rem;font-weight:700}.hero-title{margin:0 auto 18px;max-width:860px;font-size:clamp(2.15rem,5vw,3.4rem);line-height:1.08;font-weight:800;text-shadow:0 8px 28px rgba(0,0,0,.35)}.hero-subtitle{max-width:790px;margin:0 auto 24px;font-size:1.06rem;line-height:1.75;color:rgba(255,255,255,.95)}.hero-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn,button{background:linear-gradient(135deg,var(--royal),var(--deep));color:#fff;padding:12px 20px;font-size:15px;text-decoration:none;border-radius:999px;display:inline-block;margin:8px 5px 0;border:none;cursor:pointer;font-weight:700;box-shadow:0 10px 25px rgba(0,51,160,.24);transition:.3s ease}.btn:hover,button:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(0,51,160,.34)}.secondary-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.72);backdrop-filter:blur(8px)}.secondary-btn:hover{background:#fff;color:var(--royal)}
+    .trust-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;max-width:1040px;margin:24px auto 0;padding:0 20px;position:relative;z-index:2}.trust-card{background:rgba(255,255,255,.94);border:1px solid rgba(0,51,160,.1);border-radius:18px;padding:18px;text-align:center;box-shadow:0 14px 35px rgba(0,0,0,.08)}.trust-card strong{display:block;color:var(--royal);font-family:'Montserrat',sans-serif;margin-bottom:6px}.trust-card span{font-size:.88rem;color:var(--muted);line-height:1.5}
+    main{max-width:1040px;margin:34px auto;padding:0 18px}section{background:rgba(255,255,255,.95);border:1px solid rgba(0,51,160,.08);border-radius:22px;box-shadow:var(--shadow);padding:30px 28px;margin-bottom:34px}h2{color:var(--royal);text-align:center;font-size:clamp(1.55rem,3vw,2.15rem);margin:0 0 12px}h2:after{content:"";display:block;width:88px;height:3px;margin:13px auto 0;border-radius:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}h3{color:var(--deep);margin:8px 0}.eyebrow{text-align:center;color:var(--royal);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.76rem;margin-bottom:8px}.section-intro{max-width:790px;margin:0 auto 24px;text-align:center;color:var(--muted);line-height:1.75}p{line-height:1.7}.two-column{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px}.info-card{background:linear-gradient(145deg,#fff,#f7f9ff);border:1px solid rgba(0,51,160,.12);border-radius:18px;padding:21px;box-shadow:0 12px 30px rgba(0,51,160,.08)}.info-card h3{margin-top:0}.info-card p{color:var(--muted);font-size:.92rem;margin-bottom:0}.highlight-box{background:#f4f7ff;border-left:4px solid var(--gold);border-radius:14px;padding:18px;margin-top:16px}ul{padding-left:20px}li{margin-bottom:8px;line-height:1.55}
+    .form-card{background:linear-gradient(145deg,#fff,#f7f9ff);border:1px solid rgba(0,51,160,.14);border-radius:20px;padding:22px;box-shadow:0 18px 40px rgba(0,51,160,.11)}label{display:block;font-weight:700;color:var(--royal);margin-bottom:6px}input,select,textarea{width:100%;padding:13px;border:1px solid #d7ddea;border-radius:11px;font-size:15px;background:#fff;color:var(--text)}textarea{min-height:120px;resize:vertical}.form-row{margin-bottom:13px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}.step{border-radius:18px;padding:20px;background:linear-gradient(145deg,#fff,#f7f9ff);border:1px solid rgba(0,51,160,.12)}.step-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--royal);color:#fff;font-weight:800;font-family:'Montserrat',sans-serif;margin-bottom:11px}.step p{color:var(--muted);font-size:.9rem;margin-bottom:0}.cta-panel{background:linear-gradient(135deg,rgba(0,51,160,.97),rgba(0,21,70,.98));color:#fff;border:1px solid rgba(212,175,55,.4)}.cta-panel h2{color:#fff}.cta-panel p{max-width:760px;margin:0 auto 12px;text-align:center;color:rgba(255,255,255,.92)}.cta-center{text-align:center}.faq-item{border-bottom:1px solid #e7eaf1;padding:13px 0}.faq-item:last-child{border-bottom:none}
+    footer{background:linear-gradient(180deg,#f5f7fb,#eef2fb);padding:34px 20px;text-align:center;color:var(--royal);font-size:14px;border-top:1px solid rgba(0,51,160,.08)}footer a{color:var(--royal);text-decoration:none;font-weight:700}.footer-links{display:flex;justify-content:center;gap:12px 18px;flex-wrap:wrap;margin-top:12px}.floating-contact,.call-button{position:fixed;right:20px;background:linear-gradient(135deg,var(--royal),var(--deep));color:#fff;padding:12px 18px;font-weight:700;border-radius:30px;box-shadow:0 4px 14px rgba(0,51,160,.3);text-decoration:none;z-index:1000}.floating-contact{bottom:20px}.call-button{bottom:80px}
+    @media(max-width:900px){.two-column,.steps{grid-template-columns:1fr}}@media(max-width:768px){nav{justify-content:flex-start;min-height:58px}.nav-links{display:none;flex-direction:column;width:100%;background:rgba(0,31,92,.98);position:absolute;top:58px;left:0;padding:15px 0}.nav-links.active{display:flex}.hamburger{display:flex}header{padding:52px 18px 46px}.logo-container img{max-width:95px}section{padding:24px 18px}.floating-contact,.call-button{padding:10px 14px;font-size:.86rem}}
   </style>
-
-  <!-- LocalBusiness / Service markup for Swampscott property management -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Swampscott Property Management",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "AV Realty & Management",
-      "image": "https://avrealtymanagement.com/logo-512.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "5 Huron Street",
-        "addressLocality": "Swampscott",
-        "addressRegion": "MA",
-        "postalCode": "01907",
-        "addressCountry": "US"
-      },
-      "telephone": "+1-978-277-3435",
-      "url": "https://avrealtymanagement.com"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Swampscott"
-    },
-    "serviceType": "Residential property management"
-  }
-  </script>
-
-  <!-- FAQ schema for this page -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What types of properties do you manage in Swampscott?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We manage single-family homes, condos, small multifamily buildings, and house-hacks in Swampscott. Whether you own one unit or a small portfolio, we tailor our management to your goals and the specific property."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does property management cost in Swampscott?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pricing depends on the number of units and the level of service you need, but most Swampscott owners pay a simple percentage of collected rent with no surprise junk fees. We are happy to provide a transparent quote after a quick call and a look at your property."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you help place a tenant and then let me self-manage?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. For some Swampscott owners, we offer lease-up only services including marketing, showings, screening, and lease execution. After that, you can self-manage, or we can continue with full-service management."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work with Section 8 and other housing programs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We have experience working with Section 8 and other local housing programs. We help you navigate inspections, paperwork, and compliance so the process is smoother and more predictable."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I get started with Swampscott property management?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The first step is a free rent and property review. Share your address and a few details about your goals, and we will run the numbers, review your current lease or situation, and outline a management plan tailored to your Swampscott property."
-        }
-      }
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Swampscott Property Management","url":"https://avrealtymanagement.com/swampscott-property-management.html","serviceType":"Residential Property Management","provider":{"@type":"RealEstateAgent","name":"AV Realty & Management","url":"https://avrealtymanagement.com","image":"https://avrealtymanagement.com/logo.png","telephone":"+1-978-277-3435","address":{"@type":"PostalAddress","streetAddress":"5 Huron Street","addressLocality":"Swampscott","addressRegion":"MA","postalCode":"01907","addressCountry":"US"}},"areaServed":{"@type":"City","name":"Swampscott","addressRegion":"MA"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What types of rental properties do you manage in Swampscott?","acceptedAnswer":{"@type":"Answer","text":"AV Realty & Management works with Swampscott single-family rentals, condos, and small multifamily properties, including properties with existing tenants or vacancies that need to be prepared for leasing."}},{"@type":"Question","name":"Can you take over management if a tenant is already in place?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can review the current rental setup, organize available documents, establish management procedures, communicate the transition, and take over day-to-day operations."}},{"@type":"Question","name":"Do you help owners who live outside Massachusetts?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide a local point of contact for out-of-area and absentee owners who need help with tenant communication, rent collection, maintenance coordination, leasing, property oversight, and owner reporting."}},{"@type":"Question","name":"Can you help with an inherited rental property in Swampscott?","acceptedAnswer":{"@type":"Answer","text":"Yes. On the property-management and real-estate side, we can help organize the current rental picture, coordinate approved property work, address vacancies, evaluate rental potential, and discuss management or sale options while the owner works with their attorney or tax professionals on estate-specific matters."}},{"@type":"Question","name":"How do I get started with Swampscott property management?","acceptedAnswer":{"@type":"Answer","text":"Start with a free property and rent review. Share the property address, current occupancy, rent information, and your goals, and AV Realty & Management will outline practical next steps."}}]}</script>
 </head>
 <body>
   <nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div>
     <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="calculator.html">Mortgage Calculator</a>
-      <a href="#contact">Free Rent Analysis</a>
+      <a href="index.html">Home</a><a href="north-shore-real-estate.html">Real Estate</a><a href="north-shore-property-management.html">Property Management</a><a href="north-shore-ma-apartments.html">Apartments</a><a href="about.html">About</a><a href="#contact">Contact</a><a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Resident Portal</a>
     </div>
   </nav>
-
   <header>
-    <div class="logo-container">
-      <a href="index.html">
-        <img src="logo.png" alt="AV Realty & Management Logo">
-      </a>
+    <div class="hero-overlay">
+      <div class="logo-container"><a href="index.html"><img src="logo.png" alt="AV Realty & Management"></a></div>
+      <p class="hero-label">Local • Hands-On • Owner Focused</p>
+      <h1 class="hero-title">Swampscott Property Management Without the Corporate Runaround</h1>
+      <p class="hero-subtitle">Local property management for Swampscott landlords, investors, inherited-property owners, and out-of-area owners who want one reliable point of contact for leasing, rent collection, maintenance coordination, and day-to-day operations.</p>
+      <div class="hero-cta"><a class="btn" href="#contact">Request a Free Property Review</a><a class="btn secondary-btn" href="free-rent-analysis.html">Get a Free Rent Analysis</a></div>
     </div>
-    <h1>Swampscott Property Management</h1>
-    <div class="page-tagline">
-      Local, hands-on management for Swampscott rental properties.
-    </div>
-    <p class="hero-subline">
-      AV Realty & Management is based in Swampscott and actively owns and manages property here.
-      We treat your home like one of our own units, with proactive leasing, careful tenant screening,
-      and systems built from real on-the-ground experience.
-    </p>
-    <a class="btn" href="#contact">Request Your Free Swampscott Rent Analysis</a>
   </header>
-
+  <div class="trust-strip">
+    <div class="trust-card"><strong>Swampscott Based</strong><span>A local point of contact for your property and your tenants.</span></div>
+    <div class="trust-card"><strong>Hands-On Management</strong><span>Practical oversight, vendor coordination, leasing, and communication.</span></div>
+    <div class="trust-card"><strong>Owner Reporting</strong><span>Clear accounting, statements, updates, and organized property records.</span></div>
+    <div class="trust-card"><strong>Brokerage + Management</strong><span>One firm for rental operations, acquisition, leasing, or eventual sale.</span></div>
+  </div>
   <main>
-    <section id="overview">
+    <section>
+      <p class="eyebrow">Property Management Built Around the Owner</p><h2>Your Rental Should Not Become Your Second Job</h2>
+      <p class="section-intro">Managing a rental property means more than collecting rent. It means handling communication, coordinating repairs, tracking documents, managing vacancies, planning renewals, and making decisions that protect the property over time.</p>
       <div class="two-column">
         <div>
-          <h2>Why Swampscott Owners Trust AV Realty & Management</h2>
-          <p>
-            Swampscott is a unique coastal market. Between seasonal demand, commuter access to Boston,
-            and an older housing stock, your property needs management that understands both the numbers
-            and the realities of owning in this town.
-          </p>
-          <p>
-            As a local owner and operator, we focus on protecting your asset, keeping good residents,
-            and making sure the property is performing the way it should.
-          </p>
-
-          <div class="highlight-box">
-            <strong>We help Swampscott owners with:</strong>
-            <ul>
-              <li>Accurate rental pricing and rent increases backed by market data</li>
-              <li>Filling vacancies with qualified residents who respect your home</li>
-              <li>Day-to-day maintenance coordination so you are not on call 24/7</li>
-              <li>Clear accounting, statements, and communication</li>
-            </ul>
-          </div>
-
-          <div class="stat-row">
-            <div class="stat">
-              <strong>Local</strong>
-              <span>Based in Swampscott and active on the North Shore</span>
-            </div>
-            <div class="stat">
-              <strong>Hands-On</strong>
-              <span>Owner-operated, not a distant corporate call center</span>
-            </div>
-            <div class="stat">
-              <strong>Investor Mindset</strong>
-              <span>We own units and think like owners</span>
-            </div>
-          </div>
+          <h3>What we handle</h3>
+          <div class="highlight-box"><ul><li>Rent collection and resident communication</li><li>Maintenance request intake and vendor coordination</li><li>Vacancy preparation, marketing, showings, and tenant screening</li><li>Lease administration and renewal coordination</li><li>Owner statements, records, and ongoing property updates</li><li>Property walkthroughs and make-ready coordination as needed</li><li>Rental pricing strategy informed by local market conditions</li></ul></div>
+          <h3 style="margin-top:24px;">A local operator matters in Swampscott</h3>
+          <p>Coastal exposure, older housing stock, parking limitations, seasonal maintenance, heating systems, basements, porches, and small multifamily layouts can all affect the day-to-day operation of a Swampscott rental. Good management starts with understanding the actual property—not treating every unit like a generic listing.</p>
         </div>
-
-        <div>
-          <h2>Free Swampscott Rent Analysis</h2>
-          <p>
-            Share your address and a few details about your property. We will review current market
-            data, your existing lease (if applicable), and send a clear plan for your next step.
-          </p>
-
-          <!-- UPDATED FORM: Web3Forms integration -->
+        <div class="form-card">
+          <h3 style="text-align:center;">Free Swampscott Property Review</h3><p style="text-align:center;color:#666;margin-top:0;">Tell us what you own and what you need help with.</p>
           <form id="contact" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Required Web3Forms access key -->
-            <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
-
-            <!-- Form settings -->
-            <input type="hidden" name="subject" value="Swampscott Property Management Lead - Website Form">
-            <input type="hidden" name="from_name" value="AV Realty & Management Website">
-            <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
-            <input type="hidden" name="form_source" value="Swampscott Property Management Page">
-
-            <!-- Spam honeypot -->
-            <input type="checkbox" name="botcheck" style="display:none;">
-
-            <div class="form-row">
-              <label for="name"><strong>Full Name</strong></label>
-              <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-row">
-              <label for="email"><strong>Email Address</strong></label>
-              <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-row">
-              <label for="phone"><strong>Phone Number</strong></label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-
-            <div class="form-row">
-              <label for="address"><strong>Property Address (Swampscott)</strong></label>
-              <input type="text" id="address" name="property_address">
-            </div>
-
-            <div class="form-row">
-              <label for="details"><strong>Tell us about your situation</strong></label>
-              <textarea id="details" name="message" placeholder="Number of units, current rent, vacancy, goals, or any concerns you have."></textarea>
-            </div>
-
-            <button type="submit">Get My Free Rent Analysis</button>
+            <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422"><input type="hidden" name="subject" value="NEW LEAD - Swampscott Property Management"><input type="hidden" name="from_name" value="AV Realty & Management Website"><input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html"><input type="hidden" name="form_source" value="Swampscott Property Management Page"><input type="checkbox" name="botcheck" style="display:none;">
+            <div class="form-row"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+            <div class="form-row"><label for="email">Email Address</label><input type="email" id="email" name="email" required></div>
+            <div class="form-row"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"></div>
+            <div class="form-row"><label for="address">Property Address</label><input type="text" id="address" name="property_address" placeholder="Swampscott, MA"></div>
+            <div class="form-row"><label for="property_type">Property Type</label><select id="property_type" name="property_type"><option value="">Select one</option><option>Single-family rental</option><option>Condo</option><option>2-family</option><option>3-family</option><option>4-family</option><option>Other</option></select></div>
+            <div class="form-row"><label for="occupancy">Current Occupancy</label><select id="occupancy" name="occupancy"><option value="">Select one</option><option>Fully occupied</option><option>Partially occupied</option><option>Vacant</option><option>Owner occupied / house hack</option></select></div>
+            <div class="form-row"><label for="details">What would you like help with?</label><textarea id="details" name="message" placeholder="Current rent, vacancy, maintenance concerns, tenant situation, inherited property, out-of-state ownership, or anything else we should know."></textarea></div>
+            <button type="submit" style="width:100%;margin-left:0;">Request My Free Review</button>
           </form>
-
-          <p style="font-size: 0.8rem; color: #666; margin-top: 8px;">
-            No obligation, no pressure. We will not share your information with third parties.
-          </p>
+          <p style="font-size:.8rem;color:#666;margin:10px 0 0;text-align:center;">No obligation. Your information is used to respond to your request.</p>
         </div>
       </div>
     </section>
-
     <section id="services">
-      <h2>Swampscott Property Management Services</h2>
-      <p>
-        Every property and owner is different. We offer both full-service management and lease-up only
-        options so you can choose the level of support that fits your situation.
-      </p>
-
-      <h3>Full-Service Management</h3>
-      <ul>
-        <li>Rental pricing strategy tailored to Swampscott and your specific street</li>
-        <li>Professional photos and listing placement on major rental sites</li>
-        <li>Pre-screening, showings, and full tenant screening (credit, background, income, housing history)</li>
-        <li>Lease drafting and execution with Massachusetts-compliant documents</li>
-        <li>Online rent collection and enforcement of payment terms</li>
-        <li>Coordination of maintenance, inspections, and seasonal work</li>
-        <li>Lease renewals, rent increase planning, and notice management</li>
-      </ul>
-
-      <h3>Lease-Up Only (Tenant Placement)</h3>
-      <p>
-        Ideal for owners who are comfortable handling maintenance and day-to-day communication but want
-        help finding the right resident.
-      </p>
-      <ul>
-        <li>Marketing and listing setup</li>
-        <li>Showings and application processing</li>
-        <li>Screening and written recommendation</li>
-        <li>Lease preparation and move-in coordination</li>
-      </ul>
-
-      <h3>Consulting for Swampscott Investors</h3>
-      <p>
-        Thinking about buying another property in Swampscott or turning your home into a rental?
-        We can help you review numbers, understand likely rents, and plan upgrades that actually move the needle.
-      </p>
-    </section>
-
-    <section id="local-expertise">
-      <h2>Local Swampscott Expertise</h2>
-      <p>
-        Swampscott is not a generic rental market. You have a mix of long-term residents, commuters, and
-        people attracted to the coastal lifestyle. Small details like parking, basement moisture, and
-        unit finishes can make a big difference in your rent and resident profile.
-      </p>
-      <p>
-        Because we live and operate here, we understand how to position your property to attract the right
-        residents and keep them long-term.
-      </p>
-
-      <div class="highlight-box">
-        <strong>We pay attention to things like:</strong>
-        <ul>
-          <li>Realistic rent ranges by street and building type</li>
-          <li>What upgrades actually add rent versus what is just cosmetic</li>
-          <li>Seasonal timing for leasing along the North Shore</li>
-          <li>Parking, storage, and amenity expectations for Swampscott residents</li>
-        </ul>
+      <p class="eyebrow">Full-Service Support</p><h2>Swampscott Property Management Services</h2><p class="section-intro">Choose the level of support that fits your property, from tenant placement to ongoing management.</p>
+      <div class="card-grid">
+        <div class="info-card"><h3>Rent Collection & Resident Communication</h3><p>Structured rent collection, payment follow-up, resident communication, and an organized point of contact for day-to-day questions.</p></div>
+        <div class="info-card"><h3>Maintenance Coordination</h3><p>Work-order intake, vendor communication, scheduling, owner approvals, repair tracking, and support with seasonal property needs.</p></div>
+        <div class="info-card"><h3>Leasing & Tenant Placement</h3><p>Rental pricing, marketing, inquiries, showings, applications, screening, lease coordination, and move-in preparation.</p></div>
+        <div class="info-card"><h3>Renewals & Turnovers</h3><p>Renewal planning, rental-position review, vacancy preparation, cleaning/repair coordination, and re-leasing support.</p></div>
+        <div class="info-card"><h3>Owner Reporting</h3><p>Monthly statements, expense organization, rent reporting, property updates, and records that help owners understand what is happening.</p></div>
+        <div class="info-card"><h3>Property Oversight</h3><p>Local walkthroughs, approved vendor access, condition observations, and coordination for owners who cannot be at the property themselves.</p></div>
       </div>
     </section>
-
+    <section>
+      <p class="eyebrow">Especially Helpful For</p><h2>Not Every Swampscott Owner Starts From the Same Place</h2>
+      <div class="card-grid">
+        <div class="info-card"><h3>Out-of-Area Owners</h3><p>If you live outside Swampscott—or outside Massachusetts—you need someone local who can communicate with tenants, coordinate vendors, and keep the property moving.</p><a class="btn" href="absentee-landlord-property-management.html">Remote Owner Management</a></div>
+        <div class="info-card"><h3>Inherited Property Owners</h3><p>If you inherited a rental, we can help organize the property-management side: occupancy, rents, documents, repairs, vacancies, leasing, and management strategy while your legal and tax advisors handle estate matters.</p><a class="btn" href="absentee-landlord-property-management.html">Inherited Property Help</a></div>
+        <div class="info-card"><h3>Owners With Existing Tenants</h3><p>You do not need to wait for a vacancy. We can review the current operating setup and create an orderly transition into professional management.</p><a class="btn" href="#contact">Discuss My Property</a></div>
+      </div>
+    </section>
     <section id="process">
-      <h2>Our Swampscott Management Process</h2>
-      <h3>1. Conversation and Rent Analysis</h3>
-      <p>
-        We start with a conversation to understand your goals and your current situation. Then we run a
-        rent analysis based on comparable properties, current demand, and the condition of your home.
-      </p>
-
-      <h3>2. Onboarding and Property Walkthrough</h3>
-      <p>
-        If we decide to work together, we review your current lease (if occupied), walk the property,
-        and outline any recommended repairs or improvements before marketing or taking over management.
-      </p>
-
-      <h3>3. Leasing and Screening</h3>
-      <p>
-        We market the unit, manage inquiries and showings, and complete thorough screening before we
-        recommend a resident for approval.
-      </p>
-
-      <h3>4. Day-to-Day Management and Reporting</h3>
-      <p>
-        We handle communication, rent, work orders, and notices while you receive regular statements
-        and updates. You stay informed without being overwhelmed.
-      </p>
-
-      <a class="btn" href="#contact">Talk About Your Swampscott Property</a>
+      <p class="eyebrow">Simple Onboarding</p><h2>How Swampscott Management Starts</h2>
+      <div class="steps"><div class="step"><div class="step-num">1</div><h3>Property Review</h3><p>We discuss the property, occupancy, rents, current challenges, and your goals.</p></div><div class="step"><div class="step-num">2</div><h3>Walkthrough & Plan</h3><p>We review the physical property and identify immediate operational or make-ready priorities.</p></div><div class="step"><div class="step-num">3</div><h3>Onboarding</h3><p>We organize available documents, resident information, payment processes, vendors, and owner reporting.</p></div><div class="step"><div class="step-num">4</div><h3>Ongoing Management</h3><p>We take over the agreed day-to-day responsibilities while keeping you informed.</p></div></div>
     </section>
-
+    <section class="cta-panel"><h2>Not Sure What Your Swampscott Rental Should Be Earning?</h2><p>Start with the numbers. Request a free rent analysis or use our free rental property calculator to evaluate income, expenses, NOI, cap rate, cash flow, and DSCR.</p><div class="cta-center"><a class="btn secondary-btn" href="free-rent-analysis.html">Free Rent Analysis</a><a class="btn secondary-btn" href="rental-property-calculator.html">Rental Property Calculator</a></div></section>
     <section id="faq">
-      <h2>Swampscott Property Management FAQ</h2>
-
-      <div class="faq-item">
-        <h3>What types of properties do you manage in Swampscott?</h3>
-        <p>
-          We manage single-family homes, condos, small multifamily buildings, and house-hack style
-          setups where the owner may live in one unit and rent the others. If you are not sure whether
-          your property is a fit, reach out and we can talk through it.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How much does property management cost in Swampscott?</h3>
-        <p>
-          Most owners pay a percentage of collected rent plus any agreed-upon leasing fees. Pricing is
-          straightforward and transparent so you can see exactly what you are paying for. After we know
-          more about your property and needs, we will provide a written quote.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Can you help if I already have a tenant in place?</h3>
-        <p>
-          Yes. We can take over mid-lease, review your current lease terms, and work with your resident
-          so the transition is smooth. We will discuss timing together so there is minimal disruption.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Do you work with Section 8 and other voucher programs?</h3>
-        <p>
-          We do. We are familiar with inspections, paperwork, and communication with local housing
-          authorities and can help you stay organized and compliant.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How do I get started?</h3>
-        <p>
-          The simplest next step is to request a free rent analysis using the form above. You can also
-          call <a href="tel:19782773435">(978) 277-3435</a> and mention that you are calling about
-          Swampscott property management.
-        </p>
-      </div>
+      <p class="eyebrow">Questions From Owners</p><h2>Swampscott Property Management FAQ</h2>
+      <div class="faq-item"><h3>What types of rental properties do you manage in Swampscott?</h3><p>We work with single-family rentals, condos, and small multifamily properties. That includes occupied properties, vacancies, owner-occupied multifamily properties transitioning to rentals, and properties that need make-ready coordination before leasing.</p></div>
+      <div class="faq-item"><h3>Can you take over management if I already have a tenant?</h3><p>Yes. We can review the existing rental setup and available documents, establish new management procedures, communicate the transition, and take over the agreed day-to-day responsibilities.</p></div>
+      <div class="faq-item"><h3>Do you help owners who live outside Massachusetts?</h3><p>Yes. Remote ownership is one of the situations where a local property manager can add the most value. We can serve as the local point of contact for leasing, tenant communication, maintenance coordination, property oversight, and reporting.</p></div>
+      <div class="faq-item"><h3>Can you help with an inherited property?</h3><p>Yes. We can help with the real-estate and property-management side of the property, including understanding occupancy, rents, condition, vacancies, repairs, leasing potential, and ongoing management. Estate, probate, tax, and legal questions should be handled with the appropriate professionals.</p></div>
+      <div class="faq-item"><h3>How much does property management cost?</h3><p>Pricing depends on the property, unit count, occupancy, and services needed. After a quick review, we can provide a written proposal that clearly explains management and any applicable leasing fees.</p></div>
+      <div class="faq-item"><h3>How do I get started?</h3><p>Submit the property-review form above or call <a href="tel:9782773435">(978) 277-3435</a>. We will start with the current property situation and outline practical next steps.</p></div>
     </section>
   </main>
-
   <footer>
-    <div style="margin-bottom: 8px; font-weight: 600;">
-      AV Realty & Management
-    </div>
-    <div style="margin-bottom: 4px;">
-      5 Huron Street, Swampscott, MA 01907
-    </div>
-    <div style="margin-bottom: 10px;">
-      <a href="tel:19782773435">(978) 277-3435</a> • <a href="index.html">avrealtymanagement.com</a>
-    </div>
-    <div style="font-size: 13px; color: #555; margin-top: 6px;">
-      Serving Swampscott, Salem, Lynn, Beverly, Marblehead, Peabody, Nahant, Danvers, and the North Shore.
-    </div>
-    <div style="color: #666; font-size: 13px; margin-top: 10px;">
-      &copy; 2025 AV Realty & Management LLC. All rights reserved.
-    </div>
+    <div style="font-weight:800;font-family:'Montserrat',sans-serif;">AV Realty & Management</div><div style="margin-top:6px;">5 Huron Street, Swampscott, MA 01907</div><div style="margin-top:6px;"><a href="tel:9782773435">(978) 277-3435</a></div>
+    <div class="footer-links"><a href="north-shore-property-management.html">North Shore Property Management</a><a href="free-rent-analysis.html">Free Rent Analysis</a><a href="rental-property-calculator.html">Rental Property Calculator</a><a href="absentee-landlord-property-management.html">Out-of-State & Inherited Property</a><a href="north-shore-real-estate.html">Real Estate Services</a></div>
+    <div style="color:#666;font-size:13px;margin-top:15px;">Serving Swampscott and communities across Boston's North Shore.</div><div style="color:#666;font-size:13px;margin-top:8px;">&copy; 2026 AV Realty & Management LLC. All rights reserved.</div>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("active");
-    }
-  </script>
+  <a href="#contact" class="floating-contact">Email Now</a><a href="tel:9782773435" class="call-button">Call Now</a>
+  <script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active")}</script>
 </body>
 </html>
