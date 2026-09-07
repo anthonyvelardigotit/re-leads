@@ -4,56 +4,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Bienes Raíces en North Shore MA | Comprar, Vender e Invertir | AV Realty & Management</title>
-  <meta name="description" content="Servicios de bienes raíces en North Shore, Massachusetts. Te ayudamos a comprar, vender e invertir en Swampscott, Salem, Lynn, Beverly, Marblehead, Peabody, Danvers, Nahant y más. Consulta gratis.">
-  <meta name="keywords" content="bienes raíces North Shore MA, realtor en Swampscott, casas en venta Salem MA, agente de bienes raíces Lynn, bienes raíces Beverly MA, comprar casa North Shore, vender casa North Shore, inversion inmobiliaria Massachusetts">
+  <title>Agente de Bienes Raíces en Español | North Shore MA | AV Realty & Management</title>
+  <meta name="description" content="Agente de bienes raíces en español en North Shore, Massachusetts. Ayuda para comprar, vender o invertir en Swampscott, Lynn, Salem, Beverly, Marblehead y otras comunidades del North Shore. Consulta sin compromiso.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://avrealtymanagement.com/north-shore-real-estate-es.html">
 
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Bienes Raíces en Español en North Shore MA | AV Realty & Management">
+  <meta property="og:description" content="Orientación clara en español para compradores, vendedores e inversionistas en el North Shore de Massachusetts.">
+  <meta property="og:url" content="https://avrealtymanagement.com/north-shore-real-estate-es.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avrealtymanagement.com/logo.png">
+  <meta property="og:site_name" content="AV Realty & Management">
+  <meta property="og:locale" content="es_US">
 
-  <!-- Tell Google this is the Spanish version -->
-  <link rel="alternate" hreflang="en" href="https://avrealtymanagement.com/north-shore-real-estate.html" />
-  <link rel="alternate" hreflang="es" href="https://avrealtymanagement.com/north-shore-real-estate-es.html" />
-  <link rel="alternate" hreflang="x-default" href="https://avrealtymanagement.com/north-shore-real-estate.html" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --royal: #0033a0;
+      --deep-blue: #001b55;
+      --navy: #061329;
+      --gold: #d4af37;
+      --light-gold: #f2dc87;
+      --soft-bg: #f5f7fb;
+      --text: #121212;
+      --muted: #666;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(0,0,0,0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+
     body {
-      font-family: 'Open Sans', sans-serif;
-      background: #f5f5f5;
       margin: 0;
-      padding: 0;
-      color: #000;
+      padding: 58px 0 0;
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(0,51,160,0.08), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
     }
 
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, nav a, button {
+    h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow {
       font-family: 'Montserrat', sans-serif;
     }
 
     nav {
-      background-color: #0033a0;
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
       z-index: 1000;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      justify-content: space-between;
+      padding: 12px 22px;
+      background: rgba(0,31,92,0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
     }
 
     .nav-links {
+      width: 100%;
       display: flex;
-      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--light-gold);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      border: 1px solid rgba(212,175,55,0.72);
+      border-radius: 30px;
+      padding: 8px 14px;
     }
 
     .hamburger {
@@ -65,241 +108,924 @@
     .hamburger div {
       width: 25px;
       height: 3px;
-      background: white;
+      background: #fff;
       margin: 4px 0;
-      transition: 0.3s;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      padding: 68px 20px 64px;
+      border-bottom: 1px solid rgba(212,175,55,0.5);
+      background:
+        linear-gradient(rgba(0,16,52,0.71), rgba(0,22,70,0.62)),
+        url('hero.jpg') no-repeat center center/cover;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 36%),
+        linear-gradient(90deg, rgba(0,51,160,0.18), transparent, rgba(0,51,160,0.18));
+      pointer-events: none;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.12) 45%, transparent 70%);
+      transform: translateX(-100%);
+      animation: luxurySweep 5s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes luxurySweep {
+      0%, 45% { transform: translateX(-100%); }
+      75%, 100% { transform: translateX(100%); }
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 1;
+      max-width: 980px;
+      margin: auto;
+    }
+
+    .logo-container img {
+      max-width: 112px;
+      height: auto;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+    }
+
+    .hero-label {
+      margin: 0 0 13px;
+      color: var(--light-gold);
+      text-transform: uppercase;
+      letter-spacing: 3.2px;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      max-width: 900px;
+      margin: 0 auto 18px;
+      font-size: clamp(2.2rem, 5vw, 3.55rem);
+      line-height: 1.08;
+      font-weight: 800;
+      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
+    }
+
+    .hero-subtitle {
+      max-width: 790px;
+      margin: 0 auto 24px;
+      font-size: 1.06rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn, button {
+      display: inline-block;
+      margin: 8px 5px 0;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
+      box-shadow: 0 10px 25px rgba(0,51,160,0.24);
+      transition: all 0.35s ease;
+    }
+
+    .btn:hover, button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgba(0,51,160,0.34);
+      background: linear-gradient(135deg, #00257a, #00143f);
+    }
+
+    .secondary-btn {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.72);
+      backdrop-filter: blur(8px);
+    }
+
+    .secondary-btn:hover {
+      background: #fff;
+      color: var(--royal);
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+      gap: 16px;
+      max-width: 1040px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+    }
+
+    .trust-card {
+      padding: 18px;
+      text-align: center;
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 18px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+    }
+
+    .trust-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--royal);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.98rem;
+    }
+
+    .trust-card span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 34px auto;
+      padding: 0 18px;
+    }
+
+    section {
+      margin-bottom: 34px;
+      padding: 30px 28px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid rgba(0,51,160,0.08);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin-bottom: 8px;
+      text-align: center;
+      color: var(--royal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      text-align: center;
+      color: var(--royal);
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 88px;
+      height: 3px;
+      margin: 13px auto 0;
+      border-radius: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    h3 {
+      margin: 8px 0;
+      color: var(--deep-blue);
+    }
+
+    p {
+      line-height: 1.72;
+    }
+
+    .section-intro {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .three-grid,
+    .four-grid,
+    .town-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .three-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .four-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .town-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .info-card,
+    .town-box,
+    .step {
+      background: linear-gradient(145deg, #fff, #f7f9ff);
+      border: 1px solid rgba(0,51,160,0.12);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,51,160,0.08);
+    }
+
+    .info-card {
+      padding: 22px;
+    }
+
+    .info-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .town-box {
+      padding: 14px 12px;
+      text-align: center;
+      color: var(--royal);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+
+    .highlight {
+      margin-top: 22px;
+      padding: 19px;
+      background: #f4f7ff;
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+    }
+
+    .highlight p {
+      margin: 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step {
+      padding: 20px;
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 11px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--royal);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+    }
+
+    .step p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .lead-section {
+      background:
+        linear-gradient(135deg, rgba(0,51,160,0.98), rgba(0,21,70,0.99)),
+        radial-gradient(circle at top right, rgba(212,175,55,0.25), transparent 35%);
+      color: #fff;
+      border: 1px solid rgba(212,175,55,0.4);
+    }
+
+    .lead-section h2 {
+      color: #fff;
+    }
+
+    .lead-section .section-intro {
+      color: rgba(255,255,255,0.90);
+    }
+
+    .form-card {
+      max-width: 760px;
+      margin: 26px auto 0;
+      padding: 24px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.22);
+      color: var(--text);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-row {
+      margin-bottom: 14px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--royal);
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d7ddea;
+      border-radius: 11px;
+      font-size: 15px;
+      background: #fff;
+      color: var(--text);
+    }
+
+    textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--royal);
+      box-shadow: 0 0 0 4px rgba(0,51,160,0.10);
+    }
+
+    .faq-item {
+      padding: 13px 0;
+      border-bottom: 1px solid #e7eaf1;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      padding: 34px 20px;
+      text-align: center;
+      color: var(--royal);
+      font-size: 14px;
+      background: linear-gradient(180deg, #f5f7fb, #eef2fb);
+      border-top: 1px solid rgba(0,51,160,0.08);
+    }
+
+    footer a {
+      color: var(--royal);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .floating-contact,
+    .call-button {
+      position: fixed;
+      right: 20px;
+      z-index: 1000;
+      padding: 12px 18px;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
+      box-shadow: 0 4px 14px rgba(0,51,160,0.3);
+    }
+
+    .floating-contact { bottom: 20px; }
+    .call-button { bottom: 80px; }
+
+    @media (max-width: 900px) {
+      .three-grid,
+      .four-grid,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 768px) {
+      nav {
+        justify-content: flex-start;
+        min-height: 58px;
+      }
+
       .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #0033a0;
         position: absolute;
-        top: 55px;
+        top: 58px;
         left: 0;
-        padding: 10px 0;
+        padding: 15px 0;
+        background: rgba(0,31,92,0.98);
       }
+
       .nav-links.active { display: flex; }
       .hamburger { display: flex; }
+
+      header {
+        padding: 52px 18px 48px;
+      }
+
+      .logo-container img {
+        max-width: 95px;
+      }
+
+      section {
+        padding: 24px 18px;
+      }
+
+      .three-grid,
+      .four-grid,
+      .steps,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: auto;
+      }
+
+      .floating-contact,
+      .call-button {
+        padding: 10px 14px;
+        font-size: 0.86rem;
+      }
     }
 
-    header {
-      background: url('hero.jpg') no-repeat center center/cover;
-      color: white;
-      padding: 90px 20px 70px;
-      text-align: center;
-      border-bottom: 2px solid #0033a0;
-    }
-
-    .logo-container img {
-      max-width: 160px;
-      height: auto;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin: 15px 0 10px;
-    }
-
-    .tagline {
-      background: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 1.1rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-
-    .town-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .town-box {
-      background: #eef3ff;
-      border: 1px solid #0033a0;
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
-      font-weight: 600;
-      color: #0033a0;
-    }
-
-    .lead-form {
-      margin-top: 40px;
-      padding: 25px;
-      background: #f9f9f9;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-      box-sizing: border-box;
-      margin-top: 10px;
-      background: white;
-      color: #000;
-    }
-
-    textarea {
-      height: 120px;
-      resize: vertical;
-    }
-
-    button {
-      background-color: #0033a0;
-      color: white;
-      padding: 14px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    button:hover {
-      background-color: #00257a;
-    }
-
-    footer {
-      background: #f5f5f5;
-      padding: 30px 20px;
-      text-align: center;
-      color: #0033a0;
-      font-size: 14px;
-      margin-top: 40px;
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "AV Realty & Management",
+    "url": "https://avrealtymanagement.com/north-shore-real-estate-es.html",
+    "image": "https://avrealtymanagement.com/logo.png",
+    "telephone": "+1-978-277-3435",
+    "inLanguage": "es",
+    "description": "Servicios de bienes raíces en español para compradores, vendedores e inversionistas en el North Shore de Massachusetts.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5 Huron Street",
+      "addressLocality": "Swampscott",
+      "addressRegion": "MA",
+      "postalCode": "01907",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {"@type":"City","name":"Swampscott","addressRegion":"MA"},
+      {"@type":"City","name":"Lynn","addressRegion":"MA"},
+      {"@type":"City","name":"Salem","addressRegion":"MA"},
+      {"@type":"City","name":"Beverly","addressRegion":"MA"},
+      {"@type":"City","name":"Marblehead","addressRegion":"MA"},
+      {"@type":"City","name":"Nahant","addressRegion":"MA"},
+      {"@type":"City","name":"Peabody","addressRegion":"MA"},
+      {"@type":"City","name":"Danvers","addressRegion":"MA"},
+      {"@type":"City","name":"Revere","addressRegion":"MA"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Puedo recibir ayuda para comprar una casa en español?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sí. AV Realty & Management ofrece orientación en español para compradores que buscan vivienda en el North Shore de Massachusetts, desde la preparación inicial y la búsqueda de propiedades hasta la oferta, inspección y cierre."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Trabajan con compradores por primera vez?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sí. Ayudamos a compradores por primera vez a entender el proceso, organizar sus prioridades, coordinar con prestamistas y evaluar propiedades con una estrategia clara."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Me pueden ayudar a vender mi casa en el North Shore?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sí. Podemos ayudarte a preparar la propiedad, analizar el mercado, establecer una estrategia de precio, mercadear la vivienda, negociar ofertas y coordinar el proceso hasta el cierre."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Ayudan a inversionistas que quieren comprar propiedades multifamiliares?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sí. Trabajamos con inversionistas interesados en propiedades de renta y multifamiliares, ayudando a revisar rentas, gastos, condición de la propiedad, estrategia de oferta y objetivos de inversión."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué áreas del North Shore atienden?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Atendemos Swampscott, Lynn, Salem, Beverly, Marblehead, Nahant, Peabody, Danvers, Revere, Saugus, Wakefield, Reading y otras comunidades del North Shore de Massachusetts."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Abrir navegación" role="button" tabindex="0">
+      <div></div><div></div><div></div>
+    </div>
 
-<nav>
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div><div></div><div></div>
-  </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#comprar">Comprar</a>
+      <a href="#vender">Vender</a>
+      <a href="#invertir">Invertir</a>
+      <a href="#areas">Áreas</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="nav-cta" href="#consulta">Consulta Gratis</a>
+    </div>
+  </nav>
 
-  <div class="nav-links" id="navLinks">
-    <a href="index.html#services">Servicios</a>
-    <a href="about.html">Sobre Nosotros</a>
-    <a href="calculator.html">Calculadora</a>
-    <a href="index.html#listings">Buscar Propiedades</a>
-    <a href="index.html#contact">Contacto</a>
-  </div>
-</nav>
-
-<header>
-  <div class="logo-container">
-    <img src="logo.png" alt="AV Realty & Management Logo">
-  </div>
-  <h1>Bienes Raíces en North Shore, MA</h1>
-  <p class="tagline">Te ayudamos a comprar, vender e invertir con confianza.</p>
-</header>
-
-<div class="container">
-
-  <h2 style="text-align:center; color:#0033a0;">Tu Agente de Bienes Raíces en North Shore</h2>
-
-  <p style="margin-top:15px; font-size:1rem; line-height:1.6;">
-    Ya sea que quieras comprar tu casa, vender al mejor precio, o invertir en propiedades de renta, en AV Realty & Management te guiamos con experiencia local y una estrategia clara.
-    Trabajamos con clientes en toda la zona de North Shore y te ayudamos a tomar decisiones inteligentes.
-  </p>
-
-  <h2 style="text-align:center; margin-top:40px; color:#0033a0;">Ciudades que Atendemos</h2>
-
-  <div class="town-grid">
-    <div class="town-box">Swampscott</div>
-    <div class="town-box">Salem</div>
-    <div class="town-box">Marblehead</div>
-    <div class="town-box">Beverly</div>
-    <div class="town-box">Lynn</div>
-    <div class="town-box">Nahant</div>
-    <div class="town-box">Peabody</div>
-    <div class="town-box">Danvers</div>
-    <div class="town-box">Saugus</div>
-    <div class="town-box">Revere</div>
-    <div class="town-box">Winthrop</div>
-    <div class="town-box">Woburn</div>
-    <div class="town-box">Wakefield</div>
-    <div class="town-box">Reading</div>
-    <div class="town-box">Hamilton / Wenham</div>
-    <div class="town-box">Ipswich</div>
-  </div>
-
-  <p style="text-align:center; margin-top:20px; color:#444;">
-    Si está en North Shore — podemos ayudarte.
-  </p>
-
-  <div class="lead-form">
-    <h2 style="text-align:center; color:#0033a0;">Consulta Gratis</h2>
-    <p style="text-align:center; margin-top:10px;">Sin presión. Sin compromiso. Te damos claridad y un plan.</p>
-
-    <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST">
-      <input type="text" name="_honey" style="display:none">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-      <input type="hidden" name="_subject" value="Nuevo Lead en Español - North Shore Real Estate">
-
-      <div style="margin-bottom: 15px;">
-        <label for="name" style="display:block; font-weight:bold; color:#0033a0;">Nombre Completo</label>
-        <input type="text" id="name" name="name" required />
+  <header>
+    <div class="hero-overlay">
+      <div class="logo-container">
+        <img src="logo.png" alt="AV Realty & Management - bienes raíces en North Shore Massachusetts">
       </div>
 
-      <div style="margin-bottom: 15px;">
-        <label for="email" style="display:block; font-weight:bold; color:#0033a0;">Correo Electrónico</label>
-        <input type="email" id="email" name="email" required />
-      </div>
+      <p class="hero-label">Atención en español • North Shore Massachusetts</p>
 
-      <div style="margin-bottom: 15px;">
-        <label for="phone" style="display:block; font-weight:bold; color:#0033a0;">Teléfono</label>
-        <input type="tel" id="phone" name="phone" />
-      </div>
+      <h1 class="hero-title">Bienes Raíces en Español en el North Shore de Massachusetts</h1>
 
-      <div style="margin-bottom: 15px;">
-        <label for="message" style="display:block; font-weight:bold; color:#0033a0;">¿Qué necesitas?</label>
-        <textarea id="message" name="message" placeholder="¿Comprar? ¿Vender? ¿Invertir? ¿Qué ciudad te interesa?"></textarea>
-      </div>
+      <p class="hero-subtitle">
+        Si quieres comprar casa, vender una propiedad o invertir en bienes raíces, te ayudamos a entender el proceso y tomar decisiones con más claridad. Atención profesional en español para clientes en Swampscott, Lynn, Salem, Beverly, Marblehead y comunidades cercanas.
+      </p>
 
-      <div style="text-align:center;">
-        <button type="submit">Solicitar Consulta</button>
+      <div class="hero-cta">
+        <a class="btn" href="#consulta">Quiero Hablar con un Agente</a>
+        <a class="btn secondary-btn" href="tel:9782773435">Llamar Ahora</a>
       </div>
-    </form>
+    </div>
+  </header>
 
-    <p style="text-align:center; font-size:0.9rem; margin-top:15px; color:#555;">
-      Respuesta rápida. Atención profesional. Comunicación clara en español.
-    </p>
+  <div class="trust-strip">
+    <div class="trust-card">
+      <strong>Atención en Español</strong>
+      <span>Explicaciones claras para que entiendas cada etapa del proceso.</span>
+    </div>
+
+    <div class="trust-card">
+      <strong>Experiencia Local</strong>
+      <span>Enfoque en el North Shore de Massachusetts y sus comunidades.</span>
+    </div>
+
+    <div class="trust-card">
+      <strong>Compradores y Vendedores</strong>
+      <span>Representación estratégica para encontrar, negociar o vender propiedad.</span>
+    </div>
+
+    <div class="trust-card">
+      <strong>Enfoque en Inversión</strong>
+      <span>Apoyo para analizar propiedades de renta y oportunidades multifamiliares.</span>
+    </div>
   </div>
 
-</div>
+  <main>
+    <section>
+      <p class="eyebrow">Una guía clara de principio a fin</p>
+      <h2>Tu Agente de Bienes Raíces en Español en North Shore, MA</h2>
 
-<footer>
-  <div>AV Realty & Management</div>
-  <div>5 Huron Street, Swampscott, MA 01907</div>
-  <div><a href="tel:9782773435" style="color:#0033a0; text-decoration:none;">(978) 277-3435</a></div>
-  <div style="margin-top:10px; font-size:13px;">&copy; 2025 AV Realty & Management LLC. All rights reserved.</div>
-</footer>
+      <p class="section-intro">
+        Comprar o vender una propiedad puede sentirse complicado, especialmente cuando hay contratos, financiamiento, inspecciones, negociaciones y fechas importantes. Nuestro objetivo es ayudarte a entender qué está pasando, qué opciones tienes y cuál puede ser el próximo paso más conveniente para ti.
+      </p>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
+      <div class="highlight">
+        <p>
+          <strong>No tienes que conocer todo el proceso antes de empezar.</strong> Podemos comenzar con una conversación sobre tu situación, tu presupuesto, tus metas y la ciudad donde quieres comprar, vender o invertir.
+        </p>
+      </div>
+    </section>
 
+    <section id="comprar">
+      <p class="eyebrow">Para compradores</p>
+      <h2>¿Quieres Comprar una Casa en Massachusetts?</h2>
+
+      <p class="section-intro">
+        Te ayudamos a organizar tu búsqueda y entender cada paso, desde la preparación inicial hasta el cierre.
+      </p>
+
+      <div class="three-grid">
+        <div class="info-card">
+          <h3>Compradores por Primera Vez</h3>
+          <p>Te explicamos cómo prepararte, qué documentos suelen pedir los prestamistas, cómo funciona una oferta y qué esperar durante la inspección y el cierre.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Búsqueda de Propiedades</h3>
+          <p>Definimos tus prioridades, presupuesto, ubicación y tipo de propiedad para enfocar la búsqueda en opciones que tengan sentido para ti.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Ofertas y Negociación</h3>
+          <p>Te ayudamos a revisar la propiedad, comparar el mercado y estructurar una oferta considerando precio, condiciones y tus objetivos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="vender">
+      <p class="eyebrow">Para propietarios</p>
+      <h2>¿Estás Pensando en Vender tu Casa?</h2>
+
+      <p class="section-intro">
+        Una buena venta empieza antes de publicar la propiedad. Analizamos el mercado, la condición de la vivienda y tus objetivos para crear una estrategia clara.
+      </p>
+
+      <div class="three-grid">
+        <div class="info-card">
+          <h3>Análisis de Mercado</h3>
+          <p>Revisamos ventas comparables, competencia actual y características de tu propiedad para ayudarte a entender su posición en el mercado.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Preparación para Vender</h3>
+          <p>Identificamos mejoras, presentación y prioridades que pueden ayudar a posicionar mejor la propiedad sin gastar dinero innecesariamente.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Marketing y Negociación</h3>
+          <p>Coordinamos el proceso de comercialización, revisamos las ofertas contigo y negociamos buscando proteger tus intereses hasta el cierre.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="invertir">
+      <p class="eyebrow">Para inversionistas</p>
+      <h2>Compra de Propiedades de Inversión y Multifamiliares</h2>
+
+      <p class="section-intro">
+        Si tu meta es generar renta o construir un portafolio de propiedades, podemos ayudarte a mirar más allá del precio de compra y evaluar cómo funciona la propiedad como inversión.
+      </p>
+
+      <div class="three-grid">
+        <div class="info-card">
+          <h3>Propiedades Multifamiliares</h3>
+          <p>Apoyo para compradores interesados en casas de 2 a 4 unidades, propiedades con inquilinos y oportunidades para vivir en una unidad y rentar las demás.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Análisis de Renta y Gastos</h3>
+          <p>Revisamos renta potencial, gastos operativos, condición, vacancias y otros factores que pueden afectar el rendimiento real de la propiedad.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Estrategia a Largo Plazo</h3>
+          <p>Consideramos tus metas: flujo de efectivo, crecimiento de valor, mejoras, administración futura y potencial de compra adicional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Cómo trabajamos contigo</p>
+      <h2>Un Proceso Más Fácil de Entender</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Conversación Inicial</h3>
+          <p>Nos cuentas qué quieres lograr y qué preguntas tienes.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Plan y Preparación</h3>
+          <p>Organizamos tus prioridades, presupuesto, documentos y próximos pasos.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Búsqueda o Venta</h3>
+          <p>Avanzamos con propiedades, visitas, marketing, ofertas y negociación.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Cierre</h3>
+          <p>Coordinamos las etapas finales y te mantenemos informado hasta completar la transacción.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas">
+      <p class="eyebrow">North Shore Massachusetts</p>
+      <h2>Comunidades Donde Trabajamos</h2>
+
+      <p class="section-intro">
+        Ayudamos a clientes que buscan comprar, vender o invertir en varias comunidades del North Shore y áreas cercanas.
+      </p>
+
+      <div class="town-grid">
+        <div class="town-box">Swampscott</div>
+        <div class="town-box">Lynn</div>
+        <div class="town-box">Salem</div>
+        <div class="town-box">Marblehead</div>
+        <div class="town-box">Beverly</div>
+        <div class="town-box">Nahant</div>
+        <div class="town-box">Peabody</div>
+        <div class="town-box">Danvers</div>
+        <div class="town-box">Saugus</div>
+        <div class="town-box">Revere</div>
+        <div class="town-box">Winthrop</div>
+        <div class="town-box">Wakefield</div>
+        <div class="town-box">Reading</div>
+        <div class="town-box">Woburn</div>
+        <div class="town-box">Hamilton</div>
+        <div class="town-box">Wenham</div>
+        <div class="town-box">Ipswich</div>
+      </div>
+    </section>
+
+    <section id="preguntas">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Preguntas Sobre Bienes Raíces en Español</h2>
+
+      <div class="faq-item">
+        <h3>¿Puedo recibir ayuda para comprar una casa completamente en español?</h3>
+        <p>Sí. Podemos explicarte el proceso, tus opciones y los próximos pasos en español para que puedas tomar decisiones con mayor claridad.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Trabajan con compradores por primera vez?</h3>
+        <p>Sí. Ayudamos a compradores que nunca han comprado propiedad antes y necesitan orientación sobre preparación, financiamiento, búsqueda, ofertas, inspección y cierre.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Necesito estar preaprobado antes de hablar con ustedes?</h3>
+        <p>No. Podemos empezar con una conversación. Si todavía necesitas hablar con un prestamista, te explicamos por qué la preaprobación es importante antes de presentar ofertas y qué información normalmente se utiliza en ese proceso.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Pueden ayudarme a vender una propiedad aunque todavía viva en ella?</h3>
+        <p>Sí. Podemos hablar sobre tiempos, preparación, presentación, estrategia de precio y cómo organizar el proceso de venta según tu situación.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Ayudan a comprar casas de dos o tres familias?</h3>
+        <p>Sí. Trabajamos con compradores e inversionistas interesados en propiedades multifamiliares y podemos ayudarte a analizar renta, gastos, condición y estrategia de oferta.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Qué ciudades del North Shore atienden?</h3>
+        <p>Trabajamos en Swampscott, Lynn, Salem, Beverly, Marblehead, Nahant, Peabody, Danvers, Revere, Saugus, Wakefield, Reading y otras comunidades cercanas.</p>
+      </div>
+    </section>
+
+    <section class="lead-section" id="consulta">
+      <p class="eyebrow" style="color:#f2dc87;">Consulta sin compromiso</p>
+      <h2>Cuéntanos Qué Quieres Lograr</h2>
+
+      <p class="section-intro">
+        Comprar, vender o invertir empieza con una conversación. Completa el formulario y cuéntanos un poco sobre tu situación.
+      </p>
+
+      <div class="form-card">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+          <input type="hidden" name="subject" value="NUEVO LEAD EN ESPAÑOL - North Shore Real Estate">
+          <input type="hidden" name="from_name" value="AV Realty & Management - Página en Español">
+          <input type="hidden" name="form_source" value="North Shore Real Estate - Spanish Landing Page">
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="name">Nombre Completo</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-row">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+              <label for="city">Ciudad de Interés</label>
+              <input type="text" id="city" name="city" placeholder="Ej. Lynn, Salem, Swampscott">
+            </div>
+
+            <div class="form-row">
+              <label for="goal">¿Qué quieres hacer?</label>
+              <select id="goal" name="goal">
+                <option value="">Selecciona una opción</option>
+                <option>Comprar mi primera casa</option>
+                <option>Comprar otra propiedad</option>
+                <option>Comprar una propiedad multifamiliar</option>
+                <option>Comprar una propiedad de inversión</option>
+                <option>Vender mi casa</option>
+                <option>Vender una propiedad de inversión</option>
+                <option>Quiero orientación antes de decidir</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="timeline">¿Cuándo te gustaría comenzar?</label>
+              <select id="timeline" name="timeline">
+                <option value="">Selecciona una opción</option>
+                <option>Ahora</option>
+                <option>En los próximos 1-3 meses</option>
+                <option>En los próximos 3-6 meses</option>
+                <option>En 6-12 meses</option>
+                <option>Solo estoy investigando</option>
+              </select>
+            </div>
+
+            <div class="form-row full-width">
+              <label for="message">Cuéntanos un poco más</label>
+              <textarea id="message" name="message" placeholder="¿Qué tipo de propiedad buscas? ¿Tienes una casa que quieres vender? ¿Cuál es tu presupuesto o meta?"></textarea>
+            </div>
+          </div>
+
+          <div style="text-align:center;">
+            <button type="submit">Solicitar Mi Consulta Gratis</button>
+          </div>
+        </form>
+
+        <p style="text-align:center;font-size:0.82rem;color:#666;margin:12px 0 0;">
+          Sin presión y sin compromiso. Usamos tu información únicamente para responder a tu solicitud.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="font-weight:800;font-family:'Montserrat',sans-serif;">
+      AV Realty & Management
+    </div>
+
+    <div style="margin-top:6px;">
+      5 Huron Street, Swampscott, MA 01907
+    </div>
+
+    <div style="margin-top:6px;">
+      <a href="tel:9782773435">(978) 277-3435</a>
+    </div>
+
+    <div style="color:#666;font-size:13px;margin-top:15px;">
+      Servicios de bienes raíces para compradores, vendedores e inversionistas en el North Shore de Massachusetts.
+    </div>
+
+    <div style="color:#666;font-size:13px;margin-top:8px;">
+      &copy; 2026 AV Realty & Management LLC. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <a href="#consulta" class="floating-contact">Escríbenos</a>
+  <a href="tel:9782773435" class="call-button">Llamar Ahora</a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
