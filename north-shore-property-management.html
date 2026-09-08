@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>North Shore MA Property Management | AV Realty & Management</title>
-  <meta name="description" content="Professional North Shore MA property management for single-family, condo, and multifamily owners. AV Realty & Management provides leasing, rent collection, maintenance coordination, inspections, owner reporting, and local landlord support across Swampscott, Salem, Beverly, Lynn, Marblehead, and surrounding communities." />
+  <meta name="description" content="Professional North Shore MA property management for single-family, condo, and multifamily owners. Featured local service in Swampscott, Marblehead, Salem, and Nahant, with broader coverage across surrounding North Shore communities." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://avrealtymanagement.com/north-shore-property-management.html" />
 
@@ -471,6 +471,75 @@
       margin: 0;
     }
 
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .market-card {
+      background: linear-gradient(145deg, #ffffff, #f8faff);
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .market-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(0,51,160,0.12);
+    }
+
+    .market-card h3 {
+      color: var(--royal);
+      margin: 0 0 8px;
+    }
+
+    .market-card p {
+      color: var(--muted);
+      line-height: 1.68;
+      margin: 0;
+      font-size: 0.92rem;
+    }
+
+    .market-link {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--royal);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .market-link:hover {
+      text-decoration: underline;
+    }
+
+    .secondary-service-box {
+      margin-top: 26px;
+      padding: 22px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #ffffff, #f7f9ff);
+      border: 1px solid rgba(0,51,160,0.10);
+    }
+
+    .secondary-service-box h3 {
+      margin: 0 0 10px;
+      text-align: center;
+      color: var(--deep-blue);
+    }
+
+    .secondary-service-box p {
+      max-width: 800px;
+      margin: 0 auto 16px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
     .pill-row {
       display: flex;
       flex-wrap: wrap;
@@ -764,7 +833,8 @@
         grid-template-columns: repeat(2, minmax(0,1fr));
       }
 
-      .two-column {
+      .two-column,
+      .market-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -871,10 +941,13 @@
         },
         "areaServed": [
           {"@type":"City","name":"Swampscott, Massachusetts"},
+          {"@type":"City","name":"Marblehead, Massachusetts"},
           {"@type":"City","name":"Salem, Massachusetts"},
+          {"@type":"City","name":"Nahant, Massachusetts"},
           {"@type":"City","name":"Beverly, Massachusetts"},
           {"@type":"City","name":"Lynn, Massachusetts"},
-          {"@type":"City","name":"Marblehead, Massachusetts"}
+          {"@type":"City","name":"Peabody, Massachusetts"},
+          {"@type":"City","name":"Danvers, Massachusetts"}
         ],
         "sameAs": [
           "https://www.instagram.com/av.realty/",
@@ -891,12 +964,20 @@
           "@id": "https://avrealtymanagement.com/#realestateagent"
         },
         "areaServed": "North Shore Massachusetts",
-        "description": "Residential property management services including leasing, rent collection, maintenance coordination, inspections, owner reporting, and resident communication."
+        "description": "Residential property management services across the North Shore, with featured local service in Swampscott, Marblehead, Salem, and Nahant, including leasing, rent collection, maintenance coordination, inspections, owner reporting, and resident communication."
       },
       {
         "@type": "FAQPage",
         "@id": "https://avrealtymanagement.com/north-shore-property-management.html#faq",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What North Shore areas do you manage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AV Realty & Management's featured local property-management markets are Swampscott, Marblehead, Salem, and Nahant. Properties in surrounding North Shore communities are also considered based on location, property type, size, condition, and service needs."
+            }
+          },
           {
             "@type": "Question",
             "name": "How much does property management cost?",
@@ -970,7 +1051,7 @@
       </h1>
 
       <p class="hero-subtitle">
-        Hands-on residential property management for landlords who want organized leasing, reliable communication, maintenance coordination, rent collection, and local oversight without managing every detail themselves.
+        Hands-on residential property management across Boston’s North Shore, with dedicated local service in Swampscott, Marblehead, Salem, and Nahant. Leasing, rent collection, maintenance coordination, resident communication, and owner support without managing every detail yourself.
       </p>
 
       <div class="hero-cta">
@@ -1006,7 +1087,7 @@
         <p class="eyebrow">North Shore Property Management</p>
         <h2>Professional Management Without the Day-to-Day Burden</h2>
         <p class="section-intro">
-          AV Realty & Management provides residential property management for single-family homes, condominiums, two-to-four-family properties, and smaller multifamily buildings across the North Shore. The goal is simple: keep the property organized, the owner informed, and day-to-day issues handled professionally.
+          AV Realty & Management provides residential property management for single-family homes, condominiums, two-to-four-family properties, and smaller multifamily buildings across the North Shore. Swampscott, Marblehead, Salem, and Nahant are our featured local markets, with broader service available throughout surrounding North Shore communities. The goal is simple: keep the property organized, the owner informed, and day-to-day issues handled professionally.
         </p>
       </section>
 
@@ -1066,20 +1147,78 @@
           </div>
 
           <aside class="area-card">
-            <h3>North Shore Service Area</h3>
+            <h3>Built for Small & Mid-Sized Owners</h3>
             <p>
-              AV Realty & Management is based in Swampscott and serves rental-property owners across nearby North Shore communities. Property location, size, and service needs are reviewed individually.
+              Our management model is designed for owners who want professional systems without feeling disconnected from their property. We work with single-family rentals, condos, two-to-four-family properties, and smaller multifamily buildings.
             </p>
 
             <div class="pill-row">
-              <span class="pill">Swampscott</span>
-              <span class="pill">Salem</span>
-              <span class="pill">Beverly</span>
-              <span class="pill">Lynn</span>
-              <span class="pill">Marblehead</span>
-              <span class="pill">Greater North Shore</span>
+              <span class="pill">Single-Family</span>
+              <span class="pill">Condominiums</span>
+              <span class="pill">2–4 Family</span>
+              <span class="pill">Small Multifamily</span>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="fade-in">
+        <p class="eyebrow">Featured Local Markets</p>
+        <h2>Property Management in Our Four Core North Shore Markets</h2>
+        <p class="section-intro">
+          Our dedicated local pages go deeper into the property types, owner needs, and management challenges we commonly see in Swampscott, Marblehead, Salem, and Nahant.
+        </p>
+
+        <div class="market-grid">
+          <article class="market-card">
+            <h3>Swampscott Property Management</h3>
+            <p>
+              Hands-on local oversight for single-family rentals, condos, duplexes, and small multifamily properties, with a strong focus on communication, maintenance coordination, leasing, and owner visibility.
+            </p>
+            <a class="market-link" href="swampscott-property-management.html">Explore Swampscott Property Management →</a>
+          </article>
+
+          <article class="market-card">
+            <h3>Marblehead Property Management</h3>
+            <p>
+              Higher-touch management for owners who want organized leasing, resident communication, vendor coordination, and attentive property care for distinctive local housing.
+            </p>
+            <a class="market-link" href="marblehead-property-management.html">Explore Marblehead Property Management →</a>
+          </article>
+
+          <article class="market-card">
+            <h3>Salem Property Management</h3>
+            <p>
+              Practical management support for condos, multifamily rentals, occupied properties, turnovers, leasing, rent collection, maintenance, and ongoing resident operations.
+            </p>
+            <a class="market-link" href="salem-property-management.html">Explore Salem Property Management →</a>
+          </article>
+
+          <article class="market-card">
+            <h3>Nahant Property Management</h3>
+            <p>
+              Local coordination for owners who may need reliable on-the-ground oversight, maintenance support, leasing, resident communication, and management of smaller coastal rental properties.
+            </p>
+            <a class="market-link" href="nahant-property-management.html">Explore Nahant Property Management →</a>
+          </article>
+        </div>
+
+        <div class="secondary-service-box">
+          <h3>Also Serving Owners Across the Greater North Shore</h3>
+          <p>
+            AV Realty & Management is not limited to these four communities. Property location, size, condition, and service needs are reviewed individually throughout nearby North Shore markets.
+          </p>
+
+          <div class="pill-row" style="justify-content:center;">
+            <span class="pill">Beverly</span>
+            <span class="pill">Lynn</span>
+            <span class="pill">Peabody</span>
+            <span class="pill">Danvers</span>
+            <span class="pill">Saugus</span>
+            <span class="pill">Revere</span>
+            <span class="pill">Winthrop</span>
+            <span class="pill">Greater North Shore</span>
+          </div>
         </div>
       </section>
 
@@ -1123,6 +1262,37 @@
         </div>
       </section>
 
+
+      <section class="fade-in">
+        <p class="eyebrow">Specialized Owner Situations</p>
+        <h2>Property Management for Owners Who Need Local Help</h2>
+        <p class="section-intro">
+          Some owners need more than routine rent collection. AV Realty & Management can help when distance, inheritance, an existing tenancy, a vacancy, or a transition away from self-management makes local coordination especially valuable.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Out-of-State Owners</h3>
+            <p>Local oversight, maintenance coordination, resident communication, inspections, and reporting for owners who cannot easily be at the property themselves.</p>
+          </article>
+
+          <article class="service-card">
+            <h3>Inherited Rental Property</h3>
+            <p>Help organizing an inherited property's rental operations, existing tenancy, make-ready needs, leasing, and ongoing management strategy.</p>
+          </article>
+
+          <article class="service-card">
+            <h3>Transition From Self-Management</h3>
+            <p>Review the existing lease, resident setup, rent collection, documentation, maintenance process, and next steps for handing off day-to-day operations.</p>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top:18px;">
+          <a href="absentee-landlord-property-management.html" class="btn">Out-of-State & Inherited Owners</a>
+          <a href="free-rent-analysis.html" class="btn">Request a Free Rent Analysis</a>
+        </div>
+      </section>
+
       <section class="fade-in">
         <div class="cta-panel">
           <h2>Managing the Property Yourself Today?</h2>
@@ -1138,6 +1308,11 @@
         <h2>North Shore Property Management FAQ</h2>
 
         <div class="faq-list">
+          <details>
+            <summary>What North Shore areas do you manage?</summary>
+            <p>Our featured local property-management markets are Swampscott, Marblehead, Salem, and Nahant. We also consider properties throughout surrounding North Shore communities based on location, property type, size, condition, and service needs.</p>
+          </details>
+
           <details>
             <summary>How much does property management cost?</summary>
             <p>Pricing depends on the property, number of units, level of service, and whether leasing or tenant placement is needed. AV Realty & Management reviews fees clearly before a management agreement is signed.</p>
@@ -1199,7 +1374,7 @@
 
               <div>
                 <label for="pm-city">Property City / Town</label>
-                <input type="text" id="pm-city" name="property_city" placeholder="Swampscott, Salem, Beverly, Lynn, etc." />
+                <input type="text" id="pm-city" name="property_city" placeholder="Swampscott, Marblehead, Salem, Nahant, etc." />
               </div>
 
               <div>
@@ -1270,6 +1445,11 @@
 
     <div class="footer-links">
       <a href="index.html">Home</a>
+      <a href="swampscott-property-management.html">Swampscott</a>
+      <a href="marblehead-property-management.html">Marblehead</a>
+      <a href="salem-property-management.html">Salem</a>
+      <a href="nahant-property-management.html">Nahant</a>
+      <a href="absentee-landlord-property-management.html">Out-of-State Owners</a>
       <a href="north-shore-real-estate.html">Real Estate</a>
       <a href="north-shore-ma-apartments.html">Apartments</a>
       <a href="about.html">About</a>
