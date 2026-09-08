@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Salem Real Estate | Buy, Sell & Invest | AV Realty & Management</title>
+  <meta name="description" content="Salem real estate services for buyers, sellers, and investors. Local guidance for homes, condos, multifamily properties, relocation, investment analysis, and selling strategy from AV Realty & Management.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://avrealtymanagement.com/salem-real-estate.html">
+
+  <meta property="og:title" content="Salem Real Estate | AV Realty & Management">
+  <meta property="og:description" content="Local Salem real estate guidance for buying, selling, relocating, and investing.">
+  <meta property="og:url" content="https://avrealtymanagement.com/salem-real-estate.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avrealtymanagement.com/logo.png">
+  <meta property="og:site_name" content="AV Realty & Management">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --royal: #0033a0;
+      --deep-blue: #001b55;
+      --navy: #061329;
+      --gold: #d4af37;
+      --light-gold: #f2dc87;
+      --soft-bg: #f5f7fb;
+      --text: #121212;
+      --muted: #666;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(0,0,0,0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+
+    body {
+      margin: 0;
+      padding: 58px 0 0;
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(0,51,160,0.08), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+    }
+
+    h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 22px;
+      background: rgba(0,31,92,0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    }
+
+    .nav-links {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--light-gold);
+      transform: translateY(-1px);
+    }
+
+    .portal-btn {
+      border: 1px solid rgba(212,175,55,0.7);
+      border-radius: 30px;
+      padding: 8px 14px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      padding: 68px 20px 64px;
+      border-bottom: 1px solid rgba(212,175,55,0.5);
+      background:
+        linear-gradient(rgba(0,16,52,0.72), rgba(0,22,70,0.62)),
+        url('hero.jpg') no-repeat center center/cover;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 36%),
+        linear-gradient(90deg, rgba(0,51,160,0.18), transparent, rgba(0,51,160,0.18));
+      pointer-events: none;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.12) 45%, transparent 70%);
+      transform: translateX(-100%);
+      animation: luxurySweep 5s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes luxurySweep {
+      0%,45% { transform: translateX(-100%); }
+      75%,100% { transform: translateX(100%); }
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 1;
+      max-width: 980px;
+      margin: auto;
+    }
+
+    .logo-container img {
+      max-width: 112px;
+      height: auto;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+    }
+
+    .hero-label {
+      margin: 0 0 13px;
+      color: var(--light-gold);
+      text-transform: uppercase;
+      letter-spacing: 3.2px;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      max-width: 900px;
+      margin: 0 auto 18px;
+      font-size: clamp(2.2rem, 5vw, 3.55rem);
+      line-height: 1.08;
+      font-weight: 800;
+      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
+    }
+
+    .hero-subtitle {
+      max-width: 820px;
+      margin: 0 auto 24px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .header-cta {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn, button {
+      display: inline-block;
+      margin: 8px 5px 0;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
+      box-shadow: 0 10px 25px rgba(0,51,160,0.24);
+      transition: all 0.35s ease;
+    }
+
+    .btn:hover, button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgba(0,51,160,0.34);
+      background: linear-gradient(135deg, #00257a, #00143f);
+    }
+
+    .secondary-btn {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.72);
+      backdrop-filter: blur(8px);
+    }
+
+    .secondary-btn:hover {
+      background: #fff;
+      color: var(--royal);
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+      gap: 16px;
+      max-width: 1040px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+    }
+
+    .trust-card {
+      padding: 18px;
+      text-align: center;
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(0,51,160,0.10);
+      border-radius: 18px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+    }
+
+    .trust-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--royal);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.98rem;
+    }
+
+    .trust-card span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 34px auto;
+      padding: 0 18px;
+    }
+
+    section {
+      margin-bottom: 34px;
+      padding: 30px 28px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid rgba(0,51,160,0.08);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin-bottom: 8px;
+      text-align: center;
+      color: var(--royal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      text-align: center;
+      color: var(--royal);
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 88px;
+      height: 3px;
+      margin: 13px auto 0;
+      border-radius: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    h3 {
+      margin: 8px 0;
+      color: var(--deep-blue);
+    }
+
+    p { line-height: 1.72; }
+
+    .section-intro {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .info-card {
+      padding: 22px;
+      background: linear-gradient(145deg,#fff,#f7f9ff);
+      border: 1px solid rgba(0,51,160,0.12);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,51,160,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(0,51,160,0.14);
+    }
+
+    .info-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .highlight {
+      margin-top: 18px;
+      padding: 18px;
+      background: #f4f7ff;
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .market-box {
+      padding: 18px;
+      border-radius: 16px;
+      background: linear-gradient(145deg,#fff,#f7f9ff);
+      border: 1px solid rgba(0,51,160,0.12);
+    }
+
+    .market-box strong {
+      display: block;
+      color: var(--royal);
+      margin-bottom: 5px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .market-box span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .form-card {
+      padding: 22px;
+      background: linear-gradient(145deg,#fff,#f7f9ff);
+      border: 1px solid rgba(0,51,160,0.14);
+      border-radius: 20px;
+      box-shadow: 0 18px 40px rgba(0,51,160,0.11);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--royal);
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d7ddea;
+      border-radius: 11px;
+      font-size: 15px;
+      background: #fff;
+      color: var(--text);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--royal);
+      box-shadow: 0 0 0 4px rgba(0,51,160,0.10);
+    }
+
+    .form-row { margin-bottom: 13px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step {
+      padding: 20px;
+      background: linear-gradient(145deg,#fff,#f7f9ff);
+      border: 1px solid rgba(0,51,160,0.12);
+      border-radius: 18px;
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 11px;
+      border-radius: 50%;
+      background: var(--royal);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+    }
+
+    .step p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .cta-panel {
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(0,51,160,0.97), rgba(0,21,70,0.98)),
+        radial-gradient(circle at top right, rgba(212,175,55,0.25), transparent 35%);
+      border: 1px solid rgba(212,175,55,0.4);
+    }
+
+    .cta-panel h2 { color: #fff; }
+
+    .cta-panel p {
+      max-width: 760px;
+      margin: 0 auto 12px;
+      text-align: center;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .cta-center { text-align: center; }
+
+    .faq-item {
+      padding: 13px 0;
+      border-bottom: 1px solid #e7eaf1;
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    footer {
+      padding: 34px 20px;
+      text-align: center;
+      color: var(--royal);
+      font-size: 14px;
+      background: linear-gradient(180deg,#f5f7fb,#eef2fb);
+      border-top: 1px solid rgba(0,51,160,0.08);
+    }
+
+    footer a {
+      color: var(--royal);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px 16px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .floating-contact, .call-button {
+      position: fixed;
+      right: 20px;
+      z-index: 1000;
+      padding: 12px 18px;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      background: linear-gradient(135deg,var(--royal),var(--deep-blue));
+      box-shadow: 0 4px 14px rgba(0,51,160,0.3);
+    }
+
+    .floating-contact { bottom: 20px; }
+    .call-button { bottom: 80px; }
+
+    @media (max-width: 900px) {
+      .two-column,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        justify-content: flex-start;
+        min-height: 58px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        padding: 15px 0;
+        background: rgba(0,31,92,0.98);
+      }
+
+      .nav-links.active { display: flex; }
+      .hamburger { display: flex; }
+
+      header { padding: 52px 18px 48px; }
+      .logo-container img { max-width: 95px; }
+      section { padding: 24px 18px; }
+
+      .floating-contact,
+      .call-button {
+        padding: 10px 14px;
+        font-size: 0.86rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Salem Real Estate Services",
+    "url": "https://avrealtymanagement.com/salem-real-estate.html",
+    "serviceType": "Residential Real Estate Brokerage",
+    "description": "Real estate services for buyers, sellers, and investors in Salem, Massachusetts.",
+    "provider": {
+      "@type": "RealEstateAgent",
+      "name": "AV Realty & Management",
+      "url": "https://avrealtymanagement.com",
+      "image": "https://avrealtymanagement.com/logo.png",
+      "telephone": "+1-978-277-3435",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5 Huron Street",
+        "addressLocality": "Swampscott",
+        "addressRegion": "MA",
+        "postalCode": "01907",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Salem",
+      "addressRegion": "MA"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://avrealtymanagement.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "North Shore Real Estate",
+        "item": "https://avrealtymanagement.com/north-shore-real-estate.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Salem Real Estate",
+        "item": "https://avrealtymanagement.com/salem-real-estate.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you help me buy a home or condo in Salem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AV Realty & Management helps buyers evaluate Salem homes, condos, and multifamily properties, coordinate showings, review comparable sales, structure offers, and navigate the transaction through closing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you help first-time homebuyers in Salem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We can help first-time buyers understand the process, organize their search, coordinate with lenders and other transaction professionals, evaluate properties, and prepare offers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help me sell my Salem property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We can help evaluate the property's market position, prepare a pricing and marketing strategy, coordinate showings, review offers, negotiate terms, and manage the transaction through closing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with multifamily and investment properties in Salem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We work with investors and owner-occupant buyers evaluating rental and multifamily opportunities, including rent positioning, expenses, condition, financing considerations, and future management strategy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help me decide whether to sell my Salem property or keep it as a rental?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Because AV Realty & Management provides both brokerage and property management services, we can help you compare the practical real-estate and rental-management considerations of selling versus retaining the property."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" role="button" tabindex="0">
+      <div></div><div></div><div></div>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="north-shore-real-estate.html">Real Estate</a>
+      <a href="north-shore-property-management.html">Property Management</a>
+      <a href="north-shore-ma-apartments.html">Apartments</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+      <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Resident Portal</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero-overlay">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo.png" alt="AV Realty & Management">
+        </a>
+      </div>
+
+      <p class="hero-label">Salem • North Shore Massachusetts</p>
+
+      <h1 class="hero-title">Salem Real Estate for Buyers, Sellers & Investors</h1>
+
+      <p class="hero-subtitle">
+        Local guidance for buying a home, selling property, relocating to Salem, or evaluating a multifamily or rental investment. AV Realty & Management combines brokerage services with practical property-management insight to help you evaluate both the transaction and what ownership looks like afterward.
+      </p>
+
+      <div class="header-cta">
+        <a class="btn" href="#contact">Start a Conversation</a>
+        <a class="btn secondary-btn" href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener">Search Listings</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="trust-strip">
+    <div class="trust-card">
+      <strong>North Shore Local</strong>
+      <span>Focused guidance for Salem and nearby North Shore communities.</span>
+    </div>
+
+    <div class="trust-card">
+      <strong>Buyer Representation</strong>
+      <span>Search strategy, showings, property analysis, offers, negotiation, and closing guidance.</span>
+    </div>
+
+    <div class="trust-card">
+      <strong>Seller Strategy</strong>
+      <span>Pricing, preparation, marketing, offer review, and transaction coordination.</span>
+    </div>
+
+    <div class="trust-card">
+      <strong>Investor Perspective</strong>
+      <span>Brokerage plus property-management insight for condos, rentals, and multifamily opportunities.</span>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <p class="eyebrow">Local Salem Real Estate</p>
+      <h2>A Diverse Market Requires More Than a Generic Search</h2>
+
+      <p class="section-intro">
+        Salem offers a broad mix of housing, including single-family homes, condos, older properties, converted buildings, and multifamily housing. The right purchase or sale strategy can vary significantly depending on location, condition, parking, association structure, unit mix, rental potential, and the buyer pool for a specific property.
+      </p>
+
+      <div class="market-grid">
+        <div class="market-box">
+          <strong>Single-Family Homes</strong>
+          <span>Evaluate condition, layout, location, renovation needs, and long-term resale positioning.</span>
+        </div>
+
+        <div class="market-box">
+          <strong>Condos</strong>
+          <span>Review association finances, monthly fees, building condition, restrictions, and competing units—not just the interior.</span>
+        </div>
+
+        <div class="market-box">
+          <strong>Multifamily Properties</strong>
+          <span>Look at rents, unit mix, expenses, occupancy, condition, financing, and the operational demands after closing.</span>
+        </div>
+
+        <div class="market-box">
+          <strong>Older Housing Stock</strong>
+          <span>Systems, renovations, deferred maintenance, layout, and property history can materially affect value and ownership costs.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="buyers">
+      <p class="eyebrow">Buying in Salem</p>
+      <h2>Buyer Representation for Homes, Condos & Multifamily Properties</h2>
+
+      <p class="section-intro">
+        Salem buyers may be comparing very different property types within the same search. We help you evaluate the property, the asking price, the transaction structure, and the tradeoffs that matter to your goals.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Search & Property Comparison</h3>
+          <p>We help narrow the search based on your budget, property type, condition preferences, parking needs, location, and long-term plans.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Offer Strategy</h3>
+          <p>We review comparable sales, competition, property condition, contingencies, timing, and your risk tolerance before structuring an offer.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Inspection & Due Diligence</h3>
+          <p>For condos, older homes, and multifamily properties, we help keep the review organized around condition, documents, association information, and transaction milestones.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Closing Coordination</h3>
+          <p>We stay engaged through lender, attorney, inspection, appraisal, final walkthrough, and closing coordination.</p>
+        </div>
+      </div>
+
+      <div class="cta-center" style="margin-top:18px;">
+        <a class="btn" href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener">Search Salem & North Shore Listings</a>
+      </div>
+    </section>
+
+    <section id="sellers">
+      <p class="eyebrow">Selling in Salem</p>
+      <h2>Position the Property for the Right Buyer</h2>
+
+      <p class="section-intro">
+        A Salem condo, single-family home, and multifamily property should not be marketed exactly the same way. We build the listing strategy around the property's actual strengths, condition, target buyer, and competing inventory.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Pricing Analysis</h3>
+          <p>We review relevant sales, active competition, condition, property type, location, and the features buyers are likely to compare.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Pre-Market Preparation</h3>
+          <p>We help prioritize cleanup, repairs, presentation, access, and other improvements before the property reaches the market.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Marketing & Showings</h3>
+          <p>We coordinate the listing launch, buyer inquiries, showing activity, feedback, and property presentation.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Offer Review & Negotiation</h3>
+          <p>We compare price, financing, contingencies, timing, deposits, and other terms so you can evaluate the complete offer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="investors">
+      <p class="eyebrow">Salem Investment Real Estate</p>
+      <h2>Multifamily & Rental Property Deserve a Different Analysis</h2>
+
+      <p class="section-intro">
+        Salem can appeal to investors because it includes condos, multifamily properties, and other housing that may have rental potential. But the investment case should be built from realistic income, expenses, condition, financing, and operational assumptions—not just the advertised rent.
+      </p>
+
+      <div class="two-column">
+        <div>
+          <h3>What we look at with investors</h3>
+
+          <div class="highlight">
+            <ul>
+              <li>Current rents and realistic rent positioning</li>
+              <li>Unit mix, layouts, parking, and tenant appeal</li>
+              <li>Taxes, insurance, utilities, and recurring expenses</li>
+              <li>Vacancy and turnover assumptions</li>
+              <li>Deferred maintenance and near-term capital needs</li>
+              <li>Financing structure and cash requirements</li>
+              <li>Ongoing management and operational workload</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Think about the property after closing</h3>
+          <p>
+            AV Realty & Management works on both brokerage and property-management matters. That means we can help investors think through the acquisition alongside future leasing, maintenance, resident communication, rent collection, and management needs.
+          </p>
+
+          <div class="cta-center">
+            <a class="btn" href="rental-property-calculator.html">Analyze a Rental Property</a>
+            <a class="btn" href="salem-property-management.html">Salem Property Management</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">First-Time Buyers</p>
+      <h2>Buying Your First Home in Salem?</h2>
+
+      <p class="section-intro">
+        First-time buyers often have to learn financing, inspections, offers, attorneys, appraisals, and closing while also trying to decide whether a property is actually right for them. We help organize the process so you can focus on the decision instead of getting lost in the moving pieces.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Define the Search</h3>
+          <p>We help separate must-haves from nice-to-haves and build the search around your budget and long-term ownership goals.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Understand the Offer</h3>
+          <p>We walk through price, deposits, contingencies, timing, and the practical tradeoffs involved before you submit.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Stay Organized</h3>
+          <p>We help coordinate the transaction with your lender, attorney, inspector, and other professionals through closing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Relocating to Salem</p>
+      <h2>Moving to Salem or the North Shore?</h2>
+
+      <p class="section-intro">
+        Relocation buyers may be comparing Salem with several nearby communities at the same time. We can help you understand the available property types, narrow your priorities, and use your time more efficiently when touring from out of town.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Compare Housing Options</h3>
+          <p>We help you compare condos, single-family homes, multifamily options, condition, price points, and ownership tradeoffs.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Focus the Search</h3>
+          <p>We build around your priorities, including property type, parking, condition, commute, layout, outdoor space, and future plans.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Coordinate From a Distance</h3>
+          <p>If you are not local yet, we can help organize showings and transaction steps so your visits are more productive.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Sell or Keep It?</p>
+      <h2>Should You Sell Your Salem Property or Rent It?</h2>
+
+      <p class="section-intro">
+        Owners sometimes reach a point where both options are viable. Selling may create liquidity and simplify the next move; keeping the property may preserve a long-term asset. We can help you compare the practical brokerage and property-management considerations before making the decision.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Evaluate a Sale</h3>
+          <p>We can review market positioning, preparation needs, comparable sales, likely buyer demand, and the transaction path.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Evaluate a Rental</h3>
+          <p>We can review rental positioning, make-ready needs, tenant placement, maintenance, and what ongoing management would involve.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Compare the Options</h3>
+          <p>We can help organize the relevant real-estate and management considerations so you have a clearer basis for deciding which path fits your goals.</p>
+        </div>
+      </div>
+
+      <div class="cta-center" style="margin-top:18px;">
+        <a class="btn" href="free-rent-analysis.html">Request a Free Rent Analysis</a>
+        <a class="btn" href="salem-property-management.html">Salem Property Management</a>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">How We Work</p>
+      <h2>A Clear Real Estate Process</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Initial Conversation</h3>
+          <p>We discuss your goals, timing, budget, target property, or the property you may be selling.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Strategy</h3>
+          <p>We build a practical plan around buying, selling, relocating, investing, or holding the property.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Execution</h3>
+          <p>Showings, marketing, offers, negotiations, inspections, and transaction coordination.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Closing & Next Step</h3>
+          <p>We stay involved through closing and help you think about what comes next.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-panel">
+      <h2>Thinking About Buying or Selling in Salem?</h2>
+      <p>
+        Tell us what you are trying to accomplish. We can start with a simple conversation about the property, your timing, and what a practical next step looks like.
+      </p>
+
+      <div class="cta-center">
+        <a class="btn secondary-btn" href="#contact">Request a Consultation</a>
+        <a class="btn secondary-btn" href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener">Search Listings</a>
+      </div>
+    </section>
+
+    <section id="faq">
+      <p class="eyebrow">Questions From Buyers & Sellers</p>
+      <h2>Salem Real Estate FAQ</h2>
+
+      <div class="faq-item">
+        <h3>Can you help me buy a home or condo in Salem?</h3>
+        <p>Yes. We help buyers evaluate homes, condos, and multifamily properties, coordinate showings, review comparable sales, structure offers, and navigate the transaction through closing.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you work with first-time homebuyers?</h3>
+        <p>Yes. We can help explain the process, organize your search, coordinate with your lender and other transaction professionals, evaluate properties, and prepare offers.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you help me sell my Salem property?</h3>
+        <p>Yes. We can help evaluate market position, prepare a pricing and marketing strategy, coordinate showings, review offers, negotiate terms, and manage the transaction through closing.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you work with Salem multifamily and investment properties?</h3>
+        <p>Yes. We work with investors and owner-occupant buyers evaluating rental and multifamily opportunities, including rent positioning, expenses, condition, financing considerations, and future management needs.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you help me decide whether to sell or rent my Salem property?</h3>
+        <p>Yes. Because AV Realty & Management offers both brokerage and property-management services, we can help you compare the practical considerations of each option.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="eyebrow">Start Here</p>
+      <h2>Tell Us What You Want to Accomplish</h2>
+
+      <p class="section-intro">
+        Buying, selling, investing, relocating, or deciding what to do with a Salem property? Send us the basics and we will follow up with a practical next step.
+      </p>
+
+      <div class="form-card" style="max-width:760px;margin:0 auto;">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+          <input type="hidden" name="subject" value="NEW LEAD - Salem Real Estate">
+          <input type="hidden" name="from_name" value="AV Realty & Management Website">
+          <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+          <input type="hidden" name="form_source" value="Salem Real Estate Page">
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="two-column">
+            <div class="form-row">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="goal">What are you looking to do?</label>
+            <select id="goal" name="goal">
+              <option value="">Select one</option>
+              <option>Buy a home or condo in Salem</option>
+              <option>Sell a Salem property</option>
+              <option>Buy a multifamily or investment property</option>
+              <option>First-time homebuyer</option>
+              <option>Relocate to Salem / North Shore</option>
+              <option>Decide whether to sell or rent my property</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="property_address">Property Address or Area of Interest</label>
+            <input type="text" id="property_address" name="property_address" placeholder="Optional">
+          </div>
+
+          <div class="form-row">
+            <label for="timeline">Timing</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select one</option>
+              <option>As soon as possible</option>
+              <option>Within 1-3 months</option>
+              <option>Within 3-6 months</option>
+              <option>6-12 months</option>
+              <option>Just researching</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Tell us a little more</label>
+            <textarea id="message" name="message" placeholder="What are you looking for? What property are you considering selling? What questions do you have?"></textarea>
+          </div>
+
+          <button type="submit" style="width:100%;margin-left:0;">Request My Consultation</button>
+        </form>
+
+        <p style="font-size:0.8rem;color:#666;margin:10px 0 0;text-align:center;">
+          No obligation. Your information is used to respond to your request.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">More AV Realty Resources</p>
+      <h2>Continue Your Research</h2>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>North Shore Real Estate</h3>
+          <p>Explore our broader real estate services for buyers, sellers, and investors throughout the North Shore.</p>
+          <a class="btn" href="north-shore-real-estate.html">North Shore Real Estate</a>
+        </div>
+
+        <div class="info-card">
+          <h3>Salem Property Management</h3>
+          <p>Already own a rental or considering keeping your Salem property instead of selling? Explore local management services.</p>
+          <a class="btn" href="salem-property-management.html">Property Management</a>
+        </div>
+
+        <div class="info-card">
+          <h3>Rental Property Calculator</h3>
+          <p>Estimate income, expenses, NOI, cap rate, cash flow, and DSCR for a potential investment property.</p>
+          <a class="btn" href="rental-property-calculator.html">Analyze a Property</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="font-weight:800;font-family:'Montserrat',sans-serif;">
+      AV Realty & Management
+    </div>
+
+    <div style="margin-top:6px;">
+      5 Huron Street, Swampscott, MA 01907
+    </div>
+
+    <div style="margin-top:6px;">
+      <a href="tel:9782773435">(978) 277-3435</a>
+    </div>
+
+    <div class="footer-links">
+      <a href="north-shore-real-estate.html">North Shore Real Estate</a>
+      <a href="salem-property-management.html">Salem Property Management</a>
+      <a href="free-rent-analysis.html">Free Rent Analysis</a>
+      <a href="rental-property-calculator.html">Rental Property Calculator</a>
+      <a href="north-shore-ma-apartments.html">Apartments</a>
+    </div>
+
+    <div style="color:#666;font-size:13px;margin-top:15px;">
+      Serving Salem and communities across Boston's North Shore.
+    </div>
+
+    <div style="color:#666;font-size:13px;margin-top:8px;">
+      &copy; 2026 AV Realty & Management LLC. All rights reserved.
+    </div>
+  </footer>
+
+  <a href="#contact" class="floating-contact">Contact Us</a>
+  <a href="tel:9782773435" class="call-button">Call Now</a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
