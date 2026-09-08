@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- ==================================================
+       CORE WEBSITE
+  =================================================== -->
+
   <url>
     <loc>https://avrealtymanagement.com/</loc>
     <lastmod>2026-08-26</lastmod>
@@ -11,43 +15,64 @@
     <lastmod>2026-08-26</lastmod>
   </url>
 
-  <url>
-    <loc>https://avrealtymanagement.com/calculator.html</loc>
-    <lastmod>2026-08-26</lastmod>
-  </url>
 
-  <url>
-    <loc>https://avrealtymanagement.com/rental-property-calculator.html</loc>
-    <lastmod>2026-08-26</lastmod>
-  </url>
+  <!-- ==================================================
+       REAL ESTATE
+  =================================================== -->
 
-  <url>
-    <loc>https://avrealtymanagement.com/absentee-landlord-property-management.html</loc>
-    <lastmod>2026-09-04</lastmod>
-  </url>
-
-  <url>
-    <loc>https://avrealtymanagement.com/swampscott-property-management.html</loc>
-    <lastmod>2026-09-07</lastmod>
-  </url>
-
-  <url>
-    <loc>https://avrealtymanagement.com/free-rent-analysis.html</loc>
-    <lastmod>2026-08-26</lastmod>
-  </url>
-
+  <!-- North Shore Real Estate Hub -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-real-estate.html</loc>
     <lastmod>2026-09-07</lastmod>
   </url>
 
+  <!-- Local Real Estate Markets -->
+  <url>
+    <loc>https://avrealtymanagement.com/swampscott-real-estate.html</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+
+  <url>
+    <loc>https://avrealtymanagement.com/marblehead-real-estate.html</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+
+  <url>
+    <loc>https://avrealtymanagement.com/salem-real-estate.html</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+
+  <url>
+    <loc>https://avrealtymanagement.com/nahant-real-estate.html</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+
+  <!-- Multifamily & Investment Real Estate -->
+  <url>
+    <loc>https://avrealtymanagement.com/north-shore-multifamily-real-estate.html</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+
+  <!-- Spanish Real Estate -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-real-estate-es.html</loc>
     <lastmod>2026-09-07</lastmod>
   </url>
 
+
+  <!-- ==================================================
+       PROPERTY MANAGEMENT
+  =================================================== -->
+
+  <!-- North Shore Property Management Hub -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-property-management.html</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+
+  <!-- Local Property Management Markets -->
+  <url>
+    <loc>https://avrealtymanagement.com/swampscott-property-management.html</loc>
     <lastmod>2026-09-07</lastmod>
   </url>
 
@@ -62,38 +87,44 @@
   </url>
 
   <url>
+    <loc>https://avrealtymanagement.com/nahant-property-management.html</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+
+  <!-- Specialized Owner Services -->
+  <url>
+    <loc>https://avrealtymanagement.com/absentee-landlord-property-management.html</loc>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+
+
+  <!-- ==================================================
+       INVESTOR & OWNER TOOLS
+  =================================================== -->
+
+  <url>
+    <loc>https://avrealtymanagement.com/rental-property-calculator.html</loc>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+
+  <url>
+    <loc>https://avrealtymanagement.com/free-rent-analysis.html</loc>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+
+  <url>
+    <loc>https://avrealtymanagement.com/calculator.html</loc>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+
+
+  <!-- ==================================================
+       RENTERS & APARTMENTS
+  =================================================== -->
+
+  <url>
     <loc>https://avrealtymanagement.com/north-shore-ma-apartments.html</loc>
     <lastmod>2026-08-22</lastmod>
   </url>
-  
-  <url>
-  <loc>https://avrealtymanagement.com/nahant-property-management.html</loc>
-  <lastmod>2026-09-07</lastmod>
-</url>
 
-  <url>
-  <loc>https://avrealtymanagement.com/swampscott-real-estate.html</loc>
-  <lastmod>2026-09-07</lastmod>
-</url>
-
-  <url>
-  <loc>https://avrealtymanagement.com/marblehead-real-estate.html</loc>
-  <lastmod>2026-09-07</lastmod>
-</url>
-
-  <url>
-  <loc>https://avrealtymanagement.com/salem-real-estate.html</loc>
-  <lastmod>2026-09-07</lastmod>
-</url>
-
-  <url>
-  <loc>https://avrealtymanagement.com/nahant-real-estate.html</loc>
-  <lastmod>2026-09-07</lastmod>
-</url>
-
-  <url>
-  <loc>https://avrealtymanagement.com/north-shore-multifamily-real-estate.html</loc>
-  <lastmod>2026-09-07</lastmod>
-</url>
-  
 </urlset>
