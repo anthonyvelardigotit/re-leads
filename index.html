@@ -716,16 +716,6 @@
       border-top: 1px solid rgba(0,51,160,0.08);
     }
 
-    #guidePopup {
-      border: 1px solid rgba(212,175,55,0.35) !important;
-      animation: popupFloat 0.5s ease both;
-    }
-
-    @keyframes popupFloat {
-      from { opacity: 0; transform: translate(-50%, -46%) scale(0.96); }
-      to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    }
-
     @media (max-width: 768px) {
       nav {
         justify-content: flex-start;
@@ -1192,7 +1182,7 @@
             <span class="tool-kicker">Free Guide</span>
             <h3>2026 Multifamily Buyer’s Playbook</h3>
             <p>Use our practical buyer’s playbook to think through financing, due diligence, rental income, operations, and long-term ownership strategy.</p>
-            <button type="button" onclick="showGuidePopup()">Get the Free Guide</button>
+            <a class="btn" href="multifamily-guide.pdf" target="_blank" rel="noopener">Get the Free Guide</a>
           </div>
         </div>
       </section>
@@ -1285,6 +1275,7 @@
       <a href="north-shore-real-estate.html">Real Estate</a>
       <a href="north-shore-property-management.html">Property Management</a>
       <a href="north-shore-multifamily-real-estate.html">Multifamily Investing</a>
+      <a href="multifamily-guide.pdf" target="_blank" rel="noopener">Multifamily Guide</a>
       <a href="rental-property-calculator.html">Rental Calculator</a>
       <a href="free-rent-analysis.html">Free Rent Analysis</a>
       <a href="north-shore-ma-apartments.html">Apartments</a>
@@ -1313,25 +1304,6 @@
 
   <a href="#contact" class="floating-contact">Email Now</a>
   <a href="tel:9782773435" class="call-button">Call Now</a>
-
-  <div id="guidePopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border-radius:18px; padding:24px; box-shadow:0 18px 55px rgba(0,0,0,0.25); z-index:1001; max-width:420px; width:90%;">
-    <h2 style="margin-top:0; font-family:Montserrat, sans-serif; color:#0033a0;">Free Multifamily Guide</h2>
-    <p style="font-size:0.95rem; color:#333; line-height:1.6;">Want to learn how to buy your first multifamily property? Get our step-by-step guide for free.</p>
-    <p style="font-size:0.8rem; color:#666; margin-top:8px; line-height:1.5;">
-      You may also receive occasional tips on North Shore real estate and property management. You can unsubscribe at any time.
-    </p>
-    <form action="https://formsubmit.co/anthony@avrealtymanagement.com" method="POST" onsubmit="handleGuideSubmit()">
-      <input type="text" name="_honey" style="display:none">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://avrealtymanagement.com/thankyou.html">
-      <input type="hidden" name="_subject" value="New Multifamily Guide Request - AVRealtyManagement.com">
-      <input type="hidden" name="form_source" value="Multifamily Guide Popup">
-      <input type="email" name="email" required placeholder="Enter your email" style="width:100%; padding:12px; margin-top:10px; border:1px solid #ccc; border-radius:10px;">
-      <button type="submit" style="margin-top:15px; width:100%;">Send Me the Guide</button>
-    </form>
-    <button type="button" onclick="dismissGuidePopup()" style="margin-top:12px; background:none; border:none; color:#666; font-size:0.85rem; text-decoration:underline; cursor:pointer; box-shadow:none;">No thanks</button>
-  </div>
 
   <script>
     function toggleMenu(button) {
@@ -1370,33 +1342,7 @@
         card.classList.toggle('flipped');
       });
     });
-
-    function showGuidePopup() {
-      if (!sessionStorage.getItem('guidePopupDismissed')) {
-        document.getElementById('guidePopup').style.display = 'block';
-      }
     }
-
-    function dismissGuidePopup() {
-      sessionStorage.setItem('guidePopupDismissed', 'true');
-      document.getElementById('guidePopup').style.display = 'none';
-    }
-
-    function handleGuideSubmit() {
-      sessionStorage.setItem('guidePopupDismissed', 'true');
-    }
-
-    setTimeout(showGuidePopup, 10000);
-
-    let popupShownByScroll = false;
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (!popupShownByScroll && pageHeight > 0 && (scrollY / pageHeight) > 0.5) {
-        popupShownByScroll = true;
-        showGuidePopup();
-      }
-    });
   </script>
 </body>
 </html>
