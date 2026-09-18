@@ -102,6 +102,34 @@
       padding: 8px 14px;
     }
 
+    .language-toggle {
+      position: absolute;
+      right: 22px;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px;
+      border: 1px solid rgba(212,175,55,0.7);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .language-toggle button {
+      min-width: 38px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: transparent;
+      box-shadow: none;
+      font-size: 0.76rem;
+      letter-spacing: 0.04em;
+    }
+
+    .language-toggle button:hover { transform: none; }
+
+    .language-toggle button.active {
+      color: var(--deep-blue);
+      background: var(--light-gold);
+    }
+
     .hamburger {
       display: none;
       flex-direction: column;
@@ -521,6 +549,8 @@
       .nav-links.active { display: flex; }
       .hamburger { display: flex; }
 
+      .language-toggle { right: 14px; }
+
       header { padding: 54px 18px 46px; }
       .hero-title { font-size: 2.05rem; }
       .hero-subtitle { font-size: 0.95rem; }
@@ -572,6 +602,11 @@
       <a href="about.html">About</a>
       <a href="index.html#contact">Contact</a>
       <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Resident Portal</a>
+    </div>
+
+    <div class="language-toggle" role="group" aria-label="Language selection">
+      <button type="button" id="lang-en" class="active" onclick="setLanguage('en')" aria-pressed="true">EN</button>
+      <button type="button" id="lang-es" onclick="setLanguage('es')" aria-pressed="false">ES</button>
     </div>
   </nav>
 
@@ -782,13 +817,104 @@
   </footer>
 
   <script>
+    let currentLanguage = "en";
+
+    const translations = {
+      "Real Estate": "Bienes Raíces", "Property Management": "Administración de Propiedades",
+      "Apartments": "Apartamentos", "About": "Sobre Nosotros", "Contact": "Contacto",
+      "Resident Portal": "Portal de Residentes",
+      "Free Buyer & Investor Tool": "Herramienta Gratuita para Compradores e Inversionistas",
+      "North Shore MA Mortgage Calculator": "Calculadora de Hipoteca de North Shore, MA",
+      "Estimate your monthly mortgage payment, principal and interest, property taxes, insurance, HOA, and total monthly housing cost before you make an offer or compare financing scenarios.": "Calcula tu pago hipotecario mensual, capital e intereses, impuestos sobre la propiedad, seguro, cuota de condominio y costo mensual total de vivienda antes de hacer una oferta o comparar opciones de financiamiento.",
+      "Calculate a Payment": "Calcular un Pago", "Analyze a Rental Property": "Analizar una Propiedad de Alquiler",
+      "Mortgage Payment Estimate": "Estimado del Pago Hipotecario",
+      "See the Monthly Cost Before You Buy": "Conoce el Costo Mensual Antes de Comprar",
+      "Enter your financing assumptions below. The calculator updates automatically as you adjust the purchase price, down payment, interest rate, term, taxes, insurance, and HOA.": "Ingresa los datos de financiamiento a continuación. La calculadora se actualiza automáticamente al ajustar el precio de compra, el pago inicial, la tasa de interés, el plazo, los impuestos, el seguro y la cuota de condominio.",
+      "Property & Financing": "Propiedad y Financiamiento", "Purchase Price": "Precio de Compra",
+      "Down Payment (%)": "Pago Inicial (%)", "Interest Rate (%)": "Tasa de Interés (%)",
+      "Loan Term (Years)": "Plazo del Préstamo (Años)",
+      "Annual Property Taxes": "Impuestos Anuales sobre la Propiedad",
+      "Annual Homeowners Insurance": "Seguro Anual de Vivienda",
+      "Monthly HOA / Condo Fee": "Cuota Mensual de Condominio / HOA",
+      "Monthly PMI / Mortgage Insurance": "PMI Mensual / Seguro Hipotecario",
+      "Update Payment": "Actualizar Pago", "Want a Copy of Your Estimate?": "¿Quieres una Copia de tu Estimado?",
+      "Send the current calculation to your email and keep the financing assumptions for reference.": "Envía el cálculo actual a tu correo electrónico y guarda los datos de financiamiento como referencia.",
+      "Email Address": "Correo Electrónico", "Send My Estimate": "Enviar mi Estimado",
+      "Estimated Monthly Cost": "Costo Mensual Estimado", "Total Monthly Payment": "Pago Mensual Total",
+      "Principal & Interest": "Capital e Intereses", "Estimated Loan Amount": "Monto Estimado del Préstamo",
+      "Down Payment": "Pago Inicial", "Property Taxes": "Impuestos sobre la Propiedad",
+      "Insurance": "Seguro", "HOA / Condo": "Condominio / HOA",
+      "PMI / Mortgage Insurance": "PMI / Seguro Hipotecario",
+      "This is a preliminary estimate only. Actual mortgage payments can differ based on lender terms, escrow requirements, insurance, taxes, mortgage insurance, fees, and loan program.": "Este es solo un estimado preliminar. Los pagos hipotecarios reales pueden variar según las condiciones del prestamista, los requisitos de la cuenta de depósito en garantía, el seguro, los impuestos, el seguro hipotecario, los cargos y el programa de préstamo.",
+      "Buying on the North Shore?": "¿Buscas comprar en North Shore?",
+      "AV Realty & Management can help you evaluate homes, compare properties, and navigate the purchase process.": "AV Realty & Management puede ayudarte a evaluar viviendas, comparar propiedades y orientarte durante el proceso de compra.",
+      "Explore Real Estate Services": "Explorar Servicios de Bienes Raíces", "Useful Next Steps": "Próximos Pasos Útiles",
+      "More Tools for Buyers, Landlords & Investors": "Más Herramientas para Compradores, Propietarios e Inversionistas",
+      "Rental Property Calculator": "Calculadora de Propiedades de Alquiler",
+      "Evaluating an investment property? Estimate cash flow, NOI, cap rate, cash-on-cash return, and DSCR.": "¿Estás evaluando una propiedad de inversión? Calcula el flujo de efectivo, NOI, tasa de capitalización, rendimiento sobre el efectivo y DSCR.",
+      "Free Rent Analysis": "Análisis Gratuito de Alquiler",
+      "Own a rental property? Get a local estimate of what your North Shore property may rent for.": "¿Eres dueño de una propiedad de alquiler? Obtén un estimado local de cuánto podrías cobrar por tu propiedad en North Shore.",
+      "Estimate My Rent": "Estimar mi Alquiler", "Search North Shore Homes": "Buscar Viviendas en North Shore",
+      "Browse live MLS listings and compare available homes before refining your financing assumptions.": "Explora propiedades disponibles en el MLS y compara viviendas antes de ajustar tus datos de financiamiento.",
+      "Search Homes for Sale": "Buscar Viviendas en Venta",
+      "Need Help Turning the Payment Into a Real Buying Strategy?": "¿Necesitas Convertir este Pago en una Estrategia Real de Compra?",
+      "A monthly-payment estimate is only one part of the decision. AV Realty & Management can help you compare properties, understand value, evaluate investment potential, and make a more informed North Shore real estate decision.": "El estimado del pago mensual es solo una parte de la decisión. AV Realty & Management puede ayudarte a comparar propiedades, entender su valor, evaluar su potencial de inversión y tomar una decisión inmobiliaria más informada en North Shore.",
+      "Start a Conversation": "Iniciar una Conversación", "Home": "Inicio",
+      "© 2026 AV Realty & Management LLC. All rights reserved.": "© 2026 AV Realty & Management LLC. Todos los derechos reservados."
+    };
+
+    const originalText = new Map();
+
+    function translatableTextNodes() {
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          return !parent || ["SCRIPT", "STYLE"].includes(parent.tagName) || !node.nodeValue.trim()
+            ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      return nodes;
+    }
+
+    function setLanguage(language) {
+      currentLanguage = language === "es" ? "es" : "en";
+      document.documentElement.lang = currentLanguage;
+      translatableTextNodes().forEach(node => {
+        if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+        const english = originalText.get(node);
+        const trimmed = english.trim();
+        const leading = english.match(/^\s*/)[0];
+        const trailing = english.match(/\s*$/)[0];
+        node.nodeValue = currentLanguage === "es" && translations[trimmed]
+          ? leading + translations[trimmed] + trailing : english;
+      });
+      document.title = currentLanguage === "es"
+        ? "Calculadora de Hipoteca de North Shore, MA | AV Realty & Management"
+        : "Mortgage Calculator North Shore MA | AV Realty & Management";
+      document.querySelector('meta[name="description"]').content = currentLanguage === "es"
+        ? "Usa la calculadora hipotecaria gratuita de AV Realty & Management para estimar capital, intereses, impuestos, seguro, HOA y el costo mensual de una propiedad."
+        : "Use AV Realty & Management's free North Shore MA mortgage calculator to estimate principal, interest, property taxes, insurance, HOA, and monthly housing costs for homes and investment properties.";
+      const enButton = document.getElementById("lang-en");
+      const esButton = document.getElementById("lang-es");
+      enButton.classList.toggle("active", currentLanguage === "en");
+      esButton.classList.toggle("active", currentLanguage === "es");
+      enButton.setAttribute("aria-pressed", String(currentLanguage === "en"));
+      esButton.setAttribute("aria-pressed", String(currentLanguage === "es"));
+      document.querySelector(".language-toggle").setAttribute("aria-label", currentLanguage === "es" ? "Selección de idioma" : "Language selection");
+      document.querySelector('input[name="subject"]').value = currentLanguage === "es" ? "Resultado de la Calculadora Hipotecaria del Sitio Web" : "Mortgage Calculator Result from Website";
+      document.querySelector('input[name="form_source"]').value = currentLanguage === "es" ? "Página de la Calculadora Hipotecaria - Español" : "Mortgage Calculator Page";
+      calculate();
+    }
+
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("active");
     }
 
     function money(value) {
       if (!isFinite(value)) return "$0";
-      return value.toLocaleString("en-US", {
+      return value.toLocaleString(currentLanguage === "es" ? "es-US" : "en-US", {
         style: "currency",
         currency: "USD",
         maximumFractionDigits: 0
@@ -835,10 +961,11 @@
       document.getElementById("loanAmount").textContent = money(loan);
       document.getElementById("downPayment").textContent = money(downPayment);
 
-      document.getElementById("taxMonthly").textContent = money(taxesMonthly) + "/mo";
-      document.getElementById("insuranceMonthly").textContent = money(insuranceMonthly) + "/mo";
-      document.getElementById("hoaMonthly").textContent = money(monthlyHoa) + "/mo";
-      document.getElementById("pmiMonthly").textContent = money(monthlyPmi) + "/mo";
+      const monthLabel = currentLanguage === "es" ? "/mes" : "/mo";
+      document.getElementById("taxMonthly").textContent = money(taxesMonthly) + monthLabel;
+      document.getElementById("insuranceMonthly").textContent = money(insuranceMonthly) + monthLabel;
+      document.getElementById("hoaMonthly").textContent = money(monthlyHoa) + monthLabel;
+      document.getElementById("pmiMonthly").textContent = money(monthlyPmi) + monthLabel;
     }
 
     function updateHiddenResult() {
@@ -865,8 +992,9 @@
       document.getElementById("hidden-hoa").value = monthlyHoa;
       document.getElementById("hidden-pmi").value = monthlyPmi;
 
-      document.getElementById("hidden-summary").value =
-        `Purchase Price: ${purchasePrice}, Down Payment: ${downPct}%, Loan Amount: ${loan}, Interest Rate: ${rate}%, Term: ${years} years, Annual Taxes: ${annualTaxes}, Annual Insurance: ${annualInsurance}, Monthly HOA: ${monthlyHoa}, Monthly PMI: ${monthlyPmi}, Estimated Total Monthly Payment: ${document.getElementById("totalPayment").textContent}`;
+      document.getElementById("hidden-summary").value = currentLanguage === "es"
+        ? `Precio de compra: ${purchasePrice}, Pago inicial: ${downPct}%, Monto del préstamo: ${loan}, Tasa de interés: ${rate}%, Plazo: ${years} años, Impuestos anuales: ${annualTaxes}, Seguro anual: ${annualInsurance}, HOA mensual: ${monthlyHoa}, PMI mensual: ${monthlyPmi}, Pago mensual total estimado: ${document.getElementById("totalPayment").textContent}`
+        : `Purchase Price: ${purchasePrice}, Down Payment: ${downPct}%, Loan Amount: ${loan}, Interest Rate: ${rate}%, Term: ${years} years, Annual Taxes: ${annualTaxes}, Annual Insurance: ${annualInsurance}, Monthly HOA: ${monthlyHoa}, Monthly PMI: ${monthlyPmi}, Estimated Total Monthly Payment: ${document.getElementById("totalPayment").textContent}`;
     }
 
     document.querySelectorAll("input, select").forEach(el => {
