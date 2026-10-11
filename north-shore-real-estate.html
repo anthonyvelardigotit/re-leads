@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>North Shore MA Real Estate | Buy, Sell & Invest | AV Realty & Management</title>
-  <meta name="description" content="Explore North Shore MA real estate with AV Realty & Management. Local guidance for buyers, sellers, and investors, with featured market expertise in Swampscott, Marblehead, Salem, and Nahant plus service across surrounding North Shore communities." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://avrealtymanagement.com/north-shore-real-estate.html" />
+  <title>North Shore MA Real Estate | Buy &amp; Sell Homes | AV Realty</title>
+  <meta name="description" content="Buy or sell a home on Massachusetts’ North Shore with AV Realty &amp; Management. Local brokerage serving Swampscott, Marblehead, Salem, Nahant, and nearby towns.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://avrealtymanagement.com/north-shore-real-estate.html">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="North Shore MA Real Estate | AV Realty & Management" />
-  <meta property="og:description" content="Buying, selling, or investing on Boston's North Shore? Work with a local brokerage focused on clear strategy, market insight, and practical guidance." />
-  <meta property="og:url" content="https://avrealtymanagement.com/north-shore-real-estate.html" />
-  <meta property="og:image" content="https://avrealtymanagement.com/hero.jpg" />
-  <meta property="og:site_name" content="AV Realty & Management" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="North Shore MA Real Estate | Buy &amp; Sell Homes | AV Realty">
+  <meta property="og:description" content="Buying, selling, or investing on Boston's North Shore? Work with a local brokerage focused on clear strategy, market insight, and practical guidance.">
+  <meta property="og:url" content="https://avrealtymanagement.com/north-shore-real-estate.html">
+  <meta property="og:image" content="https://avrealtymanagement.com/hero.jpg">
+  <meta property="og:site_name" content="AV Realty &amp; Management">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="North Shore MA Real Estate | AV Realty & Management" />
-  <meta name="twitter:description" content="Local North Shore guidance for buyers, sellers, and real estate investors." />
-  <meta name="twitter:image" content="https://avrealtymanagement.com/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="North Shore MA Real Estate | AV Realty &amp; Management">
+  <meta name="twitter:description" content="Local North Shore guidance for buyers, sellers, and real estate investors.">
+  <meta name="twitter:image" content="https://avrealtymanagement.com/hero.jpg">
 
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="hero.jpg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --royal: #0033a0;
-      --deep-blue: #001b55;
-      --navy: #061329;
-      --gold: #d4af37;
-      --light-gold: #f2dc87;
-      --soft-bg: #f5f7fb;
-      --text: #121212;
-      --muted: #666;
-      --white: #ffffff;
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      --navy: #07162f;
+      --blue: #173859;
+      --gold: #c8a75d;
+      --cream: #faf9f6;
+      --ink: #172435;
+      --muted: #596575;
+      --line: #dfe4e8;
+      --radius: 14px;
     }
 
     * {
@@ -46,529 +45,558 @@
 
     html {
       scroll-behavior: smooth;
-    }
-
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
+      scroll-padding-top: 100px;
     }
 
     body {
       margin: 0;
-      padding-top: 58px;
-      font-family: 'Open Sans', sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(0,51,160,0.08), transparent 30%),
-        linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Manrope, sans-serif;
+      line-height: 1.7;
     }
 
-    h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow, .stat strong {
-      font-family: 'Montserrat', sans-serif;
+    h1, h2, h3 {
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      letter-spacing: -.035em;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      margin: 0 0 14px;
     }
 
     a {
-      color: var(--royal);
+      color: var(--blue);
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: #806124;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+    }
+
+    a, button, input, textarea, select {
+      touch-action: manipulation;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 5px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      transform: translateY(-150%);
+      z-index: 1200;
+      background: white;
+      padding: 10px 18px;
+    }
+
+    .skip-link:focus {
+      transform: none;
     }
 
     nav {
-      background: rgba(0, 31, 92, 0.96);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
       z-index: 1000;
+      background: rgba(7, 22, 47, .98);
+      border-bottom: 1px solid #ffffff20;
+      padding: 14px max(24px, calc((100% - 1180px) / 2));
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      min-height: 58px;
-      padding: 12px 22px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      width: 100%;
-      justify-content: center;
+      gap: 24px;
+      min-height: 84px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-      transition: color 0.3s ease, transform 0.3s ease;
+      font-size: .78rem;
+      font-weight: 600;
     }
 
     nav a:hover {
-      color: var(--light-gold);
-      transform: translateY(-1px);
+      color: #ead9ad;
+    }
+
+    nav a[aria-current="page"] {
+      color: #ead9ad;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 67px;
+      height: 48px;
+      object-fit: contain;
+      background: white;
+      border-radius: 6px;
+      padding: 4px;
+    }
+
+    .brand span {
+      max-width: 150px;
+      font-size: .88rem;
+      line-height: 1.35;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
     }
 
     .portal-btn {
-      border: 1px solid rgba(212,175,55,0.7);
-      border-radius: 30px;
-      padding: 8px 14px;
+      border: 1px solid #c8a75d80;
+      border-radius: 7px;
+      padding: 10px;
     }
 
     .hamburger {
       display: none;
-      flex-direction: column;
+      background: transparent;
+      color: white;
+      border: 1px solid #ffffff50;
+      border-radius: 6px;
+      padding: 9px 12px;
       cursor: pointer;
     }
 
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-      transition: 0.4s;
-    }
-
     header {
-      background:
-        linear-gradient(rgba(0,16,52,0.72), rgba(0,22,70,0.62)),
-        url('hero.jpg') no-repeat center center/cover;
       color: white;
-      text-align: center;
-      padding: 78px 20px 68px;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid rgba(212,175,55,0.5);
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
       background:
-        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 36%),
-        linear-gradient(90deg, rgba(0,51,160,0.18), transparent, rgba(0,51,160,0.18));
-      pointer-events: none;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.10) 45%, transparent 70%);
-      transform: translateX(-100%);
-      animation: luxurySweep 6s ease-in-out infinite;
-      pointer-events: none;
+        linear-gradient(
+          90deg,
+          rgba(5, 17, 38, .94),
+          rgba(7, 25, 54, .79) 50%,
+          rgba(7, 25, 54, .28)
+        ),
+        url('hero.jpg') center/cover;
+      padding: 90px 24px;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
     }
 
     .hero-overlay {
-      max-width: 980px;
+      max-width: 1132px;
+      width: 100%;
       margin: auto;
-      position: relative;
-      z-index: 1;
     }
 
-    .logo-container img {
-      max-width: 112px;
-      height: auto;
-      margin-bottom: 18px;
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+    .hero-label, .eyebrow {
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 0 0 16px;
     }
 
     .hero-label {
-      letter-spacing: 3.5px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--light-gold);
-      margin: 0 0 13px;
-      text-transform: uppercase;
+      color: #ead9ad;
     }
 
     .hero-title {
-      font-size: clamp(2.15rem, 5vw, 3.35rem);
-      line-height: 1.1;
-      margin: 0 auto 18px;
-      font-weight: 800;
-      color: #fff;
-      max-width: 900px;
-      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
+      font-size: clamp(2.4rem, 4.8vw, 3.9rem);
+      letter-spacing: -.045em;
+      max-width: 800px;
+      margin: 0 0 24px;
+      font-weight: 600;
     }
 
     .hero-subtitle {
-      max-width: 780px;
-      margin: 0 auto 24px;
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.94);
+      font-size: 1.08rem;
+      max-width: 640px;
+      color: #e3e9ef;
+      margin: 0 0 30px;
     }
 
     .hero-cta {
       display: flex;
-      justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-top: 8px;
+      gap: 12px;
     }
 
-    .logo-container,
-    .hero-label,
-    .hero-title,
-    .hero-subtitle,
-    .hero-cta {
-      opacity: 0;
-      transform: translateY(18px);
-      animation: heroFadeUp 0.9s ease forwards;
+    .hero-shortcuts {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
     }
 
-    .logo-container { animation-delay: 0.1s; }
-    .hero-label { animation-delay: 0.25s; }
-    .hero-title { animation-delay: 0.4s; }
-    .hero-subtitle { animation-delay: 0.55s; }
-    .hero-cta { animation-delay: 0.7s; }
-
-    @keyframes heroFadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .hero-shortcuts a {
+      color: #ead9ad;
+      font-size: .9rem;
     }
 
-    @keyframes luxurySweep {
-      0%, 45% { transform: translateX(-100%); }
-      75%, 100% { transform: translateX(100%); }
-    }
-
-    .btn, button {
-      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
+    .btn, button[type="submit"] {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      border: 1px solid var(--navy);
+      border-radius: 8px;
+      background: var(--navy);
       color: white;
-      padding: 12px 20px;
-      font-size: 15px;
       text-decoration: none;
-      border-radius: 999px;
-      display: inline-block;
-      transition: all 0.35s ease;
-      border: none;
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: .86rem;
       cursor: pointer;
-      font-weight: 700;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,51,160,0.24);
+      transition: background .2s, transform .2s;
     }
 
-    .btn::before,
-    button::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 80%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
-      transition: 0.6s;
+    .btn:hover, button[type="submit"]:hover {
+      background: var(--blue);
+      color: white;
+      transform: translateY(-2px);
     }
 
-    .btn:hover::before,
-    button:hover::before {
-      left: 120%;
+    .hero-primary {
+      background: #d7bb7a;
+      border-color: #d7bb7a;
+      color: var(--navy);
     }
 
-    .btn:hover,
-    button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 35px rgba(0,51,160,0.34);
-      background: linear-gradient(135deg, #00257a, #00143f);
+    .hero-primary:hover {
+      background: #ead9ad;
+      color: var(--navy);
     }
 
     .secondary-btn {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.72);
-      backdrop-filter: blur(8px);
-    }
-
-    .secondary-btn:hover {
-      background: white;
-      color: var(--royal);
+      background: transparent;
+      border-color: #ffffff85;
     }
 
     .container {
-      max-width: 1080px;
-      margin: 34px auto;
-      padding: 30px;
-      background: rgba(255,255,255,0.95);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0,51,160,0.08);
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 24px;
     }
 
-    section {
-      margin-bottom: 58px;
+    .section-spacious {
+      padding: 72px 0;
     }
 
-    h2 {
-      color: var(--royal);
-      padding-bottom: 12px;
-      text-align: center;
-      font-size: clamp(1.55rem, 3vw, 2.1rem);
-      margin-bottom: 14px;
-      position: relative;
-    }
-
-    h2::after {
-      content: "";
-      display: block;
-      width: 88px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 13px auto 0;
-      border-radius: 3px;
+    .section-spacious + .section-spacious {
+      border-top: 1px solid var(--line);
     }
 
     .eyebrow {
+      color: #806124;
       text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--gold);
-      font-size: 0.76rem;
-      font-weight: 800;
-      margin: 0 0 6px;
+    }
+
+    section > h2 {
+      text-align: center;
     }
 
     .section-intro {
       text-align: center;
       color: var(--muted);
-      max-width: 800px;
-      margin: 0 auto 26px;
-      line-height: 1.75;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .text-link {
+      font-weight: 700;
+      font-size: .87rem;
+      text-decoration: none;
+      margin-top: auto;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .card-number {
+      color: #806124;
+      font-size: .76rem;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
     .trust-strip {
+      max-width: 1180px;
+      margin: auto;
+      padding: 24px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      max-width: 1040px;
-      margin: 24px auto 0;
-      padding: 0 20px;
-      position: relative;
-      z-index: 2;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
     }
 
     .trust-card {
-      background: rgba(255,255,255,0.94);
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 18px;
-      padding: 19px;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .trust-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 45px rgba(0,51,160,0.18);
+      padding-right: 16px;
     }
 
     .trust-card strong {
       display: block;
-      color: var(--royal);
-      font-family: 'Montserrat', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
       margin-bottom: 6px;
-      font-size: 0.97rem;
     }
 
     .trust-card span {
       color: var(--muted);
-      font-size: 0.86rem;
-      line-height: 1.5;
+      font-size: .83rem;
     }
 
     .two-column {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 28px;
+      gap: 24px;
     }
 
     .feature-card {
-      background: linear-gradient(145deg, #ffffff, #f8faff);
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 38px rgba(0,51,160,0.12);
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
     }
 
     .feature-card h3 {
-      color: var(--deep-blue);
-      margin: 0 0 9px;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 
     .feature-card p {
       color: var(--muted);
-      line-height: 1.7;
-      margin: 0 0 16px;
+    }
+
+    .feature-card .card-actions {
+      margin-top: auto;
+      padding-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
     }
 
     .list-check {
       list-style: none;
       padding: 0;
       margin: 0;
-      color: #3e4758;
-      line-height: 1.7;
+      color: var(--muted);
+      font-size: .93rem;
     }
 
     .list-check li {
       position: relative;
       padding-left: 24px;
-      margin-bottom: 9px;
+      margin-bottom: 12px;
     }
 
     .list-check li::before {
-      content: "✓";
+      content: '✓';
       position: absolute;
       left: 0;
-      top: 0;
-      color: var(--gold);
-      font-weight: 800;
+      color: #806124;
     }
 
-    .town-grid {
+    .process-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-      margin-top: 22px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
     }
 
-    .town-box {
-      background: linear-gradient(145deg, #ffffff, #f6f8ff);
-      border: 1px solid rgba(0,51,160,0.16);
-      border-radius: 12px;
-      padding: 13px 10px;
+    .process-card {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .process-card h3 {
+      font-size: 1.1rem;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .process-card .card-number {
+      display: block;
+    }
+
+    .resource-note {
       text-align: center;
-      font-weight: 700;
-      color: var(--royal);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      margin-top: 24px;
+      font-size: .9rem;
     }
 
-    .town-box:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(0,51,160,0.10);
+    .investor-panel {
+      background: var(--navy);
+      color: white;
+      border-radius: 18px;
+      padding: 44px;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .investor-panel h2 {
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+    }
+
+    .investor-panel .eyebrow {
+      color: #ead9ad;
+      text-align: left;
+    }
+
+    .investor-panel p {
+      color: #c9d2de;
+      margin: 0;
+    }
+
+    .investor-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .investor-actions .text-link {
+      color: #ead9ad;
     }
 
     .city-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
-      margin-top: 22px;
     }
 
     .city-card {
-      border-radius: 16px;
-      border: 1px solid rgba(0,51,160,0.10);
-      background: #f8faff;
-      padding: 20px;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f0f2ef;
+      display: flex;
+      flex-direction: column;
     }
 
     .city-card h3 {
-      margin: 0 0 7px;
-      color: var(--royal);
-      font-size: 1.05rem;
+      font-size: 1.14rem;
     }
 
     .city-card p {
-      margin: 0;
-      font-size: 0.92rem;
-      line-height: 1.6;
+      font-size: .9rem;
       color: var(--muted);
+      margin: 0 0 24px;
     }
 
-    .city-card .market-link {
-      display: inline-block;
-      margin-top: 14px;
-      color: var(--royal);
-      text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    .city-card .market-link:hover {
-      text-decoration: underline;
-    }
-
-    .primary-markets-note {
-      max-width: 820px;
-      margin: -8px auto 24px;
-      text-align: center;
-      color: var(--muted);
-      line-height: 1.7;
+    .market-link {
+      font-size: .84rem;
+      font-weight: 600;
+      margin-top: auto;
     }
 
     .secondary-service-box {
-      margin-top: 26px;
-      padding: 22px;
-      border-radius: 18px;
-      background: linear-gradient(145deg, #ffffff, #f7f9ff);
-      border: 1px solid rgba(0,51,160,0.10);
-    }
-
-    .secondary-service-box h3 {
-      margin: 0 0 10px;
+      padding-top: 32px;
       text-align: center;
-      color: var(--deep-blue);
     }
 
     .secondary-service-box p {
-      max-width: 800px;
-      margin: 0 auto 16px;
-      text-align: center;
       color: var(--muted);
-      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto 20px;
     }
 
-    .investor-panel {
-      background:
-        radial-gradient(circle at top right, rgba(212,175,55,0.22), transparent 35%),
-        linear-gradient(135deg, rgba(0,51,160,0.98), rgba(0,21,70,0.98));
-      border-radius: 22px;
-      padding: 30px 24px;
-      color: white;
-      box-shadow: 0 20px 50px rgba(0,51,160,0.24);
-      border: 1px solid rgba(212,175,55,0.35);
-      text-align: center;
+    .town-grid {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .investor-panel h2 {
-      color: white;
-      margin-top: 0;
-    }
-
-    .investor-panel p {
-      max-width: 760px;
-      margin: 0 auto 16px;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.72;
+    .town-box {
+      font-size: .83rem;
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      border-radius: 50px;
     }
 
     .lead-form {
-      padding: 28px;
-      background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 20px;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.07);
+      padding: 0;
+    }
+
+    .lead-form h2 {
+      text-align: center;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 58px;
+      align-items: start;
+    }
+
+    .contact-details .eyebrow {
+      text-align: left;
+    }
+
+    .contact-details h3 {
+      font-size: 1.5rem;
+    }
+
+    .contact-details p {
+      color: var(--muted);
+    }
+
+    .contact-details a {
+      overflow-wrap: anywhere;
+    }
+
+    .contact-method {
+      display: block;
+      margin: 12px 0;
+      font-weight: 600;
+    }
+
+    .contact-details address {
+      font-style: normal;
+      margin-top: 28px;
+      color: var(--muted);
+    }
+
+    .consultation-form {
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
     }
 
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 18px;
     }
 
     .full-width {
@@ -577,68 +605,57 @@
 
     label {
       display: block;
-      font-weight: 700;
-      color: var(--royal);
-      margin-bottom: 6px;
+      margin-bottom: 7px;
+      color: var(--ink);
+      font-size: .85rem;
+      font-weight: 600;
     }
 
-    input, select, textarea {
+    input:not([type="hidden"]):not([type="checkbox"]),
+    textarea,
+    select {
       width: 100%;
-      padding: 14px;
-      border: 1px solid #d7ddea;
-      border-radius: 12px;
-      font-size: 16px;
-      box-sizing: border-box;
+      padding: 13px;
+      border: 1px solid #cbd3dc;
+      border-radius: 7px;
+      color: var(--ink);
       background: white;
-      color: var(--text);
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      outline: none;
-      border-color: var(--royal);
-      box-shadow: 0 0 0 4px rgba(0,51,160,0.10);
+      font-size: 16px;
     }
 
     textarea {
-      min-height: 120px;
+      min-height: 130px;
       resize: vertical;
     }
 
     .form-note {
       text-align: center;
+      font-size: .78rem;
       color: var(--muted);
-      font-size: 0.8rem;
-      margin-top: 12px;
-      line-height: 1.5;
+      margin: 18px 0 0;
     }
 
     .faq-list {
+      max-width: 850px;
+      margin: auto;
       display: grid;
       gap: 12px;
-      max-width: 850px;
-      margin: 0 auto;
     }
 
     details {
       background: white;
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 15px;
-      padding: 0 18px;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0 22px;
     }
 
     summary {
       cursor: pointer;
       list-style: none;
-      padding: 18px 28px 18px 0;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      color: var(--deep-blue);
+      padding: 20px 30px 20px 0;
       position: relative;
+      font-weight: 600;
+      font-size: .95rem;
     }
 
     summary::-webkit-details-marker {
@@ -646,173 +663,273 @@
     }
 
     summary::after {
-      content: "+";
+      content: '+';
       position: absolute;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--royal);
-      font-size: 1.35rem;
+      color: #806124;
+      font-size: 1.3rem;
     }
 
     details[open] summary::after {
-      content: "–";
+      content: '−';
     }
 
     details p {
-      color: var(--muted);
-      line-height: 1.68;
-      padding: 0 0 18px;
       margin: 0;
+      padding-bottom: 22px;
+      color: var(--muted);
+      font-size: .92rem;
     }
 
     footer {
-      background: linear-gradient(180deg, #f5f7fb, #eef2fb);
-      padding: 34px 20px;
+      background: var(--navy);
+      color: #c9d2de;
+      padding: 40px 24px;
       text-align: center;
-      color: var(--royal);
-      font-size: 14px;
-      border-top: 1px solid rgba(0,51,160,0.08);
+      font-size: .86rem;
     }
 
-    .footer-links {
+    footer a {
+      color: #ead9ad;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-links,
+    .mobile-social-icons {
       display: flex;
       justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
-      margin: 12px 0 14px;
+      gap: 12px 20px;
+      margin: 20px 0;
     }
 
     .footer-links a {
-      color: var(--royal);
       text-decoration: none;
-      font-weight: 700;
     }
 
-    .floating-contact, .call-button {
-      position: fixed;
-      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
-      color: white;
-      padding: 12px 18px;
-      font-weight: bold;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      text-decoration: none;
-      z-index: 1000;
-      transition: all 0.3s ease;
+    footer .copyright {
+      color: #c9d2de;
+      font-size: .78rem;
+      margin-top: 24px;
     }
 
-    .floating-contact {
-      bottom: 20px;
-      right: 20px;
+    .mobile-contact {
+      display: none;
     }
 
-    .call-button {
-      bottom: 80px;
-      right: 20px;
-    }
-
-    .floating-contact:hover, .call-button:hover {
-      transform: translateY(-3px);
-      background: linear-gradient(135deg, #00257a, #00143f);
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 900px) {
-      .trust-strip {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .two-column,
-      .city-grid {
-        grid-template-columns: 1fr;
+    @media (min-width: 901px) {
+      .nav-links {
+        display: flex !important;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
       nav {
-        justify-content: flex-start;
-        min-height: 58px;
+        gap: 14px;
+        padding: 14px 20px;
       }
 
       .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0,31,92,0.98);
-        position: absolute;
-        top: 58px;
-        left: 0;
-        padding: 15px 0;
+        gap: 14px;
       }
 
-      .nav-links.active {
-        display: flex;
+      .brand span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .city-grid,
+      .trust-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        min-height: 76px;
+        flex-wrap: wrap;
+      }
+
+      .brand span {
+        display: block;
       }
 
       .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        width: 100%;
         display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        padding: 10px 0;
+      }
+
+      .nav-links[hidden] {
+        display: none;
+      }
+
+      .nav-links a,
+      .nav-links .portal-btn {
+        padding: 10px;
       }
 
       header {
-        padding: 56px 18px 48px;
-      }
-
-      .logo-container img {
-        max-width: 95px;
+        min-height: 520px;
+        padding: 64px 24px;
       }
 
       .hero-title {
-        font-size: 2.1rem;
+        max-width: 700px;
       }
 
-      .hero-subtitle {
-        font-size: 0.95rem;
+      .two-column,
+      .investor-panel,
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .investor-panel {
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      html {
+        scroll-padding-top: 90px;
       }
 
       .container {
-        margin: 24px 14px;
-        padding: 22px 16px;
+        padding: 0 20px;
+      }
+
+      .section-spacious {
+        padding: 50px 0;
+      }
+
+      .brand span {
+        font-size: .78rem;
+      }
+
+      .hero-title {
+        font-size: clamp(2.25rem, 9vw, 3rem);
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .hero-label {
+        font-size: .65rem;
+        letter-spacing: .14em;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+      }
+
+      .hero-cta .btn {
+        width: 100%;
+      }
+
+      .hero-shortcuts {
+        gap: 14px 22px;
       }
 
       .trust-strip {
-        grid-template-columns: 1fr;
+        padding: 24px 20px;
+        gap: 20px;
       }
 
+      .trust-card {
+        padding: 0;
+      }
+
+      .trust-card strong {
+        font-size: .83rem;
+      }
+
+      .trust-card span {
+        font-size: .78rem;
+      }
+
+      .feature-card {
+        padding: 26px 22px;
+      }
+
+      .city-grid,
       .form-grid {
         grid-template-columns: 1fr;
       }
 
-      .full-width {
-        grid-column: auto;
+      .investor-panel {
+        padding: 30px 24px;
       }
 
-      .floating-contact,
-      .call-button {
-        padding: 10px 14px;
-        font-size: 0.86rem;
+      .contact-layout {
+        gap: 26px;
+      }
+
+      .consultation-form {
+        padding: 24px 20px;
+      }
+
+      footer {
+        padding-bottom: 110px;
+      }
+
+      .mobile-contact {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: var(--navy);
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+        gap: 12px;
+        z-index: 990;
+        border-top: 1px solid #ffffff30;
+      }
+
+      .mobile-contact a {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 9px;
+        border: 1px solid #ffffff50;
+        border-radius: 7px;
+        font-size: .86rem;
+      }
+
+      .mobile-contact a:last-child {
+        background: #d7bb7a;
+        color: var(--navy);
+        border-color: #d7bb7a;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
       *, *::before, *::after {
         animation: none !important;
         transition: none !important;
-      }
-
-      .fade-in {
-        opacity: 1;
-        transform: none;
       }
     }
   </style>
@@ -823,11 +940,13 @@
     "@graph": [
       {
         "@type": "RealEstateAgent",
-        "@id": "https://avrealtymanagement.com/#realestateagent",
+        "@id": "https://avrealtymanagement.com/#business",
         "name": "AV Realty & Management",
-        "url": "https://avrealtymanagement.com/",
+        "image": "https://avrealtymanagement.com/logo.png",
         "logo": "https://avrealtymanagement.com/logo.png",
+        "url": "https://avrealtymanagement.com",
         "telephone": "+1-978-277-3435",
+        "email": "anthony@avrealtymanagement.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "5 Huron Street",
@@ -837,16 +956,17 @@
           "addressCountry": "US"
         },
         "areaServed": [
-          {"@type":"City","name":"Swampscott, Massachusetts"},
-          {"@type":"City","name":"Marblehead, Massachusetts"},
-          {"@type":"City","name":"Salem, Massachusetts"},
-          {"@type":"City","name":"Nahant, Massachusetts"},
-          {"@type":"City","name":"Beverly, Massachusetts"},
-          {"@type":"City","name":"Lynn, Massachusetts"},
-          {"@type":"City","name":"Peabody, Massachusetts"},
-          {"@type":"City","name":"Danvers, Massachusetts"},
-          {"@type":"City","name":"Revere, Massachusetts"}
+          "Swampscott, Massachusetts",
+          "Marblehead, Massachusetts",
+          "Salem, Massachusetts",
+          "Nahant, Massachusetts",
+          "Beverly, Massachusetts",
+          "Lynn, Massachusetts",
+          "Peabody, Massachusetts",
+          "Danvers, Massachusetts",
+          "North Shore Massachusetts"
         ],
+        "description": "AV Realty & Management provides residential real estate brokerage, property management, multifamily and investment-property guidance, rental analysis, and owner resources across Boston's North Shore.",
         "sameAs": [
           "https://www.instagram.com/av.realty/",
           "https://www.facebook.com/avrealtymgmt",
@@ -857,12 +977,27 @@
         "@type": "WebPage",
         "@id": "https://avrealtymanagement.com/north-shore-real-estate.html#webpage",
         "url": "https://avrealtymanagement.com/north-shore-real-estate.html",
-        "name": "North Shore MA Real Estate",
-        "description": "Real estate services for buyers, sellers, and investors across Boston's North Shore, with featured local market coverage in Swampscott, Marblehead, Salem, and Nahant.",
-        "isPartOf": {
-          "@id": "https://avrealtymanagement.com/#realestateagent"
-        },
-        "inLanguage": "en-US"
+        "name": "North Shore MA Real Estate | Buy & Sell Homes | AV Realty",
+        "about": {
+          "@id": "https://avrealtymanagement.com/#business"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avrealtymanagement.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "North Shore Real Estate",
+            "item": "https://avrealtymanagement.com/north-shore-real-estate.html"
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -873,23 +1008,31 @@
             "name": "What areas does AV Realty & Management serve?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "AV Realty & Management serves buyers, sellers, investors, and property owners across Boston's North Shore. Dedicated local real estate pages are available for Swampscott, Marblehead, Salem, and Nahant, with service also available throughout surrounding North Shore communities."
+              "text": "AV Realty & Management serves clients across Boston’s North Shore. Our featured local markets are Swampscott, Marblehead, Salem, and Nahant, with service also available throughout surrounding North Shore and nearby communities."
             }
           },
           {
             "@type": "Question",
-            "name": "Can AV Realty & Management help with investment properties?",
+            "name": "Can you help me buy an investment or multifamily property?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. AV Realty & Management works with real estate investors and can help evaluate rental income, market positioning, property condition, and long-term ownership considerations."
+              "text": "Yes. AV Realty & Management works with real estate investors and can help evaluate potential acquisitions through both a brokerage and property-management lens, including rental income, market positioning, operating considerations, and property condition."
             }
           },
           {
             "@type": "Question",
-            "name": "Can I browse North Shore homes for sale online?",
+            "name": "Can I browse current North Shore homes for sale online?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. The page includes a link to AV Realty & Management's live MLS property search portal."
+              "text": "Yes. Use the live MLS search link on this page to browse available properties, then contact AV Realty & Management if you would like to discuss a specific listing or your broader search strategy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help me determine what my North Shore property may be worth?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A conversation can help establish a realistic pricing range using relevant comparable sales, property condition, location, current inventory, and market demand. A formal listing strategy would be tailored to the specific property."
             }
           }
         ]
@@ -900,21 +1043,36 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+  <nav aria-label="Primary navigation">
+    <a class="brand" href="/" aria-label="AV Realty &amp; Management home">
+      <img src="logo.png" alt="" width="67" height="48">
+      <span>AV Realty<br>&amp; Management</span>
+    </a>
+
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
+    >
+      Menu <span aria-hidden="true">☰</span>
+    </button>
 
     <div class="nav-links" id="navLinks">
-      <a href="north-shore-real-estate.html">Real Estate</a>
+      <a href="north-shore-real-estate.html" aria-current="page">Real Estate</a>
       <a href="north-shore-property-management.html">Property Management</a>
       <a href="north-shore-ma-apartments.html">Apartments</a>
       <a href="about.html">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">
+      <a href="#consultation">Contact</a>
+      <a
+        class="portal-btn"
+        href="https://avrealtymanagement.managebuilding.com/Resident/portal/login"
+        target="_blank"
+        rel="noopener"
+      >
         Resident Portal
       </a>
     </div>
@@ -922,67 +1080,85 @@
 
   <header>
     <div class="hero-overlay">
-      <div class="logo-container">
-        <img src="logo.png" alt="AV Realty & Management Logo">
-      </div>
-
       <p class="hero-label">North Shore Massachusetts Real Estate</p>
 
       <h1 class="hero-title">
-        Buy, Sell & Invest Across Boston’s North Shore
+        North Shore Real Estate.<br>Your Next Chapter.
       </h1>
 
       <p class="hero-subtitle">
-        Local real estate guidance for buyers, sellers, and investors across Boston’s North Shore, with dedicated market expertise in Swampscott, Marblehead, Salem, and Nahant—and service throughout surrounding communities.
+        Buy or sell a home on Massachusetts’ North Shore with clear advice,
+        thoughtful strategy, and support from the first conversation to closing.
       </p>
 
       <div class="hero-cta">
-        <a href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener" class="btn">
+        <a
+          href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567"
+          target="_blank"
+          rel="noopener"
+          class="btn hero-primary"
+        >
           Search Homes for Sale
         </a>
         <a href="#consultation" class="btn secondary-btn">
-          Request a Real Estate Consultation
+          Discuss Your Real Estate Goals
         </a>
+      </div>
+
+      <div class="hero-shortcuts">
+        <a href="#buyers">Buying a Home →</a>
+        <a href="#sellers">Selling a Property →</a>
       </div>
     </div>
   </header>
 
-  <div class="trust-strip fade-in">
+  <div class="trust-strip">
     <div class="trust-card">
       <strong>Licensed Brokerage</strong>
-      <span>Professional representation for buyers, sellers, and real estate investors.</span>
+      <span>
+        Professional representation for buyers, sellers, and real estate investors.
+      </span>
     </div>
     <div class="trust-card">
       <strong>North Shore Local</strong>
-      <span>Based in Swampscott with a focus on communities throughout Boston’s North Shore.</span>
+      <span>
+        Based in Swampscott with a focus on communities throughout Boston’s North Shore.
+      </span>
     </div>
     <div class="trust-card">
       <strong>Investor Mindset</strong>
-      <span>Practical guidance built around value, income potential, risk, and long-term performance.</span>
+      <span>
+        Practical guidance built around value, income potential, risk,
+        and long-term performance.
+      </span>
     </div>
     <div class="trust-card">
       <strong>Full-Service Perspective</strong>
-      <span>Brokerage experience combined with hands-on leasing and property management knowledge.</span>
+      <span>
+        Brokerage experience combined with hands-on leasing
+        and property management knowledge.
+      </span>
     </div>
   </div>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <div class="container">
 
-      <section class="fade-in">
-        <p class="eyebrow">North Shore Real Estate Services</p>
-        <h2>Your Local Real Estate Partner</h2>
+      <section class="section-spacious" aria-labelledby="services-heading">
+        <p class="eyebrow">Residential Brokerage</p>
+        <h2 id="services-heading">A Clear Path to Buying or Selling</h2>
         <p class="section-intro">
-          AV Realty & Management helps clients navigate residential real estate across the North Shore of Massachusetts. Swampscott, Marblehead, Salem, and Nahant are our featured local markets, supported by broader service throughout surrounding North Shore communities. Whether you are buying a home, preparing to sell, or evaluating an investment property, the goal is the same: understand the market, understand the numbers, and make a decision that fits your long-term objectives.
+          From your first home to your next move, our brokerage helps you
+          evaluate the options and navigate each step with confidence.
         </p>
-      </section>
 
-      <section class="fade-in">
         <div class="two-column">
-          <article class="feature-card">
+          <article class="feature-card" id="buyers">
             <h3>Buying a Home on the North Shore</h3>
             <p>
-              North Shore communities can feel very different from one another in price, housing stock, transportation, neighborhood character, and long-term value. A good home search starts with understanding those trade-offs.
+              A focused search starts with your budget, priorities, and timing.
+              We help you compare homes, understand property-specific
+              considerations, and prepare for the decisions ahead.
             </p>
             <ul class="list-check">
               <li>Guidance on towns, neighborhoods, budget, and commute considerations.</li>
@@ -990,15 +1166,30 @@
               <li>Support reviewing comparable sales and property-specific considerations.</li>
               <li>Coordination with lenders, attorneys, inspectors, and other professionals.</li>
             </ul>
-            <div style="margin-top:18px;">
-              <a href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener" class="btn">Browse North Shore Homes</a>
+            <div class="card-actions">
+              <a
+                href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567"
+                target="_blank"
+                rel="noopener"
+                class="btn"
+              >
+                Browse North Shore Homes
+              </a>
+              <a
+                href="#consultation"
+                class="text-link"
+                data-interest="Buy a home"
+              >
+                Plan Your Home Search →
+              </a>
             </div>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card" id="sellers">
             <h3>Selling a North Shore Property</h3>
             <p>
-              Selling successfully requires more than choosing a list price. Positioning, preparation, presentation, timing, negotiation, and local demand all influence how a property performs.
+              Bring your property to market with a strategy built around
+              its condition, comparable sales, presentation, and your goals.
             </p>
             <ul class="list-check">
               <li>Pricing recommendations informed by relevant comparable sales.</li>
@@ -1006,73 +1197,154 @@
               <li>Marketing strategy focused on attracting serious, qualified buyers.</li>
               <li>Negotiation designed to protect both your equity and your timeline.</li>
             </ul>
-            <div style="margin-top:18px;">
-              <a href="#consultation" class="btn">Discuss Selling Your Property</a>
+            <div class="card-actions">
+              <a
+                href="#consultation"
+                class="btn"
+                data-interest="Sell a property"
+              >
+                Request a Pricing Conversation
+              </a>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="fade-in">
-        <p class="eyebrow">Investment Real Estate</p>
+      <section class="section-spacious" aria-labelledby="process-heading">
+        <p class="eyebrow">From First Conversation to Closing</p>
+        <h2 id="process-heading">Know What Comes Next</h2>
+        <p class="section-intro">
+          The details vary by transaction. Our role is to keep your
+          strategy clear and your next steps organized.
+        </p>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <span class="card-number">01</span>
+            <h3>Define Your Strategy</h3>
+            <p>
+              Discuss your goals, timing, and budget or property.
+              Establish priorities and review relevant market information.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="card-number">02</span>
+            <h3>Search or Bring to Market</h3>
+            <p>
+              Compare homes and prepare offers, or develop a pricing
+              and presentation plan for your listing.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="card-number">03</span>
+            <h3>Navigate the Transaction</h3>
+            <p>
+              Stay informed through negotiation, inspections, contract milestones,
+              and coordination with your lender and attorney.
+            </p>
+          </article>
+        </div>
+
+        <p class="resource-note">
+          Planning a purchase?
+          <a href="calculator.html">Explore the mortgage calculator →</a>
+        </p>
+      </section>
+
+      <section class="section-spacious" aria-labelledby="investor-heading">
         <div class="investor-panel">
-          <h2>Real Estate Guidance for Investors & Multifamily Owners</h2>
-          <p>
-            Investment decisions require a different lens than a traditional home purchase. AV Realty & Management brings brokerage and property management perspectives together to help investors think through rental income, operating costs, tenant demand, property condition, market positioning, and long-term ownership strategy.
-          </p>
-          <p>
-            That can be especially useful when evaluating multifamily properties or rental assets where the quality of the investment depends on both the acquisition and the operations that follow.
-          </p>
-          <a href="rental-property-calculator.html" class="btn secondary-btn">Analyze a Rental Property</a>
-          <a href="north-shore-property-management.html" class="btn secondary-btn">Explore Property Management</a>
+          <div>
+            <p class="eyebrow">Investing Beyond the Purchase</p>
+            <h2 id="investor-heading">Looking at Multifamily or Rental Property?</h2>
+            <p>
+              Explore our dedicated investment services for a closer look
+              at rental income, operating costs, property condition,
+              and long-term ownership.
+            </p>
+          </div>
+
+          <div class="investor-actions">
+            <a
+              href="north-shore-multifamily-real-estate.html"
+              class="btn hero-primary"
+            >
+              Explore Multifamily &amp; Investing
+            </a>
+            <a href="rental-property-calculator.html" class="text-link">
+              Analyze a Rental Property →
+            </a>
+            <a href="north-shore-property-management.html" class="text-link">
+              Explore Property Management →
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="fade-in">
+      <section class="section-spacious">
         <p class="eyebrow">Featured Local Markets</p>
-        <h2>Start With the North Shore Market You Care About</h2>
+        <h2>Explore Our Local Markets</h2>
         <p class="section-intro">
-          Our dedicated local real estate pages go deeper into the buying, selling, relocation, and investment considerations that matter within each of our four primary markets.
+          Explore local buying and selling resources for Swampscott,
+          Marblehead, Salem, and Nahant, with service across surrounding communities.
         </p>
 
         <div class="city-grid">
           <article class="city-card">
             <h3>Swampscott Real Estate</h3>
             <p>
-              Coastal homes, single-family neighborhoods, condos, multifamily properties, relocation, and sell-versus-rent decisions in AV Realty & Management's home market.
+              Coastal homes, single-family neighborhoods, condos, multifamily
+              properties, relocation, and sell-versus-rent decisions in
+              AV Realty &amp; Management's home market.
             </p>
-            <a class="market-link" href="swampscott-real-estate.html">Explore Swampscott Real Estate →</a>
+            <a class="market-link" href="swampscott-real-estate.html">
+              Explore Swampscott Real Estate →
+            </a>
           </article>
 
           <article class="city-card">
             <h3>Marblehead Real Estate</h3>
             <p>
-              Property-specific guidance for distinctive single-family homes, condos, older housing stock, renovated homes, coastal properties, and relocating buyers.
+              Property-specific guidance for distinctive single-family homes,
+              condos, older housing stock, renovated homes, coastal properties,
+              and relocating buyers.
             </p>
-            <a class="market-link" href="marblehead-real-estate.html">Explore Marblehead Real Estate →</a>
+            <a class="market-link" href="marblehead-real-estate.html">
+              Explore Marblehead Real Estate →
+            </a>
           </article>
 
           <article class="city-card">
             <h3>Salem Real Estate</h3>
             <p>
-              Buyer, seller, first-time homebuyer, condo, multifamily, and investor guidance for one of the North Shore's most varied residential markets.
+              Buyer, seller, first-time homebuyer, condo, multifamily,
+              and investor guidance for one of the North Shore's
+              most varied residential markets.
             </p>
-            <a class="market-link" href="salem-real-estate.html">Explore Salem Real Estate →</a>
+            <a class="market-link" href="salem-real-estate.html">
+              Explore Salem Real Estate →
+            </a>
           </article>
 
           <article class="city-card">
             <h3>Nahant Real Estate</h3>
             <p>
-              Local guidance for a small coastal market where individual property characteristics, condition, limited inventory, and ownership strategy matter.
+              Local guidance for a small coastal market where individual
+              property characteristics, condition, limited inventory,
+              and ownership strategy matter.
             </p>
-            <a class="market-link" href="nahant-real-estate.html">Explore Nahant Real Estate →</a>
+            <a class="market-link" href="nahant-real-estate.html">
+              Explore Nahant Real Estate →
+            </a>
           </article>
         </div>
 
         <div class="secondary-service-box">
           <h3>Also Serving the Broader North Shore</h3>
           <p>
-            AV Realty & Management is not limited to these four communities. We also work with buyers, sellers, investors, and property owners throughout the surrounding North Shore and nearby markets.
+            Also serving buyers and sellers in nearby communities.
+            Contact us to discuss your location and goals.
           </p>
 
           <div class="town-grid">
@@ -1091,113 +1363,205 @@
         </div>
       </section>
 
-      <section class="fade-in">
-        <p class="eyebrow">Why Work With AV Realty</p>
-        <h2>Brokerage Knowledge With an Operational Perspective</h2>
-        <p class="section-intro">
-          Real estate decisions do not end at the closing table. For investors and rental-property owners in particular, leasing, operating expenses, property condition, resident demand, and long-term management all influence the value of an asset. AV Realty & Management is built around that broader perspective.
-        </p>
-
-        <div class="two-column">
-          <article class="feature-card">
-            <h3>For Home Buyers & Sellers</h3>
-            <p>
-              Expect clear communication, thoughtful market analysis, and practical guidance throughout the transaction. The objective is to help you make informed decisions without unnecessary pressure.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>For Investors & Property Owners</h3>
-            <p>
-              Brokerage strategy can be paired with rental analysis and property management knowledge to help evaluate not only what a property costs, but how it may function as an income-producing asset.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="consultation" class="fade-in">
+      <section id="consultation" class="section-spacious">
         <div class="lead-form">
           <p class="eyebrow">Start the Conversation</p>
-          <h2>Request a North Shore Real Estate Consultation</h2>
+          <h2>Let’s Plan Your Next Move</h2>
           <p class="section-intro">
-            Tell us what you are considering and where you are in the process. Whether you are buying, selling, investing, or simply evaluating your options, we can start with a straightforward conversation.
+            Tell us what you are considering and where you are in the process.
+            Whether you are buying, selling, investing, or simply evaluating
+            your options, we can start with a straightforward conversation.
           </p>
 
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
-            <input type="hidden" name="subject" value="New North Shore Real Estate Lead from AVRealtyManagement.com">
-            <input type="hidden" name="from_name" value="AV Realty & Management Website">
-            <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
-            <input type="hidden" name="form_source" value="North Shore Real Estate Page">
-            <input type="checkbox" name="botcheck" style="display:none;">
-
-            <div class="form-grid">
-              <div>
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" autocomplete="name" required />
-              </div>
-
-              <div>
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" autocomplete="email" required />
-              </div>
-
-              <div>
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" />
-              </div>
-
-              <div>
-                <label for="interest">What are you looking to do?</label>
-                <select id="interest" name="interest">
-                  <option value="">Select one</option>
-                  <option>Buy a home</option>
-                  <option>Sell a property</option>
-                  <option>Buy an investment property</option>
-                  <option>Sell an investment property</option>
-                  <option>Evaluate a multifamily property</option>
-                  <option>General real estate consultation</option>
-                </select>
-              </div>
-
-              <div class="full-width">
-                <label for="message">Tell Us About Your Real Estate Goals</label>
-                <textarea id="message" name="message" placeholder="Which town or property are you considering? What is your timeline?"></textarea>
-              </div>
+          <div class="contact-layout">
+            <div class="contact-details">
+              <p class="eyebrow">Contact AV Realty</p>
+              <h3>Clear advice starts with a conversation.</h3>
+              <p>
+                Tell us where you are in the process. We can discuss your search,
+                a potential sale, or the questions you want to resolve before
+                moving forward.
+              </p>
+              <a class="contact-method" href="tel:9782773435">
+                Call (978) 277-3435
+              </a>
+              <a class="contact-method" href="sms:+19782773435">Text Us</a>
+              <a
+                class="contact-method"
+                href="mailto:anthony@avrealtymanagement.com"
+              >
+                Email Us
+              </a>
+              <address>
+                5 Huron Street<br>
+                Swampscott, MA 01907
+              </address>
             </div>
 
-            <div style="text-align:center; margin-top:18px;">
-              <button type="submit">Request Your Consultation</button>
-            </div>
+            <form
+              class="consultation-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="84a59070-e01a-4b1b-ad1d-416a5e719422"
+              >
+              <input
+                type="hidden"
+                name="subject"
+                value="New North Shore Real Estate Lead from AVRealtyManagement.com"
+              >
+              <input
+                type="hidden"
+                name="from_name"
+                value="AV Realty &amp; Management Website"
+              >
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://avrealtymanagement.com/thankyou.html"
+              >
+              <input
+                type="hidden"
+                name="form_source"
+                value="North Shore Real Estate Page"
+              >
+              <input
+                type="checkbox"
+                name="botcheck"
+                tabindex="-1"
+                aria-hidden="true"
+                style="display:none"
+              >
 
-            <p class="form-note">Submitting this form does not create an agency relationship or obligate you to use AV Realty & Management.</p>
-          </form>
+              <div class="form-grid">
+                <div>
+                  <label for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="120"
+                    required
+                  >
+                </div>
+
+                <div>
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                  >
+                </div>
+
+                <div>
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    autocomplete="tel"
+                    maxlength="40"
+                  >
+                </div>
+
+                <div>
+                  <label for="interest">What are you looking to do?</label>
+                  <select id="interest" name="interest">
+                    <option value="">Select one</option>
+                    <option>Buy a home</option>
+                    <option>Sell a property</option>
+                    <option>Buy an investment property</option>
+                    <option>Sell an investment property</option>
+                    <option>Evaluate a multifamily property</option>
+                    <option>General real estate consultation</option>
+                  </select>
+                </div>
+
+                <div class="full-width">
+                  <label for="town">Town or Property Location (optional)</label>
+                  <input
+                    id="town"
+                    name="town"
+                    type="text"
+                    maxlength="200"
+                    placeholder="Town, area, or property address"
+                  >
+                </div>
+
+                <div class="full-width">
+                  <label for="message">Tell Us About Your Real Estate Goals</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    maxlength="5000"
+                    placeholder="Which town or property are you considering? What is your timeline?"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div style="text-align:center; margin-top:18px">
+                <button type="submit">Request Your Consultation</button>
+              </div>
+
+              <p class="form-note">
+                Submitting this form does not create an agency relationship
+                or obligate you to use AV Realty &amp; Management.
+              </p>
+            </form>
+          </div>
         </div>
       </section>
 
-      <section id="faq" class="fade-in">
+      <section id="faq" class="section-spacious">
         <p class="eyebrow">Frequently Asked Questions</p>
         <h2>North Shore Real Estate FAQ</h2>
 
         <div class="faq-list">
           <details>
-            <summary>What areas does AV Realty & Management serve?</summary>
-            <p>AV Realty & Management serves clients across Boston’s North Shore. Our featured local markets are Swampscott, Marblehead, Salem, and Nahant, with service also available throughout surrounding North Shore and nearby communities.</p>
+            <summary>What areas does AV Realty &amp; Management serve?</summary>
+            <p>
+              AV Realty &amp; Management serves clients across Boston’s North Shore.
+              Our featured local markets are Swampscott, Marblehead, Salem, and
+              Nahant, with service also available throughout surrounding
+              North Shore and nearby communities.
+            </p>
           </details>
 
           <details>
             <summary>Can you help me buy an investment or multifamily property?</summary>
-            <p>Yes. AV Realty & Management works with real estate investors and can help evaluate potential acquisitions through both a brokerage and property-management lens, including rental income, market positioning, operating considerations, and property condition.</p>
+            <p>
+              Yes. AV Realty &amp; Management works with real estate investors and
+              can help evaluate potential acquisitions through both a brokerage
+              and property-management lens, including rental income, market
+              positioning, operating considerations, and property condition.
+            </p>
           </details>
 
           <details>
             <summary>Can I browse current North Shore homes for sale online?</summary>
-            <p>Yes. Use the live MLS search link on this page to browse available properties, then contact AV Realty & Management if you would like to discuss a specific listing or your broader search strategy.</p>
+            <p>
+              Yes. Use the live MLS search link on this page to browse available
+              properties, then contact AV Realty &amp; Management if you would like
+              to discuss a specific listing or your broader search strategy.
+            </p>
           </details>
 
           <details>
             <summary>Can you help me determine what my North Shore property may be worth?</summary>
-            <p>Yes. A conversation can help establish a realistic pricing range using relevant comparable sales, property condition, location, current inventory, and market demand. A formal listing strategy would be tailored to the specific property.</p>
+            <p>
+              Yes. A conversation can help establish a realistic pricing range
+              using relevant comparable sales, property condition, location,
+              current inventory, and market demand. A formal listing strategy
+              would be tailored to the specific property.
+            </p>
           </details>
         </div>
       </section>
@@ -1206,18 +1570,19 @@
   </main>
 
   <footer>
-    <div style="margin-bottom:10px; font-weight:700; font-family:'Montserrat',sans-serif;">
-      AV Realty & Management
+    <div style="margin-bottom:10px; font-weight:700">
+      AV Realty &amp; Management
     </div>
-    <div style="margin-bottom:5px;">
+    <div style="margin-bottom:5px">
       5 Huron Street, Swampscott, MA 01907
     </div>
-    <div style="margin-bottom:10px;">
-      <a href="tel:9782773435" style="color:#0033a0; text-decoration:none;">(978) 277-3435</a>
+    <div style="margin-bottom:10px">
+      <a href="tel:9782773435" style="text-decoration:none">(978) 277-3435</a>
     </div>
 
     <div class="footer-links">
       <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
       <a href="swampscott-real-estate.html">Swampscott</a>
       <a href="marblehead-real-estate.html">Marblehead</a>
       <a href="salem-real-estate.html">Salem</a>
@@ -1227,39 +1592,92 @@
       <a href="about.html">About</a>
     </div>
 
-    <div style="color:#666; font-size:13px;">
-      &copy; 2026 AV Realty & Management LLC. All rights reserved.
+    <div class="copyright">
+      &copy; 2026 AV Realty &amp; Management LLC. All rights reserved.
+    </div>
+
+    <p>Equal Housing Opportunity</p>
+
+    <div class="mobile-social-icons">
+      <a href="https://www.instagram.com/av.realty/" target="_blank" rel="noopener">
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/avrealtymgmt" target="_blank" rel="noopener">
+        Facebook
+      </a>
+      <a
+        href="https://www.linkedin.com/company/av-realty-management-llc"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
     </div>
   </footer>
 
-  <a href="#consultation" class="floating-contact">Contact</a>
-  <a href="tel:9782773435" class="call-button">Call Now</a>
+  <div class="mobile-contact" aria-label="Quick contact">
+    <a href="tel:9782773435">Call Us</a>
+    <a href="#consultation">Get in Touch</a>
+  </div>
 
   <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("active");
-    }
+    (() => {
+      const menu = document.querySelector('.hamburger');
+      const links = document.getElementById('navLinks');
+      const mobile = window.matchMedia('(max-width:900px)');
 
-    const faders = document.querySelectorAll('.fade-in');
+      const setOpen = (open) => {
+        links.hidden = mobile.matches && !open;
+        menu.setAttribute('aria-expanded', String(open));
+        menu.setAttribute(
+          'aria-label',
+          open ? 'Close navigation menu' : 'Open navigation menu'
+        );
+      };
 
-    if ('IntersectionObserver' in window) {
-      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        });
-      }, {
-        threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
+      setOpen(false);
+
+      menu.addEventListener('click', () => {
+        setOpen(menu.getAttribute('aria-expanded') !== 'true');
       });
 
-      faders.forEach(fader => appearOnScroll.observe(fader));
-    } else {
-      faders.forEach(fader => fader.classList.add("visible"));
-    }
-  </script>
+      links.addEventListener('click', (event) => {
+        if (event.target.closest('a') && mobile.matches) {
+          setOpen(false);
+        }
+      });
 
+      document.addEventListener('keydown', (event) => {
+        if (
+          event.key === 'Escape' &&
+          menu.getAttribute('aria-expanded') === 'true'
+        ) {
+          setOpen(false);
+          menu.focus();
+        }
+      });
+
+      document.addEventListener('click', (event) => {
+        if (mobile.matches && !event.target.closest('nav')) {
+          setOpen(false);
+        }
+      });
+
+      if (mobile.addEventListener) {
+        mobile.addEventListener('change', () => setOpen(false));
+      }
+
+      document.querySelectorAll('[data-interest]').forEach((link) => {
+        link.addEventListener('click', () => {
+          const field = document.getElementById('interest');
+          const value = link.dataset.interest;
+
+          if ([...field.options].some((option) => option.value === value)) {
+            field.value = value;
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
