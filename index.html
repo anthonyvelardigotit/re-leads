@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>North Shore Real Estate & Property Management | AV Realty</title>
+  <title>North Shore Real Estate &amp; Property Management | AV Realty</title>
   <meta name="description" content="Buy, sell, rent, or manage property on Massachusetts’ North Shore. AV Realty &amp; Management offers local brokerage, leasing, and hands-on owner support.">
 
   <meta property="og:type" content="website">
@@ -16,15 +16,15 @@
   <meta property="og:image:alt" content="North Shore residential architecture">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="canonical" href="https://avrealtymanagement.com/" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="shortcut icon" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="canonical" href="https://avrealtymanagement.com/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="hero.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -115,6 +115,8 @@
       transform: none;
     }
 
+    /* Navigation */
+
     nav {
       position: sticky;
       top: 0;
@@ -148,8 +150,8 @@
     }
 
     .brand img {
-      width: 67px;
-      height: 48px;
+      width: 78px;
+      height: 56px;
       object-fit: contain;
       background: #fff;
       border-radius: 6px;
@@ -184,23 +186,55 @@
       cursor: pointer;
     }
 
-    header {
+    /* Video hero */
+
+    header.av-video-hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 620px;
+      padding: 100px 24px;
       color: white;
       background:
-        linear-gradient(
-          90deg,
-          rgba(5, 17, 38, .94),
-          rgba(7, 25, 54, .79) 50%,
-          rgba(7, 25, 54, .28)
-        ),
-        url('hero.jpg') center/cover;
-      padding: 90px 24px;
-      min-height: 560px;
+        var(--navy)
+        url("hero.jpg") center / cover no-repeat;
       display: flex;
       align-items: center;
     }
 
+    .av-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -2;
+      opacity: 0;
+      transition: opacity .6s ease;
+      pointer-events: none;
+    }
+
+    .av-video-hero.video-ready .av-hero-video {
+      opacity: 1;
+    }
+
+    .av-video-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        rgba(5, 17, 38, .90) 0%,
+        rgba(7, 22, 47, .72) 48%,
+        rgba(7, 22, 47, .30) 100%
+      );
+    }
+
     .hero-overlay {
+      position: relative;
       max-width: 1132px;
       width: 100%;
       margin: auto;
@@ -219,16 +253,16 @@
     }
 
     .hero-title {
-      font-size: clamp(2.4rem, 4.8vw, 3.9rem);
+      font-size: clamp(2.7rem, 5.5vw, 4.5rem);
       letter-spacing: -.045em;
-      max-width: 800px;
+      max-width: 780px;
       margin: 0 0 24px;
       font-weight: 600;
     }
 
     .hero-subtitle {
       font-size: 1.08rem;
-      max-width: 640px;
+      max-width: 610px;
       color: #e3e9ef;
       margin: 0 0 30px;
     }
@@ -239,7 +273,7 @@
       gap: 12px;
     }
 
-    .btn, button[type=submit] {
+    .btn, button[type="submit"] {
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -256,7 +290,7 @@
       transition: background .2s, transform .2s;
     }
 
-    .btn:hover, button[type=submit]:hover {
+    .btn:hover, button[type="submit"]:hover {
       background: var(--blue);
       color: white;
       transform: translateY(-2px);
@@ -288,6 +322,31 @@
     .hero-rental:hover {
       color: white;
     }
+
+    .av-video-toggle {
+      position: absolute;
+      right: 24px;
+      bottom: 22px;
+      min-height: 44px;
+      padding: 10px 15px;
+      border: 1px solid rgba(255, 255, 255, .55);
+      border-radius: 7px;
+      background: rgba(7, 22, 47, .75);
+      color: white;
+      font: inherit;
+      font-size: .78rem;
+      cursor: pointer;
+    }
+
+    .av-video-toggle:hover {
+      background: var(--navy);
+    }
+
+    .av-video-toggle[hidden] {
+      display: none;
+    }
+
+    /* Sections */
 
     .container {
       max-width: 1180px;
@@ -561,6 +620,8 @@
       color: #ead9ad;
     }
 
+    /* Contact */
+
     #contact {
       padding: 72px 0;
     }
@@ -611,7 +672,7 @@
       font-weight: 600;
     }
 
-    input:not([type=hidden]):not([type=checkbox]),
+    input:not([type="hidden"]):not([type="checkbox"]),
     textarea,
     select {
       width: 100%;
@@ -652,6 +713,8 @@
       border: 0;
       border-radius: 14px;
     }
+
+    /* Footer */
 
     footer {
       background: var(--navy);
@@ -696,11 +759,7 @@
       display: none;
     }
 
-    .fade-in {
-      opacity: 1;
-      transform: none;
-      filter: none;
-    }
+    /* Responsive layouts */
 
     @media (min-width: 901px) {
       .nav-links {
@@ -785,15 +844,6 @@
       .resource-panel {
         padding: 32px;
       }
-
-      .hero-title {
-        max-width: 700px;
-      }
-
-      header {
-        min-height: 520px;
-        padding: 64px 24px;
-      }
     }
 
     @media (max-width: 600px) {
@@ -809,16 +859,34 @@
         padding: 50px 0;
       }
 
+      .brand img {
+        width: 67px;
+        height: 48px;
+      }
+
       .brand span {
         font-size: .78rem;
       }
 
+      header.av-video-hero {
+        min-height: 540px;
+        padding: 64px 24px;
+      }
+
       .hero-title {
-        font-size: clamp(2.25rem, 9vw, 3rem);
+        font-size: clamp(2.4rem, 10vw, 3.2rem);
       }
 
       .hero-subtitle {
         font-size: 1rem;
+      }
+
+      .av-video-hero::before {
+        background: linear-gradient(
+          180deg,
+          rgba(5, 17, 38, .80),
+          rgba(7, 22, 47, .65)
+        );
       }
 
       .header-cta {
@@ -865,7 +933,7 @@
       }
 
       footer {
-        padding-bottom: 110px;
+        padding-bottom: calc(110px + env(safe-area-inset-bottom));
       }
 
       .mobile-contact {
@@ -977,11 +1045,15 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <nav aria-label="Primary navigation">
-    <a class="brand" href="/" aria-label="AV Realty &amp; Management home">
-      <img src="logo.png" alt="" width="67" height="48">
+  <nav aria-label="Main navigation">
+    <a
+      class="brand"
+      href="/"
+      aria-label="AV Realty &amp; Management home"
+    >
+      <img src="logo.png" alt="" width="78" height="56">
       <span>AV Realty<br>&amp; Management</span>
     </a>
 
@@ -1001,6 +1073,7 @@
       <a href="north-shore-ma-apartments.html">Apartments</a>
       <a href="about.html">About</a>
       <a href="#contact">Contact</a>
+
       <a
         class="portal-btn"
         href="https://avrealtymanagement.managebuilding.com/Resident/portal/login"
@@ -1012,32 +1085,73 @@
     </div>
   </nav>
 
-  <header>
+  <header class="av-video-hero" id="homepage-hero">
+    <video
+      class="av-hero-video"
+      id="coastal-hero-video"
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster="hero.jpg"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <source
+        data-src="coastal-hero.mp4"
+        type="video/mp4"
+      >
+    </video>
+
     <div class="hero-overlay">
-      <p class="hero-label">North Shore Massachusetts</p>
+      <p class="hero-label">
+        AV Realty &amp; Management · North Shore Massachusetts
+      </p>
 
       <h1 class="hero-title">
-        North Shore Real Estate<br>&amp; Property Management
+        Local Expertise.<br>
+        Lasting Value.
       </h1>
 
       <p class="hero-subtitle">
-        Local expertise. Personal service. Helping you buy, sell, invest,
-        and care for your property on Massachusetts’ North Shore.
+        Real estate brokerage, property management, and investment
+        guidance across Massachusetts’ North Shore. Thoughtful
+        service for your property and your next move.
       </p>
 
       <div class="header-cta">
-        <a href="north-shore-real-estate.html" class="btn hero-primary">
-          Buy or Sell a Home
+        <a
+          class="btn hero-primary"
+          href="north-shore-real-estate.html"
+        >
+          Explore Real Estate
         </a>
-        <a href="north-shore-property-management.html" class="btn secondary-btn">
-          Property Management
+
+        <a
+          class="btn secondary-btn"
+          href="north-shore-property-management.html"
+        >
+          Explore Property Management
         </a>
       </div>
 
-      <a class="hero-rental" href="north-shore-ma-apartments.html">
-        Looking for a rental? Explore available homes →
+      <a
+        class="hero-rental"
+        href="north-shore-ma-apartments.html"
+      >
+        Looking for a rental? Browse North Shore apartments →
       </a>
     </div>
+
+    <button
+      class="av-video-toggle"
+      id="coastal-video-toggle"
+      type="button"
+      aria-controls="coastal-hero-video"
+      hidden
+    >
+      Pause background video
+    </button>
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -1045,6 +1159,7 @@
       <section id="services" class="section-spacious">
         <p class="eyebrow">What We Do</p>
         <h2>Your Property. Your Next Step.</h2>
+
         <p class="section-intro">
           From your first home to your next investment, choose the service
           that fits your goals.
@@ -1096,11 +1211,13 @@
       <section id="reviews" class="reviews-section section-spacious">
         <p class="eyebrow">Client Experience</p>
         <h2>What Clients Say</h2>
+
         <p class="section-intro">
           Real feedback from clients who have worked with AV Realty &amp; Management.
         </p>
 
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
         <div
           class="elfsight-app-29ea5bc8-0b12-4a77-a437-288dbe968634"
           data-elfsight-app-lazy
@@ -1112,15 +1229,20 @@
         </p>
       </section>
 
-      <section class="why-av section-spacious" aria-labelledby="why-av-heading">
+      <section
+        class="why-av section-spacious"
+        aria-labelledby="why-av-heading"
+      >
         <div class="section-heading-left">
           <p class="eyebrow">Why AV Realty &amp; Management</p>
           <h2 id="why-av-heading">Local Expertise. Thoughtful Service.</h2>
+
           <p>
             AV Realty &amp; Management connects local market knowledge with
             practical experience in buying, selling, leasing, and property
             operations. Based in Swampscott, our company helps clients make
             informed decisions across Massachusetts’ North Shore.
+
             <a class="text-link owner-link" href="about.html">
               About AV Realty &amp; Management →
             </a>
@@ -1157,6 +1279,7 @@
       <section class="section-spacious">
         <p class="eyebrow">Featured Local Markets</p>
         <h2>North Shore Knowledge, Market by Market</h2>
+
         <p class="section-intro">
           Explore dedicated real estate and property-management resources
           for four core communities, with broader service throughout
@@ -1233,9 +1356,11 @@
           >
             Search Homes for Sale
           </a>
+
           <a class="text-link" href="north-shore-ma-apartments.html">
             Browse North Shore Apartments →
           </a>
+
           <a class="text-link" href="north-shore-multifamily-real-estate.html">
             Explore Multifamily Real Estate →
           </a>
@@ -1250,6 +1375,7 @@
             Explore free calculators and our multifamily guide, or request
             a personalized rent analysis for your property.
           </p>
+
           <div class="resource-secondary-links">
             <a href="absentee-landlord-property-management.html">
               Out-of-State &amp; Inherited Owners →
@@ -1294,6 +1420,7 @@
 
       <section id="contact">
         <h2>Start the Conversation</h2>
+
         <p class="section-intro">
           Tell us what you are working on, whether it is buying, selling,
           investing, renting, or full-service property management.
@@ -1303,6 +1430,7 @@
           <div class="contact-details">
             <p class="eyebrow" style="text-align:left">Contact AV Realty</p>
             <h3>Let’s discuss your next step.</h3>
+
             <p>
               Buying, selling, renting, or handing off the day-to-day
               management of your property? Share your goals and we’ll
@@ -1312,7 +1440,11 @@
             <a class="contact-method" href="tel:9782773435">
               Call (978) 277-3435
             </a>
-            <a class="contact-method" href="sms:+19782773435">Text Us</a>
+
+            <a class="contact-method" href="sms:+19782773435">
+              Text Us
+            </a>
+
             <a class="contact-method" href="mailto:anthony@avrealtymanagement.com">
               Email Us
             </a>
@@ -1345,6 +1477,7 @@
               value="https://avrealtymanagement.com/thankyou.html"
             >
             <input type="hidden" name="form_source" value="Contact Form">
+
             <input
               type="checkbox"
               name="botcheck"
@@ -1427,6 +1560,7 @@
 
     <div class="map-section">
       <h2>Based in Swampscott. Serving the North Shore.</h2>
+
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.9679949971783!2d-70.92617722419632!3d42.47096937118288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e36d30e01e00b9%3A0x9ae17f45d8530d7b!2sAV%20Realty%20%26%20Management!5e0!3m2!1sen!2sus!4v1746841814412!5m2!1sen!2sus"
         width="100%"
@@ -1451,6 +1585,8 @@
 
     <div style="margin-bottom:15px">
       <a href="tel:9782773435" class="footer-phone">(978) 277-3435</a>
+      <span aria-hidden="true"> · </span>
+      <a href="mailto:anthony@avrealtymanagement.com">Email Us</a>
     </div>
 
     <div class="footer-resource-links" aria-label="Site resources">
@@ -1472,14 +1608,29 @@
 
     <div class="mobile-social-row">
       <span>Connect with AV Realty:</span>
+
       <div class="mobile-social-icons">
-        <a href="https://www.instagram.com/av.realty/" target="_blank" rel="noopener">
+        <a
+          href="https://www.instagram.com/av.realty/"
+          target="_blank"
+          rel="noopener"
+        >
           Instagram
         </a>
-        <a href="https://www.facebook.com/avrealtymgmt" target="_blank" rel="noopener">
+
+        <a
+          href="https://www.facebook.com/avrealtymgmt"
+          target="_blank"
+          rel="noopener"
+        >
           Facebook
         </a>
-        <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank" rel="noopener">
+
+        <a
+          href="https://www.linkedin.com/company/av-realty-management-llc"
+          target="_blank"
+          rel="noopener"
+        >
           LinkedIn
         </a>
       </div>
@@ -1492,51 +1643,169 @@
   </div>
 
   <script>
+    /* Navigation */
     (() => {
-      const menu = document.querySelector('.hamburger');
-      const links = document.getElementById('navLinks');
-      const mobile = window.matchMedia('(max-width:900px)');
+      const menu = document.querySelector(".hamburger");
+      const links = document.getElementById("navLinks");
+      const mobile = window.matchMedia("(max-width:900px)");
 
       const setOpen = (open) => {
         links.hidden = mobile.matches && !open;
-        menu.setAttribute('aria-expanded', String(open));
+
+        menu.setAttribute("aria-expanded", String(open));
         menu.setAttribute(
-          'aria-label',
-          open ? 'Close navigation menu' : 'Open navigation menu'
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu"
         );
       };
 
       setOpen(false);
 
-      menu.addEventListener('click', () => {
-        setOpen(menu.getAttribute('aria-expanded') !== 'true');
+      menu.addEventListener("click", () => {
+        setOpen(menu.getAttribute("aria-expanded") !== "true");
       });
 
-      links.addEventListener('click', (event) => {
-        if (event.target.closest('a') && mobile.matches) {
+      links.addEventListener("click", (event) => {
+        if (event.target.closest("a") && mobile.matches) {
           setOpen(false);
         }
       });
 
-      document.addEventListener('keydown', (event) => {
+      document.addEventListener("keydown", (event) => {
         if (
-          event.key === 'Escape' &&
-          menu.getAttribute('aria-expanded') === 'true'
+          event.key === "Escape" &&
+          menu.getAttribute("aria-expanded") === "true"
         ) {
           setOpen(false);
           menu.focus();
         }
       });
 
-      document.addEventListener('click', (event) => {
-        if (mobile.matches && !event.target.closest('nav')) {
+      document.addEventListener("click", (event) => {
+        if (mobile.matches && !event.target.closest("nav")) {
           setOpen(false);
         }
       });
 
       if (mobile.addEventListener) {
-        mobile.addEventListener('change', () => setOpen(false));
+        mobile.addEventListener("change", () => setOpen(false));
       }
+    })();
+
+    /* Coastal video */
+    (() => {
+      const hero = document.getElementById("homepage-hero");
+      const video = document.getElementById("coastal-hero-video");
+      const toggle = document.getElementById("coastal-video-toggle");
+
+      if (!hero || !video || !toggle) return;
+
+      const source = video.querySelector("source[data-src]");
+
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+
+      const smallScreen = window.matchMedia("(max-width: 600px)");
+      const connection = navigator.connection;
+
+      let userPaused = false;
+      let loaded = false;
+      let failed = false;
+      let inView = true;
+
+      const staticMode = () => {
+        return (
+          reducedMotion.matches ||
+          smallScreen.matches ||
+          Boolean(connection?.saveData)
+        );
+      };
+
+      const updateButton = () => {
+        toggle.textContent = video.paused
+          ? "Play background video"
+          : "Pause background video";
+      };
+
+      const syncPlayback = () => {
+        if (staticMode() || failed) {
+          video.pause();
+          hero.classList.remove("video-ready");
+          toggle.hidden = true;
+          return;
+        }
+
+        if (document.hidden || !inView || userPaused) {
+          video.pause();
+          return;
+        }
+
+        if (!loaded && source) {
+          source.src = source.dataset.src;
+          video.muted = true;
+          loaded = true;
+          video.load();
+        }
+
+        video.play().catch(() => {
+          if (staticMode() || failed) return;
+
+          // Allow a manual start if the browser blocks autoplay.
+          toggle.hidden = false;
+          updateButton();
+        });
+      };
+
+      video.addEventListener("playing", () => {
+        if (staticMode() || failed) {
+          syncPlayback();
+          return;
+        }
+
+        hero.classList.add("video-ready");
+        toggle.hidden = false;
+        updateButton();
+      });
+
+      video.addEventListener("pause", updateButton);
+
+      const onError = () => {
+        failed = true;
+        video.pause();
+        hero.classList.remove("video-ready");
+        toggle.hidden = true;
+      };
+
+      video.addEventListener("error", onError);
+      source?.addEventListener("error", onError);
+
+      toggle.addEventListener("click", () => {
+        if (video.paused) {
+          userPaused = false;
+          syncPlayback();
+        } else {
+          userPaused = true;
+          video.pause();
+        }
+      });
+
+      document.addEventListener("visibilitychange", syncPlayback);
+      reducedMotion.addEventListener("change", syncPlayback);
+      smallScreen.addEventListener("change", syncPlayback);
+      connection?.addEventListener?.("change", syncPlayback);
+
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(
+          ([entry]) => {
+            inView = entry.isIntersecting;
+            syncPlayback();
+          },
+          { threshold: 0.05 }
+        ).observe(hero);
+      }
+
+      syncPlayback();
     })();
   </script>
 </body>
