@@ -1,956 +1,891 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Rental Property Investment Calculator | North Shore MA | AV Realty & Management</title>
-  <meta name="description" content="Analyze a rental property with AV Realty & Management's free rental property investment calculator. Estimate monthly cash flow, NOI, cap rate, cash-on-cash return, DSCR, and annual profit for North Shore MA investment properties." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://avrealtymanagement.com/rental-property-calculator.html" />
+  <title>Rental Property Calculator | Cash Flow &amp; Returns | AV Realty</title>
+  <meta name="description" content="Analyze rental cash flow, NOI, cap rate, cash-on-cash return, and debt coverage. Free rental property calculator with a multifamily rent roll and stress tests.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#07162f">
+  <link rel="canonical" href="https://avrealtymanagement.com/rental-property-calculator.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Rental Property Investment Calculator | AV Realty & Management" />
-  <meta property="og:description" content="Estimate cash flow, NOI, cap rate, cash-on-cash return, DSCR, and annual profit for a rental property." />
-  <meta property="og:url" content="https://avrealtymanagement.com/rental-property-calculator.html" />
-  <meta property="og:image" content="https://avrealtymanagement.com/hero.jpg" />
-  <meta property="og:site_name" content="AV Realty & Management" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AV Realty &amp; Management">
+  <meta property="og:title" content="Rental Property Investment Calculator">
+  <meta property="og:description" content="Explore cash flow, rental returns, and stress-test scenarios with AV Realty & Management.">
+  <meta property="og:url" content="https://avrealtymanagement.com/rental-property-calculator.html">
+  <meta property="og:image" content="https://avrealtymanagement.com/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rental Property Investment Calculator" />
-  <meta name="twitter:description" content="Free rental-property analysis tool for investors and landlords." />
-  <meta name="twitter:image" content="https://avrealtymanagement.com/hero.jpg" />
-
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --royal: #0033a0;
-      --deep-blue: #001b55;
-      --navy: #061329;
-      --gold: #d4af37;
-      --light-gold: #f2dc87;
-      --soft-bg: #f5f7fb;
-      --text: #121212;
-      --muted: #666;
-      --white: #ffffff;
-      --good: #0f7a47;
-      --warn: #a65a00;
-      --bad: #a82929;
-      --shadow: 0 18px 45px rgba(0,0,0,0.12);
+      --navy:#07162f;
+      --blue:#173859;
+      --gold:#c8a75d;
+      --cream:#faf9f6;
+      --ink:#172435;
+      --muted:#596575;
+      --line:#dfe4e8;
+      --good:#236448;
+      --bad:#9b3535;
     }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:110px}
+    body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.7 Manrope,sans-serif}
+    h1,h2,h3{line-height:1.2;font-weight:500}
+    h1{font-size:clamp(2.6rem,5.5vw,4.6rem);letter-spacing:-.045em;margin:0 0 24px;max-width:950px}
+    h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.035em;margin:0 0 18px}
+    h3{font-size:1.12rem;margin:0 0 15px}
+    p{margin-top:0}
+    a{color:var(--blue);text-underline-offset:4px}
+    a:hover{color:#806124}
+    button,input,select{font:inherit}
+    a,button,input,select{touch-action:manipulation}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    [hidden]{display:none!important}
+    .container{max-width:1180px;margin:auto;padding:0 24px}
+    .section{padding:64px 0}
+    .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:#806124;margin:0 0 16px}
+    .muted,.note{color:var(--muted)}
+    .note{font-size:.77rem;line-height:1.6;margin:14px 0 0}
+    .skip{position:fixed;top:8px;left:8px;transform:translateY(-160%);z-index:1200;background:white;padding:10px 18px}
+    .skip:focus{transform:none}
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    html, body { max-width: 100%; overflow-x: hidden; }
+    .site-nav{position:sticky;top:0;z-index:1000;background:rgba(7,22,47,.98);border-bottom:1px solid #ffffff20}
+    .nav-inner{max-width:1180px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .brand img{width:78px;height:56px;object-fit:contain;background:white;border-radius:6px;padding:4px}
+    .site-nav a{color:white;text-decoration:none;font-size:.78rem;font-weight:600}
+    .brand span{max-width:150px;font-size:.88rem;line-height:1.35}
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .site-nav a:hover{color:#ead9ad}
+    .portal{border:1px solid #c8a75d80;padding:10px;border-radius:7px}
+    .menu{display:none;background:transparent;color:white;border:1px solid #ffffff50;border-radius:6px;padding:9px 12px;min-height:44px;cursor:pointer}
 
-    body {
-      margin: 0;
-      padding-top: 58px;
-      font-family: 'Open Sans', sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(0,51,160,0.08), transparent 30%),
-        linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+    .hero{padding:64px 0;background:linear-gradient(90deg,rgba(5,17,38,.94),rgba(7,22,47,.72)),url("/hero.jpg") center/cover;background-color:var(--navy);color:white}
+    .hero .eyebrow{color:#ead9ad}
+    .hero-copy{max-width:690px;color:#d4dce6;margin-bottom:28px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;background:var(--navy);border:1px solid var(--navy);border-radius:8px;color:white;text-decoration:none;font-size:.85rem;font-weight:600;cursor:pointer}
+    .btn:hover{background:var(--blue);color:white}
+    .gold{background:#d7bb7a;border-color:#d7bb7a;color:var(--navy)}
+    .gold:hover{background:#ead9ad;color:var(--navy)}
+    .outline{background:transparent;border-color:#ffffff85}
+    .light{background:white;color:var(--blue);border-color:var(--line)}
+    .light:hover{background:#f0f2ef;color:var(--navy)}
+
+    .intro{max-width:780px;margin-bottom:30px}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+    .panel{padding:28px;background:white;border:1px solid var(--line);border-radius:14px;min-width:0}
+    fieldset{border:0;padding:0;margin:0 0 28px;min-width:0}
+    legend{font-weight:700;font-size:.96rem;padding:0;margin-bottom:17px}
+    .inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+    .full{grid-column:1/-1}
+    label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px}
+    input,select{width:100%;min-height:48px;border:1px solid #cbd3dc;border-radius:7px;padding:11px;background:white;color:var(--ink);font-size:16px}
+    .hint{display:block;color:var(--muted);font-size:.73rem;line-height:1.5;margin-top:6px}
+    .rent-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:10px;align-items:end;margin-bottom:12px}
+    .remove{min-height:48px;min-width:44px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--bad);cursor:pointer}
+    .rent-total{font-size:.86rem;color:var(--muted);margin:12px 0}
+    .results{min-width:0}
+    .headline{background:var(--navy);color:white;padding:28px;border-radius:14px}
+    .headline .eyebrow{color:#ead9ad}
+    .cash{font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.15;letter-spacing:-.04em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+    .headline .note{color:#c9d2de}
+    .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .stat{padding:16px;background:#f0f2ef;border-radius:10px}
+    .stat dt{font-size:.75rem;color:var(--muted)}
+    .stat dd{margin:6px 0 0;font-size:1.16rem;font-weight:600;overflow-wrap:anywhere}
+    .statement{margin:18px 0}
+    .row{display:flex;justify-content:space-between;gap:18px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.84rem}
+    .row dt{color:var(--muted)}
+    .row dd{margin:0;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+    .row.total-row{border-top:1px solid var(--ink)}
+    .row.total-row dt{color:var(--ink);font-weight:700}
+    .positive{color:var(--good)}
+    .negative{color:var(--bad)}
+    .error{padding:14px;margin-bottom:18px;color:#842d2d;background:#fff4f4;border:1px solid #d6a3a3;border-radius:8px;font-size:.88rem}
+    .snapshot{padding:18px;border-left:3px solid var(--gold);background:#faf9f6;font-size:.85rem;margin:20px 0}
+    details{border-top:1px solid var(--line);margin-top:20px}
+    summary{padding:18px 0;font-weight:600;font-size:.9rem;cursor:pointer}
+    .table-wrap{overflow:auto}
+    table{width:100%;border-collapse:collapse;font-size:.8rem}
+    caption{text-align:left;padding-bottom:12px;color:var(--muted)}
+    th,td{padding:10px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+    th:first-child,td:first-child{text-align:left}
+    .definitions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .definitions p{font-size:.88rem;color:var(--muted);margin:0}
+    .cta{margin-top:36px;padding:34px;border-radius:14px;background:var(--navy);color:white}
+    .cta p{color:#c9d2de;max-width:790px}
+    footer{padding:40px 24px;background:var(--navy);color:#c9d2de;text-align:center;font-size:.85rem}
+    footer a{color:#ead9ad}
+    footer a:hover{color:white}
+    footer address{font-style:normal;margin:8px 0}
+    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 20px;margin:20px 0}
+    .copyright{font-size:.76rem}
+    .mobile-contact{display:none}
+
+    @media(min-width:901px){.nav-links[hidden]{display:flex!important}}
+    @media(max-width:1100px){.brand span{display:none}.nav-links{gap:14px}}
+    @media(max-width:900px){
+      .nav-inner{flex-wrap:wrap}
+      .brand span{display:block}
+      .js .menu{display:block}
+      .nav-links{width:100%;flex-wrap:wrap;gap:12px 20px}
+      .nav-links a{padding:10px 0}
+      .nav-links .portal{padding:10px}
+      .layout{grid-template-columns:1fr}
+      .definitions{grid-template-columns:1fr}
     }
-
-    h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow, .metric-value {
-      font-family: 'Montserrat', sans-serif;
+    @media(max-width:600px){
+      .container{padding:0 20px}
+      .section{padding:44px 0}
+      .hero{padding:42px 0}
+      .brand img{width:67px;height:48px}
+      .brand span{font-size:.78rem}
+      .panel,.headline{padding:22px}
+      .inputs{grid-template-columns:1fr}
+      .rent-row{grid-template-columns:minmax(0,1fr) auto}
+      .rent-row .unit-label{grid-column:1/-1}
+      .hero .actions{flex-direction:column}
+      footer{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+      .mobile-contact{position:fixed;bottom:0;left:0;right:0;z-index:1000;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));background:var(--navy);border-top:1px solid #ffffff30}
+      .mobile-contact a{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #ffffff55;border-radius:7px;color:white;text-decoration:none;font-size:.82rem}
+      .mobile-contact a:last-child{background:#d7bb7a;color:var(--navy);border-color:#d7bb7a}
     }
-
-    nav {
-      background: rgba(0,31,92,0.96);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      min-height: 58px;
-      padding: 12px 22px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      width: 100%;
-      justify-content: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-    }
-
-    nav a:hover { color: var(--light-gold); }
-
-    .portal-btn {
-      border: 1px solid rgba(212,175,55,0.7);
-      border-radius: 30px;
-      padding: 8px 14px;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-    }
-
-    header {
-      background:
-        linear-gradient(rgba(0,16,52,0.74), rgba(0,22,70,0.64)),
-        url('hero.jpg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 76px 20px 64px;
-      position: relative;
-      border-bottom: 1px solid rgba(212,175,55,0.5);
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 36%),
-        linear-gradient(90deg, rgba(0,51,160,0.18), transparent, rgba(0,51,160,0.18));
-      pointer-events: none;
-    }
-
-    .hero-overlay {
-      max-width: 980px;
-      margin: auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .logo-container img {
-      max-width: 108px;
-      height: auto;
-      margin-bottom: 16px;
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
-    }
-
-    .hero-label {
-      color: var(--light-gold);
-      text-transform: uppercase;
-      letter-spacing: 3.2px;
-      font-size: 0.76rem;
-      font-weight: 800;
-      margin: 0 0 12px;
-    }
-
-    .hero-title {
-      font-size: clamp(2.25rem, 5vw, 3.5rem);
-      line-height: 1.08;
-      margin: 0 auto 18px;
-      max-width: 900px;
-      font-weight: 800;
-      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
-    }
-
-    .hero-subtitle {
-      max-width: 800px;
-      margin: 0 auto 22px;
-      font-size: 1.04rem;
-      line-height: 1.72;
-      color: rgba(255,255,255,0.94);
-    }
-
-    .hero-cta {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn, button {
-      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
-      color: white;
-      padding: 12px 20px;
-      font-size: 15px;
-      text-decoration: none;
-      border-radius: 999px;
-      display: inline-block;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      font-weight: 700;
-      box-shadow: 0 10px 25px rgba(0,51,160,0.24);
-    }
-
-    .btn:hover, button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 35px rgba(0,51,160,0.34);
-      background: linear-gradient(135deg, #00257a, #00143f);
-    }
-
-    .secondary-btn {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.72);
-      box-shadow: none;
-    }
-
-    .secondary-btn:hover {
-      background: white;
-      color: var(--royal);
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: 34px auto;
-      padding: 30px;
-      background: rgba(255,255,255,0.96);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0,51,160,0.08);
-    }
-
-    .eyebrow {
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--gold);
-      font-size: 0.76rem;
-      font-weight: 800;
-      margin: 0 0 6px;
-    }
-
-    h2 {
-      color: var(--royal);
-      text-align: center;
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
-      margin-bottom: 14px;
-    }
-
-    .section-intro {
-      text-align: center;
-      color: var(--muted);
-      max-width: 820px;
-      margin: 0 auto 28px;
-      line-height: 1.75;
-    }
-
-    .calculator-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-      gap: 28px;
-      align-items: start;
-    }
-
-    .calculator-panel,
-    .results-panel {
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 20px;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.07);
-    }
-
-    .calculator-panel {
-      background: #fff;
-      padding: 24px;
-    }
-
-    .results-panel {
-      background:
-        radial-gradient(circle at top right, rgba(212,175,55,0.18), transparent 34%),
-        linear-gradient(145deg, #f8faff, #ffffff);
-      padding: 24px;
-      position: sticky;
-      top: 88px;
-    }
-
-    .section-title-small {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--deep-blue);
-      font-weight: 800;
-      font-size: 1.05rem;
-      margin: 0 0 15px;
-    }
-
-    .input-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 13px;
-    }
-
-    .input-group {
-      margin-bottom: 2px;
-    }
-
-    .full-width { grid-column: 1 / -1; }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 700;
-      color: var(--deep-blue);
-      font-size: 0.84rem;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 12px 13px;
-      border: 1px solid #d7ddea;
-      border-radius: 11px;
-      font-size: 16px;
-      background: white;
-      color: #1c2841;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    input:focus, select:focus {
-      outline: none;
-      border-color: var(--royal);
-      box-shadow: 0 0 0 4px rgba(0,51,160,0.10);
-    }
-
-    .group-divider {
-      border: 0;
-      border-top: 1px solid #e7ebf3;
-      margin: 22px 0 18px;
-    }
-
-    .calculate-btn {
-      width: 100%;
-      margin-top: 20px;
-      min-height: 50px;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 13px;
-    }
-
-    .metric {
-      background: white;
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 15px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .metric-label {
-      color: var(--muted);
-      font-size: 0.76rem;
-      line-height: 1.4;
-      min-height: 34px;
-    }
-
-    .metric-value {
-      color: var(--royal);
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-top: 6px;
-    }
-
-    .analysis-note {
-      margin-top: 18px;
-      padding: 16px;
-      border-radius: 14px;
-      background: #fff;
-      border-left: 4px solid var(--gold);
-      color: #4c586b;
-      font-size: 0.86rem;
-      line-height: 1.55;
-    }
-
-    .deal-summary {
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
-      color: white;
-    }
-
-    .deal-summary h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-    }
-
-    .deal-summary p {
-      margin: 0;
-      color: rgba(255,255,255,0.9);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    .lead-cta {
-      margin-top: 20px;
-      text-align: center;
-      padding: 20px;
-      border-radius: 18px;
-      background: #fff;
-      border: 1px solid rgba(0,51,160,0.10);
-    }
-
-    .lead-cta p {
-      margin: 0 0 12px;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 0.9rem;
-    }
-
-    .content-section {
-      margin-top: 58px;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .info-card {
-      background: linear-gradient(145deg, #ffffff, #f8faff);
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-    }
-
-    .info-card h3 {
-      margin: 0 0 8px;
-      color: var(--deep-blue);
-      font-size: 1rem;
-    }
-
-    .info-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.89rem;
-    }
-
-    .cta-panel {
-      margin-top: 58px;
-      background:
-        radial-gradient(circle at top right, rgba(212,175,55,0.22), transparent 35%),
-        linear-gradient(135deg, rgba(0,51,160,0.98), rgba(0,21,70,0.98));
-      border-radius: 22px;
-      padding: 32px 24px;
-      color: white;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0,51,160,0.24);
-      border: 1px solid rgba(212,175,55,0.35);
-    }
-
-    .cta-panel h2 { color: white; margin-top: 0; }
-    .cta-panel p {
-      max-width: 760px;
-      margin: 0 auto 16px;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.7;
-    }
-
-    footer {
-      background: linear-gradient(180deg, #f5f7fb, #eef2fb);
-      padding: 34px 20px;
-      text-align: center;
-      color: var(--royal);
-      font-size: 14px;
-      border-top: 1px solid rgba(0,51,160,0.08);
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin: 12px 0 14px;
-    }
-
-    .footer-links a {
-      color: var(--royal);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    @media (max-width: 980px) {
-      .calculator-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .results-panel {
-        position: static;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        justify-content: flex-start;
-        min-height: 58px;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0,31,92,0.98);
-        position: absolute;
-        top: 58px;
-        left: 0;
-        padding: 15px 0;
-      }
-
-      .nav-links.active { display: flex; }
-      .hamburger { display: flex; }
-
-      header { padding: 56px 18px 48px; }
-      .hero-title { font-size: 2.05rem; }
-      .hero-subtitle { font-size: 0.95rem; }
-
-      .container {
-        margin: 24px 14px;
-        padding: 20px 15px;
-      }
-
-      .input-grid,
-      .metrics-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .full-width { grid-column: auto; }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{
+      .site-nav,.hero .actions,.actions,.resources,footer,.mobile-contact,.skip,.remove,#addUnit{display:none!important}
+      body{background:white;font-size:11px}
+      .hero{background:white!important;color:var(--ink);padding:12px 0}
+      .hero-copy,.hero .eyebrow{color:var(--muted)}
+      h1{font-size:26px}
+      .container{max-width:none;padding:0}
+      .section{padding:12px 0}
+      .layout{display:block}
+      .panel{padding:16px;margin-bottom:16px}
+      .inputs{grid-template-columns:1fr 1fr}
+      input,select{min-height:30px;padding:5px}
+      .headline{background:white;color:var(--ink);border:1px solid var(--line);break-inside:avoid}
+      .headline .eyebrow,.headline .note{color:var(--muted)}
+      .stats{break-inside:avoid}
     }
   </style>
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Rental Property Investment Calculator",
-    "url": "https://avrealtymanagement.com/rental-property-calculator.html",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Web",
-    "isAccessibleForFree": true,
-    "provider": {
-      "@type": "RealEstateAgent",
-      "name": "AV Realty & Management",
-      "url": "https://avrealtymanagement.com/"
-    },
-    "description": "Free rental property calculator for estimating cash flow, net operating income, cap rate, cash-on-cash return, debt service coverage ratio, and annual profit."
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"AV Realty Rental Property Calculator",
+    "url":"https://avrealtymanagement.com/rental-property-calculator.html",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"Web",
+    "isAccessibleForFree":true,
+    "description":"Rental property analysis with cash flow, NOI, cap rate, cash-on-cash return, NOI-based debt coverage, rent roll, and stress tests.",
+    "provider":{
+      "@type":"RealEstateAgent",
+      "name":"AV Realty & Management",
+      "url":"https://avrealtymanagement.com/"
+    }
   }
   </script>
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-
-    <div class="nav-links" id="navLinks">
-      <a href="north-shore-real-estate.html">Real Estate</a>
-      <a href="north-shore-property-management.html">Property Management</a>
-      <a href="north-shore-ma-apartments.html">Apartments</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Resident Portal</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="78" height="56">
+        <span>AV Realty &amp; Management</span>
+      </a>
+      <button class="menu" type="button" aria-controls="navLinks"
+        aria-expanded="false" aria-label="Open navigation menu">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/north-shore-real-estate.html">Real Estate</a>
+        <a href="/north-shore-property-management.html">Property Management</a>
+        <a href="/north-shore-ma-apartments.html">Apartments</a>
+        <a href="/about.html">About</a>
+        <a href="/#contact">Contact</a>
+        <a class="portal"
+          href="https://avrealtymanagement.managebuilding.com/Resident/portal/login"
+          target="_blank" rel="noopener">Resident Portal</a>
+      </div>
     </div>
   </nav>
 
-  <header>
-    <div class="hero-overlay">
-      <div class="logo-container">
-        <a href="index.html"><img src="logo.png" alt="AV Realty & Management Logo"></a>
+  <main id="main">
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Free Investor &amp; Landlord Tool</p>
+        <h1>Rental property calculator.<br>See the ownership picture.</h1>
+        <p class="hero-copy">
+          Explore rental cash flow, operating income, financing,
+          reserves, and returns. Then test how the numbers change
+          when the assumptions do.
+        </p>
+        <div class="actions">
+          <a class="btn gold" href="#calculator">Analyze a Property</a>
+          <a class="btn outline" href="/free-rent-analysis.html">Get a Free Rent Analysis</a>
+        </div>
       </div>
+    </header>
 
-      <p class="hero-label">Free Investor Tool</p>
-      <h1 class="hero-title">Rental Property Investment Calculator</h1>
-      <p class="hero-subtitle">
-        Estimate monthly cash flow, net operating income, cap rate, cash-on-cash return, DSCR, and annual profit before you buy or refinance a rental property.
-      </p>
+    <noscript>
+      <p class="container">This calculator requires JavaScript. Please enable it or contact AV Realty &amp; Management for assistance.</p>
+    </noscript>
 
-      <div class="hero-cta">
-        <a href="#calculator" class="btn">Analyze a Property</a>
-        <a href="free-rent-analysis.html" class="btn secondary-btn">Get a Rent Analysis</a>
-      </div>
-    </div>
-  </header>
+    <div class="container">
+      <section class="section" id="calculator" aria-labelledby="calc-heading">
+        <div class="intro">
+          <p class="eyebrow">Build Your Scenario</p>
+          <h2 id="calc-heading">Run the numbers with clear assumptions.</h2>
+          <p class="muted">
+            Results update as you type. Starting values are examples,
+            not current financing quotes or a forecast for a specific
+            property. Enter whole-property totals, not per-unit expenses.
+          </p>
+        </div>
 
-  <main>
-    <div class="container" id="calculator">
-      <p class="eyebrow">Rental Property Analysis</p>
-      <h2>Run the Numbers Before You Make the Decision</h2>
-      <p class="section-intro">
-        Enter your assumptions below. The calculator updates your estimated monthly and annual performance so you can quickly compare rental opportunities.
-      </p>
+        <div class="layout">
+          <form id="calculatorForm" class="panel">
+            <fieldset>
+              <legend>1. Purchase &amp; Financing</legend>
+              <div class="inputs">
+                <div class="full">
+                  <label for="property">Property / Scenario Name</label>
+                  <input id="property" type="text" maxlength="200" placeholder="Optional address or scenario label">
+                </div>
+                <div>
+                  <label for="price">Purchase Price ($)</label>
+                  <input id="price" type="number" min="1" max="1000000000" step="any" value="600000" required>
+                </div>
+                <div>
+                  <label for="down">Down Payment (%)</label>
+                  <input id="down" type="number" min="0" max="100" step="any" value="25" required>
+                </div>
+                <div>
+                  <label for="rate">Interest Rate (%)</label>
+                  <input id="rate" type="number" min="0" max="50" step="any" value="7" required>
+                </div>
+                <div>
+                  <label for="years">Loan Term (Years)</label>
+                  <select id="years">
+                    <option value="30">30</option>
+                    <option value="25">25</option>
+                    <option value="20">20</option>
+                    <option value="15">15</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="closing">Closing Costs ($)</label>
+                  <input id="closing" type="number" min="0" max="1000000000" step="any" value="12000" required>
+                </div>
+                <div>
+                  <label for="repairs">Initial Repairs / Improvements ($)</label>
+                  <input id="repairs" type="number" min="0" max="1000000000" step="any" value="10000" required>
+                </div>
+                <div class="full">
+                  <label for="reserve">Initial Cash Reserve ($)</label>
+                  <input id="reserve" type="number" min="0" max="1000000000" step="any" value="5000" required>
+                  <span class="hint">Included in initial cash committed. Separate from the recurring capital reserve below. Avoid counting the same upfront funds twice.</span>
+                </div>
+              </div>
+            </fieldset>
 
-      <div class="calculator-layout">
+            <fieldset>
+              <legend>2. Rental Income</legend>
+              <label for="rentMode">Enter Rent As</label>
+              <select id="rentMode">
+                <option value="total">One monthly total</option>
+                <option value="units">Unit-by-unit rent roll</option>
+              </select>
 
-        <section class="calculator-panel">
-          <div class="section-title-small">Purchase & Financing</div>
+              <div id="totalRentGroup" style="margin-top:17px">
+                <label for="rent">Gross Potential Monthly Rent ($)</label>
+                <input id="rent" type="number" min="0" max="100000000" step="any" value="5000" required>
+              </div>
 
-          <div class="input-grid">
-            <div class="input-group">
-              <label for="purchasePrice">Purchase Price</label>
-              <input type="number" id="purchasePrice" value="600000" min="0" step="1000">
+              <div id="unitGroup" hidden style="margin-top:17px">
+                <div id="rentRows"></div>
+                <button class="btn light" id="addUnit" type="button">Add a Unit</button>
+                <p class="rent-total" id="rentTotal"></p>
+              </div>
+
+              <p class="hint">
+                Enter potential rent before vacancy. For a vacant unit,
+                enter its assumed rent rather than zero unless you intend
+                to exclude its income.
+              </p>
+
+              <div class="inputs" style="margin-top:17px">
+                <div>
+                  <label for="other">Other Monthly Income ($)</label>
+                  <input id="other" type="number" min="0" max="100000000" step="any" value="0" required>
+                </div>
+                <div>
+                  <label for="vacancy">Rent Vacancy / Collection Loss (%)</label>
+                  <input id="vacancy" type="number" min="0" max="100" step="any" value="5" required>
+                </div>
+              </div>
+              <p class="note">
+                Vacancy reduces rent only. Other income is assumed
+                collected in full; enter a conservative net amount.
+                Exclude security deposits.
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>3. Operating Expenses</legend>
+              <div class="inputs">
+                <div>
+                  <label for="tax">Annual Property Taxes ($)</label>
+                  <input id="tax" type="number" min="0" max="100000000" step="any" value="8400" required>
+                </div>
+                <div>
+                  <label for="insurance">Annual Property Insurance ($)</label>
+                  <input id="insurance" type="number" min="0" max="100000000" step="any" value="2400" required>
+                </div>
+                <div>
+                  <label for="utilities">Monthly Owner-Paid Utilities ($)</label>
+                  <input id="utilities" type="number" min="0" max="10000000" step="any" value="250" required>
+                </div>
+                <div>
+                  <label for="hoa">Monthly HOA / Condo Fees ($)</label>
+                  <input id="hoa" type="number" min="0" max="10000000" step="any" value="0" required>
+                </div>
+                <div>
+                  <label for="maintenance">Maintenance (% of Potential Rent)</label>
+                  <input id="maintenance" type="number" min="0" max="100" step="any" value="5" required>
+                </div>
+                <div>
+                  <label for="management">Management (% of Collected Rent)</label>
+                  <input id="management" type="number" min="0" max="100" step="any" value="10" required>
+                </div>
+                <div class="full">
+                  <label for="misc">Other Monthly Operating Costs ($)</label>
+                  <input id="misc" type="number" min="0" max="10000000" step="any" value="0" required>
+                  <span class="hint">Include expenses not already entered, such as landscaping, snow removal, or annualized leasing costs. Do not include mortgage P&amp;I or capital reserves here.</span>
+                </div>
+              </div>
+              <p class="note">
+                Maintenance is modeled as a recurring operating-cost
+                allowance. Management applies to rent after vacancy,
+                excluding other income. Fee inputs are editable assumptions,
+                not a service proposal.
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>4. Capital Reserve</legend>
+              <label for="capital">Capital Reserve (% of Potential Rent)</label>
+              <input id="capital" type="number" min="0" max="100" step="any" value="5" required>
+              <p class="note">
+                A recurring allowance for major replacements. Deducted
+                after NOI when estimating cash flow.
+              </p>
+            </fieldset>
+
+            <div class="actions">
+              <button class="btn" type="submit">Update Analysis</button>
+              <button class="btn light" type="reset">Reset Examples</button>
+            </div>
+          </form>
+
+          <aside class="results" aria-label="Investment analysis results">
+            <div id="error" class="error" role="status" hidden></div>
+
+            <div id="output">
+              <div class="headline">
+                <p class="eyebrow">Estimated Monthly Cash Flow</p>
+                <div class="cash" id="cash">—</div>
+                <p class="note">After operating costs, capital reserve, and mortgage P&amp;I. Before income taxes.</p>
+              </div>
+
+              <div class="panel" style="margin-top:18px">
+                <dl class="stats">
+                  <div class="stat"><dt>Annual Cash Flow</dt><dd id="annualCash">—</dd></div>
+                  <div class="stat"><dt>Annual NOI · Before Capital Reserve</dt><dd id="noi">—</dd></div>
+                  <div class="stat"><dt>Cap Rate · NOI / Price</dt><dd id="cap">—</dd></div>
+                  <div class="stat"><dt>Cash-on-Cash · After Capital Reserve</dt><dd id="coc">—</dd></div>
+                  <div class="stat"><dt>DSCR · NOI / Debt Service</dt><dd id="dscr">—</dd></div>
+                  <div class="stat"><dt>Initial Cash Committed</dt><dd id="invested">—</dd></div>
+                </dl>
+
+                <h3>Monthly Income to Cash Flow</h3>
+                <dl class="statement" id="statement"></dl>
+                <div id="snapshot" class="snapshot"></div>
+
+                <details open>
+                  <summary>Stress-Test Your Assumptions</summary>
+                  <div class="table-wrap">
+                    <table>
+                      <caption>Each scenario changes one assumption from the base case.</caption>
+                      <thead>
+                        <tr><th>Scenario</th><th>Monthly Cash Flow</th><th>NOI DSCR</th></tr>
+                      </thead>
+                      <tbody id="stress"></tbody>
+                    </table>
+                  </div>
+                  <p class="note">
+                    The rate test models a different loan at origination;
+                    it does not change an existing fixed-rate loan.
+                    Percentage-based costs recalculate with rent and vacancy.
+                  </p>
+                </details>
+
+                <details>
+                  <summary>Financing &amp; Expense Details</summary>
+                  <dl id="details" class="statement"></dl>
+                </details>
+
+                <div class="actions" style="margin-top:22px">
+                  <button id="print" class="btn light" type="button">Print / Save PDF</button>
+                </div>
+
+                <p class="note">
+                  Purchase analysis using a fixed-rate, fully amortizing
+                  loan. No appreciation, rent growth, tax benefits, sale
+                  proceeds, or refinance proceeds are modeled. Mortgage
+                  insurance and other loan charges are not added
+                  automatically. If applicable, account for them separately
+                  before relying on the cash-flow estimate.
+                </p>
+                <p class="note">
+                  DSCR here is NOI divided by mortgage P&amp;I. Lenders may
+                  use different income, reserve, insurance, and debt-service
+                  definitions. This is a planning tool, not underwriting
+                  or an investment recommendation.
+                </p>
+              </div>
             </div>
 
-            <div class="input-group">
-              <label for="downPaymentPct">Down Payment (%)</label>
-              <input type="number" id="downPaymentPct" value="25" min="0" max="100" step="0.1">
-            </div>
-
-            <div class="input-group">
-              <label for="interestRate">Interest Rate (%)</label>
-              <input type="number" id="interestRate" value="7" min="0" step="0.01">
-            </div>
-
-            <div class="input-group">
-              <label for="loanTerm">Loan Term (Years)</label>
-              <input type="number" id="loanTerm" value="30" min="1" step="1">
-            </div>
-
-            <div class="input-group">
-              <label for="closingCosts">Closing Costs</label>
-              <input type="number" id="closingCosts" value="12000" min="0" step="500">
-            </div>
-
-            <div class="input-group">
-              <label for="initialRepairs">Initial Repairs / CapEx</label>
-              <input type="number" id="initialRepairs" value="10000" min="0" step="500">
-            </div>
-          </div>
-
-          <hr class="group-divider">
-
-          <div class="section-title-small">Income</div>
-
-          <div class="input-grid">
-            <div class="input-group">
-              <label for="monthlyRent">Gross Monthly Rent</label>
-              <input type="number" id="monthlyRent" value="5000" min="0" step="50">
-            </div>
-
-            <div class="input-group">
-              <label for="otherIncome">Other Monthly Income</label>
-              <input type="number" id="otherIncome" value="0" min="0" step="25">
-            </div>
-
-            <div class="input-group">
-              <label for="vacancyPct">Vacancy Allowance (%)</label>
-              <input type="number" id="vacancyPct" value="5" min="0" max="100" step="0.1">
-            </div>
-          </div>
-
-          <hr class="group-divider">
-
-          <div class="section-title-small">Monthly Operating Expenses</div>
-
-          <div class="input-grid">
-            <div class="input-group">
-              <label for="taxes">Property Taxes</label>
-              <input type="number" id="taxes" value="700" min="0" step="25">
-            </div>
-
-            <div class="input-group">
-              <label for="insurance">Insurance</label>
-              <input type="number" id="insurance" value="200" min="0" step="10">
-            </div>
-
-            <div class="input-group">
-              <label for="utilities">Owner-Paid Utilities</label>
-              <input type="number" id="utilities" value="250" min="0" step="10">
-            </div>
-
-            <div class="input-group">
-              <label for="maintenancePct">Maintenance Reserve (% of rent)</label>
-              <input type="number" id="maintenancePct" value="5" min="0" max="100" step="0.1">
-            </div>
-
-            <div class="input-group">
-              <label for="capexPct">Capital Reserve (% of rent)</label>
-              <input type="number" id="capexPct" value="5" min="0" max="100" step="0.1">
-            </div>
-
-            <div class="input-group">
-              <label for="managementPct">Management Fee (% of rent)</label>
-              <input type="number" id="managementPct" value="8" min="0" max="100" step="0.1">
-            </div>
-
-            <div class="input-group">
-              <label for="hoa">HOA / Condo Fee</label>
-              <input type="number" id="hoa" value="0" min="0" step="10">
-            </div>
-
-            <div class="input-group">
-              <label for="otherExpenses">Other Monthly Expenses</label>
-              <input type="number" id="otherExpenses" value="0" min="0" step="10">
-            </div>
-          </div>
-
-          <button type="button" class="calculate-btn" onclick="calculateDeal()">Calculate Investment Performance</button>
-        </section>
-
-        <aside class="results-panel">
-          <div class="section-title-small">Estimated Performance</div>
-
-          <div class="metrics-grid">
-            <div class="metric">
-              <div class="metric-label">Monthly Cash Flow</div>
-              <div class="metric-value" id="monthlyCashFlow">$0</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Annual Cash Flow</div>
-              <div class="metric-value" id="annualCashFlow">$0</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Annual NOI</div>
-              <div class="metric-value" id="noi">$0</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Cap Rate</div>
-              <div class="metric-value" id="capRate">0%</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Cash-on-Cash Return</div>
-              <div class="metric-value" id="cocReturn">0%</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">DSCR</div>
-              <div class="metric-value" id="dscr">0.00</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Monthly Mortgage P&I</div>
-              <div class="metric-value" id="mortgagePayment">$0</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Cash Invested</div>
-              <div class="metric-value" id="cashInvested">$0</div>
-            </div>
-          </div>
-
-          <div class="deal-summary">
-            <h3>Deal Snapshot</h3>
-            <p id="dealSummaryText">Enter your assumptions and calculate the property to see a quick summary.</p>
-          </div>
-
-          <div class="analysis-note">
-            This calculator is for preliminary analysis only. Actual financing terms, expenses, taxes, insurance, vacancy, repairs, management costs, and rental income can vary materially.
-          </div>
-
-          <div class="lead-cta">
-            <p><strong>Considering a North Shore investment property?</strong><br>AV Realty & Management can help you review the property, rental positioning, and management strategy.</p>
-            <a href="index.html#contact" class="btn">Request an Investment Consultation</a>
-          </div>
-        </aside>
-      </div>
-
-      <section class="content-section">
-        <p class="eyebrow">Understand the Metrics</p>
-        <h2>What the Calculator Measures</h2>
-
-        <div class="info-grid">
-          <article class="info-card">
-            <h3>Net Operating Income (NOI)</h3>
-            <p>Estimated rental income after vacancy and operating expenses, but before mortgage payments and income taxes.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Cap Rate</h3>
-            <p>NOI divided by the purchase price. It is one way to compare a property's operating return independent of financing.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Cash-on-Cash Return</h3>
-            <p>Estimated annual cash flow divided by the initial cash invested, including down payment, closing costs, and initial repairs.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>DSCR</h3>
-            <p>Debt service coverage ratio compares NOI with annual mortgage debt service and can help evaluate how comfortably the property's operations cover the loan payment.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Vacancy & Reserves</h3>
-            <p>Using realistic vacancy, maintenance, and capital reserves helps prevent an investment from looking stronger on paper than it may perform in practice.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Monthly Cash Flow</h3>
-            <p>The estimated amount remaining after vacancy, operating expenses, reserves, management, and mortgage principal and interest.</p>
-          </article>
+            <p id="announcement" class="note" role="status" aria-live="polite"></p>
+          </aside>
         </div>
       </section>
 
-      <section class="cta-panel">
-        <h2>Need Better Rent Assumptions?</h2>
-        <p>
-          A rental-property calculator is only as useful as the numbers entered into it. If you are evaluating a North Shore property, request a complimentary rent analysis to get a more informed rental estimate before relying on projected cash flow.
-        </p>
-        <a href="free-rent-analysis.html" class="btn secondary-btn">Get a Free Rent Analysis</a>
-      </section>
+      <section class="section resources" aria-labelledby="metrics-heading">
+        <p class="eyebrow">Understand the Results</p>
+        <h2 id="metrics-heading">Know what each number includes.</h2>
 
+        <div class="definitions">
+          <article class="panel">
+            <h3>NOI</h3>
+            <p>Collected rent plus other income, less operating expenses. Excludes debt service, capital reserve, and income taxes in this model.</p>
+          </article>
+          <article class="panel">
+            <h3>Cap Rate</h3>
+            <p>Annual NOI divided by purchase price. Initial repairs and closing costs are not included in this denominator.</p>
+          </article>
+          <article class="panel">
+            <h3>Cash-on-Cash Return</h3>
+            <p>Annual cash flow after capital reserve and mortgage P&amp;I divided by down payment, closing costs, initial improvements, and initial cash reserve.</p>
+          </article>
+          <article class="panel">
+            <h3>Debt Coverage</h3>
+            <p>This tool’s DSCR compares NOI to mortgage P&amp;I. It displays N/A when there is no mortgage debt service.</p>
+          </article>
+          <article class="panel">
+            <h3>Capital Reserve</h3>
+            <p>An assumed amount set aside for larger replacements. Cash flow is reduced by this allowance even when the money has not yet been spent.</p>
+          </article>
+          <article class="panel">
+            <h3>Cash Flow</h3>
+            <p>The modeled amount remaining after operating expenses, capital reserve, and mortgage P&amp;I. It is not accounting profit or a total investment return.</p>
+          </article>
+        </div>
+
+        <div class="cta">
+          <h2>Better assumptions start with the property.</h2>
+          <p>
+            Request rental pricing guidance or discuss the operating
+            needs of a North Shore property before relying on a projection.
+          </p>
+          <div class="actions">
+            <a class="btn gold" href="/free-rent-analysis.html">Free Rent Analysis</a>
+            <a class="btn outline" href="/#contact">Discuss a Property</a>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer>
-    <div style="font-family:'Montserrat',sans-serif;font-weight:800;">AV Realty & Management</div>
-    <div style="margin-top:6px;">5 Huron Street, Swampscott, MA 01907</div>
-    <div style="margin-top:5px;"><a href="tel:9782773435" style="color:#0033a0;text-decoration:none;">(978) 277-3435</a></div>
-
+    <strong>AV Realty &amp; Management</strong>
+    <address>5 Huron Street, Swampscott, MA 01907</address>
+    <a href="tel:+19782773435">(978) 277-3435</a> ·
+    <a href="mailto:anthony@avrealtymanagement.com">Email Us</a>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="north-shore-real-estate.html">Real Estate</a>
-      <a href="north-shore-property-management.html">Property Management</a>
-      <a href="free-rent-analysis.html">Free Rent Analysis</a>
+      <a href="/">Home</a>
+      <a href="/north-shore-real-estate.html">Real Estate</a>
+      <a href="/north-shore-property-management.html">Property Management</a>
+      <a href="/north-shore-multifamily-real-estate.html">Multifamily Investing</a>
+      <a href="/free-rent-analysis.html">Free Rent Analysis</a>
+      <a href="/calculator.html">Mortgage Calculator</a>
     </div>
-
-    <div style="color:#666;font-size:13px;">&copy; 2026 AV Realty & Management LLC. All rights reserved.</div>
+    <p class="copyright">© 2026 AV Realty &amp; Management LLC. All rights reserved.</p>
+    <p>Equal Housing Opportunity</p>
   </footer>
 
+  <div class="mobile-contact" role="group" aria-label="Quick contact">
+    <a href="tel:+19782773435">Call Us</a>
+    <a href="/free-rent-analysis.html">Free Rent Analysis</a>
+  </div>
+
+  <template id="unitTemplate">
+    <div class="rent-row">
+      <div class="unit-label">
+        <label>Unit / Description
+          <input class="unit-name" type="text" maxlength="80">
+        </label>
+      </div>
+      <div>
+        <label>Potential Monthly Rent ($)
+          <input class="unit-rent" type="number" min="0" max="100000000" step="any" required>
+        </label>
+      </div>
+      <button type="button" class="remove" aria-label="Remove this unit">×</button>
+    </div>
+  </template>
+
   <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
+    (() => {
+      "use strict";
+      const $ = id => document.getElementById(id);
+      const form = $("calculatorForm");
+      const numeric = [
+        "price","down","rate","years","closing","repairs","reserve",
+        "other","vacancy","tax","insurance","utilities","hoa",
+        "misc","maintenance","management","capital"
+      ];
+      let latest = null;
+      let timer;
+      let unitNumber = 0;
 
-    function money(value) {
-      if (!isFinite(value)) return "$0";
-      return value.toLocaleString("en-US", {
-        style: "currency",
-        currency: "USD",
-        maximumFractionDigits: 0
-      });
-    }
+      const money = value => new Intl.NumberFormat("en-US", {
+        style:"currency",currency:"USD",
+        minimumFractionDigits:2,maximumFractionDigits:2
+      }).format(value);
 
-    function pct(value) {
-      if (!isFinite(value)) return "0.0%";
-      return value.toFixed(1) + "%";
-    }
+      const pct = value => value === null ? "N/A" : value.toFixed(2) + "%";
+      const ratio = value => value === null ? "N/A" : value.toFixed(2) + "×";
 
-    function num(id) {
-      return parseFloat(document.getElementById(id).value) || 0;
-    }
+      function payment(loan, rate, years) {
+        const r = rate / 1200;
+        const n = years * 12;
+        if (loan === 0) return 0;
+        if (r === 0) return loan / n;
+        return loan * r / (-Math.expm1(-n * Math.log1p(r)));
+      }
 
-    function calculateDeal() {
-      const purchasePrice = num("purchasePrice");
-      const downPaymentPct = num("downPaymentPct");
-      const interestRate = num("interestRate");
-      const loanTerm = num("loanTerm");
-      const closingCosts = num("closingCosts");
-      const initialRepairs = num("initialRepairs");
+      function analyze(d, rent=d.rent, vacancy=d.vacancy, rate=d.rate) {
+        const downAmount = d.price * d.down / 100;
+        const loan = Math.max(0, d.price - downAmount);
+        const debt = payment(loan, rate, d.years);
+        const vacancyLoss = rent * vacancy / 100;
+        const collected = rent - vacancyLoss;
+        const income = collected + d.other;
+        const maintenance = rent * d.maintenance / 100;
+        const management = collected * d.management / 100;
+        const capital = rent * d.capital / 100;
+        const fixed = d.tax/12 + d.insurance/12 + d.utilities + d.hoa + d.misc;
+        const operating = fixed + maintenance + management;
+        const noi = income - operating;
+        const cash = noi - capital - debt;
+        const invested = downAmount + d.closing + d.repairs + d.reserve;
 
-      const monthlyRent = num("monthlyRent");
-      const otherIncome = num("otherIncome");
-      const vacancyPct = num("vacancyPct");
+        return {
+          downAmount,loan,debt,vacancyLoss,collected,income,
+          maintenance,management,capital,fixed,operating,noi,cash,invested,
+          cap:noi * 1200 / d.price,
+          coc:invested > 0 ? cash * 1200 / invested : null,
+          dscr:debt > 0 ? noi / debt : null
+        };
+      }
 
-      const taxes = num("taxes");
-      const insurance = num("insurance");
-      const utilities = num("utilities");
-      const maintenancePct = num("maintenancePct");
-      const capexPct = num("capexPct");
-      const managementPct = num("managementPct");
-      const hoa = num("hoa");
-      const otherExpenses = num("otherExpenses");
-
-      const downPayment = purchasePrice * (downPaymentPct / 100);
-      const loanAmount = Math.max(purchasePrice - downPayment, 0);
-
-      const monthlyRate = interestRate / 100 / 12;
-      const payments = loanTerm * 12;
-
-      let mortgage = 0;
-
-      if (loanAmount > 0 && payments > 0) {
-        if (monthlyRate === 0) {
-          mortgage = loanAmount / payments;
-        } else {
-          mortgage = loanAmount *
-            (monthlyRate * Math.pow(1 + monthlyRate, payments)) /
-            (Math.pow(1 + monthlyRate, payments) - 1);
+      function addUnit(name, rent, focus=false) {
+        unitNumber++;
+        const row = $("unitTemplate").content.firstElementChild.cloneNode(true);
+        const nameInput = row.querySelector(".unit-name");
+        const rentInput = row.querySelector(".unit-rent");
+        nameInput.value = name;
+        rentInput.value = rent;
+        row.querySelector(".remove").addEventListener("click", () => {
+          const nextFocus = row.nextElementSibling?.querySelector(".unit-rent")
+            || row.previousElementSibling?.querySelector(".unit-rent")
+            || $("addUnit");
+          row.remove();
+          syncMode();
+          calculate();
+          nextFocus.focus();
+        });
+        $("rentRows").append(row);
+        if (focus) {
+          syncMode();
+          nameInput.focus();
         }
       }
 
-      const grossMonthlyIncome = monthlyRent + otherIncome;
-      const vacancyAllowance = grossMonthlyIncome * (vacancyPct / 100);
-      const effectiveMonthlyIncome = grossMonthlyIncome - vacancyAllowance;
+      function syncMode() {
+        const units = $("rentMode").value === "units";
+        $("unitGroup").hidden = !units;
+        $("totalRentGroup").hidden = units;
+        $("rent").disabled = units;
 
-      const maintenance = monthlyRent * (maintenancePct / 100);
-      const capex = monthlyRent * (capexPct / 100);
-      const management = monthlyRent * (managementPct / 100);
+        $("rentRows").querySelectorAll("input").forEach(input => {
+          input.disabled = !units;
+        });
 
-      const monthlyOperatingExpenses =
-        taxes + insurance + utilities + maintenance + capex +
-        management + hoa + otherExpenses;
-
-      const monthlyNOI = effectiveMonthlyIncome - monthlyOperatingExpenses;
-      const annualNOI = monthlyNOI * 12;
-
-      const monthlyCashFlow = monthlyNOI - mortgage;
-      const annualCashFlow = monthlyCashFlow * 12;
-
-      const capRate = purchasePrice > 0 ? (annualNOI / purchasePrice) * 100 : 0;
-
-      const cashInvested = downPayment + closingCosts + initialRepairs;
-      const cocReturn = cashInvested > 0 ? (annualCashFlow / cashInvested) * 100 : 0;
-
-      const annualDebtService = mortgage * 12;
-      const dscr = annualDebtService > 0 ? annualNOI / annualDebtService : 0;
-
-      document.getElementById("monthlyCashFlow").textContent = money(monthlyCashFlow);
-      document.getElementById("annualCashFlow").textContent = money(annualCashFlow);
-      document.getElementById("noi").textContent = money(annualNOI);
-      document.getElementById("capRate").textContent = pct(capRate);
-      document.getElementById("cocReturn").textContent = pct(cocReturn);
-      document.getElementById("dscr").textContent = dscr.toFixed(2);
-      document.getElementById("mortgagePayment").textContent = money(mortgage);
-      document.getElementById("cashInvested").textContent = money(cashInvested);
-
-      let summary = "";
-
-      if (monthlyCashFlow > 0) {
-        summary += `Based on these assumptions, the property produces approximately ${money(monthlyCashFlow)} in estimated monthly cash flow. `;
-      } else if (monthlyCashFlow < 0) {
-        summary += `Based on these assumptions, the property produces approximately ${money(Math.abs(monthlyCashFlow))} in estimated negative monthly cash flow. `;
-      } else {
-        summary += "Based on these assumptions, the property is approximately break-even on monthly cash flow. ";
+        const rows = $("rentRows").querySelectorAll(".rent-row");
+        rows.forEach(row => {
+          row.querySelector(".remove").disabled = rows.length <= 1;
+        });
+        $("addUnit").disabled = rows.length >= 100;
       }
 
-      summary += `Estimated cap rate is ${pct(capRate)}, cash-on-cash return is ${pct(cocReturn)}, and DSCR is ${dscr.toFixed(2)}.`;
+      function read() {
+        const d = {};
+        for (const id of numeric) {
+          const input = $(id);
+          const value = input.tagName === "SELECT"
+            ? Number(input.value) : input.valueAsNumber;
+          if (!input.validity.valid || input.value === "" || !Number.isFinite(value)) {
+            return null;
+          }
+          d[id] = value;
+        }
 
-      document.getElementById("dealSummaryText").textContent = summary;
-    }
+        if ($("rentMode").value === "units") {
+          d.rent = 0;
+          for (const input of $("rentRows").querySelectorAll(".unit-rent")) {
+            if (!input.validity.valid || !Number.isFinite(input.valueAsNumber)) return null;
+            d.rent += input.valueAsNumber;
+          }
+        } else {
+          if (!$("rent").validity.valid || !Number.isFinite($("rent").valueAsNumber)) return null;
+          d.rent = $("rent").valueAsNumber;
+        }
+        return d;
+      }
 
-    document.querySelectorAll("input, select").forEach(el => {
-      el.addEventListener("input", calculateDeal);
-      el.addEventListener("change", calculateDeal);
-    });
+      function renderRows(target, rows) {
+        $(target).replaceChildren();
+        rows.forEach(([label,value,total=false]) => {
+          const row = document.createElement("div");
+          row.className = "row" + (total ? " total-row" : "");
+          const dt = document.createElement("dt");
+          const dd = document.createElement("dd");
+          dt.textContent = label;
+          dd.textContent = money(value);
+          row.append(dt,dd);
+          $(target).append(row);
+        });
+      }
 
-    calculateDeal();
+      function stressRow(label, result) {
+        const row = document.createElement("tr");
+        [label,money(result.cash),ratio(result.dscr)].forEach((value,index) => {
+          const td = document.createElement("td");
+          td.textContent = value;
+          if (index === 1) td.className = result.cash < 0 ? "negative" : "positive";
+          row.append(td);
+        });
+        return row;
+      }
+
+      function calculate(announce=true) {
+        const d = read();
+        latest = null;
+        $("output").hidden = !d;
+        $("error").hidden = Boolean(d);
+        clearTimeout(timer);
+
+        if (!d) {
+          $("error").textContent =
+            "Enter valid numbers in every numeric field. Use 0 where a cost does not apply. Purchase price must be positive, and percentages must stay within the displayed limits.";
+          $("announcement").textContent = "";
+          $("rentTotal").textContent = "";
+          return false;
+        }
+
+        const a = analyze(d);
+        latest = {d,a};
+        $("rentTotal").textContent = "Total potential monthly rent: " + money(d.rent);
+        $("cash").textContent = money(a.cash);
+        $("annualCash").textContent = money(a.cash * 12);
+        $("annualCash").className = a.cash < 0 ? "negative" : "positive";
+        $("noi").textContent = money(a.noi * 12);
+        $("cap").textContent = pct(a.cap);
+        $("coc").textContent = pct(a.coc);
+        $("dscr").textContent = ratio(a.dscr);
+        $("invested").textContent = money(a.invested);
+
+        renderRows("statement", [
+          ["Potential rent",d.rent],
+          ["Less vacancy / collection loss",-a.vacancyLoss],
+          ["Other income",d.other],
+          ["Effective income",a.income,true],
+          ["Operating expenses",-a.operating],
+          ["NOI · before capital reserve",a.noi,true],
+          ["Capital reserve",-a.capital],
+          ["Mortgage principal & interest",-a.debt],
+          ["Estimated cash flow",a.cash,true]
+        ]);
+
+        renderRows("details", [
+          ["Down payment",a.downAmount],
+          ["Base loan amount",a.loan],
+          ["Monthly mortgage P&I",a.debt],
+          ["Monthly property taxes",d.tax/12],
+          ["Monthly insurance",d.insurance/12],
+          ["Monthly owner utilities",d.utilities],
+          ["Monthly HOA / condo",d.hoa],
+          ["Maintenance allowance",a.maintenance],
+          ["Management allowance",a.management],
+          ["Other operating costs",d.misc],
+          ["Monthly capital reserve",a.capital],
+          ["Initial cash reserve",d.reserve]
+        ]);
+
+        const direction = a.cash < 0
+          ? `${money(Math.abs(a.cash))} monthly shortfall`
+          : `${money(a.cash)} monthly surplus`;
+
+        $("snapshot").textContent =
+          `This scenario models a ${direction} after the entered expenses, capital reserve, and mortgage P&I. ` +
+          (a.loan === 0 ? "It is modeled as a cash purchase. " : "") +
+          (a.invested === 0 ? "Cash-on-cash return is undefined because initial cash committed is zero. " : "") +
+          "Results reflect your assumptions, not a prediction of actual performance.";
+
+        $("stress").replaceChildren();
+        const tests = [
+          ["Base case",a],
+          ["Rent 10% lower",analyze(d,d.rent*.9)],
+          [
+            `Vacancy ${Math.min(100,d.vacancy+5).toFixed(1)}%`,
+            analyze(d,d.rent,Math.min(100,d.vacancy+5))
+          ]
+        ];
+        if (a.loan > 0) {
+          tests.push([
+            `Financing rate ${(d.rate+1).toFixed(2)}%`,
+            analyze(d,d.rent,d.vacancy,d.rate+1)
+          ]);
+        }
+        tests.forEach(([label,result]) => $("stress").append(stressRow(label,result)));
+
+        if (announce) {
+          timer = setTimeout(() => {
+            $("announcement").textContent =
+              "Updated monthly cash flow estimate: " + money(a.cash);
+          },650);
+        }
+        return true;
+      }
+
+      addUnit("Unit 1",2500);
+      addUnit("Unit 2",2500);
+      syncMode();
+
+      $("addUnit").addEventListener("click", () => {
+        addUnit("Unit " + (unitNumber+1),0,true);
+        calculate();
+      });
+
+      $("rentMode").addEventListener("change", () => {
+        syncMode();
+        calculate();
+      });
+
+      form.addEventListener("input", () => calculate());
+      form.addEventListener("change", () => calculate());
+
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        if (calculate()) {
+          $("output").scrollIntoView({block:"start"});
+        }
+      });
+
+      form.addEventListener("reset", () => {
+        setTimeout(() => {
+          $("rentRows").replaceChildren();
+          unitNumber = 0;
+          addUnit("Unit 1",2500);
+          addUnit("Unit 2",2500);
+          syncMode();
+          calculate();
+        },0);
+      });
+
+      $("print").addEventListener("click", () => {
+        if (!calculate(false)) {
+          form.reportValidity();
+          return;
+        }
+        const detailElements = [...document.querySelectorAll("#output details")];
+        const openStates = detailElements.map(element => element.open);
+        detailElements.forEach(element => element.open = true);
+
+        const restore = () => {
+          detailElements.forEach((element,index) => element.open = openStates[index]);
+          window.removeEventListener("afterprint",restore);
+        };
+        window.addEventListener("afterprint",restore);
+        window.print();
+      });
+
+      const menu = document.querySelector(".menu");
+      const links = $("navLinks");
+      const nav = document.querySelector(".site-nav");
+      const mobile = window.matchMedia("(max-width:900px)");
+      document.documentElement.classList.add("js");
+
+      const setOpen = open => {
+        links.hidden = mobile.matches && !open;
+        menu.setAttribute("aria-expanded",String(open));
+        menu.setAttribute("aria-label",open ? "Close navigation menu" : "Open navigation menu");
+      };
+
+      setOpen(false);
+      menu.addEventListener("click", () => {
+        setOpen(menu.getAttribute("aria-expanded") !== "true");
+      });
+      links.addEventListener("click", event => {
+        if (mobile.matches && event.target.closest("a")) setOpen(false);
+      });
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && menu.getAttribute("aria-expanded") === "true") {
+          setOpen(false);
+          menu.focus();
+        }
+      });
+      document.addEventListener("click", event => {
+        if (mobile.matches && !nav.contains(event.target)) setOpen(false);
+      });
+      nav.addEventListener("focusout", event => {
+        if (mobile.matches && !nav.contains(event.relatedTarget)) setOpen(false);
+      });
+
+      const resetMenu = () => {
+        if (mobile.matches && links.contains(document.activeElement)) menu.focus();
+        setOpen(false);
+      };
+      if (mobile.addEventListener) mobile.addEventListener("change",resetMenu);
+      else mobile.addListener(resetMenu);
+
+      calculate(false);
+    })();
   </script>
-
 </body>
 </html>
