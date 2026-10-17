@@ -1,1009 +1,840 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Mortgage Calculator North Shore MA | AV Realty & Management</title>
-  <meta name="description" content="Use AV Realty & Management's free North Shore MA mortgage calculator to estimate principal, interest, property taxes, insurance, HOA, and monthly housing costs for homes and investment properties." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://avrealtymanagement.com/calculator.html" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mortgage Calculator North Shore MA | AV Realty & Management" />
-  <meta property="og:description" content="Estimate your monthly mortgage payment and total housing costs for a North Shore Massachusetts property." />
-  <meta property="og:url" content="https://avrealtymanagement.com/calculator.html" />
-  <meta property="og:image" content="https://avrealtymanagement.com/hero.jpg" />
-  <meta property="og:site_name" content="AV Realty & Management" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mortgage Calculator North Shore MA" />
-  <meta name="twitter:description" content="Estimate principal, interest, taxes, insurance, HOA, and monthly payment." />
-  <meta name="twitter:image" content="https://avrealtymanagement.com/hero.jpg" />
-
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mortgage Calculator North Shore MA | AV Realty &amp; Management</title>
+  <meta name="description" content="Estimate mortgage payments, taxes, insurance, HOA fees, and extra-payment savings with AV Realty & Management’s free North Shore MA mortgage calculator.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#07162f">
+  <link rel="canonical" href="https://avrealtymanagement.com/calculator.html">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AV Realty &amp; Management">
+  <meta property="og:title" content="North Shore MA Mortgage Calculator">
+  <meta property="og:description" content="Explore monthly housing costs and compare fixed-rate mortgage scenarios.">
+  <meta property="og:url" content="https://avrealtymanagement.com/calculator.html">
+  <meta property="og:image" content="https://avrealtymanagement.com/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --royal: #0033a0;
-      --deep-blue: #001b55;
-      --gold: #d4af37;
-      --light-gold: #f2dc87;
-      --soft-bg: #f5f7fb;
-      --text: #121212;
-      --muted: #666;
-      --shadow: 0 18px 45px rgba(0,0,0,0.12);
+      --navy:#07162f;
+      --blue:#173859;
+      --gold:#c8a75d;
+      --cream:#faf9f6;
+      --ink:#172435;
+      --muted:#596575;
+      --line:#dfe4e8;
     }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:110px}
+    body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.7 Manrope,sans-serif}
+    h1,h2,h3{line-height:1.2;font-weight:500}
+    h1{font-size:clamp(2.6rem,5.5vw,4.6rem);letter-spacing:-.045em;margin:0 0 22px;max-width:900px}
+    h2{font-size:clamp(1.65rem,3vw,2.4rem);letter-spacing:-.035em;margin:0 0 18px}
+    h3{font-size:1.1rem;margin:0 0 16px}
+    p{margin-top:0}
+    a{color:var(--blue);text-underline-offset:4px}
+    a:hover{color:#806124}
+    button,input,select{font:inherit}
+    button,a,input,select{touch-action:manipulation}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    [hidden]{display:none!important}
+    .container{max-width:1180px;margin:auto;padding:0 24px}
+    .section{padding:64px 0}
+    .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#806124;margin:0 0 16px}
+    .muted,.note{color:var(--muted)}
+    .note{font-size:.78rem;line-height:1.6;margin:14px 0 0}
+    .skip{position:fixed;top:8px;left:8px;transform:translateY(-160%);z-index:1200;background:white;padding:10px 18px}
+    .skip:focus{transform:none}
 
-    * { box-sizing: border-box; }
+    .site-nav{position:sticky;top:0;z-index:1000;background:rgba(7,22,47,.98);border-bottom:1px solid #ffffff20}
+    .nav-inner{max-width:1180px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .brand img{width:78px;height:56px;object-fit:contain;background:white;border-radius:6px;padding:4px}
+    .site-nav a{color:white;text-decoration:none;font-size:.78rem;font-weight:600}
+    .brand span{max-width:150px;font-size:.88rem;line-height:1.35}
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .site-nav a:hover{color:#ead9ad}
+    .portal{border:1px solid #c8a75d80;padding:10px;border-radius:7px}
+    .menu{display:none;background:transparent;color:white;border:1px solid #ffffff50;border-radius:6px;padding:9px 12px;min-height:44px;cursor:pointer}
 
-    html { scroll-behavior: smooth; }
+    .hero{padding:62px 0;background:linear-gradient(90deg,rgba(5,17,38,.94),rgba(7,22,47,.72)),url("/hero.jpg") center/cover;background-color:var(--navy);color:white}
+    .hero .eyebrow{color:#ead9ad}
+    .hero p:not(.eyebrow){max-width:680px;color:#d4dce6}
+    .hero-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}
+    .hero-top .eyebrow{margin:0}
+    .languages{display:flex;gap:4px;flex-shrink:0}
+    .languages button{min-height:44px;padding:8px 13px;border:1px solid #ffffff50;border-radius:6px;background:transparent;color:white;cursor:pointer}
+    .languages button[aria-pressed="true"]{background:#d7bb7a;color:var(--navy);border-color:#d7bb7a}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;background:var(--navy);border:1px solid var(--navy);border-radius:8px;color:white;text-decoration:none;font-size:.85rem;font-weight:600;cursor:pointer}
+    .btn:hover{background:var(--blue);color:white}
+    .gold{background:#d7bb7a;border-color:#d7bb7a;color:var(--navy)}
+    .gold:hover{background:#ead9ad;color:var(--navy)}
+    .outline{background:transparent;border-color:#ffffff85}
+    .light{background:white;color:var(--blue);border-color:var(--line)}
+    .light:hover{background:#f0f2ef;color:var(--navy)}
 
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
+    .intro{max-width:760px;margin-bottom:30px}
+    .layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:28px;align-items:start}
+    .panel{padding:28px;background:white;border:1px solid var(--line);border-radius:14px;min-width:0}
+    fieldset{border:0;padding:0;margin:0 0 26px;min-width:0}
+    legend{font-weight:700;margin-bottom:16px;padding:0;font-size:.95rem}
+    .inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .full{grid-column:1/-1}
+    label{display:block;font-size:.83rem;font-weight:600;margin-bottom:6px}
+    input,select{width:100%;min-height:48px;border:1px solid #cbd3dc;border-radius:7px;padding:11px;background:white;color:var(--ink);font-size:16px}
+    input:invalid:not(:focus):not(:placeholder-shown){border-color:#ad3c3c}
+    .hint{display:block;color:var(--muted);font-size:.74rem;line-height:1.5;margin-top:7px}
+    .down-row{display:grid;grid-template-columns:1fr 100px;gap:8px}
+    .error{padding:14px;border:1px solid #d6a3a3;background:#fff4f4;border-radius:8px;color:#842d2d;margin-bottom:20px;font-size:.88rem}
+    .results{position:sticky;top:108px}
+    .total-panel{background:var(--navy);color:white;padding:28px;border-radius:14px}
+    .total-panel .eyebrow{color:#ead9ad}
+    .total{font-size:clamp(2.4rem,5vw,3.4rem);line-height:1.15;letter-spacing:-.04em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+    .total-panel .note{color:#c9d2de}
+    .bar{height:10px;display:flex;overflow:hidden;border-radius:20px;background:#ffffff25;margin-top:22px}
+    .bar span{height:100%}
+    .breakdown{margin:18px 0 0}
+    .row{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.85rem}
+    .row dt{color:var(--muted)}
+    .row dd{margin:0;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+    .row:last-child{border-bottom:0}
+    .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .stat{padding:16px;background:#f0f2ef;border-radius:10px}
+    .stat dt{color:var(--muted);font-size:.76rem}
+    .stat dd{margin:5px 0 0;font-size:1.15rem;font-weight:600;overflow-wrap:anywhere}
+    .extra-note{border-left:3px solid var(--gold);padding:12px 16px;background:#faf9f6;font-size:.84rem;margin:20px 0}
+    details{border-top:1px solid var(--line);margin-top:22px}
+    summary{padding:18px 0;font-size:.9rem;font-weight:600;cursor:pointer}
+    .table-wrap{overflow:auto}
+    table{width:100%;border-collapse:collapse;font-size:.8rem}
+    caption{text-align:left;color:var(--muted);padding-bottom:12px}
+    th,td{text-align:right;padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+    th:first-child,td:first-child{text-align:left}
+    .followup{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+    .followup p{font-size:.86rem;color:var(--muted)}
+    .followup .btn{width:100%;margin-top:12px}
+    .resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .resource-grid p{font-size:.9rem;color:var(--muted)}
+    .resource-grid a{font-size:.87rem;font-weight:700}
+    .cta{margin-top:36px;padding:34px;background:var(--navy);color:white;border-radius:14px}
+    .cta p{color:#c9d2de;max-width:780px}
+
+    footer{padding:40px 24px;background:var(--navy);color:#c9d2de;text-align:center;font-size:.85rem}
+    footer a{color:#ead9ad}
+    footer a:hover{color:white}
+    footer address{font-style:normal;margin:8px 0}
+    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 20px;margin:20px 0}
+    .copyright{font-size:.76rem}
+    .mobile-contact{display:none}
+    noscript p{padding:24px;background:#fff4dc}
+
+    @media(min-width:901px){.nav-links[hidden]{display:flex!important}}
+    @media(max-width:1100px){.brand span{display:none}.nav-links{gap:14px}}
+    @media(max-width:900px){
+      .nav-inner{flex-wrap:wrap}
+      .brand span{display:block}
+      .js .menu{display:block}
+      .nav-links{width:100%;flex-wrap:wrap;gap:12px 20px}
+      .nav-links a{padding:10px 0}
+      .nav-links .portal{padding:10px}
+      .layout{grid-template-columns:1fr}
+      .results{position:static}
+      .resource-grid{grid-template-columns:1fr}
     }
-
-    body {
-      margin: 0;
-      padding-top: 58px;
-      font-family: 'Open Sans', sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(0,51,160,0.08), transparent 30%),
-        linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+    @media(max-width:600px){
+      .container{padding:0 20px}
+      .section{padding:44px 0}
+      .hero{padding:36px 0 44px}
+      .hero-top{align-items:flex-start}
+      .hero-top .eyebrow{max-width:190px}
+      .brand img{width:67px;height:48px}
+      .brand span{font-size:.78rem}
+      .panel,.total-panel{padding:22px}
+      .inputs{grid-template-columns:1fr}
+      .actions .btn{flex:1}
+      footer{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+      .mobile-contact{position:fixed;bottom:0;left:0;right:0;z-index:1000;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));background:var(--navy);border-top:1px solid #ffffff30}
+      .mobile-contact a{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #ffffff55;border-radius:7px;color:white;text-decoration:none;font-size:.82rem}
+      .mobile-contact a:last-child{background:#d7bb7a;color:var(--navy);border-color:#d7bb7a}
     }
-
-    h1, h2, h3, nav a, .btn, button, .hero-label, .eyebrow, .metric-value {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    nav {
-      background: rgba(0,31,92,0.96);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      min-height: 58px;
-      padding: 12px 22px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      width: 100%;
-      justify-content: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-    }
-
-    nav a:hover { color: var(--light-gold); }
-
-    .portal-btn {
-      border: 1px solid rgba(212,175,55,0.7);
-      border-radius: 30px;
-      padding: 8px 14px;
-    }
-
-    .language-toggle {
-      position: absolute;
-      right: 22px;
-      display: inline-flex;
-      align-items: center;
-      padding: 4px;
-      border: 1px solid rgba(212,175,55,0.7);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .language-toggle button {
-      min-width: 38px;
-      padding: 6px 9px;
-      border-radius: 999px;
-      background: transparent;
-      box-shadow: none;
-      font-size: 0.76rem;
-      letter-spacing: 0.04em;
-    }
-
-    .language-toggle button:hover { transform: none; }
-
-    .language-toggle button.active {
-      color: var(--deep-blue);
-      background: var(--light-gold);
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-    }
-
-    header {
-      background:
-        linear-gradient(rgba(0,16,52,0.74), rgba(0,22,70,0.64)),
-        url('hero.jpg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 72px 20px 58px;
-      position: relative;
-      border-bottom: 1px solid rgba(212,175,55,0.5);
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.18), transparent 36%),
-        linear-gradient(90deg, rgba(0,51,160,0.18), transparent, rgba(0,51,160,0.18));
-      pointer-events: none;
-    }
-
-    .hero-overlay {
-      max-width: 940px;
-      margin: auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .logo-container img {
-      max-width: 108px;
-      height: auto;
-      margin-bottom: 16px;
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
-    }
-
-    .hero-label {
-      color: var(--light-gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 0.76rem;
-      font-weight: 800;
-      margin: 0 0 12px;
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 5vw, 3.35rem);
-      line-height: 1.08;
-      margin: 0 auto 18px;
-      max-width: 880px;
-      font-weight: 800;
-      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
-    }
-
-    .hero-subtitle {
-      max-width: 780px;
-      margin: 0 auto 22px;
-      font-size: 1.03rem;
-      line-height: 1.72;
-      color: rgba(255,255,255,0.94);
-    }
-
-    .hero-cta {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn, button {
-      background: linear-gradient(135deg, var(--royal), var(--deep-blue));
-      color: white;
-      padding: 12px 20px;
-      font-size: 15px;
-      text-decoration: none;
-      border-radius: 999px;
-      display: inline-block;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      font-weight: 700;
-      box-shadow: 0 10px 25px rgba(0,51,160,0.24);
-    }
-
-    .btn:hover, button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 35px rgba(0,51,160,0.34);
-      background: linear-gradient(135deg, #00257a, #00143f);
-    }
-
-    .secondary-btn {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.72);
-      box-shadow: none;
-    }
-
-    .secondary-btn:hover {
-      background: white;
-      color: var(--royal);
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 34px auto;
-      padding: 30px;
-      background: rgba(255,255,255,0.96);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0,51,160,0.08);
-    }
-
-    .eyebrow {
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--gold);
-      font-size: 0.76rem;
-      font-weight: 800;
-      margin: 0 0 6px;
-    }
-
-    h2 {
-      color: var(--royal);
-      text-align: center;
-      font-size: clamp(1.55rem, 3vw, 2.1rem);
-      margin-bottom: 14px;
-    }
-
-    .section-intro {
-      text-align: center;
-      color: var(--muted);
-      max-width: 800px;
-      margin: 0 auto 28px;
-      line-height: 1.75;
-    }
-
-    .calculator-layout {
-      display: grid;
-      grid-template-columns: minmax(0,1.05fr) minmax(360px,0.95fr);
-      gap: 28px;
-      align-items: start;
-    }
-
-    .calculator-panel,
-    .results-panel {
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 20px;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.07);
-    }
-
-    .calculator-panel {
-      background: #fff;
-      padding: 24px;
-    }
-
-    .results-panel {
-      background:
-        radial-gradient(circle at top right, rgba(212,175,55,0.18), transparent 34%),
-        linear-gradient(145deg, #f8faff, #ffffff);
-      padding: 24px;
-      position: sticky;
-      top: 88px;
-    }
-
-    .section-title-small {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--deep-blue);
-      font-weight: 800;
-      font-size: 1.05rem;
-      margin: 0 0 15px;
-    }
-
-    .input-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 13px;
-    }
-
-    .full-width { grid-column: 1 / -1; }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 700;
-      color: var(--deep-blue);
-      font-size: 0.84rem;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 12px 13px;
-      border: 1px solid #d7ddea;
-      border-radius: 11px;
-      font-size: 16px;
-      background: white;
-      color: #1c2841;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    input:focus, select:focus {
-      outline: none;
-      border-color: var(--royal);
-      box-shadow: 0 0 0 4px rgba(0,51,160,0.10);
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 13px;
-    }
-
-    .metric {
-      background: white;
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 15px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .metric-label {
-      color: var(--muted);
-      font-size: 0.76rem;
-      line-height: 1.4;
-      min-height: 34px;
-    }
-
-    .metric-value {
-      color: var(--royal);
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-top: 6px;
-    }
-
-    .breakdown {
-      margin-top: 18px;
-      background: white;
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 15px;
-      padding: 16px;
-    }
-
-    .breakdown-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 8px 0;
-      border-bottom: 1px solid #edf0f6;
-      color: #4c586b;
-      font-size: 0.88rem;
-    }
-
-    .breakdown-row:last-child { border-bottom: 0; }
-
-    .analysis-note {
-      margin-top: 18px;
-      padding: 16px;
-      border-radius: 14px;
-      background: #fff;
-      border-left: 4px solid var(--gold);
-      color: #4c586b;
-      font-size: 0.86rem;
-      line-height: 1.55;
-    }
-
-    .lead-cta {
-      margin-top: 20px;
-      text-align: center;
-      padding: 20px;
-      border-radius: 18px;
-      background: #fff;
-      border: 1px solid rgba(0,51,160,0.10);
-    }
-
-    .lead-cta p {
-      margin: 0 0 12px;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 0.9rem;
-    }
-
-    .email-box {
-      margin-top: 26px;
-      padding: 22px;
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 18px;
-      background: #f8faff;
-    }
-
-    .email-box h3 {
-      margin: 0 0 8px;
-      color: var(--deep-blue);
-    }
-
-    .email-box p {
-      margin: 0 0 12px;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 0.9rem;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .info-card {
-      background: linear-gradient(145deg, #ffffff, #f8faff);
-      border: 1px solid rgba(0,51,160,0.10);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-    }
-
-    .info-card h3 {
-      margin: 0 0 8px;
-      color: var(--deep-blue);
-      font-size: 1rem;
-    }
-
-    .info-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.89rem;
-    }
-
-    .cta-panel {
-      margin-top: 56px;
-      background:
-        radial-gradient(circle at top right, rgba(212,175,55,0.22), transparent 35%),
-        linear-gradient(135deg, rgba(0,51,160,0.98), rgba(0,21,70,0.98));
-      border-radius: 22px;
-      padding: 32px 24px;
-      color: white;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0,51,160,0.24);
-      border: 1px solid rgba(212,175,55,0.35);
-    }
-
-    .cta-panel h2 { color: white; margin-top: 0; }
-
-    .cta-panel p {
-      max-width: 760px;
-      margin: 0 auto 16px;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.7;
-    }
-
-    footer {
-      background: linear-gradient(180deg, #f5f7fb, #eef2fb);
-      padding: 34px 20px;
-      text-align: center;
-      color: var(--royal);
-      font-size: 14px;
-      border-top: 1px solid rgba(0,51,160,0.08);
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin: 12px 0 14px;
-    }
-
-    .footer-links a {
-      color: var(--royal);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    @media (max-width: 980px) {
-      .calculator-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .results-panel {
-        position: static;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        justify-content: flex-start;
-        min-height: 58px;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0,31,92,0.98);
-        position: absolute;
-        top: 58px;
-        left: 0;
-        padding: 15px 0;
-      }
-
-      .nav-links.active { display: flex; }
-      .hamburger { display: flex; }
-
-      .language-toggle { right: 14px; }
-
-      header { padding: 54px 18px 46px; }
-      .hero-title { font-size: 2.05rem; }
-      .hero-subtitle { font-size: 0.95rem; }
-
-      .container {
-        margin: 24px 14px;
-        padding: 20px 15px;
-      }
-
-      .input-grid,
-      .metrics-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .full-width { grid-column: auto; }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{
+      .site-nav,.languages,.hero .actions,.actions,.followup,.resources,footer,.mobile-contact,.skip{display:none!important}
+      body{background:white;font-size:11px}
+      .hero{background:white!important;color:#172435;padding:15px 0}
+      .hero p:not(.eyebrow),.hero .eyebrow{color:#596575}
+      h1{font-size:26px}
+      .container{max-width:none;padding:0}
+      .section{padding:15px 0}
+      .layout{display:block}
+      .panel{padding:16px;margin-bottom:16px}
+      .results{position:static}
+      .total-panel{background:white;color:#172435;border:1px solid #dfe4e8}
+      .total-panel .eyebrow,.total-panel .note{color:#596575}
+      .bar{display:none}
+      .inputs{grid-template-columns:1fr 1fr}
+      input,select{min-height:30px;padding:5px}
+      .stats,.total-panel{break-inside:avoid}
     }
   </style>
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Mortgage Calculator",
-    "url": "https://avrealtymanagement.com/calculator.html",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Web",
-    "isAccessibleForFree": true,
-    "provider": {
-      "@type": "RealEstateAgent",
-      "name": "AV Realty & Management",
-      "url": "https://avrealtymanagement.com/"
-    },
-    "description": "Free mortgage calculator for estimating principal, interest, taxes, insurance, HOA, and total monthly housing costs."
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"AV Realty Mortgage Calculator",
+    "url":"https://avrealtymanagement.com/calculator.html",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"Web",
+    "isAccessibleForFree":true,
+    "inLanguage":["en","es"],
+    "description":"Fixed-rate mortgage calculator with monthly housing costs and extra principal payment estimates.",
+    "provider":{
+      "@type":"RealEstateAgent",
+      "name":"AV Realty & Management",
+      "url":"https://avrealtymanagement.com/"
+    }
   }
   </script>
 </head>
-
 <body>
+  <a class="skip" href="#main" data-en="Skip to content" data-es="Ir al contenido">Skip to content</a>
 
-  <nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-
-    <div class="nav-links" id="navLinks">
-      <a href="north-shore-real-estate.html">Real Estate</a>
-      <a href="north-shore-property-management.html">Property Management</a>
-      <a href="north-shore-ma-apartments.html">Apartments</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Resident Portal</a>
-    </div>
-
-    <div class="language-toggle" role="group" aria-label="Language selection">
-      <button type="button" id="lang-en" class="active" onclick="setLanguage('en')" aria-pressed="true">EN</button>
-      <button type="button" id="lang-es" onclick="setLanguage('es')" aria-pressed="false">ES</button>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="78" height="56">
+        <span>AV Realty &amp; Management</span>
+      </a>
+      <button class="menu" type="button" aria-controls="navLinks" aria-expanded="false"
+        data-en="Menu" data-es="Menú">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/north-shore-real-estate.html" data-en="Real Estate" data-es="Bienes Raíces">Real Estate</a>
+        <a href="/north-shore-property-management.html" data-en="Property Management" data-es="Administración de Propiedades">Property Management</a>
+        <a href="/north-shore-ma-apartments.html" data-en="Apartments" data-es="Apartamentos">Apartments</a>
+        <a href="/about.html" data-en="About" data-es="Sobre Nosotros">About</a>
+        <a href="/#contact" data-en="Contact" data-es="Contacto">Contact</a>
+        <a class="portal" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login"
+          target="_blank" rel="noopener" data-en="Resident Portal" data-es="Portal de Residentes">Resident Portal</a>
+      </div>
     </div>
   </nav>
 
-  <header>
-    <div class="hero-overlay">
-      <div class="logo-container">
-        <a href="index.html"><img src="logo.png" alt="AV Realty & Management Logo"></a>
-      </div>
-
-      <p class="hero-label">Free Buyer & Investor Tool</p>
-      <h1 class="hero-title">North Shore MA Mortgage Calculator</h1>
-      <p class="hero-subtitle">
-        Estimate your monthly mortgage payment, principal and interest, property taxes, insurance, HOA, and total monthly housing cost before you make an offer or compare financing scenarios.
-      </p>
-
-      <div class="hero-cta">
-        <a href="#calculator" class="btn">Calculate a Payment</a>
-        <a href="rental-property-calculator.html" class="btn secondary-btn">Analyze a Rental Property</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="container" id="calculator">
-      <p class="eyebrow">Mortgage Payment Estimate</p>
-      <h2>See the Monthly Cost Before You Buy</h2>
-      <p class="section-intro">
-        Enter your financing assumptions below. The calculator updates automatically as you adjust the purchase price, down payment, interest rate, term, taxes, insurance, and HOA.
-      </p>
-
-      <div class="calculator-layout">
-
-        <section class="calculator-panel">
-          <div class="section-title-small">Property & Financing</div>
-
-          <div class="input-grid">
-            <div>
-              <label for="purchasePrice">Purchase Price</label>
-              <input type="number" id="purchasePrice" value="600000" min="0" step="1000">
-            </div>
-
-            <div>
-              <label for="downPaymentPct">Down Payment (%)</label>
-              <input type="number" id="downPaymentPct" value="20" min="0" max="100" step="0.1">
-            </div>
-
-            <div>
-              <label for="interest">Interest Rate (%)</label>
-              <input type="number" id="interest" value="6.75" min="0" step="0.01">
-            </div>
-
-            <div>
-              <label for="years">Loan Term (Years)</label>
-              <select id="years">
-                <option>30</option>
-                <option>20</option>
-                <option>15</option>
-                <option>10</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="annualTaxes">Annual Property Taxes</label>
-              <input type="number" id="annualTaxes" value="7200" min="0" step="100">
-            </div>
-
-            <div>
-              <label for="annualInsurance">Annual Homeowners Insurance</label>
-              <input type="number" id="annualInsurance" value="2400" min="0" step="100">
-            </div>
-
-            <div>
-              <label for="monthlyHoa">Monthly HOA / Condo Fee</label>
-              <input type="number" id="monthlyHoa" value="0" min="0" step="10">
-            </div>
-
-            <div>
-              <label for="monthlyPmi">Monthly PMI / Mortgage Insurance</label>
-              <input type="number" id="monthlyPmi" value="0" min="0" step="10">
-            </div>
+  <main id="main">
+    <header class="hero">
+      <div class="container">
+        <div class="hero-top">
+          <p class="eyebrow" data-en="Free Buyer & Investor Tool" data-es="Herramienta Gratuita para Compradores">Free Buyer &amp; Investor Tool</p>
+          <div class="languages" role="group" aria-label="Language / Idioma">
+            <button type="button" id="en" lang="en" aria-pressed="true">EN</button>
+            <button type="button" id="es" lang="es" aria-pressed="false">ES</button>
           </div>
+        </div>
+        <h1 data-en="North Shore MA Mortgage Calculator" data-es="Calculadora de Hipoteca de North Shore, MA">North Shore MA Mortgage Calculator</h1>
+        <p data-en="See what your next home could cost each month. Explore financing, ownership expenses, and the difference extra payments can make."
+          data-es="Calcula cuánto podría costarte tu próxima vivienda cada mes. Explora el financiamiento, los gastos de la propiedad y el efecto de los pagos adicionales.">
+          See what your next home could cost each month. Explore financing, ownership expenses, and the difference extra payments can make.
+        </p>
+        <div class="actions">
+          <a class="btn gold" href="#calculator" data-en="Estimate Your Payment" data-es="Calcular tu Pago">Estimate Your Payment</a>
+          <a class="btn outline" href="/rental-property-calculator.html" data-en="Analyze a Rental Property" data-es="Analizar una Propiedad de Alquiler">Analyze a Rental Property</a>
+        </div>
+      </div>
+    </header>
 
-          <button type="button" style="width:100%; margin-top:20px;" onclick="calculate()">Update Payment</button>
+    <noscript><p>This calculator requires JavaScript. Please enable it or contact AV Realty &amp; Management for help.</p></noscript>
 
-          <div class="email-box">
-            <h3>Want a Copy of Your Estimate?</h3>
-            <p>Send the current calculation to your email and keep the financing assumptions for reference.</p>
+    <div class="container">
+      <section class="section" id="calculator" aria-labelledby="calc-heading">
+        <div class="intro">
+          <p class="eyebrow" data-en="Plan With Clarity" data-es="Planifica con Claridad">Plan With Clarity</p>
+          <h2 id="calc-heading" data-en="Build your monthly estimate." data-es="Calcula tu estimado mensual.">Build your monthly estimate.</h2>
+          <p class="muted" data-en="Results update as you type. Starting figures are examples, not current rates or property-specific quotes."
+            data-es="Los resultados se actualizan al ingresar los datos. Los valores iniciales son ejemplos, no tasas actuales ni cotizaciones para una propiedad específica.">
+            Results update as you type. Starting figures are examples, not current rates or property-specific quotes.
+          </p>
+        </div>
 
-            <form action="https://api.web3forms.com/submit" method="POST" onsubmit="updateHiddenResult()">
-              <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
-              <input type="hidden" name="subject" value="Mortgage Calculator Result from Website">
-              <input type="hidden" name="from_name" value="AV Realty & Management Website">
-              <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
-              <input type="hidden" name="form_source" value="Mortgage Calculator Page">
+        <div class="layout">
+          <div class="panel">
+            <form id="inputs">
+              <fieldset>
+                <legend data-en="Property & Financing" data-es="Propiedad y Financiamiento">Property &amp; Financing</legend>
+                <div class="inputs">
+                  <div class="full">
+                    <label for="price" data-en="Purchase price ($)" data-es="Precio de compra ($)">Purchase price ($)</label>
+                    <input id="price" type="number" value="600000" min="1" max="1000000000" step="any" required>
+                  </div>
+                  <div class="full">
+                    <label for="down" data-en="Down payment" data-es="Pago inicial">Down payment</label>
+                    <div class="down-row">
+                      <input id="down" type="number" value="20" min="0" max="100" step="any" required aria-describedby="downHint">
+                      <select id="downMode" aria-label="Down payment unit / Unidad del pago inicial">
+                        <option value="percent">%</option>
+                        <option value="dollars">$</option>
+                      </select>
+                    </div>
+                    <span class="hint" id="downHint"></span>
+                  </div>
+                  <div>
+                    <label for="rate" data-en="Interest rate (%)" data-es="Tasa de interés (%)">Interest rate (%)</label>
+                    <input id="rate" type="number" value="6.75" min="0" max="50" step="any" required>
+                  </div>
+                  <div>
+                    <label for="years" data-en="Loan term (years)" data-es="Plazo (años)">Loan term (years)</label>
+                    <select id="years">
+                      <option value="30">30</option>
+                      <option value="25">25</option>
+                      <option value="20">20</option>
+                      <option value="15">15</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
 
-              <input type="hidden" id="hidden-result" name="calculated_monthly_payment" value="">
-              <input type="hidden" id="hidden-purchase" name="purchase_price" value="">
-              <input type="hidden" id="hidden-down" name="down_payment_percent" value="">
-              <input type="hidden" id="hidden-loan" name="loan_amount" value="">
-              <input type="hidden" id="hidden-interest" name="interest_rate_percent" value="">
-              <input type="hidden" id="hidden-years" name="loan_term_years" value="">
-              <input type="hidden" id="hidden-tax" name="annual_property_taxes" value="">
-              <input type="hidden" id="hidden-insurance" name="annual_insurance" value="">
-              <input type="hidden" id="hidden-hoa" name="monthly_hoa" value="">
-              <input type="hidden" id="hidden-pmi" name="monthly_pmi" value="">
-              <input type="hidden" id="hidden-summary" name="calculation_summary" value="">
-              <input type="checkbox" name="botcheck" style="display:none;">
+              <fieldset>
+                <legend data-en="Taxes, Insurance & Fees" data-es="Impuestos, Seguros y Cuotas">Taxes, Insurance &amp; Fees</legend>
+                <div class="inputs">
+                  <div>
+                    <label for="tax" data-en="Annual property taxes ($)" data-es="Impuestos anuales ($)">Annual property taxes ($)</label>
+                    <input id="tax" type="number" value="7200" min="0" max="10000000" step="any" required>
+                  </div>
+                  <div>
+                    <label for="insurance" data-en="Annual home insurance ($)" data-es="Seguro anual de vivienda ($)">Annual home insurance ($)</label>
+                    <input id="insurance" type="number" value="2400" min="0" max="10000000" step="any" required>
+                  </div>
+                  <div>
+                    <label for="hoa" data-en="Monthly HOA / condo ($)" data-es="Condominio / HOA mensual ($)">Monthly HOA / condo ($)</label>
+                    <input id="hoa" type="number" value="0" min="0" max="1000000" step="any" required>
+                  </div>
+                  <div>
+                    <label for="mi" data-en="Monthly mortgage insurance ($)" data-es="Seguro hipotecario mensual ($)">Monthly mortgage insurance ($)</label>
+                    <input id="mi" type="number" value="0" min="0" max="1000000" step="any" required aria-describedby="miHint">
+                  </div>
+                  <p class="note full" id="miHint" data-en="Mortgage insurance is not calculated automatically. Enter your lender’s estimate; $0 does not confirm that none is required."
+                    data-es="El seguro hipotecario no se calcula automáticamente. Ingresa el estimado de tu prestamista; $0 no confirma que no sea necesario.">
+                    Mortgage insurance is not calculated automatically. Enter your lender’s estimate; $0 does not confirm that none is required.
+                  </p>
+                </div>
+              </fieldset>
 
-              <label for="userEmail">Email Address</label>
-              <input type="email" name="email" id="userEmail" autocomplete="email" required>
-              <button type="submit" style="width:100%; margin-top:14px;">Send My Estimate</button>
+              <fieldset>
+                <legend data-en="Explore Extra Payments" data-es="Explora Pagos Adicionales">Explore Extra Payments</legend>
+                <label for="extra" data-en="Extra monthly principal ($)" data-es="Pago mensual adicional al capital ($)">Extra monthly principal ($)</label>
+                <input id="extra" type="number" value="0" min="0" max="1000000000" step="any" required>
+                <p class="note" data-en="Assumes the same extra amount is applied to principal every month from the first payment."
+                  data-es="Supone que el mismo monto adicional se aplica al capital cada mes desde el primer pago.">
+                  Assumes the same extra amount is applied to principal every month from the first payment.
+                </p>
+              </fieldset>
+
+              <div class="actions">
+                <button class="btn" type="submit" data-en="Update Estimate" data-es="Actualizar Estimado">Update Estimate</button>
+                <button class="btn light" type="reset" data-en="Reset Examples" data-es="Restablecer Ejemplos">Reset Examples</button>
+              </div>
             </form>
-          </div>
-        </section>
 
-        <aside class="results-panel">
-          <div class="section-title-small">Estimated Monthly Cost</div>
-
-          <div class="metrics-grid">
-            <div class="metric">
-              <div class="metric-label">Total Monthly Payment</div>
-              <div class="metric-value" id="totalPayment">$0</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Principal & Interest</div>
-              <div class="metric-value" id="piPayment">$0</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Estimated Loan Amount</div>
-              <div class="metric-value" id="loanAmount">$0</div>
-            </div>
-
-            <div class="metric">
-              <div class="metric-label">Down Payment</div>
-              <div class="metric-value" id="downPayment">$0</div>
+            <div class="followup">
+              <h3 data-en="Want help reviewing this scenario?" data-es="¿Quieres ayuda para revisar este escenario?">Want help reviewing this scenario?</h3>
+              <p data-en="Send your assumptions to AV Realty & Management and request a follow-up."
+                data-es="Envía tus datos a AV Realty & Management y solicita que te contactemos.">
+                Send your assumptions to AV Realty &amp; Management and request a follow-up.
+              </p>
+              <form id="followup" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+                <input type="hidden" name="subject" value="Mortgage Calculator - Review Request">
+                <input type="hidden" name="from_name" value="AV Realty & Management Website">
+                <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+                <input type="hidden" name="form_source" value="Mortgage Calculator">
+                <input type="hidden" name="calculation_summary" id="summary">
+                <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none">
+                <label for="email" data-en="Your email address" data-es="Tu correo electrónico">Your email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                <button class="btn" type="submit" data-en="Request a Review" data-es="Solicitar una Revisión">Request a Review</button>
+              </form>
+              <p class="note" data-en="This sends a request to our team. Use Print / Save PDF for an immediate copy of your estimate."
+                data-es="Esto envía una solicitud a nuestro equipo. Usa Imprimir / Guardar PDF para obtener una copia inmediata de tu estimado.">
+                This sends a request to our team. Use Print / Save PDF for an immediate copy of your estimate.
+              </p>
             </div>
           </div>
 
-          <div class="breakdown">
-            <div class="breakdown-row"><span>Property Taxes</span><strong id="taxMonthly">$0/mo</strong></div>
-            <div class="breakdown-row"><span>Insurance</span><strong id="insuranceMonthly">$0/mo</strong></div>
-            <div class="breakdown-row"><span>HOA / Condo</span><strong id="hoaMonthly">$0/mo</strong></div>
-            <div class="breakdown-row"><span>PMI / Mortgage Insurance</span><strong id="pmiMonthly">$0/mo</strong></div>
-          </div>
+          <aside class="results" aria-label="Calculation results / Resultados">
+            <div id="error" class="error" role="status" hidden></div>
+            <div id="output">
+              <div class="total-panel">
+                <p class="eyebrow" data-en="Estimated Monthly Housing Cost" data-es="Costo Mensual Estimado de Vivienda">Estimated Monthly Housing Cost</p>
+                <div class="total" id="total">—</div>
+                <p class="note" id="totalNote"></p>
+                <div id="bar" class="bar" aria-hidden="true"></div>
+              </div>
 
-          <div class="analysis-note">
-            This is a preliminary estimate only. Actual mortgage payments can differ based on lender terms, escrow requirements, insurance, taxes, mortgage insurance, fees, and loan program.
-          </div>
+              <div class="panel" style="margin-top:18px">
+                <h3 data-en="Your payment, explained." data-es="Tu pago, explicado.">Your payment, explained.</h3>
+                <dl class="breakdown" id="breakdown"></dl>
 
-          <div class="lead-cta">
-            <p><strong>Buying on the North Shore?</strong><br>AV Realty & Management can help you evaluate homes, compare properties, and navigate the purchase process.</p>
-            <a href="north-shore-real-estate.html" class="btn">Explore Real Estate Services</a>
-          </div>
-        </aside>
-      </div>
+                <dl class="stats">
+                  <div class="stat">
+                    <dt data-en="Base loan amount" data-es="Préstamo base">Base loan amount</dt>
+                    <dd id="loan">—</dd>
+                  </div>
+                  <div class="stat">
+                    <dt data-en="Down payment" data-es="Pago inicial">Down payment</dt>
+                    <dd id="downResult">—</dd>
+                  </div>
+                  <div class="stat">
+                    <dt data-en="Estimated payoff" data-es="Plazo estimado de pago">Estimated payoff</dt>
+                    <dd id="payoff">—</dd>
+                  </div>
+                  <div class="stat">
+                    <dt data-en="Total loan interest" data-es="Intereses totales">Total loan interest</dt>
+                    <dd id="interestResult">—</dd>
+                  </div>
+                </dl>
 
-      <section style="margin-top:58px;">
-        <p class="eyebrow">Useful Next Steps</p>
-        <h2>More Tools for Buyers, Landlords & Investors</h2>
+                <div class="extra-note" id="savings"></div>
 
-        <div class="info-grid">
-          <article class="info-card">
-            <h3>Rental Property Calculator</h3>
-            <p>Evaluating an investment property? Estimate cash flow, NOI, cap rate, cash-on-cash return, and DSCR.</p>
-            <a href="rental-property-calculator.html" class="btn" style="margin-top:14px;">Analyze a Rental Property</a>
-          </article>
+                <details>
+                  <summary data-en="Compare nearby interest rates" data-es="Comparar tasas cercanas">Compare nearby interest rates</summary>
+                  <div class="table-wrap">
+                    <table>
+                      <caption data-en="Hypothetical rates; not lender quotes. Other inputs stay the same." data-es="Tasas hipotéticas, no cotizaciones. Los demás datos permanecen iguales.">Hypothetical rates; not lender quotes. Other inputs stay the same.</caption>
+                      <thead><tr>
+                        <th data-en="Rate" data-es="Tasa">Rate</th>
+                        <th data-en="Monthly total*" data-es="Total mensual*">Monthly total*</th>
+                      </tr></thead>
+                      <tbody id="rates"></tbody>
+                    </table>
+                  </div>
+                  <p class="note" data-en="*Includes entered housing costs and extra principal. Does not estimate the cost of obtaining a different rate."
+                    data-es="*Incluye los gastos ingresados y el capital adicional. No estima el costo de obtener otra tasa.">
+                    *Includes entered housing costs and extra principal. Does not estimate the cost of obtaining a different rate.
+                  </p>
+                </details>
 
-          <article class="info-card">
-            <h3>Free Rent Analysis</h3>
-            <p>Own a rental property? Get a local estimate of what your North Shore property may rent for.</p>
-            <a href="free-rent-analysis.html" class="btn" style="margin-top:14px;">Estimate My Rent</a>
-          </article>
+                <details>
+                  <summary data-en="Annual loan balance" data-es="Saldo anual del préstamo">Annual loan balance</summary>
+                  <div class="table-wrap">
+                    <table>
+                      <caption data-en="Includes extra principal; final row may be a partial year." data-es="Incluye capital adicional; la última fila puede representar un año parcial.">Includes extra principal; final row may be a partial year.</caption>
+                      <thead><tr>
+                        <th data-en="Year" data-es="Año">Year</th>
+                        <th data-en="Principal paid" data-es="Capital pagado">Principal paid</th>
+                        <th data-en="Interest paid" data-es="Intereses pagados">Interest paid</th>
+                        <th data-en="Balance" data-es="Saldo">Balance</th>
+                      </tr></thead>
+                      <tbody id="annual"></tbody>
+                    </table>
+                  </div>
+                </details>
 
-          <article class="info-card">
-            <h3>Search North Shore Homes</h3>
-            <p>Browse live MLS listings and compare available homes before refining your financing assumptions.</p>
-            <a href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener" class="btn" style="margin-top:14px;">Search Homes for Sale</a>
-          </article>
+                <div class="actions" style="margin-top:22px">
+                  <button id="print" type="button" class="btn light" data-en="Print / Save PDF" data-es="Imprimir / Guardar PDF">Print / Save PDF</button>
+                </div>
+
+                <p class="note" data-en="Fixed-rate estimate, not a loan offer. Taxes, insurance, HOA, and mortgage insurance stay constant in this model. Upfront loan fees, financed insurance premiums, closing costs, utilities, repairs, flood insurance, and other expenses are not added automatically. Enter the final financed loan structure with your lender before relying on this estimate."
+                  data-es="Estimado de tasa fija, no una oferta de préstamo. Los impuestos, seguros y cuotas permanecen constantes en este modelo. No se agregan automáticamente cargos iniciales, primas de seguro financiadas, gastos de cierre, servicios, reparaciones, seguro contra inundaciones ni otros gastos. Confirma la estructura final del préstamo con tu prestamista antes de depender de este estimado.">
+                  Fixed-rate estimate, not a loan offer. Taxes, insurance, HOA, and mortgage insurance stay constant in this model. Upfront loan fees, financed insurance premiums, closing costs, utilities, repairs, flood insurance, and other expenses are not added automatically. Enter the final financed loan structure with your lender before relying on this estimate.
+                </p>
+              </div>
+            </div>
+            <p class="note" id="announcement" role="status" aria-live="polite"></p>
+          </aside>
         </div>
       </section>
 
-      <section class="cta-panel">
-        <h2>Need Help Turning the Payment Into a Real Buying Strategy?</h2>
-        <p>
-          A monthly-payment estimate is only one part of the decision. AV Realty & Management can help you compare properties, understand value, evaluate investment potential, and make a more informed North Shore real estate decision.
-        </p>
-        <a href="index.html#contact" class="btn secondary-btn">Start a Conversation</a>
+      <section class="section resources" aria-labelledby="resources-heading">
+        <p class="eyebrow" data-en="Your Next Step" data-es="Tu Próximo Paso">Your Next Step</p>
+        <h2 id="resources-heading" data-en="Put the numbers in context." data-es="Pon los números en contexto.">Put the numbers in context.</h2>
+        <div class="resource-grid">
+          <article class="panel">
+            <h3 data-en="Rental Property Calculator" data-es="Calculadora de Alquiler">Rental Property Calculator</h3>
+            <p data-en="Explore cash flow and investment returns for a potential rental." data-es="Explora el flujo de efectivo y el rendimiento de una posible inversión.">Explore cash flow and investment returns for a potential rental.</p>
+            <a href="/rental-property-calculator.html" data-en="Analyze a Property →" data-es="Analizar una Propiedad →">Analyze a Property →</a>
+          </article>
+          <article class="panel">
+            <h3 data-en="Free Rent Analysis" data-es="Análisis Gratuito de Alquiler">Free Rent Analysis</h3>
+            <p data-en="Request rental pricing guidance for your North Shore property." data-es="Solicita orientación sobre el alquiler de tu propiedad en North Shore.">Request rental pricing guidance for your North Shore property.</p>
+            <a href="/free-rent-analysis.html" data-en="Explore Rental Value →" data-es="Explorar el Valor de Alquiler →">Explore Rental Value →</a>
+          </article>
+          <article class="panel">
+            <h3 data-en="Search North Shore Homes" data-es="Buscar Viviendas en North Shore">Search North Shore Homes</h3>
+            <p data-en="Explore MLS listings and compare properties that fit your goals." data-es="Explora el MLS y compara propiedades según tus objetivos.">Explore MLS listings and compare properties that fit your goals.</p>
+            <a href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567" target="_blank" rel="noopener" data-en="Search Homes →" data-es="Buscar Viviendas →">Search Homes →</a>
+          </article>
+        </div>
+        <div class="cta">
+          <h2 data-en="Turn your estimate into a next step." data-es="Convierte tu estimado en el próximo paso.">Turn your estimate into a next step.</h2>
+          <p data-en="AV Realty & Management can help you compare properties and navigate your North Shore home search."
+            data-es="AV Realty & Management puede ayudarte a comparar propiedades y orientarte en la búsqueda de tu vivienda en North Shore.">
+            AV Realty &amp; Management can help you compare properties and navigate your North Shore home search.
+          </p>
+          <a class="btn gold" href="/#contact" data-en="Start a Conversation" data-es="Iniciar una Conversación">Start a Conversation</a>
+        </div>
       </section>
-
     </div>
   </main>
 
   <footer>
-    <div style="font-family:'Montserrat',sans-serif;font-weight:800;">AV Realty & Management</div>
-    <div style="margin-top:6px;">5 Huron Street, Swampscott, MA 01907</div>
-    <div style="margin-top:5px;"><a href="tel:9782773435" style="color:#0033a0;text-decoration:none;">(978) 277-3435</a></div>
-
+    <strong>AV Realty &amp; Management</strong>
+    <address>5 Huron Street, Swampscott, MA 01907</address>
+    <a href="tel:+19782773435">(978) 277-3435</a> ·
+    <a href="mailto:anthony@avrealtymanagement.com" data-en="Email Us" data-es="Escríbenos">Email Us</a>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="north-shore-real-estate.html">Real Estate</a>
-      <a href="rental-property-calculator.html">Rental Property Calculator</a>
-      <a href="free-rent-analysis.html">Free Rent Analysis</a>
+      <a href="/" data-en="Home" data-es="Inicio">Home</a>
+      <a href="/north-shore-real-estate.html" data-en="Real Estate" data-es="Bienes Raíces">Real Estate</a>
+      <a href="/north-shore-property-management.html" data-en="Property Management" data-es="Administración de Propiedades">Property Management</a>
+      <a href="/about.html" data-en="About" data-es="Sobre Nosotros">About</a>
     </div>
-
-    <div style="color:#666;font-size:13px;">&copy; 2026 AV Realty & Management LLC. All rights reserved.</div>
+    <p class="copyright">© 2026 AV Realty &amp; Management LLC.</p>
+    <p data-en="Equal Housing Opportunity" data-es="Igualdad de Oportunidades de Vivienda">Equal Housing Opportunity</p>
   </footer>
 
+  <div class="mobile-contact" role="group" aria-label="Contact / Contacto">
+    <a href="tel:+19782773435" data-en="Call Us" data-es="Llámanos">Call Us</a>
+    <a href="/#contact" data-en="Get in Touch" data-es="Contáctanos">Get in Touch</a>
+  </div>
+
   <script>
-    let currentLanguage = "en";
+    (() => {
+      "use strict";
+      const $ = id => document.getElementById(id);
+      let language = "en";
+      let latest = null;
+      let announceTimer;
+      const form = $("inputs");
+      const fields = ["price","down","rate","years","tax","insurance","hoa","mi","extra"];
+      const colors = ["#173859","#c8a75d","#82978d","#9a899e","#a7bacd","#607c92"];
+      const t = (en, es) => language === "es" ? es : en;
+      const money = value => new Intl.NumberFormat(
+        language === "es" ? "es-US" : "en-US",
+        {style:"currency",currency:"USD",minimumFractionDigits:2,maximumFractionDigits:2}
+      ).format(value);
+      const percent = value => new Intl.NumberFormat(
+        language === "es" ? "es-US" : "en-US",
+        {maximumFractionDigits:2}
+      ).format(value) + "%";
 
-    const translations = {
-      "Real Estate": "Bienes Raíces", "Property Management": "Administración de Propiedades",
-      "Apartments": "Apartamentos", "About": "Sobre Nosotros", "Contact": "Contacto",
-      "Resident Portal": "Portal de Residentes",
-      "Free Buyer & Investor Tool": "Herramienta Gratuita para Compradores e Inversionistas",
-      "North Shore MA Mortgage Calculator": "Calculadora de Hipoteca de North Shore, MA",
-      "Estimate your monthly mortgage payment, principal and interest, property taxes, insurance, HOA, and total monthly housing cost before you make an offer or compare financing scenarios.": "Calcula tu pago hipotecario mensual, capital e intereses, impuestos sobre la propiedad, seguro, cuota de condominio y costo mensual total de vivienda antes de hacer una oferta o comparar opciones de financiamiento.",
-      "Calculate a Payment": "Calcular un Pago", "Analyze a Rental Property": "Analizar una Propiedad de Alquiler",
-      "Mortgage Payment Estimate": "Estimado del Pago Hipotecario",
-      "See the Monthly Cost Before You Buy": "Conoce el Costo Mensual Antes de Comprar",
-      "Enter your financing assumptions below. The calculator updates automatically as you adjust the purchase price, down payment, interest rate, term, taxes, insurance, and HOA.": "Ingresa los datos de financiamiento a continuación. La calculadora se actualiza automáticamente al ajustar el precio de compra, el pago inicial, la tasa de interés, el plazo, los impuestos, el seguro y la cuota de condominio.",
-      "Property & Financing": "Propiedad y Financiamiento", "Purchase Price": "Precio de Compra",
-      "Down Payment (%)": "Pago Inicial (%)", "Interest Rate (%)": "Tasa de Interés (%)",
-      "Loan Term (Years)": "Plazo del Préstamo (Años)",
-      "Annual Property Taxes": "Impuestos Anuales sobre la Propiedad",
-      "Annual Homeowners Insurance": "Seguro Anual de Vivienda",
-      "Monthly HOA / Condo Fee": "Cuota Mensual de Condominio / HOA",
-      "Monthly PMI / Mortgage Insurance": "PMI Mensual / Seguro Hipotecario",
-      "Update Payment": "Actualizar Pago", "Want a Copy of Your Estimate?": "¿Quieres una Copia de tu Estimado?",
-      "Send the current calculation to your email and keep the financing assumptions for reference.": "Envía el cálculo actual a tu correo electrónico y guarda los datos de financiamiento como referencia.",
-      "Email Address": "Correo Electrónico", "Send My Estimate": "Enviar mi Estimado",
-      "Estimated Monthly Cost": "Costo Mensual Estimado", "Total Monthly Payment": "Pago Mensual Total",
-      "Principal & Interest": "Capital e Intereses", "Estimated Loan Amount": "Monto Estimado del Préstamo",
-      "Down Payment": "Pago Inicial", "Property Taxes": "Impuestos sobre la Propiedad",
-      "Insurance": "Seguro", "HOA / Condo": "Condominio / HOA",
-      "PMI / Mortgage Insurance": "PMI / Seguro Hipotecario",
-      "This is a preliminary estimate only. Actual mortgage payments can differ based on lender terms, escrow requirements, insurance, taxes, mortgage insurance, fees, and loan program.": "Este es solo un estimado preliminar. Los pagos hipotecarios reales pueden variar según las condiciones del prestamista, los requisitos de la cuenta de depósito en garantía, el seguro, los impuestos, el seguro hipotecario, los cargos y el programa de préstamo.",
-      "Buying on the North Shore?": "¿Buscas comprar en North Shore?",
-      "AV Realty & Management can help you evaluate homes, compare properties, and navigate the purchase process.": "AV Realty & Management puede ayudarte a evaluar viviendas, comparar propiedades y orientarte durante el proceso de compra.",
-      "Explore Real Estate Services": "Explorar Servicios de Bienes Raíces", "Useful Next Steps": "Próximos Pasos Útiles",
-      "More Tools for Buyers, Landlords & Investors": "Más Herramientas para Compradores, Propietarios e Inversionistas",
-      "Rental Property Calculator": "Calculadora de Propiedades de Alquiler",
-      "Evaluating an investment property? Estimate cash flow, NOI, cap rate, cash-on-cash return, and DSCR.": "¿Estás evaluando una propiedad de inversión? Calcula el flujo de efectivo, NOI, tasa de capitalización, rendimiento sobre el efectivo y DSCR.",
-      "Free Rent Analysis": "Análisis Gratuito de Alquiler",
-      "Own a rental property? Get a local estimate of what your North Shore property may rent for.": "¿Eres dueño de una propiedad de alquiler? Obtén un estimado local de cuánto podrías cobrar por tu propiedad en North Shore.",
-      "Estimate My Rent": "Estimar mi Alquiler", "Search North Shore Homes": "Buscar Viviendas en North Shore",
-      "Browse live MLS listings and compare available homes before refining your financing assumptions.": "Explora propiedades disponibles en el MLS y compara viviendas antes de ajustar tus datos de financiamiento.",
-      "Search Homes for Sale": "Buscar Viviendas en Venta",
-      "Need Help Turning the Payment Into a Real Buying Strategy?": "¿Necesitas Convertir este Pago en una Estrategia Real de Compra?",
-      "A monthly-payment estimate is only one part of the decision. AV Realty & Management can help you compare properties, understand value, evaluate investment potential, and make a more informed North Shore real estate decision.": "El estimado del pago mensual es solo una parte de la decisión. AV Realty & Management puede ayudarte a comparar propiedades, entender su valor, evaluar su potencial de inversión y tomar una decisión inmobiliaria más informada en North Shore.",
-      "Start a Conversation": "Iniciar una Conversación", "Home": "Inicio",
-      "© 2026 AV Realty & Management LLC. All rights reserved.": "© 2026 AV Realty & Management LLC. Todos los derechos reservados."
-    };
-
-    const originalText = new Map();
-
-    function translatableTextNodes() {
-      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-        acceptNode(node) {
-          const parent = node.parentElement;
-          return !parent || ["SCRIPT", "STYLE"].includes(parent.tagName) || !node.nodeValue.trim()
-            ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
-        }
-      });
-      const nodes = [];
-      while (walker.nextNode()) nodes.push(walker.currentNode);
-      return nodes;
-    }
-
-    function setLanguage(language) {
-      currentLanguage = language === "es" ? "es" : "en";
-      document.documentElement.lang = currentLanguage;
-      translatableTextNodes().forEach(node => {
-        if (!originalText.has(node)) originalText.set(node, node.nodeValue);
-        const english = originalText.get(node);
-        const trimmed = english.trim();
-        const leading = english.match(/^\s*/)[0];
-        const trailing = english.match(/\s*$/)[0];
-        node.nodeValue = currentLanguage === "es" && translations[trimmed]
-          ? leading + translations[trimmed] + trailing : english;
-      });
-      document.title = currentLanguage === "es"
-        ? "Calculadora de Hipoteca de North Shore, MA | AV Realty & Management"
-        : "Mortgage Calculator North Shore MA | AV Realty & Management";
-      document.querySelector('meta[name="description"]').content = currentLanguage === "es"
-        ? "Usa la calculadora hipotecaria gratuita de AV Realty & Management para estimar capital, intereses, impuestos, seguro, HOA y el costo mensual de una propiedad."
-        : "Use AV Realty & Management's free North Shore MA mortgage calculator to estimate principal, interest, property taxes, insurance, HOA, and monthly housing costs for homes and investment properties.";
-      const enButton = document.getElementById("lang-en");
-      const esButton = document.getElementById("lang-es");
-      enButton.classList.toggle("active", currentLanguage === "en");
-      esButton.classList.toggle("active", currentLanguage === "es");
-      enButton.setAttribute("aria-pressed", String(currentLanguage === "en"));
-      esButton.setAttribute("aria-pressed", String(currentLanguage === "es"));
-      document.querySelector(".language-toggle").setAttribute("aria-label", currentLanguage === "es" ? "Selección de idioma" : "Language selection");
-      document.querySelector('input[name="subject"]').value = currentLanguage === "es" ? "Resultado de la Calculadora Hipotecaria del Sitio Web" : "Mortgage Calculator Result from Website";
-      document.querySelector('input[name="form_source"]').value = currentLanguage === "es" ? "Página de la Calculadora Hipotecaria - Español" : "Mortgage Calculator Page";
-      calculate();
-    }
-
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-
-    function money(value) {
-      if (!isFinite(value)) return "$0";
-      return value.toLocaleString(currentLanguage === "es" ? "es-US" : "en-US", {
-        style: "currency",
-        currency: "USD",
-        maximumFractionDigits: 0
-      });
-    }
-
-    function num(id) {
-      return parseFloat(document.getElementById(id).value) || 0;
-    }
-
-    function calculate() {
-      const purchasePrice = num("purchasePrice");
-      const downPct = num("downPaymentPct");
-      const rate = num("interest");
-      const years = num("years");
-      const annualTaxes = num("annualTaxes");
-      const annualInsurance = num("annualInsurance");
-      const monthlyHoa = num("monthlyHoa");
-      const monthlyPmi = num("monthlyPmi");
-
-      const downPayment = purchasePrice * (downPct / 100);
-      const loan = Math.max(purchasePrice - downPayment, 0);
-
-      const monthlyRate = rate / 100 / 12;
-      const n = years * 12;
-
-      let pi = 0;
-
-      if (loan > 0 && n > 0) {
-        if (monthlyRate === 0) {
-          pi = loan / n;
-        } else {
-          const x = Math.pow(1 + monthlyRate, n);
-          pi = (loan * x * monthlyRate) / (x - 1);
-        }
+      function payment(loan, rate, years) {
+        const r = rate / 1200;
+        const n = years * 12;
+        if (loan === 0) return 0;
+        if (r === 0) return loan / n;
+        return loan * r / (-Math.expm1(-n * Math.log1p(r)));
       }
 
-      const taxesMonthly = annualTaxes / 12;
-      const insuranceMonthly = annualInsurance / 12;
-      const total = pi + taxesMonthly + insuranceMonthly + monthlyHoa + monthlyPmi;
+      function amortize(loan, rate, years, extra) {
+        let balance = loan, interest = 0, months = 0;
+        let yearPrincipal = 0, yearInterest = 0;
+        const rows = [];
+        const pi = payment(loan, rate, years);
+        const r = rate / 1200;
 
-      document.getElementById("totalPayment").textContent = money(total);
-      document.getElementById("piPayment").textContent = money(pi);
-      document.getElementById("loanAmount").textContent = money(loan);
-      document.getElementById("downPayment").textContent = money(downPayment);
+        while (balance > 0.0000001 && months < years * 12) {
+          const charge = balance * r;
+          const principal = Math.min(balance, pi + extra - charge);
+          if (principal <= 0) throw new Error("Invalid amortization");
+          balance = Math.max(0, balance - principal);
+          interest += charge;
+          yearInterest += charge;
+          yearPrincipal += principal;
+          months++;
+          if (months % 12 === 0 || balance <= 0.0000001) {
+            rows.push({
+              year:Math.ceil(months / 12),
+              principal:yearPrincipal,
+              interest:yearInterest,
+              balance
+            });
+            yearPrincipal = 0;
+            yearInterest = 0;
+          }
+        }
+        return {months,interest,rows};
+      }
 
-      const monthLabel = currentLanguage === "es" ? "/mes" : "/mo";
-      document.getElementById("taxMonthly").textContent = money(taxesMonthly) + monthLabel;
-      document.getElementById("insuranceMonthly").textContent = money(insuranceMonthly) + monthLabel;
-      document.getElementById("hoaMonthly").textContent = money(monthlyHoa) + monthLabel;
-      document.getElementById("pmiMonthly").textContent = money(monthlyPmi) + monthLabel;
-    }
+      function read() {
+        const values = {};
+        for (const id of fields) {
+          const element = $(id);
+          const number = element.valueAsNumber !== undefined
+            ? element.valueAsNumber : Number(element.value);
+          if (element.value === "" || !Number.isFinite(number) || !element.validity.valid) return null;
+          values[id] = number;
+        }
+        const down = $("downMode").value === "percent"
+          ? values.price * values.down / 100 : values.down;
+        if (down > values.price) return null;
+        const loan = Math.max(0, values.price - down);
+        const pi = payment(loan, values.rate, values.years);
+        const extra = loan > 0 ? values.extra : 0;
+        const mi = loan > 0 ? values.mi : 0;
+        const costs = values.tax / 12 + values.insurance / 12 + values.hoa + mi;
+        return {...values,downAmount:down,loan,pi,extraApplied:extra,miApplied:mi,costs,total:pi+costs+extra};
+      }
 
-    function updateHiddenResult() {
-      const purchasePrice = num("purchasePrice");
-      const downPct = num("downPaymentPct");
-      const rate = num("interest");
-      const years = num("years");
-      const annualTaxes = num("annualTaxes");
-      const annualInsurance = num("annualInsurance");
-      const monthlyHoa = num("monthlyHoa");
-      const monthlyPmi = num("monthlyPmi");
+      function duration(months) {
+        if (months === 0) return t("No loan","Sin préstamo");
+        const years = Math.floor(months / 12);
+        const remainder = months % 12;
+        return [
+          years ? years + t(" yr"," años") : "",
+          remainder ? remainder + t(" mo"," meses") : ""
+        ].filter(Boolean).join(" ");
+      }
 
-      const downPayment = purchasePrice * (downPct / 100);
-      const loan = Math.max(purchasePrice - downPayment, 0);
+      function tableRow(values) {
+        const row = document.createElement("tr");
+        values.forEach(value => {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          row.append(cell);
+        });
+        return row;
+      }
 
-      document.getElementById("hidden-result").value = document.getElementById("totalPayment").textContent;
-      document.getElementById("hidden-purchase").value = purchasePrice;
-      document.getElementById("hidden-down").value = downPct;
-      document.getElementById("hidden-loan").value = loan;
-      document.getElementById("hidden-interest").value = rate;
-      document.getElementById("hidden-years").value = years;
-      document.getElementById("hidden-tax").value = annualTaxes;
-      document.getElementById("hidden-insurance").value = annualInsurance;
-      document.getElementById("hidden-hoa").value = monthlyHoa;
-      document.getElementById("hidden-pmi").value = monthlyPmi;
+      function calculate(announce = true) {
+        $("down").max = $("downMode").value === "percent" ? "100" : $("price").value;
+        const data = read();
+        latest = null;
+        $("output").hidden = !data;
+        $("error").hidden = Boolean(data);
 
-      document.getElementById("hidden-summary").value = currentLanguage === "es"
-        ? `Precio de compra: ${purchasePrice}, Pago inicial: ${downPct}%, Monto del préstamo: ${loan}, Tasa de interés: ${rate}%, Plazo: ${years} años, Impuestos anuales: ${annualTaxes}, Seguro anual: ${annualInsurance}, HOA mensual: ${monthlyHoa}, PMI mensual: ${monthlyPmi}, Pago mensual total estimado: ${document.getElementById("totalPayment").textContent}`
-        : `Purchase Price: ${purchasePrice}, Down Payment: ${downPct}%, Loan Amount: ${loan}, Interest Rate: ${rate}%, Term: ${years} years, Annual Taxes: ${annualTaxes}, Annual Insurance: ${annualInsurance}, Monthly HOA: ${monthlyHoa}, Monthly PMI: ${monthlyPmi}, Estimated Total Monthly Payment: ${document.getElementById("totalPayment").textContent}`;
-    }
+        if (!data) {
+          $("error").textContent = t(
+            "Enter valid numbers in every field. Down payment cannot exceed the purchase price. Use 0 for expenses that do not apply.",
+            "Ingresa números válidos en todos los campos. El pago inicial no puede superar el precio. Usa 0 para gastos que no correspondan."
+          );
+          $("downHint").textContent = "";
+          $("announcement").textContent = "";
+          return false;
+        }
 
-    document.querySelectorAll("input, select").forEach(el => {
-      el.addEventListener("input", calculate);
-      el.addEventListener("change", calculate);
-    });
+        const base = amortize(data.loan,data.rate,data.years,0);
+        const accelerated = amortize(data.loan,data.rate,data.years,data.extraApplied);
+        latest = {...data,base,accelerated};
 
-    calculate();
+        $("downHint").textContent = $("downMode").value === "percent"
+          ? money(data.downAmount)
+          : percent(data.downAmount / data.price * 100);
+
+        $("total").textContent = money(data.total);
+        $("totalNote").textContent = data.extraApplied > 0
+          ? t("Includes your extra principal payment. Final loan payment may be smaller.",
+              "Incluye el pago adicional al capital. El último pago del préstamo puede ser menor.")
+          : t("Principal, interest, and the monthly ownership costs entered.",
+              "Capital, intereses y los gastos mensuales ingresados.");
+
+        const items = [
+          [t("Principal & interest","Capital e intereses"),data.pi],
+          [t("Property taxes","Impuestos"),data.tax/12],
+          [t("Home insurance","Seguro de vivienda"),data.insurance/12],
+          [t("HOA / condo","Condominio / HOA"),data.hoa],
+          [t("Mortgage insurance","Seguro hipotecario"),data.miApplied],
+          [t("Extra principal","Capital adicional"),data.extraApplied]
+        ];
+
+        $("breakdown").replaceChildren();
+        $("bar").replaceChildren();
+        items.forEach(([label,value],index) => {
+          const row = document.createElement("div");
+          row.className = "row";
+          const dt = document.createElement("dt");
+          const dot = document.createElement("span");
+          dot.className = "dot";
+          dot.style.background = colors[index];
+          dot.setAttribute("aria-hidden","true");
+          dt.append(dot,document.createTextNode(label));
+          const dd = document.createElement("dd");
+          dd.textContent = money(value);
+          row.append(dt,dd);
+          $("breakdown").append(row);
+
+          const segment = document.createElement("span");
+          segment.style.background = colors[index];
+          segment.style.width = (data.total > 0 ? value/data.total*100 : 0) + "%";
+          $("bar").append(segment);
+        });
+
+        $("loan").textContent = money(data.loan);
+        $("downResult").textContent = money(data.downAmount);
+        $("payoff").textContent = duration(accelerated.months);
+        $("interestResult").textContent = money(accelerated.interest);
+
+        $("savings").textContent = data.loan === 0
+          ? t("Cash purchase: no loan payment or mortgage insurance is included. Entered taxes, home insurance, and HOA still apply.",
+              "Compra en efectivo: no se incluyen pagos de préstamo ni seguro hipotecario. Sí se incluyen los impuestos, el seguro de vivienda y el HOA ingresados.")
+          : data.extraApplied > 0
+          ? t(
+              `Estimated interest saved: ${money(Math.max(0,base.interest-accelerated.interest))}. Payoff is ${duration(base.months-accelerated.months)} earlier. Savings cover loan interest only.`,
+              `Ahorro estimado en intereses: ${money(Math.max(0,base.interest-accelerated.interest))}. Terminarías ${duration(base.months-accelerated.months)} antes. El ahorro incluye solo intereses del préstamo.`
+            )
+          : t("Add extra monthly principal to explore a shorter payoff period and lower total loan interest.",
+              "Agrega un pago mensual adicional al capital para explorar un plazo más corto y menos intereses.");
+
+        $("rates").replaceChildren();
+        const rates = [...new Set([
+          Math.max(0,data.rate-.5),
+          Math.max(0,data.rate-.25),
+          data.rate,
+          Math.min(50,data.rate+.25),
+          Math.min(50,data.rate+.5)
+        ])].sort((a,b)=>a-b);
+
+        rates.forEach(rate => {
+          $("rates").append(tableRow([
+            percent(rate),
+            money(payment(data.loan,rate,data.years)+data.costs+data.extraApplied)
+          ]));
+        });
+
+        $("annual").replaceChildren();
+        accelerated.rows.forEach(row => {
+          $("annual").append(tableRow([
+            row.year,money(row.principal),money(row.interest),money(row.balance)
+          ]));
+        });
+
+        clearTimeout(announceTimer);
+        if (announce) {
+          announceTimer = setTimeout(() => {
+            $("announcement").textContent = t(
+              "Updated monthly estimate: ","Estimado mensual actualizado: "
+            ) + money(data.total);
+          },650);
+        }
+        return true;
+      }
+
+      function summary() {
+        const d = latest;
+        const lines = [
+          ["Language",language],
+          ["Purchase price",money(d.price)],
+          ["Down payment",money(d.downAmount)],
+          ["Down payment percent",percent(d.downAmount/d.price*100)],
+          ["Base loan amount",money(d.loan)],
+          ["Annual interest rate",percent(d.rate)],
+          ["Loan term years",d.years],
+          ["Annual property taxes",money(d.tax)],
+          ["Annual home insurance",money(d.insurance)],
+          ["Monthly HOA",money(d.hoa)],
+          ["Monthly mortgage insurance entered",money(d.mi)],
+          ["Monthly mortgage insurance applied",money(d.miApplied)],
+          ["Extra monthly principal entered",money(d.extra)],
+          ["Extra monthly principal applied",money(d.extraApplied)],
+          ["Monthly principal and interest",money(d.pi)],
+          ["Monthly housing cost including extra principal",money(d.total)],
+          ["Estimated loan payoff",duration(d.accelerated.months)],
+          ["Total loan interest with extra payments",money(d.accelerated.interest)],
+          ["Estimated loan interest savings",money(Math.max(0,d.base.interest-d.accelerated.interest))]
+        ];
+        return lines.map(([key,value])=>key+": "+value).join("\n")
+          + "\nFixed-rate estimate; excludes costs not entered. Not a loan quote.";
+      }
+
+      function setLanguage(lang) {
+        language = lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-en][data-es]").forEach(element => {
+          element.textContent = element.dataset[lang];
+        });
+        $("en").setAttribute("aria-pressed",String(lang === "en"));
+        $("es").setAttribute("aria-pressed",String(lang === "es"));
+        document.title = t(
+          "Mortgage Calculator North Shore MA | AV Realty & Management",
+          "Calculadora de Hipoteca North Shore MA | AV Realty & Management"
+        );
+        calculate(false);
+      }
+
+      $("en").addEventListener("click",()=>setLanguage("en"));
+      $("es").addEventListener("click",()=>setLanguage("es"));
+
+      form.addEventListener("input",()=>calculate());
+      form.addEventListener("change",()=>calculate());
+      form.addEventListener("submit",event=>{
+        event.preventDefault();
+        calculate();
+      });
+      form.addEventListener("reset",()=>setTimeout(()=>calculate(),0));
+
+      let previousMode = $("downMode").value;
+      $("downMode").addEventListener("change",()=>{
+        const price = Number($("price").value);
+        const down = Number($("down").value);
+        const nextMode = $("downMode").value;
+        if (Number.isFinite(price) && price > 0 && Number.isFinite(down)) {
+          const dollars = previousMode === "percent" ? price*down/100 : down;
+          $("down").value = nextMode === "percent"
+            ? Number((dollars/price*100).toFixed(8))
+            : Number(dollars.toFixed(2));
+        }
+        previousMode = nextMode;
+        calculate();
+      });
+      form.addEventListener("reset",()=>{previousMode="percent";});
+
+      $("print").addEventListener("click",()=>{
+        if (calculate(false)) window.print();
+      });
+
+      $("followup").addEventListener("submit",event=>{
+        if (!calculate(false)) {
+          event.preventDefault();
+          form.reportValidity();
+          $("error").scrollIntoView({block:"center"});
+          return;
+        }
+        $("summary").value = summary();
+      });
+
+      const menu = document.querySelector(".menu");
+      const links = $("navLinks");
+      const nav = document.querySelector(".site-nav");
+      const mobile = window.matchMedia("(max-width:900px)");
+      document.documentElement.classList.add("js");
+
+      const setOpen = open => {
+        links.hidden = mobile.matches && !open;
+        menu.setAttribute("aria-expanded",String(open));
+      };
+      setOpen(false);
+      menu.addEventListener("click",()=>setOpen(menu.getAttribute("aria-expanded")!=="true"));
+      links.addEventListener("click",event=>{
+        if (mobile.matches && event.target.closest("a")) setOpen(false);
+      });
+      document.addEventListener("keydown",event=>{
+        if (event.key==="Escape" && menu.getAttribute("aria-expanded")==="true") {
+          setOpen(false);
+          menu.focus();
+        }
+      });
+      document.addEventListener("click",event=>{
+        if (mobile.matches && !nav.contains(event.target)) setOpen(false);
+      });
+      nav.addEventListener("focusout",event=>{
+        if (mobile.matches && !nav.contains(event.relatedTarget)) setOpen(false);
+      });
+      const resetMenu = ()=>{
+        if (mobile.matches && links.contains(document.activeElement)) menu.focus();
+        setOpen(false);
+      };
+      if (mobile.addEventListener) mobile.addEventListener("change",resetMenu);
+      else mobile.addListener(resetMenu);
+
+      calculate(false);
+    })();
   </script>
-
 </body>
 </html>
