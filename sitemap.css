@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
 
-/*
-  Browser presentation for sitemap.xml.
-  Page titles and group labels follow the XML's current URL order.
-*/
+/* Page titles follow the current URL order in sitemap.xml. */
 
 :root {
   --navy: #07162f;
@@ -22,8 +19,8 @@
 urlset {
   display: block;
   min-height: 100vh;
-  padding: 0 max(24px, calc((100% - 1040px) / 2)) 44px;
   margin: 0;
+  padding: 0 max(24px, calc((100% - 1040px) / 2)) 44px;
   background: var(--cream);
   color: var(--ink);
   font-family: "Manrope", sans-serif;
@@ -31,60 +28,59 @@ urlset {
   counter-reset: page;
 }
 
-/* Branded header */
+/* Refined navy brand bar */
 
 urlset::before {
-  content:
-    "AV REALTY & MANAGEMENT"
-    "\A"
-    "A map of"
-    "\A"
-    "your next move."
-    "\A\A"
-    "North Shore, Massachusetts · Website sitemap";
+  content: "AV REALTY & MANAGEMENT";
 
-  display: block;
-  margin: 0 calc(-1 * max(24px, calc((100% - 1040px) / 2))) 38px;
-  padding: 142px max(24px, calc((100% - 1040px) / 2)) 44px;
+  display: flex;
+  align-items: center;
+  min-height: 94px;
+
+  margin: 0 calc(-1 * max(24px, calc((100% - 1040px) / 2)));
+  padding: 26px max(24px, calc((100% - 1040px) / 2));
+  padding-left: calc(
+    max(24px, calc((100% - 1040px) / 2)) + 94px
+  );
 
   background-color: var(--navy);
-  background-image:
-    url("/logo.png"),
-    linear-gradient(
-      100deg,
-      rgba(7,22,47,.97),
-      rgba(7,22,47,.82)
-    ),
-    url("/hero.jpg");
-
+  background-image: url("/logo.png");
   background-repeat: no-repeat;
-  background-size:
-    92px auto,
-    cover,
-    cover;
-
+  background-size: 72px auto;
   background-position:
-    max(24px, calc((100% - 1040px) / 2)) 30px,
-    center,
-    center;
+    max(24px, calc((100% - 1040px) / 2)) center;
 
-  color: #fff;
-  white-space: pre-line;
-  font-size: clamp(1.45rem, 3.5vw, 2.65rem);
-  font-weight: 500;
-  letter-spacing: -.035em;
-  line-height: 1.35;
-  border-bottom: 3px solid var(--gold);
+  color: #ead9ad;
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .13em;
+  border-bottom: 1px solid rgba(200, 167, 93, .35);
 }
 
-/* Each URL becomes a compact page card */
+/* Page cards */
 
 url {
   --page-title: "Website page";
+
   display: block;
   position: relative;
   margin: 0 0 12px;
   counter-increment: page;
+}
+
+/* Main heading stays in normal flow to prevent overlap */
+
+url:nth-of-type(1)::before {
+  content: "Website directory.";
+
+  display: block;
+  padding: 38px 0 31px;
+  color: var(--navy);
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.055em;
 }
 
 loc {
@@ -92,13 +88,16 @@ loc {
   position: relative;
   min-height: 102px;
   padding: 22px 70px 22px 24px;
+
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
+
   color: var(--muted);
   font-size: .82rem;
   line-height: 1.65;
   overflow-wrap: anywhere;
+
   transition:
     border-color .2s ease,
     box-shadow .2s ease;
@@ -106,6 +105,7 @@ loc {
 
 loc::before {
   content: var(--page-title);
+
   display: block;
   margin-bottom: 7px;
   color: var(--navy);
@@ -117,6 +117,7 @@ loc::before {
 
 loc::after {
   content: counter(page, decimal-leading-zero);
+
   position: absolute;
   right: 23px;
   top: 24px;
@@ -126,9 +127,11 @@ loc::after {
 }
 
 loc:hover {
-  border-color: #c8a75d;
-  box-shadow: 0 6px 20px rgba(7,22,47,.045);
+  border-color: var(--gold);
+  box-shadow: 0 6px 20px rgba(7, 22, 47, .045);
 }
+
+/* Optional last-updated dates */
 
 lastmod {
   display: block;
@@ -143,7 +146,6 @@ lastmod::before {
 
 /* Section headings */
 
-url:nth-of-type(1)::before,
 url:nth-of-type(3)::before,
 url:nth-of-type(10)::before,
 url:nth-of-type(16)::before,
@@ -157,28 +159,23 @@ url:nth-of-type(19)::before {
   text-transform: uppercase;
 }
 
-url:nth-of-type(1)::before {
-  content: "01 / Welcome to AV";
-  padding-top: 0;
-}
-
 url:nth-of-type(3)::before {
-  content: "02 / Buy, Sell & Invest";
+  content: "Buy, Sell & Invest";
 }
 
 url:nth-of-type(10)::before {
-  content: "03 / Lease & Manage";
+  content: "Lease & Manage";
 }
 
 url:nth-of-type(16)::before {
-  content: "04 / Plan Your Next Move";
+  content: "Plan Your Next Move";
 }
 
 url:nth-of-type(19)::before {
-  content: "05 / Find Your Rental";
+  content: "Find Your Rental";
 }
 
-/* Descriptive titles */
+/* Descriptive page titles */
 
 url:nth-of-type(1) {
   --page-title: "Home";
@@ -278,8 +275,9 @@ urlset::after {
 
   display: block;
   margin-top: 38px;
-  padding: 30px 0 0;
+  padding-top: 30px;
   border-top: 1px solid var(--line);
+
   color: var(--muted);
   white-space: pre-line;
   font-size: .8rem;
@@ -294,21 +292,22 @@ urlset::after {
   }
 
   urlset::before {
-    margin: 0 -20px 25px;
-    padding: 115px 20px 29px;
+    min-height: 80px;
+    margin: 0 -20px;
+    padding: 20px 20px 20px 98px;
 
-    background-size:
-      76px auto,
-      cover,
-      cover;
+    background-size: 60px auto;
+    background-position: 20px center;
 
-    background-position:
-      20px 24px,
-      center,
-      center;
+    font-size: .64rem;
+    line-height: 1.6;
+    letter-spacing: .09em;
+  }
 
-    font-size: 1.5rem;
-    line-height: 1.4;
+  url:nth-of-type(1)::before {
+    padding: 30px 0 25px;
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+    letter-spacing: -.045em;
   }
 
   loc {
@@ -329,7 +328,6 @@ urlset::after {
     font-size: .67rem;
   }
 
-  url:nth-of-type(1)::before,
   url:nth-of-type(3)::before,
   url:nth-of-type(10)::before,
   url:nth-of-type(16)::before,
@@ -345,11 +343,15 @@ urlset::after {
   }
 }
 
+/* Reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
   }
 }
+
+/* Print */
 
 @media print {
   urlset {
@@ -358,15 +360,24 @@ urlset::after {
   }
 
   urlset::before {
-    margin: 0 0 20px;
-    padding: 0 0 20px;
+    min-height: 0;
+    margin: 0;
+    padding: 0 0 16px;
     background: none;
-    color: #07162f;
-    font-size: 1.5rem;
+    color: var(--navy);
+    border-bottom: 1px solid var(--line);
+  }
+
+  url:nth-of-type(1)::before {
+    padding: 20px 0;
+    font-size: 2rem;
+  }
+
+  url {
+    break-inside: avoid;
   }
 
   loc {
     box-shadow: none;
-    break-inside: avoid;
   }
 }
