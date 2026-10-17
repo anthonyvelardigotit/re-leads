@@ -1,130 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="/sitemap.css"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ==================================================
-       CORE WEBSITE
-  =================================================== -->
-
+  <!-- Core Website -->
   <url>
     <loc>https://avrealtymanagement.com/</loc>
-    <lastmod>2026-10-11</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/about.html</loc>
-    <lastmod>2026-08-26</lastmod>
   </url>
 
-
-  <!-- ==================================================
-       REAL ESTATE
-  =================================================== -->
-
-  <!-- North Shore Real Estate Hub -->
+  <!-- Real Estate -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-real-estate.html</loc>
-    <lastmod>2026-10-11</lastmod>
   </url>
-
-  <!-- Local Real Estate Markets -->
   <url>
     <loc>https://avrealtymanagement.com/swampscott-real-estate.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/marblehead-real-estate.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/salem-real-estate.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/nahant-real-estate.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
-  <!-- Multifamily & Investment Real Estate -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-multifamily-real-estate.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
-  <!-- Spanish Real Estate -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-real-estate-es.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
 
-
-  <!-- ==================================================
-       PROPERTY MANAGEMENT
-  =================================================== -->
-
-  <!-- North Shore Property Management Hub -->
+  <!-- Property Management -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-property-management.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
-  <!-- Local Property Management Markets -->
   <url>
     <loc>https://avrealtymanagement.com/swampscott-property-management.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/marblehead-property-management.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/salem-property-management.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/nahant-property-management.html</loc>
-    <lastmod>2026-09-07</lastmod>
   </url>
-
-  <!-- Specialized Owner Services -->
   <url>
     <loc>https://avrealtymanagement.com/absentee-landlord-property-management.html</loc>
-    <lastmod>2026-09-04</lastmod>
   </url>
 
-
-  <!-- ==================================================
-       INVESTOR & OWNER TOOLS
-  =================================================== -->
-
+  <!-- Owner & Buyer Resources -->
   <url>
     <loc>https://avrealtymanagement.com/rental-property-calculator.html</loc>
-    <lastmod>2026-08-26</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/free-rent-analysis.html</loc>
-    <lastmod>2026-08-26</lastmod>
   </url>
-
   <url>
     <loc>https://avrealtymanagement.com/calculator.html</loc>
-    <lastmod>2026-08-26</lastmod>
   </url>
 
-
-  <!-- ==================================================
-       RENTERS & APARTMENTS
-  =================================================== -->
-
+  <!-- Apartments -->
   <url>
     <loc>https://avrealtymanagement.com/north-shore-ma-apartments.html</loc>
-    <lastmod>2026-08-22</lastmod>
   </url>
 
 </urlset>
