@@ -1,143 +1,948 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marblehead Property Management | AV Realty & Management</title>
-  <meta name="description" content="Local Marblehead property management for single-family homes, condos, and multifamily rentals. Leasing, rent collection, maintenance coordination, owner reporting, and hands-on North Shore support from AV Realty & Management.">
-  <meta name="robots" content="index,follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Marblehead Property Management | AV Realty &amp; Management</title>
+  <meta name="description" content="Marblehead property management for homes, condos, and small multifamily rentals. Local leasing, rent collection, maintenance coordination, and owner reporting.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#07162f">
+
   <link rel="canonical" href="https://avrealtymanagement.com/marblehead-property-management.html">
-  <meta property="og:title" content="Marblehead Property Management | AV Realty & Management">
-  <meta property="og:description" content="Hands-on Marblehead property management for local landlords, investors, inherited-property owners, and out-of-area owners.">
-  <meta property="og:url" content="https://avrealtymanagement.com/marblehead-property-management.html">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://avrealtymanagement.com/logo.png">
-  <meta property="og:site_name" content="AV Realty & Management">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AV Realty &amp; Management">
+  <meta property="og:title" content="Marblehead Property Management | AV Realty &amp; Management">
+  <meta property="og:description" content="Local, hands-on support for Marblehead rental owners. Explore leasing, property oversight, maintenance coordination, and ongoing management.">
+  <meta property="og:url" content="https://avrealtymanagement.com/marblehead-property-management.html">
+  <meta property="og:image" content="https://avrealtymanagement.com/logo.png">
+  <meta property="og:image:alt" content="AV Realty &amp; Management">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Marblehead Property Management">
+  <meta name="twitter:description" content="Local management for Marblehead homes, condos, and small multifamily rentals.">
+  <meta name="twitter:image" content="https://avrealtymanagement.com/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
   <style>
-    :root{--royal:#0033a0;--deep-blue:#001b55;--navy:#061329;--gold:#d4af37;--light-gold:#f2dc87;--soft-bg:#f5f7fb;--text:#121212;--muted:#666;--white:#fff;--shadow:0 18px 45px rgba(0,0,0,.12)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}html,body{max-width:100%;overflow-x:hidden}
-    body{font-family:'Open Sans',sans-serif;background:radial-gradient(circle at top left,rgba(0,51,160,.08),transparent 30%),linear-gradient(180deg,#fff 0%,var(--soft-bg) 100%);margin:0;padding:58px 0 0;color:var(--text)}
-    h1,h2,h3,nav a,.btn,button,.hero-label,.eyebrow{font-family:'Montserrat',sans-serif}
-    nav{background:rgba(0,31,92,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:fixed;top:0;left:0;width:100%;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:12px 22px;box-shadow:0 8px 28px rgba(0,0,0,.18)}
-    .nav-links{display:flex;align-items:center;gap:18px;width:100%;justify-content:center}.nav-links a{color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.02em;transition:.3s}.nav-links a:hover{color:var(--light-gold);transform:translateY(-1px)}.portal-btn{border:1px solid rgba(212,175,55,.7);border-radius:30px;padding:8px 14px}.hamburger{display:none;flex-direction:column;cursor:pointer}.hamburger div{width:25px;height:3px;background:#fff;margin:4px 0}
-    header{background:linear-gradient(rgba(0,16,52,.70),rgba(0,22,70,.61)),url('hero.jpg') no-repeat center center/cover;color:#fff;text-align:center;padding:66px 20px 62px;position:relative;overflow:hidden;border-bottom:1px solid rgba(212,175,55,.5)}
-    header::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(212,175,55,.18),transparent 36%),linear-gradient(90deg,rgba(0,51,160,.18),transparent,rgba(0,51,160,.18));pointer-events:none}
-    .hero-overlay{max-width:980px;margin:auto;position:relative;z-index:1}.logo-container img{max-width:112px;height:auto;margin-bottom:18px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}.hero-label{letter-spacing:3.5px;font-size:.78rem;font-weight:700;color:var(--light-gold);margin:0 0 13px;text-transform:uppercase}.hero-title{font-size:clamp(2.15rem,5vw,3.4rem);line-height:1.08;margin:0 auto 18px;font-weight:800;color:#fff;max-width:900px;text-shadow:0 8px 28px rgba(0,0,0,.35)}.hero-subtitle{max-width:800px;margin:0 auto 24px;font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.95)}.header-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-    .btn,button{background:linear-gradient(135deg,var(--royal),var(--deep-blue));color:#fff;padding:12px 20px;font-size:15px;text-decoration:none;border-radius:999px;display:inline-block;margin:8px 5px 0;transition:.35s;border:none;cursor:pointer;font-weight:700;box-shadow:0 10px 25px rgba(0,51,160,.24)}.btn:hover,button:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(0,51,160,.34)}.secondary-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.7);backdrop-filter:blur(8px)}.secondary-btn:hover{background:#fff;color:var(--royal)}
-    .trust-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;max-width:1040px;margin:24px auto 0;padding:0 20px}.trust-card{background:rgba(255,255,255,.94);border:1px solid rgba(0,51,160,.1);border-radius:18px;padding:18px;box-shadow:0 14px 35px rgba(0,0,0,.08);text-align:center}.trust-card strong{display:block;color:var(--royal);font-family:'Montserrat',sans-serif;margin-bottom:6px}.trust-card span{color:var(--muted);font-size:.88rem;line-height:1.5}
-    main{max-width:1040px;margin:34px auto;padding:0 18px}section{margin-bottom:34px;padding:30px 28px;background:rgba(255,255,255,.95);border-radius:22px;box-shadow:var(--shadow);border:1px solid rgba(0,51,160,.08)}h2{color:var(--royal);text-align:center;font-size:clamp(1.55rem,3vw,2.15rem);margin:0 0 12px}h2::after{content:"";display:block;width:88px;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:13px auto 0;border-radius:3px}h3{color:var(--deep-blue);margin:8px 0}.eyebrow{text-align:center;color:var(--royal);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.76rem;margin-bottom:8px}.section-intro{text-align:center;color:var(--muted);max-width:790px;margin:0 auto 24px;line-height:1.75}p{line-height:1.7}
-    .two-column{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px}.info-card{background:linear-gradient(145deg,#fff,#f7f9ff);border:1px solid rgba(0,51,160,.12);border-radius:18px;padding:21px;box-shadow:0 12px 30px rgba(0,51,160,.08)}.info-card p{color:var(--muted);font-size:.92rem}.highlight-box{background:#f4f7ff;border-left:4px solid var(--gold);border-radius:14px;padding:18px;margin-top:16px}.local-callout{margin-top:22px;padding:20px;border-radius:18px;background:linear-gradient(145deg,rgba(0,51,160,.06),rgba(212,175,55,.08));border:1px solid rgba(0,51,160,.10)}ul{padding-left:20px}li{margin-bottom:8px;line-height:1.55}
-    .form-card{background:linear-gradient(145deg,#fff,#f7f9ff);border:1px solid rgba(0,51,160,.14);border-radius:20px;padding:22px;box-shadow:0 18px 40px rgba(0,51,160,.11)}label{display:block;font-weight:700;color:var(--royal);margin-bottom:6px}input,select,textarea{width:100%;padding:13px;border:1px solid #d7ddea;border-radius:11px;font-size:15px;background:#fff;color:var(--text)}textarea{min-height:120px;resize:vertical}input:focus,select:focus,textarea:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 4px rgba(0,51,160,.1)}.form-row{margin-bottom:13px}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}.step{border-radius:18px;padding:20px;background:linear-gradient(145deg,#fff,#f7f9ff);border:1px solid rgba(0,51,160,.12)}.step-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--royal);color:#fff;font-weight:800;font-family:'Montserrat',sans-serif;margin-bottom:11px}.step p{color:var(--muted);font-size:.9rem}
-    .cta-panel{background:linear-gradient(135deg,rgba(0,51,160,.97),rgba(0,21,70,.98));color:#fff;border:1px solid rgba(212,175,55,.4)}.cta-panel h2{color:#fff}.cta-panel p{max-width:760px;margin:0 auto 12px;text-align:center;color:rgba(255,255,255,.92)}.cta-center{text-align:center}.faq-item{border-bottom:1px solid #e7eaf1;padding:13px 0}.faq-item:last-child{border-bottom:none}
-    footer{background:linear-gradient(180deg,#f5f7fb,#eef2fb);padding:34px 20px;text-align:center;color:var(--royal);font-size:14px;border-top:1px solid rgba(0,51,160,.08)}footer a{color:var(--royal);text-decoration:none;font-weight:700}.footer-links{display:flex;justify-content:center;gap:10px 16px;flex-wrap:wrap;margin-top:12px}.floating-contact,.call-button{position:fixed;right:20px;background:linear-gradient(135deg,var(--royal),var(--deep-blue));color:#fff;padding:12px 18px;font-weight:700;border-radius:30px;box-shadow:0 4px 14px rgba(0,51,160,.3);text-decoration:none;z-index:1000}.floating-contact{bottom:20px}.call-button{bottom:80px}
-    @media(max-width:900px){.two-column,.steps{grid-template-columns:1fr}}@media(max-width:768px){nav{justify-content:flex-start;min-height:58px}.nav-links{display:none;flex-direction:column;width:100%;background:rgba(0,31,92,.98);position:absolute;top:58px;left:0;padding:15px 0}.nav-links.active{display:flex}.hamburger{display:flex}header{padding:52px 18px 46px}.logo-container img{max-width:95px}section{padding:24px 18px}.floating-contact,.call-button{padding:10px 14px;font-size:.86rem}}
+    :root {
+      --navy:#07162f;
+      --blue:#173859;
+      --gold:#c8a75d;
+      --cream:#faf9f6;
+      --ink:#172435;
+      --muted:#596575;
+      --line:#dfe4e8;
+      --radius:14px;
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:110px; }
+
+    body {
+      margin:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:Manrope,sans-serif;
+      line-height:1.7;
+    }
+
+    h1,h2,h3 { line-height:1.2; font-weight:500; }
+    h1 {
+      max-width:940px;
+      margin:0 0 24px;
+      font-size:clamp(2.65rem,5.6vw,4.7rem);
+      line-height:1.08;
+      letter-spacing:-.045em;
+    }
+    h2 {
+      margin:0 0 18px;
+      font-size:clamp(1.8rem,3vw,2.5rem);
+      letter-spacing:-.035em;
+    }
+    h3 { margin:0 0 13px; font-size:1.14rem; }
+    p { margin-top:0; }
+    a { color:var(--blue); text-underline-offset:4px; }
+    a:hover { color:#806124; }
+    img { max-width:100%; height:auto; }
+    button,input,select,textarea { font:inherit; }
+    a,button,input,select,textarea { touch-action:manipulation; }
+    :focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+
+    .container { max-width:1180px; margin:auto; padding:0 24px; }
+    .section { padding:72px 0; }
+    .section + .section { border-top:1px solid var(--line); }
+    .eyebrow {
+      margin:0 0 16px;
+      color:#806124;
+      font-size:.72rem;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+    .muted { color:var(--muted); }
+    .section-heading { max-width:750px; margin-bottom:32px; }
+    .section-heading p:last-child { color:var(--muted); margin-bottom:0; }
+    .skip-link {
+      position:fixed;
+      top:8px;
+      left:8px;
+      z-index:1200;
+      transform:translateY(-160%);
+      padding:10px 18px;
+      background:white;
+    }
+    .skip-link:focus { transform:none; }
+
+    /* Navigation */
+    .site-nav {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(7,22,47,.98);
+      border-bottom:1px solid #ffffff20;
+    }
+    .nav-inner {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      max-width:1180px;
+      min-height:84px;
+      padding:14px 24px;
+      margin:auto;
+    }
+    .site-nav a {
+      color:white;
+      text-decoration:none;
+      font-size:.78rem;
+      font-weight:600;
+    }
+    .site-nav a:hover { color:#ead9ad; }
+    .brand { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+    .brand img {
+      width:78px;
+      height:56px;
+      object-fit:contain;
+      background:white;
+      border-radius:6px;
+      padding:4px;
+    }
+    .brand span { max-width:150px; font-size:.88rem; line-height:1.35; }
+    .nav-links { display:flex; align-items:center; gap:23px; }
+    .portal-btn { padding:10px; border:1px solid #c8a75d80; border-radius:7px; }
+    .hamburger {
+      display:none;
+      min-height:44px;
+      padding:9px 12px;
+      background:transparent;
+      color:white;
+      border:1px solid #ffffff50;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    /* Hero */
+    .hero {
+      padding:48px 0 72px;
+      color:white;
+      background:
+        linear-gradient(90deg,rgba(5,17,38,.94),rgba(7,22,47,.72)),
+        url("/hero.jpg") center/cover no-repeat;
+      background-color:var(--navy);
+    }
+    .breadcrumbs {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:38px;
+      color:#c9d2de;
+      font-size:.75rem;
+    }
+    .breadcrumbs a { color:#d4dce6; }
+    .hero .eyebrow { color:#ead9ad; }
+    .hero-copy { max-width:690px; color:#d4dce6; margin-bottom:28px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .btn,button[type="submit"] {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 20px;
+      border:1px solid var(--navy);
+      border-radius:8px;
+      background:var(--navy);
+      color:white;
+      text-decoration:none;
+      font-size:.86rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .2s,transform .2s;
+    }
+    .btn:hover,button[type="submit"]:hover {
+      background:var(--blue);
+      color:white;
+      transform:translateY(-2px);
+    }
+    .btn-gold { background:#d7bb7a; border-color:#d7bb7a; color:var(--navy); }
+    .btn-gold:hover { background:#ead9ad; color:var(--navy); }
+    .btn-outline { background:transparent; border-color:#ffffff85; }
+    .btn-outline:hover { background:#ffffff12; }
+    .hero-note { margin:20px 0 0; color:#c9d2de; font-size:.8rem; }
+
+    /* Content */
+    .highlights {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:28px;
+      padding:30px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .highlights strong { display:block; margin-bottom:6px; font-size:.9rem; }
+    .highlights p { margin:0; color:var(--muted); font-size:.85rem; }
+    .split {
+      display:grid;
+      grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+      gap:58px;
+      align-items:start;
+    }
+    .grid-three,.grid-two { display:grid; gap:22px; }
+    .grid-three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .grid-two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .card {
+      padding:28px;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+    }
+    .card p { color:var(--muted); font-size:.91rem; }
+    .card p:last-child { margin-bottom:0; }
+    .owner-card { display:flex; flex-direction:column; }
+    .text-link { font-size:.86rem; font-weight:700; text-decoration:none; }
+    .text-link:hover { text-decoration:underline; }
+    .owner-card .text-link { margin-top:auto; }
+    .local-note {
+      margin-top:28px;
+      padding:22px;
+      background:#f0f2ef;
+      border-left:3px solid var(--gold);
+      border-radius:0 8px 8px 0;
+    }
+    .local-note p { margin:0; color:var(--muted); font-size:.88rem; }
+    .contact-links { display:flex; flex-wrap:wrap; gap:12px 20px; margin-top:24px; }
+    .contact-links a { font-size:.87rem; font-weight:600; }
+
+    /* Consultation */
+    .form-card {
+      padding:30px;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+    }
+    .form-card h3 { font-size:1.35rem; }
+    .form-intro { font-size:.86rem; color:var(--muted); margin-bottom:24px; }
+    .form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .full { grid-column:1/-1; }
+    label { display:block; margin-bottom:7px; font-size:.84rem; font-weight:600; }
+    input:not([type="hidden"]):not([type="checkbox"]),select,textarea {
+      width:100%;
+      min-height:48px;
+      padding:12px;
+      background:white;
+      color:var(--ink);
+      border:1px solid #cbd3dc;
+      border-radius:7px;
+      font-size:16px;
+    }
+    textarea { min-height:130px; resize:vertical; }
+    .form-note { margin:15px 0 0; font-size:.76rem; color:var(--muted); line-height:1.6; }
+
+    /* Process */
+    .steps {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:24px;
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    .steps li { padding-top:22px; border-top:1px solid var(--line); }
+    .step-number { display:block; margin-bottom:18px; color:#806124; font-size:.76rem; font-weight:700; }
+    .steps h3 { font-size:1.04rem; }
+    .steps p { margin:0; font-size:.89rem; color:var(--muted); }
+
+    /* FAQs and resources */
+    .faq-list { border-top:1px solid var(--line); }
+    .faq-list details { border-bottom:1px solid var(--line); }
+    summary { padding:20px 0; font-size:.93rem; font-weight:600; cursor:pointer; }
+    .faq-list p { margin:0; padding-bottom:22px; color:var(--muted); font-size:.91rem; }
+    .resource-panel {
+      padding:40px;
+      background:var(--navy);
+      color:white;
+      border-radius:18px;
+    }
+    .resource-panel .eyebrow { color:#ead9ad; }
+    .resource-panel p:not(.eyebrow) { max-width:790px; color:#c9d2de; }
+
+    /* Footer */
+    footer { padding:40px 24px; background:var(--navy); color:#c9d2de; text-align:center; font-size:.86rem; }
+    footer a { color:#ead9ad; }
+    footer a:hover { color:white; }
+    .footer-brand { margin-bottom:10px; color:white; font-weight:700; }
+    footer address { font-style:normal; margin-bottom:10px; }
+    .footer-links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px 20px; margin-top:22px; }
+    .footer-links a { text-decoration:none; }
+    .copyright { margin-top:24px; font-size:.78rem; }
+    .mobile-contact { display:none; }
+
+    @media(min-width:901px) {
+      .nav-links[hidden] { display:flex; }
+    }
+    @media(max-width:1100px) {
+      .nav-inner { gap:14px; }
+      .nav-links { gap:14px; }
+      .brand span { display:none; }
+      .split { gap:36px; }
+    }
+    @media(max-width:900px) {
+      .nav-inner { flex-wrap:wrap; min-height:76px; }
+      .brand span { display:block; }
+      .js .hamburger { display:block; }
+      .nav-links { width:100%; flex-wrap:wrap; gap:12px 20px; padding:10px 0; }
+      .nav-links[hidden] { display:none; }
+      .nav-links a { padding:10px 0; }
+      .nav-links .portal-btn { padding:10px; }
+      .split { grid-template-columns:minmax(0,1fr); gap:30px; }
+      .grid-three { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media(max-width:600px) {
+      html { scroll-padding-top:100px; }
+      .container { padding:0 20px; }
+      .section { padding:48px 0; }
+      .hero { padding:30px 0 48px; }
+      .breadcrumbs { margin-bottom:30px; }
+      .brand img { width:67px; height:48px; }
+      .brand span { font-size:.78rem; }
+      .hero .actions { flex-direction:column; }
+      .highlights,.grid-three,.grid-two,.steps,.form-grid { grid-template-columns:minmax(0,1fr); }
+      .highlights { gap:20px; }
+      .card,.form-card { padding:24px; }
+      .resource-panel { padding:26px; }
+      footer { padding-bottom:calc(100px + env(safe-area-inset-bottom,0px)); }
+      .mobile-contact {
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index:1000;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+        padding:10px 16px;
+        padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));
+        background:var(--navy);
+        border-top:1px solid #ffffff30;
+      }
+      .mobile-contact a {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:44px;
+        border:1px solid #ffffff55;
+        border-radius:7px;
+        color:white;
+        text-decoration:none;
+        font-size:.82rem;
+        font-weight:600;
+      }
+      .mobile-contact a:last-child { background:#d7bb7a; border-color:#d7bb7a; color:var(--navy); }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { transition:none!important; }
+      .btn:hover,button[type="submit"]:hover { transform:none; }
+    }
   </style>
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Marblehead Property Management","url":"https://avrealtymanagement.com/marblehead-property-management.html","serviceType":"Residential Property Management","description":"Property management services for single-family homes, condos, and small multifamily rentals in Marblehead, Massachusetts.","provider":{"@type":"RealEstateAgent","name":"AV Realty & Management","url":"https://avrealtymanagement.com","image":"https://avrealtymanagement.com/logo.png","telephone":"+1-978-277-3435","address":{"@type":"PostalAddress","streetAddress":"5 Huron Street","addressLocality":"Swampscott","addressRegion":"MA","postalCode":"01907","addressCountry":"US"}},"areaServed":{"@type":"City","name":"Marblehead","addressRegion":"MA"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://avrealtymanagement.com/"},{"@type":"ListItem","position":2,"name":"North Shore Property Management","item":"https://avrealtymanagement.com/north-shore-property-management.html"},{"@type":"ListItem","position":3,"name":"Marblehead Property Management","item":"https://avrealtymanagement.com/marblehead-property-management.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What types of rental properties do you manage in Marblehead?","acceptedAnswer":{"@type":"Answer","text":"AV Realty & Management works with Marblehead single-family rentals, condos, and small multifamily properties, including occupied rentals and vacant properties preparing for lease-up."}},{"@type":"Question","name":"Can you take over management if a tenant is already in place?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can review the existing rental setup and available documents, establish management procedures, communicate the transition, and take over the agreed day-to-day responsibilities."}},{"@type":"Question","name":"Do you help Marblehead owners who live outside Massachusetts?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide a local point of contact for out-of-area owners who need help with tenant communication, rent collection, maintenance coordination, leasing, property oversight, and owner reporting."}},{"@type":"Question","name":"Can you help if I inherit a rental property in Marblehead?","acceptedAnswer":{"@type":"Answer","text":"Yes. On the property-management and real-estate side, we can help organize occupancy, rents, available documents, repairs, vacancies, leasing, and ongoing management while the owner works with appropriate legal and tax professionals on estate-specific matters."}},{"@type":"Question","name":"Can you help me rent my Marblehead home if I am moving away?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can help evaluate rental positioning, prepare the property for the market, coordinate leasing and tenant screening, and provide ongoing management after move-in."}},{"@type":"Question","name":"How do I get started with Marblehead property management?","acceptedAnswer":{"@type":"Answer","text":"Start with a free property and rent review. Share the property address, occupancy, current rent information, and your goals, and AV Realty & Management will outline practical next steps."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"RealEstateAgent",
+        "@id":"https://avrealtymanagement.com/#business",
+        "name":"AV Realty & Management",
+        "url":"https://avrealtymanagement.com/",
+        "logo":"https://avrealtymanagement.com/logo.png",
+        "telephone":"+1-978-277-3435",
+        "address":{
+          "@type":"PostalAddress",
+          "streetAddress":"5 Huron Street",
+          "addressLocality":"Swampscott",
+          "addressRegion":"MA",
+          "postalCode":"01907",
+          "addressCountry":"US"
+        }
+      },
+      {
+        "@type":"Service",
+        "@id":"https://avrealtymanagement.com/marblehead-property-management.html#service",
+        "name":"Marblehead Property Management",
+        "url":"https://avrealtymanagement.com/marblehead-property-management.html",
+        "serviceType":"Residential Property Management",
+        "description":"Property management, leasing, maintenance coordination, and owner reporting for Marblehead homes, condos, and small multifamily rentals.",
+        "provider":{"@id":"https://avrealtymanagement.com/#business"},
+        "areaServed":{"@type":"City","name":"Marblehead, Massachusetts"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://avrealtymanagement.com/"},
+          {"@type":"ListItem","position":2,"name":"North Shore Property Management","item":"https://avrealtymanagement.com/north-shore-property-management.html"},
+          {"@type":"ListItem","position":3,"name":"Marblehead Property Management","item":"https://avrealtymanagement.com/marblehead-property-management.html"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <nav>
-    <div class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" role="button" tabindex="0"><div></div><div></div><div></div></div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a><a href="north-shore-real-estate.html">Real Estate</a><a href="north-shore-property-management.html">Property Management</a><a href="north-shore-ma-apartments.html">Apartments</a><a href="about.html">About</a><a href="#contact">Contact</a><a class="portal-btn" href="https://avrealtymanagement.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Resident Portal</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="78" height="56">
+        <span>AV Realty &amp; Management</span>
+      </a>
+
+      <button class="hamburger" type="button" aria-expanded="false"
+        aria-controls="navLinks" aria-label="Open navigation menu">Menu</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/north-shore-real-estate.html">Real Estate</a>
+        <a href="/north-shore-property-management.html">Property Management</a>
+        <a href="/north-shore-ma-apartments.html">Apartments</a>
+        <a href="/about.html">About</a>
+        <a href="#contact">Contact</a>
+        <a class="portal-btn"
+          href="https://avrealtymanagement.managebuilding.com/Resident/portal/login"
+          target="_blank" rel="noopener">Resident Portal</a>
+      </div>
     </div>
   </nav>
 
-  <header>
-    <div class="hero-overlay">
-      <div class="logo-container"><a href="index.html"><img src="logo.png" alt="AV Realty & Management"></a></div>
-      <p class="hero-label">Marblehead • North Shore Massachusetts</p>
-      <h1 class="hero-title">Marblehead Property Management With Local, Hands-On Oversight</h1>
-      <p class="hero-subtitle">Property management for Marblehead landlords, investors, inherited-property owners, and homeowners turning a residence into a rental. We coordinate leasing, rent collection, maintenance, resident communication, and day-to-day operations so you can own with less stress.</p>
-      <div class="header-cta"><a class="btn" href="#contact">Request a Free Property Review</a><a class="btn secondary-btn" href="free-rent-analysis.html">Get a Free Rent Analysis</a></div>
-    </div>
-  </header>
+  <main id="main">
+    <header class="hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/north-shore-property-management.html">Property Management</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Marblehead</span>
+        </nav>
 
-  <div class="trust-strip">
-    <div class="trust-card"><strong>North Shore Local</strong><span>Hands-on support from a firm based nearby in Swampscott.</span></div>
-    <div class="trust-card"><strong>Owner Focused</strong><span>Management built around protecting the property and keeping you informed.</span></div>
-    <div class="trust-card"><strong>Leasing + Operations</strong><span>One point of contact for tenant placement, renewals, maintenance, and reporting.</span></div>
-    <div class="trust-card"><strong>Brokerage + Management</strong><span>Support whether you plan to hold, lease, improve, buy, or eventually sell.</span></div>
-  </div>
+        <p class="eyebrow">Marblehead · North Shore Massachusetts</p>
+        <h1>Marblehead property management.<br>Local attention. Clear communication.</h1>
 
-  <main>
-    <section>
-      <p class="eyebrow">Local Marblehead Property Management</p>
-      <h2>Your Rental Property Should Not Become a Second Job</h2>
-      <p class="section-intro">Owning a Marblehead rental can be a strong long-term asset, but the day-to-day work adds up quickly. Professional management creates a system for rent, residents, maintenance, leasing, records, vendors, and owner communication.</p>
-      <div class="two-column">
+        <p class="hero-copy">
+          Hands-on management for single-family homes, condos, and small
+          multifamily rentals. From leasing and resident communication
+          to maintenance coordination and owner reporting, we help
+          organize the responsibilities of rental ownership.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-gold" href="#contact">Discuss Your Property</a>
+          <a class="btn btn-outline" href="/free-rent-analysis.html">Get a Free Rent Analysis</a>
+        </div>
+
+        <p class="hero-note">Based nearby in Swampscott. Supporting Marblehead owners near and far.</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="highlights">
         <div>
-          <h3>What AV Realty & Management can handle</h3>
-          <div class="highlight-box"><ul><li>Rent collection and resident communication</li><li>Maintenance request intake and vendor coordination</li><li>Rental pricing, marketing, showings, and tenant screening</li><li>Lease administration and renewal coordination</li><li>Owner statements, property updates, and organized records</li><li>Turnover and make-ready coordination</li><li>Local property walkthroughs and access coordination when needed</li></ul></div>
-          <div class="local-callout"><h3>Why local knowledge matters in Marblehead</h3><p>Marblehead has a wide mix of property types, from condos and single-family homes to older multifamily housing. Parking, storage, heating systems, coastal exposure, older building components, and property condition can all influence rental positioning and ongoing operations. We look at the actual property, not just a generic rent estimate.</p></div>
+          <strong>A local point of contact</strong>
+          <p>Coordination for tenants, vendors, and the property’s ongoing needs.</p>
         </div>
-        <div class="form-card">
-          <h3 style="text-align:center;">Free Marblehead Property Review</h3>
-          <p style="text-align:center;color:#666;margin-top:0;">Tell us what you own and what you would like help with.</p>
-          <form id="contact" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422"><input type="hidden" name="subject" value="NEW LEAD - Marblehead Property Management"><input type="hidden" name="from_name" value="AV Realty & Management Website"><input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html"><input type="hidden" name="form_source" value="Marblehead Property Management Page"><input type="checkbox" name="botcheck" style="display:none;">
-            <div class="form-row"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
-            <div class="form-row"><label for="email">Email Address</label><input type="email" id="email" name="email" required></div>
-            <div class="form-row"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"></div>
-            <div class="form-row"><label for="address">Property Address</label><input type="text" id="address" name="property_address" placeholder="Marblehead, MA"></div>
-            <div class="form-row"><label for="property_type">Property Type</label><select id="property_type" name="property_type"><option value="">Select one</option><option>Single-family rental</option><option>Condo</option><option>2-family</option><option>3-family</option><option>4-family</option><option>Other</option></select></div>
-            <div class="form-row"><label for="occupancy">Current Occupancy</label><select id="occupancy" name="occupancy"><option value="">Select one</option><option>Fully occupied</option><option>Partially occupied</option><option>Vacant</option><option>Owner occupied / planning to rent</option></select></div>
-            <div class="form-row"><label for="details">What would you like help with?</label><textarea id="details" name="message" placeholder="Current rent, vacancy, maintenance concerns, tenant situation, moving away, inherited property, out-of-state ownership, or anything else we should know."></textarea></div>
-            <button type="submit" style="width:100%;margin-left:0;">Request My Free Review</button>
+        <div>
+          <strong>Leasing through ownership</strong>
+          <p>Support for vacant units, existing rentals, and homes entering the rental market.</p>
+        </div>
+        <div>
+          <strong>Visibility for owners</strong>
+          <p>Organized reporting and communication about your property.</p>
+        </div>
+      </div>
+
+      <section class="section split" aria-labelledby="overview-heading">
+        <div>
+          <p class="eyebrow">A More Organized Way to Own</p>
+          <h2 id="overview-heading">Your rental shouldn’t run your schedule.</h2>
+          <p class="muted">
+            Resident questions, rent tracking, repairs, and lease
+            renewals can quickly fill your week. AV Realty &amp;
+            Management provides a local operating partner for the
+            responsibilities you want to hand off.
+          </p>
+          <p class="muted">
+            Whether your property is occupied, preparing for a new
+            tenant, or transitioning from your own home into a rental,
+            we start with its current needs and your goals.
+          </p>
+
+          <div class="local-note">
+            <h3>Attention to the actual property.</h3>
+            <p>
+              A Marblehead home, condo, or older multifamily can have
+              very different operating needs. Parking, laundry, heating,
+              storage, exterior maintenance, and coastal exposure are
+              details to review when planning management and leasing.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a href="tel:+19782773435">Call (978) 277-3435</a>
+            <a href="mailto:anthony@avrealtymanagement.com">Email Us</a>
+          </div>
+        </div>
+
+        <div class="form-card" id="contact">
+          <p class="eyebrow">Free Initial Property Review</p>
+          <h3>Tell us what you own.</h3>
+          <p class="form-intro">
+            Share your property and what you’d like help with.
+            Fields marked * are required.
+          </p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+            <input type="hidden" name="subject" value="NEW LEAD - Marblehead Property Management">
+            <input type="hidden" name="from_name" value="AV Realty &amp; Management Website">
+            <input type="hidden" name="redirect" value="https://avrealtymanagement.com/thankyou.html">
+            <input type="hidden" name="form_source" value="Marblehead Property Management Page">
+            <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none">
+
+            <div class="form-grid">
+              <div>
+                <label for="name">Full Name *</label>
+                <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required>
+              </div>
+              <div>
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+              <div class="full">
+                <label for="address">Property Address</label>
+                <input id="address" name="property_address" type="text"
+                  maxlength="300" placeholder="Street, unit if applicable, Marblehead, MA">
+              </div>
+              <div>
+                <label for="property-type">Property Type</label>
+                <select id="property-type" name="property_type">
+                  <option value="">Select one (optional)</option>
+                  <option>Single-family home</option>
+                  <option>Condo</option>
+                  <option>2-family</option>
+                  <option>3-family</option>
+                  <option>4-family</option>
+                  <option>Other / Not sure</option>
+                </select>
+              </div>
+              <div>
+                <label for="occupancy">Current Occupancy</label>
+                <select id="occupancy" name="occupancy">
+                  <option value="">Select one (optional)</option>
+                  <option>Fully occupied</option>
+                  <option>Partially occupied</option>
+                  <option>Vacant</option>
+                  <option>Owner-occupied / planning to rent</option>
+                  <option>Considering a purchase</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+              <div>
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+              </div>
+              <div>
+                <label for="service">Main Area of Interest</label>
+                <select id="service" name="service_interest">
+                  <option value="">Select one (optional)</option>
+                  <option>Full-service management</option>
+                  <option>Leasing / tenant placement</option>
+                  <option>Rent analysis</option>
+                  <option>Moving away / remote ownership</option>
+                  <option>Inherited property</option>
+                  <option>Exploring my options</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="details">What Would You Like Help With?</label>
+                <textarea id="details" name="message" maxlength="5000"
+                  placeholder="Tell us about current rents, vacancies, maintenance priorities, your timing, or anything else we should know."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" style="width:100%;margin-top:22px">Request My Free Review</button>
+
+            <p class="form-note">
+              No obligation to hire. We’ll use your details to respond to
+              your inquiry. Please do not include tenant names or
+              sensitive financial or identification information.
+            </p>
+            <p class="form-note">
+              Submitting this form does not establish a brokerage or
+              property-management agreement.
+            </p>
           </form>
-          <p style="font-size:.8rem;color:#666;margin:10px 0 0;text-align:center;">No obligation. Your information is used to respond to your request.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="services">
-      <p class="eyebrow">Full-Service Support</p><h2>Marblehead Property Management Services</h2><p class="section-intro">From a single rental home to a small multifamily property, we can provide the operational support needed to keep the property organized and moving forward.</p>
-      <div class="card-grid">
-        <div class="info-card"><h3>Rent Collection & Resident Communication</h3><p>Structured rent collection, payment follow-up, routine communication, and one organized point of contact for resident questions.</p></div>
-        <div class="info-card"><h3>Maintenance Coordination</h3><p>Work-order intake, vendor scheduling, owner approvals, repair tracking, and coordination of routine and seasonal property needs.</p></div>
-        <div class="info-card"><h3>Leasing & Tenant Placement</h3><p>Rental pricing, marketing, inquiries, showings, applications, screening, lease coordination, and move-in preparation.</p></div>
-        <div class="info-card"><h3>Renewals & Turnovers</h3><p>Renewal planning, rental-position reviews, vacancy preparation, cleaning and repair coordination, and re-leasing support.</p></div>
-        <div class="info-card"><h3>Owner Reporting</h3><p>Monthly statements, rent reporting, expense organization, property updates, and records that help you understand what is happening.</p></div>
-        <div class="info-card"><h3>Property Oversight</h3><p>Local walkthroughs, approved vendor access, condition observations, and coordination for owners who cannot be at the property themselves.</p></div>
-      </div>
-    </section>
+      <section class="section" id="services" aria-labelledby="services-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Leasing &amp; Day-to-Day Operations</p>
+          <h2 id="services-heading">Marblehead property-management services.</h2>
+          <p>
+            A coordinated approach to the recurring work of rental
+            ownership, with responsibilities, approvals, and reporting
+            established in your management agreement.
+          </p>
+        </div>
 
-    <section>
-      <p class="eyebrow">Built for Different Ownership Situations</p><h2>Marblehead Owners We Can Help</h2>
-      <div class="card-grid">
-        <div class="info-card"><h3>Homeowners Moving Away</h3><p>If you are relocating but want to keep your Marblehead home, we can help evaluate its rental potential, prepare it for the market, place a tenant, and manage it after move-in.</p><a class="btn" href="#contact">Discuss My Home</a></div>
-        <div class="info-card"><h3>Out-of-State Owners</h3><p>If you live outside Massachusetts, we can act as your local point of contact for tenants, vendors, leasing, repairs, and property oversight.</p><a class="btn" href="absentee-landlord-property-management.html">Remote Owner Management</a></div>
-        <div class="info-card"><h3>Inherited Property Owners</h3><p>We can help organize the property-management side of an inherited rental, including occupancy, rents, vacancies, property condition, repairs, leasing, and ongoing management.</p><a class="btn" href="absentee-landlord-property-management.html">Inherited Property Help</a></div>
-        <div class="info-card"><h3>Rental Property Investors</h3><p>For investors evaluating or operating Marblehead rentals, we can help with rent positioning, property-management strategy, and ongoing operations.</p><a class="btn" href="rental-property-calculator.html">Analyze a Rental</a></div>
-      </div>
-    </section>
+        <div class="grid-three">
+          <article class="card">
+            <h3>Rent &amp; Resident Communication</h3>
+            <p>Rent collection, payment tracking, routine follow-up, and a consistent point of contact for resident questions.</p>
+          </article>
+          <article class="card">
+            <h3>Maintenance Coordination</h3>
+            <p>Request intake, vendor scheduling, owner approvals, and repair tracking within the agreed scope and funding procedures.</p>
+          </article>
+          <article class="card">
+            <h3>Leasing &amp; Tenant Placement</h3>
+            <p>Rental pricing, marketing, inquiries, showings, applicant screening, lease coordination, and move-in preparation.</p>
+          </article>
+          <article class="card">
+            <h3>Renewals &amp; Turnovers</h3>
+            <p>Renewal planning, vacancy preparation, cleaning and repair coordination, and support for bringing a unit back to market.</p>
+          </article>
+          <article class="card">
+            <h3>Owner Reporting</h3>
+            <p>Monthly statements, organized income and expense records, and property updates to help you follow operations.</p>
+          </article>
+          <article class="card">
+            <h3>Local Property Oversight</h3>
+            <p>Walkthroughs and access coordination as agreed, with observations and updates for owners who cannot be there themselves.</p>
+          </article>
+        </div>
+      </section>
 
-    <section id="process"><p class="eyebrow">Simple Onboarding</p><h2>How Marblehead Property Management Starts</h2><div class="steps"><div class="step"><div class="step-num">1</div><h3>Property Review</h3><p>We discuss the property, occupancy, rent, current challenges, and your goals.</p></div><div class="step"><div class="step-num">2</div><h3>Walkthrough & Plan</h3><p>We review the physical property and identify immediate operational or make-ready priorities.</p></div><div class="step"><div class="step-num">3</div><h3>Onboarding</h3><p>We organize available documents, resident information, payment procedures, vendors, and owner reporting.</p></div><div class="step"><div class="step-num">4</div><h3>Ongoing Management</h3><p>We take over the agreed day-to-day responsibilities while keeping you informed.</p></div></div></section>
+      <section class="section" aria-labelledby="owners-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Different Properties. Different Priorities.</p>
+          <h2 id="owners-heading">Support for your ownership situation.</h2>
+        </div>
 
-    <section class="cta-panel"><h2>What Should Your Marblehead Rental Be Earning?</h2><p>Start with the numbers. Request a free rent analysis or use our rental property calculator to evaluate potential income, expenses, NOI, cap rate, cash flow, and DSCR.</p><div class="cta-center"><a class="btn secondary-btn" href="free-rent-analysis.html">Free Rent Analysis</a><a class="btn secondary-btn" href="rental-property-calculator.html">Rental Property Calculator</a></div></section>
+        <div class="grid-two">
+          <article class="card owner-card">
+            <h3>Keeping Your Home When You Move</h3>
+            <p>
+              Explore rental positioning, make-ready priorities, and
+              tenant placement before handing over ongoing management.
+            </p>
+            <a class="text-link" href="#contact">Discuss Your Home →</a>
+          </article>
+          <article class="card owner-card">
+            <h3>Managing From Out of State</h3>
+            <p>
+              A local contact for tenant communication, vendor access,
+              repairs, and the responsibilities that are harder to
+              coordinate from a distance.
+            </p>
+            <a class="text-link" href="/absentee-landlord-property-management.html">Explore Remote Owner Support →</a>
+          </article>
+          <article class="card owner-card">
+            <h3>Navigating an Inherited Property</h3>
+            <p>
+              Organize the rental and operating picture while you work
+              with your attorney, accountant, or estate representative
+              on estate-specific matters.
+            </p>
+            <a class="text-link" href="/absentee-landlord-property-management.html#inherited">Explore Inherited Property Support →</a>
+          </article>
+          <article class="card owner-card">
+            <h3>Operating a Rental Investment</h3>
+            <p>
+              Review rents, vacancy needs, maintenance priorities, and
+              management responsibilities with your ownership goals in mind.
+            </p>
+            <a class="text-link" href="/rental-property-calculator.html">Explore the Rental Calculator →</a>
+          </article>
+        </div>
+      </section>
 
-    <section id="faq"><p class="eyebrow">Questions From Owners</p><h2>Marblehead Property Management FAQ</h2>
-      <div class="faq-item"><h3>What types of rental properties do you manage in Marblehead?</h3><p>We work with single-family rentals, condos, and small multifamily properties. That includes occupied rentals, vacant properties preparing for lease-up, and homes transitioning from owner occupancy to rental use.</p></div>
-      <div class="faq-item"><h3>Can you take over management if I already have a tenant?</h3><p>Yes. We can review the existing rental setup and available documents, establish management procedures, communicate the transition, and take over the agreed day-to-day responsibilities.</p></div>
-      <div class="faq-item"><h3>Do you help Marblehead owners who live outside Massachusetts?</h3><p>Yes. Remote ownership is one of the situations where local management can be especially useful. We can provide a local point of contact for leasing, resident communication, maintenance coordination, property oversight, and owner reporting.</p></div>
-      <div class="faq-item"><h3>Can you help if I inherited a rental property in Marblehead?</h3><p>Yes. We can help with the real-estate and property-management side of the property, including occupancy, rents, condition, vacancies, repairs, leasing potential, and ongoing management. Estate, probate, tax, and legal matters should be handled with the appropriate professionals.</p></div>
-      <div class="faq-item"><h3>Can you manage my Marblehead home if I am moving away?</h3><p>Yes. We can help evaluate rental positioning, coordinate make-ready work, market the property, screen applicants, complete the leasing process, and provide ongoing management after move-in.</p></div>
-      <div class="faq-item"><h3>How much does Marblehead property management cost?</h3><p>Pricing depends on the property, unit count, occupancy, and services needed. After a quick review, we can provide a written proposal that clearly explains the management arrangement and any applicable leasing fees.</p></div>
-      <div class="faq-item"><h3>How do I get started?</h3><p>Submit the property-review form above or call <a href="tel:9782773435">(978) 277-3435</a>. We will start with your current property situation and outline practical next steps.</p></div>
-    </section>
+      <section class="section" id="process" aria-labelledby="process-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Getting Started</p>
+          <h2 id="process-heading">A clear transition into management.</h2>
+        </div>
 
-    <section><p class="eyebrow">More North Shore Resources</p><h2>Planning Your Next Move?</h2><p class="section-intro">Explore AV Realty & Management's property-management, real-estate, and investor resources before making your next decision.</p><div class="card-grid"><div class="info-card"><h3>North Shore Property Management</h3><p>See our broader property-management services for owners across Boston's North Shore.</p><a class="btn" href="north-shore-property-management.html">View Management Services</a></div><div class="info-card"><h3>Free Rent Analysis</h3><p>Request property-specific rental pricing guidance based on your unit and current market conditions.</p><a class="btn" href="free-rent-analysis.html">Estimate My Rent</a></div><div class="info-card"><h3>North Shore Real Estate</h3><p>Buying, selling, or deciding whether to keep a Marblehead property as a rental? Explore our brokerage services.</p><a class="btn" href="north-shore-real-estate.html">Explore Real Estate</a></div></div></section>
+        <ol class="steps">
+          <li>
+            <span class="step-number" aria-hidden="true">01</span>
+            <h3>Discuss the Property</h3>
+            <p>Review occupancy, rent, current challenges, and the responsibilities you want help managing.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">02</span>
+            <h3>Establish the Plan</h3>
+            <p>Arrange a walkthrough as appropriate and define scope, fees, priorities, and owner approvals.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">03</span>
+            <h3>Organize the Transition</h3>
+            <p>Coordinate available records, property access, resident communication, and payment procedures.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">04</span>
+            <h3>Manage Going Forward</h3>
+            <p>Begin the agreed operating responsibilities and establish ongoing owner reporting and updates.</p>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="resource-panel" aria-labelledby="rent-heading">
+        <p class="eyebrow">Start With the Rental Picture</p>
+        <h2 id="rent-heading">What could your Marblehead property rent for?</h2>
+        <p>
+          Request property-specific rental pricing guidance, or explore
+          income and expense assumptions with our rental property calculator.
+        </p>
+        <div class="actions">
+          <a class="btn btn-gold" href="/free-rent-analysis.html">Free Rent Analysis</a>
+          <a class="btn btn-outline" href="/rental-property-calculator.html">Rental Property Calculator</a>
+        </div>
+      </aside>
+
+      <section class="section split" id="faq" aria-labelledby="faq-heading">
+        <div>
+          <p class="eyebrow">Questions From Owners</p>
+          <h2 id="faq-heading">Marblehead property-management FAQs.</h2>
+          <p class="muted">
+            Your property’s needs shape the management plan. Start with
+            a conversation about its current condition, occupancy, and your goals.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>What kinds of properties do you manage?</summary>
+            <p>
+              We work with Marblehead single-family homes, condos, and
+              small multifamily rentals, including occupied properties,
+              vacant units, and homes transitioning to rental use.
+            </p>
+          </details>
+          <details>
+            <summary>Can you take over an occupied rental?</summary>
+            <p>
+              Yes. We review available leases, rent records, property
+              information, and current needs before coordinating the
+              transition and resident communication.
+            </p>
+          </details>
+          <details>
+            <summary>Can you help if I live outside Massachusetts?</summary>
+            <p>
+              Yes. We can provide a local point of contact for the
+              agreed leasing, communication, maintenance coordination,
+              oversight, and reporting responsibilities.
+            </p>
+          </details>
+          <details>
+            <summary>Can you help with an inherited property?</summary>
+            <p>
+              Yes. We can help review occupancy, rents, property
+              condition, vacancies, and management needs. Estate,
+              probate, tax, and legal matters remain with the
+              appropriate professionals.
+            </p>
+          </details>
+          <details>
+            <summary>What if I am moving away and want to rent my home?</summary>
+            <p>
+              We can discuss rental positioning, property preparation,
+              leasing, tenant placement, and management after move-in.
+              For a condo, we can also review available association
+              information relevant to the rental plan.
+            </p>
+          </details>
+          <details>
+            <summary>How are maintenance costs and approvals handled?</summary>
+            <p>
+              The management agreement establishes the scope of
+              coordination, owner funding procedures, and approval
+              arrangements. We discuss these before management begins.
+            </p>
+          </details>
+          <details>
+            <summary>How much does management cost?</summary>
+            <p>
+              Request a written proposal for your property. We will
+              explain the management fee, applicable leasing or renewal
+              charges, and any other agreed costs before you proceed.
+            </p>
+          </details>
+          <details>
+            <summary>How do I get started?</summary>
+            <p>
+              Use the <a href="#contact">property-review form</a> or
+              call <a href="tel:+19782773435">(978) 277-3435</a>.
+              We’ll discuss your situation and outline the next steps.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="related-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Explore Your Options</p>
+          <h2 id="related-heading">More support for your next decision.</h2>
+        </div>
+
+        <div class="grid-three">
+          <article class="card owner-card">
+            <h3>North Shore Management</h3>
+            <p>Explore our broader management services for rental-property owners across nearby communities.</p>
+            <a class="text-link" href="/north-shore-property-management.html">View Management Services →</a>
+          </article>
+          <article class="card owner-card">
+            <h3>Marblehead Real Estate</h3>
+            <p>Considering buying or selling? Explore brokerage services for your next Marblehead property decision.</p>
+            <a class="text-link" href="/marblehead-real-estate.html">Explore Marblehead Real Estate →</a>
+          </article>
+          <article class="card owner-card">
+            <h3>Discuss Your Property</h3>
+            <p>Tell us what you own and where you need support. We can help identify a practical starting point.</p>
+            <a class="text-link" href="#contact">Request a Property Review →</a>
+          </article>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer><div style="font-weight:800;font-family:'Montserrat',sans-serif;">AV Realty & Management</div><div style="margin-top:6px;">5 Huron Street, Swampscott, MA 01907</div><div style="margin-top:6px;"><a href="tel:9782773435">(978) 277-3435</a></div><div class="footer-links"><a href="north-shore-property-management.html">North Shore Property Management</a><a href="free-rent-analysis.html">Free Rent Analysis</a><a href="rental-property-calculator.html">Rental Property Calculator</a><a href="absentee-landlord-property-management.html">Out-of-State & Inherited Property</a><a href="north-shore-real-estate.html">Real Estate Services</a></div><div style="color:#666;font-size:13px;margin-top:15px;">Serving Marblehead, Swampscott, Salem, Beverly, Lynn, Nahant, Peabody, Danvers, and communities across Boston's North Shore.</div><div style="color:#666;font-size:13px;margin-top:8px;">&copy; 2026 AV Realty & Management LLC. All rights reserved.</div></footer>
-  <a href="#contact" class="floating-contact">Email Now</a><a href="tel:9782773435" class="call-button">Call Now</a>
-  <script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+  <footer>
+    <div class="footer-brand">AV Realty &amp; Management</div>
+    <address>5 Huron Street, Swampscott, MA 01907</address>
+    <div>
+      <a href="tel:+19782773435">(978) 277-3435</a>
+      <span aria-hidden="true"> · </span>
+      <a href="mailto:anthony@avrealtymanagement.com">Email Us</a>
+    </div>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/north-shore-property-management.html">Property Management</a>
+      <a href="/free-rent-analysis.html">Free Rent Analysis</a>
+      <a href="/rental-property-calculator.html">Rental Calculator</a>
+      <a href="/absentee-landlord-property-management.html">Remote &amp; Inherited Ownership</a>
+      <a href="/north-shore-real-estate.html">Real Estate</a>
+      <a href="/about.html">About</a>
+    </div>
+
+    <p class="copyright">&copy; 2026 AV Realty &amp; Management LLC. All rights reserved.</p>
+    <p>Equal Housing Opportunity</p>
+
+    <div class="footer-links">
+      <a href="https://www.instagram.com/av.realty/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/avrealtymgmt" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.linkedin.com/company/av-realty-management-llc" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <div class="mobile-contact" role="group" aria-label="Quick contact">
+    <a href="tel:+19782773435">Call Us</a>
+    <a href="#contact">Discuss Your Property</a>
+  </div>
+
+  <script>
+    (() => {
+      const menu = document.querySelector(".hamburger");
+      const links = document.getElementById("navLinks");
+      const nav = document.querySelector(".site-nav");
+      const mobile = window.matchMedia("(max-width:900px)");
+
+      if (!menu || !links || !nav) return;
+      document.documentElement.classList.add("js");
+
+      const setOpen = (open) => {
+        links.hidden = mobile.matches && !open;
+        menu.setAttribute("aria-expanded", String(open));
+        menu.setAttribute(
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu"
+        );
+      };
+
+      setOpen(false);
+
+      menu.addEventListener("click", () => {
+        setOpen(menu.getAttribute("aria-expanded") !== "true");
+      });
+
+      links.addEventListener("click", (event) => {
+        if (mobile.matches && event.target.closest("a")) {
+          setOpen(false);
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "Escape" &&
+          menu.getAttribute("aria-expanded") === "true"
+        ) {
+          setOpen(false);
+          menu.focus();
+        }
+      });
+
+      document.addEventListener("click", (event) => {
+        if (mobile.matches && !nav.contains(event.target)) {
+          setOpen(false);
+        }
+      });
+
+      nav.addEventListener("focusout", (event) => {
+        if (mobile.matches && !nav.contains(event.relatedTarget)) {
+          setOpen(false);
+        }
+      });
+
+      const resetMenu = () => {
+        if (mobile.matches && links.contains(document.activeElement)) {
+          menu.focus();
+        }
+        setOpen(false);
+      };
+
+      if (mobile.addEventListener) {
+        mobile.addEventListener("change", resetMenu);
+      } else {
+        mobile.addListener(resetMenu);
+      }
+    })();
+  </script>
 </body>
 </html>
