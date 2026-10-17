@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+
+/*
+  Browser presentation for sitemap.xml.
+  Page titles and group labels follow the XML's current URL order.
+*/
+
+:root {
+  --navy: #07162f;
+  --blue: #173859;
+  --gold: #c8a75d;
+  --cream: #faf9f6;
+  --ink: #172435;
+  --muted: #596575;
+  --line: #dfe4e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+urlset {
+  display: block;
+  min-height: 100vh;
+  padding: 0 max(24px, calc((100% - 1040px) / 2)) 44px;
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.65;
+  counter-reset: page;
+}
+
+/* Branded header */
+
+urlset::before {
+  content:
+    "AV REALTY & MANAGEMENT"
+    "\A"
+    "A map of"
+    "\A"
+    "your next move."
+    "\A\A"
+    "North Shore, Massachusetts · Website sitemap";
+
+  display: block;
+  margin: 0 calc(-1 * max(24px, calc((100% - 1040px) / 2))) 38px;
+  padding: 142px max(24px, calc((100% - 1040px) / 2)) 44px;
+
+  background-color: var(--navy);
+  background-image:
+    url("/logo.png"),
+    linear-gradient(
+      100deg,
+      rgba(7,22,47,.97),
+      rgba(7,22,47,.82)
+    ),
+    url("/hero.jpg");
+
+  background-repeat: no-repeat;
+  background-size:
+    92px auto,
+    cover,
+    cover;
+
+  background-position:
+    max(24px, calc((100% - 1040px) / 2)) 30px,
+    center,
+    center;
+
+  color: #fff;
+  white-space: pre-line;
+  font-size: clamp(1.45rem, 3.5vw, 2.65rem);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.35;
+  border-bottom: 3px solid var(--gold);
+}
+
+/* Each URL becomes a compact page card */
+
+url {
+  --page-title: "Website page";
+  display: block;
+  position: relative;
+  margin: 0 0 12px;
+  counter-increment: page;
+}
+
+loc {
+  display: block;
+  position: relative;
+  min-height: 102px;
+  padding: 22px 70px 22px 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+loc::before {
+  content: var(--page-title);
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+loc::after {
+  content: counter(page, decimal-leading-zero);
+  position: absolute;
+  right: 23px;
+  top: 24px;
+  color: #806124;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+loc:hover {
+  border-color: #c8a75d;
+  box-shadow: 0 6px 20px rgba(7,22,47,.045);
+}
+
+lastmod {
+  display: block;
+  padding: 6px 24px 0;
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+lastmod::before {
+  content: "Last significant update: ";
+}
+
+/* Section headings */
+
+url:nth-of-type(1)::before,
+url:nth-of-type(3)::before,
+url:nth-of-type(10)::before,
+url:nth-of-type(16)::before,
+url:nth-of-type(19)::before {
+  display: block;
+  padding: 23px 0 14px;
+  color: var(--blue);
+  font-size: .73rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+url:nth-of-type(1)::before {
+  content: "01 / Welcome to AV";
+  padding-top: 0;
+}
+
+url:nth-of-type(3)::before {
+  content: "02 / Buy, Sell & Invest";
+}
+
+url:nth-of-type(10)::before {
+  content: "03 / Lease & Manage";
+}
+
+url:nth-of-type(16)::before {
+  content: "04 / Plan Your Next Move";
+}
+
+url:nth-of-type(19)::before {
+  content: "05 / Find Your Rental";
+}
+
+/* Descriptive titles */
+
+url:nth-of-type(1) {
+  --page-title: "Home";
+}
+
+url:nth-of-type(2) {
+  --page-title: "About AV Realty & Management";
+}
+
+url:nth-of-type(3) {
+  --page-title: "North Shore Real Estate";
+}
+
+url:nth-of-type(4) {
+  --page-title: "Swampscott Real Estate";
+}
+
+url:nth-of-type(5) {
+  --page-title: "Marblehead Real Estate";
+}
+
+url:nth-of-type(6) {
+  --page-title: "Salem Real Estate";
+}
+
+url:nth-of-type(7) {
+  --page-title: "Nahant Real Estate";
+}
+
+url:nth-of-type(8) {
+  --page-title: "Multifamily & Investment Real Estate";
+}
+
+url:nth-of-type(9) {
+  --page-title: "Servicios de bienes raíces en español";
+}
+
+url:nth-of-type(10) {
+  --page-title: "North Shore Property Management";
+}
+
+url:nth-of-type(11) {
+  --page-title: "Swampscott Property Management";
+}
+
+url:nth-of-type(12) {
+  --page-title: "Marblehead Property Management";
+}
+
+url:nth-of-type(13) {
+  --page-title: "Salem Property Management";
+}
+
+url:nth-of-type(14) {
+  --page-title: "Nahant Property Management";
+}
+
+url:nth-of-type(15) {
+  --page-title: "Out-of-State & Inherited Property Owners";
+}
+
+url:nth-of-type(16) {
+  --page-title: "Rental Property Calculator";
+}
+
+url:nth-of-type(17) {
+  --page-title: "Free Rent Analysis";
+}
+
+url:nth-of-type(18) {
+  --page-title: "Mortgage Calculator";
+}
+
+url:nth-of-type(19) {
+  --page-title: "North Shore Apartments";
+}
+
+/* Footer */
+
+urlset::after {
+  content:
+    "LOCAL EXPERTISE. THOUGHTFUL SERVICE."
+    "\A\A"
+    "AV Realty & Management LLC"
+    "\A"
+    "5 Huron Street · Swampscott, MA 01907"
+    "\A"
+    "(978) 277-3435"
+    "\A\A"
+    "This XML sitemap helps search engines discover our pages."
+    "\A"
+    "Addresses above can be selected and copied."
+    "\A"
+    "For website navigation, visit avrealtymanagement.com."
+    "\A\A"
+    "Equal Housing Opportunity";
+
+  display: block;
+  margin-top: 38px;
+  padding: 30px 0 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  white-space: pre-line;
+  font-size: .8rem;
+  line-height: 1.8;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  urlset {
+    padding: 0 20px 30px;
+  }
+
+  urlset::before {
+    margin: 0 -20px 25px;
+    padding: 115px 20px 29px;
+
+    background-size:
+      76px auto,
+      cover,
+      cover;
+
+    background-position:
+      20px 24px,
+      center,
+      center;
+
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  loc {
+    min-height: 0;
+    padding: 17px 44px 17px 17px;
+    border-radius: 10px;
+    font-size: .73rem;
+  }
+
+  loc::before {
+    margin-bottom: 6px;
+    font-size: .94rem;
+  }
+
+  loc::after {
+    right: 15px;
+    top: 19px;
+    font-size: .67rem;
+  }
+
+  url:nth-of-type(1)::before,
+  url:nth-of-type(3)::before,
+  url:nth-of-type(10)::before,
+  url:nth-of-type(16)::before,
+  url:nth-of-type(19)::before {
+    font-size: .66rem;
+    letter-spacing: .1em;
+  }
+
+  urlset::after {
+    margin-top: 27px;
+    padding-top: 24px;
+    font-size: .74rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+@media print {
+  urlset {
+    padding: 0;
+    background: #fff;
+  }
+
+  urlset::before {
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    background: none;
+    color: #07162f;
+    font-size: 1.5rem;
+  }
+
+  loc {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
