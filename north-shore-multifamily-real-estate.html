@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>North Shore MA Multifamily &amp; Investment Real Estate | AV Realty</title>
   <meta name="description" content="Buy or sell North Shore MA multifamily and investment properties with AV Realty. Explore rental analysis, acquisition strategy, and property management.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#07162f">
 
   <link rel="canonical" href="https://avrealtymanagement.com/north-shore-multifamily-real-estate.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="North Shore Multifamily Real Estate | AV Realty &amp; Management">
@@ -23,836 +26,835 @@
   <meta name="twitter:description" content="Local brokerage guidance for multifamily and investment properties across Boston's North Shore.">
   <meta name="twitter:image" content="https://avrealtymanagement.com/hero.jpg">
 
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="hero.jpg">
+  <link rel="preload" as="image" href="/hero.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy: #07162f;
-      --blue: #173859;
-      --gold: #c8a75d;
-      --cream: #faf9f6;
-      --ink: #172435;
-      --muted: #596575;
-      --line: #dfe4e8;
-      --radius: 14px;
+      --navy:#07162f;
+      --blue:#173859;
+      --gold:#c8a75d;
+      --cream:#faf9f6;
+      --ink:#172435;
+      --muted:#596575;
+      --line:#dfe4e8;
+      --radius:14px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing:border-box; }
 
     html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-behavior:smooth;
+      scroll-padding-top:100px;
     }
 
     body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: Manrope, sans-serif;
-      line-height: 1.7;
+      margin:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:"Manrope",sans-serif;
+      line-height:1.7;
+      overflow-wrap:break-word;
     }
 
-    h1, h2, h3 {
-      line-height: 1.2;
-      font-weight: 500;
+    h1,h2,h3 {
+      line-height:1.2;
+      font-weight:500;
     }
 
     h2 {
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      letter-spacing: -.035em;
-      margin: 0 0 18px;
+      margin:0 0 18px;
+      font-size:clamp(1.8rem,3vw,2.5rem);
+      letter-spacing:-.035em;
     }
 
-    h3 {
-      margin: 0 0 14px;
-    }
+    h3 { margin:0 0 14px; }
+
+    p { margin:0 0 18px; }
 
     a {
-      color: var(--blue);
-      text-underline-offset: 4px;
+      color:var(--blue);
+      text-underline-offset:4px;
     }
 
-    a:hover {
-      color: #806124;
-    }
+    a:hover { color:#806124; }
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+    img { max-width:100%; height:auto; }
 
-    button, input, textarea, select {
-      font: inherit;
-    }
+    button,input,textarea,select { font:inherit; }
 
-    a, button, input, textarea, select {
-      touch-action: manipulation;
+    a,button,input,textarea,select {
+      touch-action:manipulation;
     }
 
     :focus-visible {
-      outline: 3px solid var(--gold);
-      outline-offset: 5px;
+      outline:3px solid var(--gold);
+      outline-offset:5px;
     }
 
     .skip-link {
-      position: fixed;
-      top: 8px;
-      left: 8px;
-      transform: translateY(-150%);
-      z-index: 1200;
-      background: white;
-      padding: 10px 18px;
+      position:fixed;
+      top:8px;
+      left:8px;
+      z-index:1200;
+      padding:10px 18px;
+      background:#fff;
+      transform:translateY(-150%);
     }
 
-    .skip-link:focus {
-      transform: none;
+    .skip-link:focus { transform:none; }
+
+    /* Navigation */
+
+    .site-nav {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      min-height:84px;
+      padding:14px max(24px,calc((100% - 1180px) / 2));
+      background:rgba(7,22,47,.98);
+      border-bottom:1px solid #ffffff20;
     }
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7, 22, 47, .98);
-      border-bottom: 1px solid #ffffff20;
-      padding: 14px max(24px, calc((100% - 1180px) / 2));
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      min-height: 84px;
+    .site-nav a {
+      color:#fff;
+      text-decoration:none;
+      font-size:.78rem;
+      font-weight:600;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: .78rem;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: #ead9ad;
-    }
+    .site-nav a:hover { color:#ead9ad; }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-shrink:0;
     }
 
     .brand img {
-      width: 67px;
-      height: 48px;
-      object-fit: contain;
-      background: #fff;
-      border-radius: 6px;
-      padding: 4px;
+      display:block;
+      width:67px;
+      height:48px;
+      object-fit:contain;
+      padding:4px;
+      border-radius:6px;
+      background:#fff;
     }
 
     .brand span {
-      max-width: 150px;
-      font-size: .88rem;
-      line-height: 1.35;
+      max-width:150px;
+      font-size:.88rem;
+      line-height:1.35;
     }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 23px;
+      display:flex;
+      align-items:center;
+      gap:23px;
     }
 
     .portal-btn {
-      border: 1px solid #c8a75d80;
-      border-radius: 7px;
-      padding: 10px;
+      padding:10px;
+      border:1px solid #c8a75d80;
+      border-radius:7px;
     }
 
     .hamburger {
-      display: none;
-      background: transparent;
-      color: white;
-      border: 1px solid #ffffff50;
-      border-radius: 6px;
-      padding: 9px 12px;
-      cursor: pointer;
+      display:none;
+      min-height:44px;
+      padding:9px 12px;
+      background:transparent;
+      color:#fff;
+      border:1px solid #ffffff50;
+      border-radius:6px;
+      cursor:pointer;
     }
 
-    header {
-      color: white;
+    /* Hero */
+
+    .hero {
+      display:flex;
+      align-items:center;
+      min-height:560px;
+      padding:90px 24px;
+      color:#fff;
       background:
         linear-gradient(
           90deg,
-          rgba(5, 17, 38, .94),
-          rgba(7, 25, 54, .79) 50%,
-          rgba(7, 25, 54, .28)
+          rgba(5,17,38,.94),
+          rgba(7,25,54,.79) 50%,
+          rgba(7,25,54,.28)
         ),
-        url('hero.jpg') center/cover;
-      padding: 90px 24px;
-      min-height: 560px;
-      display: flex;
-      align-items: center;
+        url("/hero.jpg") center / cover no-repeat;
     }
 
     .hero-overlay {
-      max-width: 1132px;
-      width: 100%;
-      margin: auto;
+      max-width:1132px;
+      width:100%;
+      margin:auto;
     }
 
-    .hero-label, .eyebrow {
-      font-size: .72rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin: 0 0 16px;
+    .hero-label,.eyebrow {
+      margin:0 0 16px;
+      font-size:.72rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-weight:700;
     }
 
-    .hero-label {
-      color: #ead9ad;
-    }
+    .hero-label { color:#ead9ad; }
 
     .hero-title {
-      font-size: clamp(2.4rem, 4.8vw, 3.9rem);
-      letter-spacing: -.045em;
-      max-width: 800px;
-      margin: 0 0 24px;
-      font-weight: 600;
+      max-width:800px;
+      margin:0 0 24px;
+      font-size:clamp(2.4rem,4.8vw,3.9rem);
+      letter-spacing:-.045em;
+      font-weight:500;
     }
 
     .hero-subtitle {
-      font-size: 1.08rem;
-      max-width: 640px;
-      color: #e3e9ef;
-      margin: 0 0 30px;
+      max-width:640px;
+      margin:0 0 30px;
+      color:#e3e9ef;
+      font-size:1.08rem;
     }
 
     .header-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
     }
 
-    .btn, button[type="submit"] {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 48px;
-      border: 1px solid var(--navy);
-      border-radius: 8px;
-      background: var(--navy);
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      font-weight: 600;
-      font-size: .86rem;
-      cursor: pointer;
-      transition: background .2s, transform .2s;
+    .btn,button[type="submit"] {
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-height:48px;
+      padding:12px 20px;
+      border:1px solid var(--navy);
+      border-radius:8px;
+      background:var(--navy);
+      color:#fff;
+      text-decoration:none;
+      text-align:center;
+      font-weight:600;
+      font-size:.86rem;
+      cursor:pointer;
+      transition:background .2s,transform .2s;
     }
 
-    .btn:hover, button[type="submit"]:hover {
-      background: var(--blue);
-      color: white;
-      transform: translateY(-2px);
+    .btn:hover,button[type="submit"]:hover {
+      background:var(--blue);
+      color:#fff;
+      transform:translateY(-2px);
     }
 
     .hero-primary {
-      background: #d7bb7a;
-      border-color: #d7bb7a;
-      color: var(--navy);
+      background:#d7bb7a;
+      border-color:#d7bb7a;
+      color:var(--navy);
     }
 
     .hero-primary:hover {
-      background: #ead9ad;
-      color: var(--navy);
+      background:#ead9ad;
+      color:var(--navy);
     }
 
     .secondary-btn {
-      background: transparent;
-      border-color: #ffffff85;
+      background:transparent;
+      border-color:#ffffff85;
     }
+
+    .hero-note {
+      margin:17px 0 0;
+      color:#d2dce7;
+      font-size:.78rem;
+    }
+
+    /* Sections */
 
     .container {
-      max-width: 1180px;
-      margin: auto;
-      padding: 0 24px;
+      max-width:1180px;
+      margin:auto;
+      padding:0 24px;
     }
 
-    main section {
-      padding: 72px 0;
-    }
+    main section { padding:64px 0; }
 
     main section + section {
-      border-top: 1px solid var(--line);
+      border-top:1px solid var(--line);
     }
 
     .eyebrow {
-      color: #806124;
-      text-align: center;
+      color:#806124;
+      text-align:center;
     }
 
-    section > h2 {
-      text-align: center;
-    }
+    section > h2 { text-align:center; }
 
     .section-intro {
-      text-align: center;
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto 30px;
+      max-width:700px;
+      margin:0 auto 30px;
+      text-align:center;
+      color:var(--muted);
     }
 
     .breadcrumbs {
-      max-width: 1180px;
-      margin: auto;
-      padding: 22px 24px 0;
-      font-size: .78rem;
-      color: var(--muted);
+      max-width:1180px;
+      margin:auto;
+      padding:22px 24px 0;
+      color:var(--muted);
+      font-size:.78rem;
     }
 
     .breadcrumbs ol {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 0;
-      margin: 0;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0;
+      padding:0;
+      list-style:none;
     }
 
     .breadcrumbs li + li::before {
-      content: "/";
-      margin-right: 8px;
-      color: var(--muted);
-    }
-
-    .breadcrumbs a {
-      color: var(--blue);
+      content:"/";
+      margin-right:8px;
+      color:var(--muted);
     }
 
     .trust-strip {
-      max-width: 1132px;
-      margin: 0 auto;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 24px;
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:24px;
+      padding:28px 0;
+      border-bottom:1px solid var(--line);
     }
 
-    .trust-card strong,
-    .trust-card span {
-      display: block;
-    }
+    .trust-card strong,.trust-card span { display:block; }
 
     .trust-card strong {
-      font-size: .87rem;
-      margin-bottom: 6px;
+      margin-bottom:6px;
+      font-size:.87rem;
     }
 
     .trust-card span {
-      color: var(--muted);
-      font-size: .82rem;
+      color:var(--muted);
+      font-size:.82rem;
     }
 
     .section-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px 24px;
-      margin: 0;
-      padding: 24px 0 0;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px 24px;
+      padding:22px 0 0;
     }
 
     .section-nav a {
-      font-size: .82rem;
-      font-weight: 600;
+      display:inline-flex;
+      align-items:center;
+      min-height:44px;
+      font-size:.82rem;
+      font-weight:600;
     }
 
-    .two-column,
-    .card-grid,
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
+    .two-column,.card-grid,.form-grid {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
     }
 
-    .feature-card,
-    .resource-card,
-    .metric-card,
-    .process-card {
-      min-width: 0;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
+    .feature-card,.resource-card,.metric-card,.process-card {
+      min-width:0;
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
     }
 
-    .feature-card h3,
-    .resource-card h3 {
-      font-size: 1.18rem;
+    .feature-card h3,.resource-card h3 {
+      font-size:1.18rem;
     }
 
-    .feature-card p,
-    .resource-card p,
-    .process-card p {
-      color: var(--muted);
-      font-size: .94rem;
+    .feature-card p,.resource-card p,.process-card p {
+      color:var(--muted);
+      font-size:.94rem;
     }
 
     .list-check {
-      padding-left: 20px;
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: .92rem;
+      margin-bottom:0;
+      padding-left:20px;
+      color:var(--muted);
+      font-size:.92rem;
     }
 
     .list-check li {
-      padding-left: 4px;
-      margin: 10px 0;
+      margin:10px 0;
+      padding-left:4px;
     }
 
-    .list-check li::marker {
-      color: #806124;
-    }
+    .list-check li::marker { color:#806124; }
 
-    .metric-grid,
-    .process-grid,
-    .market-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
+    .metric-grid,.process-grid,.market-grid {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
     }
 
     .metric-card {
-      background: #f0f2ef;
-      padding: 24px;
+      padding:24px;
+      background:#f0f2ef;
     }
 
     .metric-card span {
-      display: block;
-      font-size: .87rem;
-      color: var(--muted);
+      display:block;
+      font-size:.87rem;
+      color:var(--muted);
     }
 
     .metric-card .metric-label {
-      color: var(--ink);
-      font-weight: 700;
-      font-size: .94rem;
-      margin-bottom: 12px;
+      margin-bottom:12px;
+      color:var(--ink);
+      font-size:.94rem;
+      font-weight:700;
     }
 
     .market-card {
-      padding: 24px;
-      background: #f0f2ef;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      min-width: 0;
+      min-width:0;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#f0f2ef;
     }
 
     .market-card p {
-      color: var(--muted);
-      font-size: .87rem;
+      color:var(--muted);
+      font-size:.87rem;
     }
 
     .market-link {
-      display: inline-block;
-      margin: 5px 0;
-      font-size: .8rem;
-      font-weight: 700;
-      text-decoration: none;
+      display:inline-block;
+      margin:5px 0;
+      font-size:.8rem;
+      font-weight:700;
+      text-decoration:none;
     }
 
-    .market-link:hover {
-      text-decoration: underline;
-    }
+    .market-link:hover { text-decoration:underline; }
 
     .investor-panel {
-      padding: 48px;
-      border-radius: 18px;
-      background: var(--navy);
-      color: white;
+      padding:48px;
+      border-radius:18px;
+      background:var(--navy);
+      color:#fff;
     }
 
-    .investor-panel h2 {
-      max-width: 760px;
-    }
+    .investor-panel h2 { max-width:760px; }
 
     .investor-panel p {
-      max-width: 850px;
-      color: #c9d2de;
+      max-width:850px;
+      color:#c9d2de;
     }
 
-    .investor-panel .btn {
-      margin-top: 12px;
-    }
+    .investor-panel .btn { margin-top:12px; }
 
     .resource-card {
-      display: flex;
-      flex-direction: column;
+      display:flex;
+      flex-direction:column;
     }
 
     .resource-link {
-      display: inline-block;
-      color: var(--blue);
-      font-weight: 700;
-      font-size: .87rem;
-      text-decoration: none;
-      margin-top: auto;
+      display:inline-block;
+      margin-top:auto;
+      color:var(--blue);
+      font-size:.87rem;
+      font-weight:700;
+      text-decoration:none;
     }
 
-    .resource-link:hover {
-      text-decoration: underline;
-    }
+    .resource-link:hover { text-decoration:underline; }
 
-    .process-card {
-      padding: 24px;
-    }
+    .process-card { padding:24px; }
 
     .process-number {
-      color: #806124;
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      margin-bottom: 20px;
+      margin-bottom:20px;
+      color:#806124;
+      font-size:.78rem;
+      font-weight:700;
+      letter-spacing:.1em;
     }
 
-    .process-card h3 {
-      font-size: 1rem;
-    }
+    .process-card h3 { font-size:1rem; }
 
     .process-card p {
-      font-size: .87rem;
-      margin-bottom: 0;
+      margin-bottom:0;
+      font-size:.87rem;
     }
+
+    /* Consultation now appears after the service overview */
+
+    .consultation-layout {
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      align-items:start;
+      gap:44px;
+    }
+
+    .consultation-copy .eyebrow {
+      text-align:left;
+    }
+
+    .consultation-copy h2 {
+      text-align:left;
+    }
+
+    .consultation-copy > p:not(.eyebrow) {
+      color:var(--muted);
+    }
+
+    .consultation-points {
+      margin:22px 0;
+      padding:0;
+      list-style:none;
+      border-top:1px solid var(--line);
+    }
+
+    .consultation-points li {
+      padding:15px 0;
+      border-bottom:1px solid var(--line);
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    .consultation-points strong {
+      display:block;
+      margin-bottom:3px;
+      color:var(--navy);
+    }
+
+    .consultation-contact {
+      margin-top:24px;
+      padding:22px;
+      border-left:3px solid var(--gold);
+      background:#eff2f4;
+      border-radius:0 10px 10px 0;
+    }
+
+    .consultation-contact p:last-child { margin-bottom:0; }
 
     .lead-form {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+      min-width:0;
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      box-shadow:0 12px 35px rgba(7,22,47,.04);
     }
 
-    .lead-form h2 {
-      text-align: center;
+    .lead-form h3 {
+      margin-bottom:10px;
+      color:var(--navy);
+      font-size:1.35rem;
     }
 
-    .full-width {
-      grid-column: 1 / -1;
+    .form-intro {
+      margin-bottom:22px;
+      color:var(--muted);
+      font-size:.82rem;
     }
+
+    .form-grid { gap:17px 16px; }
+
+    .full-width { grid-column:1 / -1; }
 
     label {
-      display: block;
-      margin-bottom: 7px;
-      color: var(--ink);
-      font-size: .85rem;
-      font-weight: 600;
+      display:block;
+      margin-bottom:7px;
+      color:var(--ink);
+      font-size:.83rem;
+      font-weight:600;
+    }
+
+    .optional {
+      color:var(--muted);
+      font-weight:400;
+      font-size:.76rem;
     }
 
     input:not([type="hidden"]):not([type="checkbox"]),
-    textarea,
-    select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #cbd3dc;
-      border-radius: 7px;
-      color: var(--ink);
-      background: white;
-      font-size: 16px;
+    textarea,select {
+      width:100%;
+      min-height:48px;
+      padding:12px;
+      border:1px solid #cbd3dc;
+      border-radius:7px;
+      color:var(--ink);
+      background:#fff;
+      font-size:16px;
     }
 
     textarea {
-      min-height: 130px;
-      resize: vertical;
+      min-height:120px;
+      resize:vertical;
     }
 
+    .form-submit { margin-top:20px; }
+
+    .form-submit button { width:100%; }
+
     .form-note {
-      font-size: .78rem;
-      color: var(--muted);
-      margin: 18px 0 0;
-      text-align: center;
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:.76rem;
+      line-height:1.65;
+    }
+
+    .botcheck { display:none; }
+
+    .center-actions {
+      margin-top:22px;
+      text-align:center;
     }
 
     .faq-list {
-      max-width: 900px;
-      margin: auto;
+      max-width:900px;
+      margin:auto;
     }
 
-    details {
-      border-bottom: 1px solid var(--line);
-    }
+    details { border-bottom:1px solid var(--line); }
 
     summary {
-      cursor: pointer;
-      padding: 22px 24px 22px 0;
-      font-size: .95rem;
-      font-weight: 600;
+      padding:22px 24px 22px 0;
+      font-size:.95rem;
+      font-weight:600;
+      cursor:pointer;
     }
 
     details p {
-      margin: 0;
-      padding: 0 24px 22px 0;
-      color: var(--muted);
-      font-size: .92rem;
+      margin:0;
+      padding:0 24px 22px 0;
+      color:var(--muted);
+      font-size:.92rem;
     }
+
+    /* Footer */
 
     footer {
-      background: var(--navy);
-      color: #c9d2de;
-      padding: 40px 24px;
-      text-align: center;
-      font-size: .86rem;
+      padding:40px 24px;
+      background:var(--navy);
+      color:#c9d2de;
+      text-align:center;
+      font-size:.86rem;
     }
 
-    footer a {
-      color: #ead9ad;
+    footer a { color:#ead9ad; }
+    footer a:hover { color:#fff; }
+
+    .footer-resource-links,.mobile-social-icons {
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px 20px;
+      margin-top:20px;
     }
 
-    footer a:hover {
-      color: white;
+    .footer-resource-links a { text-decoration:none; }
+    .mobile-social-row { margin-top:24px; }
+
+    .copyright {
+      margin-top:24px;
+      font-size:.78rem;
     }
 
-    .footer-resource-links,
-    .mobile-social-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      margin-top: 20px;
+    .mobile-contact { display:none; }
+
+    @media (min-width:901px) {
+      .nav-links[hidden] { display:flex; }
     }
 
-    .footer-resource-links a {
-      text-decoration: none;
-    }
+    @media (max-width:1100px) {
+      .site-nav { gap:14px; padding:14px 20px; }
+      .nav-links { gap:14px; }
+      .brand span { display:none; }
 
-    .mobile-social-row {
-      margin-top: 24px;
-    }
-
-    footer .copyright {
-      color: #c9d2de;
-      font-size: .78rem;
-      margin-top: 24px;
-    }
-
-    .mobile-contact {
-      display: none;
-    }
-
-    @media (min-width: 901px) {
-      .nav-links {
-        display: flex !important;
+      .market-grid,.process-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
       }
+
+      .consultation-layout { gap:28px; }
     }
 
-    @media (max-width: 1100px) {
-      nav {
-        gap: 14px;
-        padding: 14px 20px;
-      }
+    @media (max-width:900px) {
+      .site-nav { min-height:76px; flex-wrap:wrap; }
+      .brand span { display:block; }
+      .js .hamburger { display:block; }
 
       .nav-links {
-        gap: 14px;
+        width:100%;
+        flex-wrap:wrap;
+        gap:8px 20px;
+        padding:10px 0;
+        max-height:65vh;
+        overflow-y:auto;
       }
 
-      .brand span {
-        display: none;
-      }
-
-      .market-grid,
-      .process-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 900px) {
-      nav {
-        min-height: 76px;
-        flex-wrap: wrap;
-      }
-
-      .brand span {
-        display: block;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
-      .nav-links {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px 20px;
-        padding: 10px 0;
-      }
-
-      .nav-links[hidden] {
-        display: none;
-      }
+      .nav-links[hidden] { display:none; }
 
       .nav-links a {
-        padding: 10px 0;
+        display:inline-flex;
+        align-items:center;
+        min-height:44px;
+        padding:10px 0;
       }
 
-      .nav-links .portal-btn {
-        padding: 10px;
+      .nav-links .portal-btn { padding:10px; }
+
+      .two-column,.consultation-layout {
+        grid-template-columns:1fr;
       }
 
-      .two-column {
-        grid-template-columns: 1fr;
+      .metric-grid,.trust-strip {
+        grid-template-columns:repeat(2,minmax(0,1fr));
       }
 
-      .metric-grid,
-      .trust-strip {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .hero-title {
-        max-width: 700px;
-      }
-
-      header {
-        min-height: 520px;
-        padding: 64px 24px;
-      }
-
-      .investor-panel {
-        padding: 32px;
-      }
+      .hero { min-height:480px; padding:64px 24px; }
+      .hero-title { max-width:700px; }
+      .investor-panel { padding:32px; }
     }
 
-    @media (max-width: 600px) {
-      html {
-        scroll-padding-top: 90px;
-      }
+    @media (max-width:600px) {
+      html { scroll-padding-top:86px; }
+      .container { padding:0 20px; }
+      main section { padding:38px 0; }
+      .site-nav { min-height:70px; padding:10px 20px; }
+      .brand img { width:62px; height:44px; }
+      .brand span { font-size:.76rem; }
 
-      .container {
-        padding: 0 20px;
-      }
-
-      main section {
-        padding: 50px 0;
-      }
-
-      .brand span {
-        font-size: .78rem;
+      .hero {
+        min-height:0;
+        padding:38px 20px;
       }
 
       .hero-title {
-        font-size: clamp(2.25rem, 9vw, 3rem);
+        margin-bottom:18px;
+        font-size:clamp(2rem,8vw,2.8rem);
+        text-wrap:balance;
       }
 
       .hero-subtitle {
-        font-size: 1rem;
-      }
-
-      .header-cta {
-        flex-direction: column;
-      }
-
-      .header-cta .btn {
-        width: 100%;
+        margin-bottom:23px;
+        font-size:.94rem;
       }
 
       .hero-label {
-        font-size: .65rem;
-        letter-spacing: .14em;
+        font-size:.65rem;
+        letter-spacing:.13em;
       }
 
-      .market-grid,
-      .card-grid,
-      .form-grid,
-      .metric-grid,
-      .process-grid {
-        grid-template-columns: 1fr;
+      .header-cta { flex-direction:column; gap:9px; }
+      .header-cta .btn { width:100%; }
+      .hero-note { font-size:.73rem; }
+
+      h2 { font-size:1.8rem; }
+      .section-intro { font-size:.9rem; margin-bottom:22px; }
+
+      .market-grid,.card-grid,.form-grid,.process-grid {
+        grid-template-columns:1fr;
       }
 
-      .trust-strip {
-        gap: 20px;
+      .metric-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
       }
 
-      .trust-card strong {
-        font-size: .8rem;
+      .metric-card { padding:18px; }
+      .metric-card span { font-size:.8rem; }
+      .metric-card .metric-label { font-size:.85rem; }
+
+      .trust-strip { gap:17px; padding:22px 0; }
+      .trust-card strong { font-size:.8rem; }
+      .trust-card span { font-size:.76rem; }
+
+      .section-nav {
+        justify-content:flex-start;
+        gap:0 18px;
+        padding-top:14px;
       }
 
-      .trust-card span {
-        font-size: .76rem;
+      .section-nav a { font-size:.76rem; }
+
+      .feature-card,.resource-card,.process-card {
+        padding:23px;
       }
 
-      .investor-panel {
-        padding: 28px 22px;
-      }
+      .consultation-layout { gap:22px; }
+      .consultation-copy h2 { font-size:1.8rem; }
+      .consultation-copy > p:not(.eyebrow) { font-size:.9rem; }
+      .consultation-points { margin:16px 0; }
+      .consultation-points li { padding:12px 0; font-size:.85rem; }
+      .consultation-contact { margin-top:18px; padding:18px; }
+      .lead-form { padding:24px 20px; }
 
-      .lead-form {
-        padding: 28px 20px;
-      }
-
-      .feature-card,
-      .resource-card {
-        padding: 24px;
-      }
-
-      button[type="submit"] {
-        width: 100%;
-      }
-
-      .breadcrumbs {
-        padding: 18px 20px 0;
-      }
+      .investor-panel { padding:28px 22px; }
+      .breadcrumbs { padding:17px 20px 0; font-size:.72rem; }
 
       footer {
-        padding-bottom: calc(110px + env(safe-area-inset-bottom));
+        padding-bottom:calc(105px + env(safe-area-inset-bottom));
       }
 
       .mobile-contact {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        background: var(--navy);
-        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-        gap: 12px;
-        z-index: 990;
-        border-top: 1px solid #ffffff30;
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index:990;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+        padding:8px 16px calc(8px + env(safe-area-inset-bottom));
+        background:var(--navy);
+        border-top:1px solid #ffffff30;
       }
 
       .mobile-contact a {
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        padding: 9px;
-        border: 1px solid #ffffff50;
-        border-radius: 7px;
-        font-size: .86rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:44px;
+        padding:9px;
+        border:1px solid #ffffff50;
+        border-radius:7px;
+        color:#fff;
+        text-align:center;
+        text-decoration:none;
+        font-size:.8rem;
+        font-weight:600;
       }
 
       .mobile-contact a:last-child {
-        background: #d7bb7a;
-        color: var(--navy);
-        border-color: #d7bb7a;
+        background:#d7bb7a;
+        color:var(--navy);
+        border-color:#d7bb7a;
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+
+      *,*::before,*::after {
+        animation:none !important;
+        transition:none !important;
       }
 
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
+      .btn:hover,button[type="submit"]:hover {
+        transform:none;
       }
     }
   </style>
@@ -863,11 +865,11 @@
     "@graph": [
       {
         "@type": "RealEstateAgent",
-        "@id": "https://avrealtymanagement.com/#realestateagent",
+        "@id": "https://avrealtymanagement.com/#business",
         "name": "AV Realty & Management",
         "url": "https://avrealtymanagement.com/",
         "logo": "https://avrealtymanagement.com/logo.png",
-        "telephone": "+1-978-277-3435",
+        "telephone": "+19782773435",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "5 Huron Street",
@@ -877,14 +879,14 @@
           "addressCountry": "US"
         },
         "areaServed": [
-          {"@type": "City", "name": "Swampscott, Massachusetts"},
-          {"@type": "City", "name": "Marblehead, Massachusetts"},
-          {"@type": "City", "name": "Salem, Massachusetts"},
-          {"@type": "City", "name": "Nahant, Massachusetts"},
-          {"@type": "City", "name": "Beverly, Massachusetts"},
-          {"@type": "City", "name": "Lynn, Massachusetts"},
-          {"@type": "City", "name": "Peabody, Massachusetts"},
-          {"@type": "City", "name": "Danvers, Massachusetts"}
+          {"@type":"City","name":"Swampscott, Massachusetts"},
+          {"@type":"City","name":"Marblehead, Massachusetts"},
+          {"@type":"City","name":"Salem, Massachusetts"},
+          {"@type":"City","name":"Nahant, Massachusetts"},
+          {"@type":"City","name":"Beverly, Massachusetts"},
+          {"@type":"City","name":"Lynn, Massachusetts"},
+          {"@type":"City","name":"Peabody, Massachusetts"},
+          {"@type":"City","name":"Danvers, Massachusetts"}
         ],
         "sameAs": [
           "https://www.instagram.com/av.realty/",
@@ -898,7 +900,7 @@
         "name": "North Shore Multifamily Real Estate Services",
         "serviceType": "Residential Real Estate Brokerage",
         "provider": {
-          "@id": "https://avrealtymanagement.com/#realestateagent"
+          "@id": "https://avrealtymanagement.com/#business"
         },
         "areaServed": "North Shore Massachusetts",
         "description": "Brokerage guidance for buyers, sellers, and investors evaluating multifamily and rental properties across the North Shore of Massachusetts."
@@ -940,52 +942,6 @@
         "breadcrumb": {
           "@id": "https://avrealtymanagement.com/north-shore-multifamily-real-estate.html#breadcrumbs"
         }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://avrealtymanagement.com/north-shore-multifamily-real-estate.html#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Can you help me buy a multifamily property on the North Shore?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. AV Realty & Management works with buyers evaluating two-to-four-family and other residential investment properties across the North Shore and can help review property-specific considerations, rental economics, comparable sales, and acquisition strategy."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What should I analyze before buying a multifamily property?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Review the purchase price, financing, current and potential rent, operating expenses, taxes, insurance, utilities, maintenance, property condition, vacancy assumptions, capital needs, and long-term management requirements. No single metric should be considered in isolation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you help me estimate rents before I buy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. AV Realty & Management can discuss rental positioning and help evaluate whether projected rents appear reasonable for the property and market. Actual future rents are not guaranteed."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you also manage multifamily properties after closing?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Property management may be available depending on the property's location, size, condition, and service needs. Brokerage and management can be discussed separately."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you help me sell a multifamily or investment property?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. AV Realty & Management can help owners evaluate pricing, preparation, positioning, tenant and lease considerations, and marketing strategy for multifamily or rental properties."
-            }
-          }
-        ]
       }
     ]
   }
@@ -995,40 +951,31 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <nav aria-label="Main navigation">
+  <nav class="site-nav" aria-label="Main navigation">
     <a class="brand" href="/" aria-label="AV Realty &amp; Management home">
-      <img src="logo.png" alt="" width="67" height="48">
+      <img src="/logo.png" alt="" width="67" height="48">
       <span>AV Realty<br>&amp; Management</span>
     </a>
 
-    <button
-      class="hamburger"
-      type="button"
+    <button class="hamburger" type="button"
       aria-label="Open navigation menu"
-      aria-controls="navLinks"
-      aria-expanded="false"
-    >
+      aria-controls="navLinks" aria-expanded="false">
       Menu <span aria-hidden="true">☰</span>
     </button>
 
     <div class="nav-links" id="navLinks">
-      <a href="north-shore-real-estate.html">Real Estate</a>
-      <a href="north-shore-property-management.html">Property Management</a>
-      <a href="north-shore-ma-apartments.html">Apartments</a>
-      <a href="about.html">About</a>
+      <a href="/north-shore-real-estate.html">Real Estate</a>
+      <a href="/north-shore-property-management.html">Property Management</a>
+      <a href="/north-shore-ma-apartments.html">Apartments</a>
+      <a href="/about.html">About</a>
       <a href="#consultation">Contact</a>
-      <a
-        class="portal-btn"
+      <a class="portal-btn"
         href="https://avrealtymanagement.managebuilding.com/Resident/portal/login"
-        target="_blank"
-        rel="noopener"
-      >
-        Resident Portal
-      </a>
+        target="_blank" rel="noopener">Resident Portal</a>
     </div>
   </nav>
 
-  <header>
+  <header class="hero">
     <div class="hero-overlay">
       <p class="hero-label">North Shore Massachusetts Investment Real Estate</p>
 
@@ -1043,27 +990,27 @@
       </p>
 
       <div class="header-cta">
-        <a
-          class="btn hero-primary"
-          href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567"
-          target="_blank"
-          rel="noopener"
-        >
-          Search Investment Properties
-        </a>
-
-        <a class="btn secondary-btn" href="#consultation">
+        <a class="btn hero-primary" href="#consultation">
           Discuss an Investment
         </a>
+        <a class="btn secondary-btn"
+          href="https://idx.mlspin.com/MLS.IDX/Search?AgentId=CN252567"
+          target="_blank" rel="noopener">
+          Open MLS Property Search ↗
+        </a>
       </div>
+
+      <p class="hero-note">
+        MLS search opens in a new tab. Select your location and property type within the search.
+      </p>
     </div>
   </header>
 
   <main id="main-content" tabindex="-1">
     <div class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
       <ol>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="north-shore-real-estate.html">Real Estate</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/north-shore-real-estate.html">Real Estate</a></li>
         <li aria-current="page">Multifamily &amp; Investing</li>
       </ol>
     </div>
@@ -1074,17 +1021,14 @@
           <strong>Brokerage + Management</strong>
           <span>Evaluate the purchase and the operations that may follow.</span>
         </div>
-
         <div class="trust-card">
           <strong>2–4 Family Focus</strong>
           <span>Practical guidance for small multifamily and rental-property investors.</span>
         </div>
-
         <div class="trust-card">
           <strong>Rental Analysis</strong>
           <span>Think through rents, expenses, condition, vacancy, and ownership strategy.</span>
         </div>
-
         <div class="trust-card">
           <strong>North Shore Local</strong>
           <span>Based in Swampscott with service across surrounding North Shore markets.</span>
@@ -1092,6 +1036,7 @@
       </div>
 
       <div class="section-nav" role="navigation" aria-label="On this page">
+        <a href="#consultation">Discuss Your Goals</a>
         <a href="#analysis">Investment Analysis</a>
         <a href="#due-diligence">Due Diligence</a>
         <a href="#resources">Investor Resources</a>
@@ -1103,22 +1048,19 @@
         <h2>Buy the Property With the Operations in Mind</h2>
 
         <p class="section-intro">
-          A multifamily purchase is not only a real estate transaction—it is
-          also the acquisition of an operating asset. AV Realty &amp; Management
-          helps investors evaluate both sides of the decision: what the property
-          costs today and how it may function as a rental after closing.
+          A multifamily purchase is also the acquisition of an operating
+          asset. AV Realty &amp; Management helps investors evaluate what
+          the property costs today and how it may function as a rental
+          after closing.
         </p>
 
         <div class="two-column">
           <article class="feature-card">
             <h3>For Buyers</h3>
-
             <p>
-              Evaluate the property beyond the listing price. We can help frame
-              the acquisition around realistic rental assumptions, expenses,
-              condition, financing, and the owner's intended strategy.
+              Frame the acquisition around realistic rental assumptions,
+              expenses, condition, financing, and your intended ownership strategy.
             </p>
-
             <ul class="list-check">
               <li>Comparable sales and offer strategy.</li>
               <li>Current and potential rental positioning.</li>
@@ -1130,71 +1072,219 @@
 
           <article class="feature-card">
             <h3>For Sellers &amp; Existing Owners</h3>
-
             <p>
-              Multifamily properties often require a different listing strategy
-              than owner-occupied homes because leases, rents, expenses, tenant
-              situations, and investor expectations can influence value and
-              marketability.
+              Leases, rents, expenses, occupancy, and investor expectations
+              all help shape a multifamily property's positioning.
             </p>
-
             <ul class="list-check">
               <li>Pricing and comparable-sale review.</li>
               <li>Tenant and lease considerations before listing.</li>
               <li>Property preparation and presentation strategy.</li>
-              <li>Income-property positioning for qualified buyers.</li>
+              <li>Income-property positioning for prospective buyers.</li>
               <li>Sell-versus-hold discussion when appropriate.</li>
             </ul>
           </article>
         </div>
       </section>
 
+      <!-- Consultation moved directly below the service overview -->
+
+      <section id="consultation" aria-labelledby="consultation-heading">
+        <div class="consultation-layout">
+          <div class="consultation-copy">
+            <p class="eyebrow">Investment Consultation</p>
+            <h2 id="consultation-heading">Discuss your next investment.</h2>
+
+            <p>
+              Looking at a specific property, planning your first multifamily
+              purchase, or deciding what to do with a rental you already own?
+              Start with a conversation about your goals.
+            </p>
+
+            <p>
+              Share what you know so far. You do not need a property under
+              agreement or a finished investment plan to reach out.
+            </p>
+
+            <ul class="consultation-points">
+              <li>
+                <strong>Buying or owner-occupying?</strong>
+                Discuss property types, target locations, rental assumptions,
+                and ownership plans.
+              </li>
+              <li>
+                <strong>Selling or weighing your options?</strong>
+                Explore preparation, positioning, and whether retaining
+                the property is worth considering.
+              </li>
+              <li>
+                <strong>Planning for after closing?</strong>
+                Bring leasing, maintenance, reporting, and management
+                needs into the conversation early.
+              </li>
+            </ul>
+
+            <div class="consultation-contact">
+              <h3>Prefer to talk directly?</h3>
+              <p>
+                <a href="tel:+19782773435">(978) 277-3435</a><br>
+                <a href="mailto:anthony@avrealtymanagement.com">Email AV Realty</a>
+              </p>
+              <p>
+                <a href="/rent-or-sell-north-shore.html">
+                  Considering whether to rent or sell? →
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="lead-form">
+            <h3>Tell us what you have in mind</h3>
+            <p class="form-intro">
+              Name and email are required. Everything else is optional.
+            </p>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key"
+                value="84a59070-e01a-4b1b-ad1d-416a5e719422">
+              <input type="hidden" name="subject"
+                value="NEW LEAD - North Shore Multifamily Real Estate">
+              <input type="hidden" name="from_name"
+                value="AV Realty &amp; Management Website">
+              <input type="hidden" name="redirect"
+                value="https://avrealtymanagement.com/thankyou.html">
+              <input type="hidden" name="form_source"
+                value="North Shore Multifamily Real Estate Page">
+              <input class="botcheck" type="checkbox" name="botcheck"
+                tabindex="-1" aria-hidden="true">
+
+              <div class="form-grid">
+                <div>
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name"
+                    autocomplete="name" maxlength="120" required>
+                </div>
+
+                <div>
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="email"
+                    autocomplete="email" maxlength="254" required>
+                </div>
+
+                <div>
+                  <label for="phone">
+                    Phone <span class="optional">(optional)</span>
+                  </label>
+                  <input type="tel" id="phone" name="phone"
+                    autocomplete="tel" maxlength="40">
+                </div>
+
+                <div>
+                  <label for="goal">
+                    Your goal <span class="optional">(optional)</span>
+                  </label>
+                  <select id="goal" name="goal">
+                    <option value="">Select one</option>
+                    <option>Buy a 2–4 family property</option>
+                    <option>Buy another investment property</option>
+                    <option>Owner-occupy a multifamily property</option>
+                    <option>Sell a multifamily or rental property</option>
+                    <option>Analyze a property I am considering</option>
+                    <option>Discuss property management after purchase</option>
+                    <option>General investment consultation</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="market">
+                    Preferred city / town <span class="optional">(optional)</span>
+                  </label>
+                  <input type="text" id="market" name="market"
+                    maxlength="120" placeholder="Where are you considering?">
+                </div>
+
+                <div>
+                  <label for="timeline">
+                    Timeline <span class="optional">(optional)</span>
+                  </label>
+                  <select id="timeline" name="timeline">
+                    <option value="">Select one</option>
+                    <option>Actively looking now</option>
+                    <option>Within 1–3 months</option>
+                    <option>Within 3–6 months</option>
+                    <option>6–12 months</option>
+                    <option>Just researching</option>
+                  </select>
+                </div>
+
+                <div class="full-width">
+                  <label for="message">
+                    What should we know? <span class="optional">(optional)</span>
+                  </label>
+                  <textarea id="message" name="message" maxlength="5000"
+                    placeholder="Share a property address, your goals, or questions you would like to discuss."></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit">Request My Investment Consultation</button>
+              </div>
+
+              <p class="form-note">
+                No obligation to hire. We use these details to respond to your
+                inquiry. Please avoid sensitive financial information,
+                identification numbers, or tenant names. Submitting this form
+                does not create an agency or management relationship.
+                Investment projections and future rental performance are
+                not guaranteed.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <section id="analysis">
         <p class="eyebrow">Investment Analysis</p>
-        <h2>What We Look at Before Calling It a Good Deal</h2>
+        <h2>Understand What Drives the Numbers</h2>
 
         <p class="section-intro">
-          No single metric tells the whole story. A useful investment analysis
-          combines the income, expenses, financing, property condition, and
-          long-term ownership plan.
+          No single metric tells the whole story. A useful analysis combines
+          income, expenses, financing, condition, and the ownership plan.
         </p>
 
         <div class="metric-grid">
           <div class="metric-card">
             <span class="metric-label">Rental Income</span>
             <span>
-              Existing rents, potential rents, vacancy assumptions, and
-              unit-by-unit positioning.
+              Existing rents, potential rents, vacancy assumptions,
+              and unit-by-unit positioning.
             </span>
           </div>
-
           <div class="metric-card">
             <span class="metric-label">Operating Costs</span>
             <span>
-              Taxes, insurance, utilities, repairs, maintenance, management,
-              and recurring expenses.
+              Taxes, insurance, utilities, repairs, maintenance,
+              management, and recurring expenses.
             </span>
           </div>
-
           <div class="metric-card">
             <span class="metric-label">Property Condition</span>
             <span>
-              Deferred maintenance, systems, exterior condition, unit turns,
-              and future capital needs.
+              Deferred maintenance, systems, exterior condition,
+              unit turns, and future capital needs.
             </span>
           </div>
-
           <div class="metric-card">
             <span class="metric-label">Financing &amp; Cash Flow</span>
             <span>
-              Down payment, debt service, reserves, projected cash flow, and
-              sensitivity to changing assumptions.
+              Down payment, debt service, reserves, projected cash flow,
+              and sensitivity to changing assumptions.
             </span>
           </div>
         </div>
 
-        <div style="text-align:center; margin-top:22px">
-          <a class="btn" href="rental-property-calculator.html">
+        <div class="center-actions">
+          <a class="btn" href="/rental-property-calculator.html">
             Use the Rental Property Calculator
           </a>
         </div>
@@ -1203,26 +1293,22 @@
       <section id="markets">
         <p class="eyebrow">North Shore Multifamily Markets</p>
         <h2>Featured Local Markets for Investors</h2>
-
         <p class="section-intro">
-          Investment opportunities vary property by property. Our broader
-          North Shore coverage is supported by dedicated real estate and
-          property-management pages for four core local markets.
+          Explore local real estate and management services as you
+          compare properties across the North Shore.
         </p>
 
         <div class="market-grid">
           <article class="market-card">
             <h3>Swampscott</h3>
             <p>
-              Evaluate duplexes, smaller multifamily properties, condos, and
-              rental opportunities with both resale value and long-term
-              operations in mind.
+              Consider unit condition, parking, rental positioning,
+              operating costs, and the practical needs of ownership.
             </p>
-            <a class="market-link" href="swampscott-real-estate.html">
+            <a class="market-link" href="/swampscott-real-estate.html">
               Swampscott Real Estate →
-            </a>
-            <br>
-            <a class="market-link" href="swampscott-property-management.html">
+            </a><br>
+            <a class="market-link" href="/swampscott-property-management.html">
               Swampscott Property Management →
             </a>
           </article>
@@ -1230,15 +1316,13 @@
           <article class="market-card">
             <h3>Marblehead</h3>
             <p>
-              A property-specific approach is especially important where older
-              housing, renovations, coastal exposure, and unique layouts can
-              materially affect ownership costs.
+              Review each property's layout, condition, maintenance
+              needs, and rental assumptions on its own merits.
             </p>
-            <a class="market-link" href="marblehead-real-estate.html">
+            <a class="market-link" href="/marblehead-real-estate.html">
               Marblehead Real Estate →
-            </a>
-            <br>
-            <a class="market-link" href="marblehead-property-management.html">
+            </a><br>
+            <a class="market-link" href="/marblehead-property-management.html">
               Marblehead Property Management →
             </a>
           </article>
@@ -1246,15 +1330,13 @@
           <article class="market-card">
             <h3>Salem</h3>
             <p>
-              Condos, multifamily homes, and a varied housing stock make Salem
-              a natural market for investors who want to compare acquisition
-              price, rent potential, location, and property condition carefully.
+              Look closely at rent records, occupancy, utility
+              responsibilities, unit condition, and shared building needs.
             </p>
-            <a class="market-link" href="salem-real-estate.html">
+            <a class="market-link" href="/salem-real-estate.html">
               Salem Real Estate →
-            </a>
-            <br>
-            <a class="market-link" href="salem-property-management.html">
+            </a><br>
+            <a class="market-link" href="/salem-property-management.html">
               Salem Property Management →
             </a>
           </article>
@@ -1262,15 +1344,13 @@
           <article class="market-card">
             <h3>Nahant</h3>
             <p>
-              Smaller inventory and highly individual properties make condition,
-              maintenance exposure, rental positioning, and long-term ownership
-              goals especially important to evaluate.
+              Bring property condition, exterior exposure, insurance
+              considerations, and ongoing oversight into the review.
             </p>
-            <a class="market-link" href="nahant-real-estate.html">
+            <a class="market-link" href="/nahant-real-estate.html">
               Nahant Real Estate →
-            </a>
-            <br>
-            <a class="market-link" href="nahant-property-management.html">
+            </a><br>
+            <a class="market-link" href="/nahant-property-management.html">
               Nahant Property Management →
             </a>
           </article>
@@ -1280,21 +1360,18 @@
       <section id="owner-occupied">
         <div class="investor-panel">
           <h2>Owner-Occupied Multifamily Can Be a Different Strategy</h2>
-
           <p>
-            Some buyers purchase a 2–4 family property to live in one unit while
-            renting the others. Others buy strictly as investors. The right
-            approach depends on financing, available cash, household goals,
-            expected rents, property condition, and how much operational
+            Some buyers purchase a 2–4 family property to live in one unit
+            while renting the others. Others buy strictly as investors.
+            The approach depends on financing, available cash, household
+            goals, expected rents, condition, and how much operational
             responsibility you want after closing.
           </p>
-
           <p>
-            AV Realty &amp; Management can help you evaluate the real estate side
-            of the decision and connect the ownership strategy to rental analysis
-            and management planning.
+            AV Realty &amp; Management can help evaluate the real estate
+            side of the decision and connect your ownership strategy
+            to rental analysis and management planning.
           </p>
-
           <a class="btn secondary-btn" href="#consultation">
             Talk Through Your Strategy
           </a>
@@ -1308,7 +1385,6 @@
         <div class="card-grid">
           <article class="feature-card">
             <h3>Income &amp; Tenancy</h3>
-
             <ul class="list-check">
               <li>What are the current rents and lease terms?</li>
               <li>Are any units vacant or below current market positioning?</li>
@@ -1319,18 +1395,16 @@
 
           <article class="feature-card">
             <h3>Condition &amp; Capital Needs</h3>
-
             <ul class="list-check">
               <li>What major systems may need near-term replacement?</li>
               <li>Are there deferred maintenance items?</li>
               <li>What work may be needed between tenancies?</li>
-              <li>How much reserve should the owner maintain?</li>
+              <li>What reserves should be planned for repairs and replacements?</li>
             </ul>
           </article>
 
           <article class="feature-card">
             <h3>Numbers &amp; Financing</h3>
-
             <ul class="list-check">
               <li>What will debt service look like at the actual loan terms?</li>
               <li>How sensitive is cash flow to vacancy or repairs?</li>
@@ -1341,7 +1415,6 @@
 
           <article class="feature-card">
             <h3>Ownership &amp; Management</h3>
-
             <ul class="list-check">
               <li>Will you self-manage or hire a manager?</li>
               <li>How will maintenance and emergencies be handled?</li>
@@ -1355,9 +1428,8 @@
       <section id="resources">
         <p class="eyebrow">Investor Resources</p>
         <h2>Continue the Analysis</h2>
-
         <p class="section-intro">
-          Use the tools and resources below to move from a general investment
+          Use these tools and resources to move from a general investment
           idea toward a more property-specific decision.
         </p>
 
@@ -1365,15 +1437,11 @@
           <article class="resource-card">
             <h3>Multifamily Buyer’s Playbook</h3>
             <p>
-              A practical guide for evaluating multifamily properties, due
-              diligence, financing, rental operations, and long-term ownership.
+              A practical guide to evaluating multifamily properties,
+              due diligence, financing, rental operations, and ownership.
             </p>
-            <a
-              class="resource-link"
-              href="multifamily-guide.pdf"
-              target="_blank"
-              rel="noopener"
-            >
+            <a class="resource-link" href="/multifamily-guide.pdf"
+              target="_blank" rel="noopener">
               Open the 2026 Playbook →
             </a>
           </article>
@@ -1381,10 +1449,10 @@
           <article class="resource-card">
             <h3>Rental Property Calculator</h3>
             <p>
-              Model purchase price, rent, expenses, financing, and projected
-              investment performance before making an offer.
+              Model purchase price, rent, expenses, financing, and
+              estimated investment performance using your assumptions.
             </p>
-            <a class="resource-link" href="rental-property-calculator.html">
+            <a class="resource-link" href="/rental-property-calculator.html">
               Analyze a Property →
             </a>
           </article>
@@ -1392,10 +1460,10 @@
           <article class="resource-card">
             <h3>Free Rent Analysis</h3>
             <p>
-              Discuss rental positioning for a property you own or a property
-              you are evaluating as a potential acquisition.
+              Discuss rental positioning for a property you own
+              or are evaluating as a potential acquisition.
             </p>
-            <a class="resource-link" href="free-rent-analysis.html">
+            <a class="resource-link" href="/free-rent-analysis.html">
               Request a Rent Analysis →
             </a>
           </article>
@@ -1403,10 +1471,10 @@
           <article class="resource-card">
             <h3>Property Management</h3>
             <p>
-              Explore ongoing leasing, rent collection, maintenance coordination,
-              inspections, resident communication, and owner reporting after closing.
+              Explore leasing, rent collection, maintenance coordination,
+              inspections, resident communication, and owner reporting.
             </p>
-            <a class="resource-link" href="north-shore-property-management.html">
+            <a class="resource-link" href="/north-shore-property-management.html">
               Explore Property Management →
             </a>
           </article>
@@ -1422,8 +1490,8 @@
             <div class="process-number">01</div>
             <h3>Define the Goal</h3>
             <p>
-              Clarify budget, financing, target markets, property type, and
-              whether the plan is owner-occupancy, investment, or both.
+              Clarify budget, financing, markets, property type,
+              and whether the plan is owner-occupancy, investment, or both.
             </p>
           </article>
 
@@ -1431,8 +1499,8 @@
             <div class="process-number">02</div>
             <h3>Evaluate Properties</h3>
             <p>
-              Review listings, comparable sales, rents, expenses, condition,
-              and the assumptions that drive the investment.
+              Review listings, comparable sales, rents, expenses,
+              condition, and the assumptions behind the investment.
             </p>
           </article>
 
@@ -1440,8 +1508,8 @@
             <div class="process-number">03</div>
             <h3>Due Diligence</h3>
             <p>
-              Coordinate inspections and review available property, tenancy,
-              and financial information before closing.
+              Coordinate inspections and review available property,
+              tenancy, and financial information before closing.
             </p>
           </article>
 
@@ -1454,147 +1522,9 @@
             </p>
           </article>
         </div>
-      </section>
 
-      <section id="consultation">
-        <div class="lead-form">
-          <p class="eyebrow">Investment Consultation</p>
-          <h2>Tell Us What You’re Looking to Buy, Sell, or Evaluate</h2>
-
-          <p class="section-intro">
-            Share the property, market, or investment strategy you are
-            considering. We can start with a straightforward conversation
-            about the real estate, the numbers, and the ownership plan.
-          </p>
-
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input
-              type="hidden"
-              name="access_key"
-              value="84a59070-e01a-4b1b-ad1d-416a5e719422"
-            >
-            <input
-              type="hidden"
-              name="subject"
-              value="NEW LEAD - North Shore Multifamily Real Estate"
-            >
-            <input
-              type="hidden"
-              name="from_name"
-              value="AV Realty &amp; Management Website"
-            >
-            <input
-              type="hidden"
-              name="redirect"
-              value="https://avrealtymanagement.com/thankyou.html"
-            >
-            <input
-              type="hidden"
-              name="form_source"
-              value="North Shore Multifamily Real Estate Page"
-            >
-            <input
-              type="checkbox"
-              name="botcheck"
-              style="display:none"
-              tabindex="-1"
-              aria-hidden="true"
-            >
-
-            <div class="form-grid">
-              <div>
-                <label for="name">Full Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  autocomplete="name"
-                  maxlength="120"
-                  required
-                >
-              </div>
-
-              <div>
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  autocomplete="email"
-                  maxlength="254"
-                  required
-                >
-              </div>
-
-              <div>
-                <label for="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  autocomplete="tel"
-                  maxlength="40"
-                >
-              </div>
-
-              <div>
-                <label for="goal">What are you looking to do?</label>
-                <select id="goal" name="goal">
-                  <option value="">Select one</option>
-                  <option>Buy a 2–4 family property</option>
-                  <option>Buy another investment property</option>
-                  <option>Owner-occupy a multifamily property</option>
-                  <option>Sell a multifamily or rental property</option>
-                  <option>Analyze a property I am considering</option>
-                  <option>Discuss property management after purchase</option>
-                  <option>General investment consultation</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="market">Preferred City / Town</label>
-                <input
-                  type="text"
-                  id="market"
-                  name="market"
-                  maxlength="120"
-                  placeholder="Swampscott, Marblehead, Salem, Nahant, etc."
-                >
-              </div>
-
-              <div>
-                <label for="timeline">Timeline</label>
-                <select id="timeline" name="timeline">
-                  <option value="">Select one</option>
-                  <option>Actively looking now</option>
-                  <option>Within 1–3 months</option>
-                  <option>Within 3–6 months</option>
-                  <option>6–12 months</option>
-                  <option>Just researching</option>
-                </select>
-              </div>
-
-              <div class="full-width">
-                <label for="message">Tell Us About Your Investment Goals</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  maxlength="5000"
-                  placeholder="Property address, target purchase price, financing plan, expected rents, questions, or anything else you would like us to know."
-                ></textarea>
-              </div>
-            </div>
-
-            <div style="text-align:center; margin-top:18px">
-              <button type="submit">Request My Investment Consultation</button>
-            </div>
-
-            <p class="form-note">
-              Submitting this form does not create an agency or management
-              relationship. Investment projections and future rental
-              performance are not guaranteed.
-            </p>
-          </form>
+        <div class="center-actions">
+          <a class="btn" href="#consultation">Discuss Your Next Step</a>
         </div>
       </section>
 
@@ -1607,10 +1537,9 @@
             <summary>Can you help me buy a multifamily property on the North Shore?</summary>
             <p>
               Yes. AV Realty &amp; Management works with buyers evaluating
-              two-to-four-family and other residential investment properties
-              across the North Shore and can help review property-specific
-              considerations, rental economics, comparable sales, and
-              acquisition strategy.
+              two-to-four-family and other residential investment properties.
+              We can help review property-specific considerations, rental
+              economics, comparable sales, and acquisition strategy.
             </p>
           </details>
 
@@ -1619,36 +1548,44 @@
             <p>
               Review the purchase price, financing, current and potential rent,
               operating expenses, taxes, insurance, utilities, maintenance,
-              property condition, vacancy assumptions, capital needs, and
-              long-term management requirements. No single metric should be
-              considered in isolation.
+              condition, vacancy assumptions, capital needs, and management
+              requirements. No single metric should be considered in isolation.
             </p>
           </details>
 
           <details>
             <summary>Can you help me estimate rents before I buy?</summary>
             <p>
-              Yes. AV Realty &amp; Management can discuss rental positioning and
-              help evaluate whether projected rents appear reasonable for the
-              property and market. Actual future rents are not guaranteed.
+              Yes. We can discuss rental positioning and help evaluate
+              whether projected rents appear reasonable for the property
+              and market. Actual future rents are not guaranteed.
             </p>
           </details>
 
           <details>
             <summary>Do you also manage multifamily properties after closing?</summary>
             <p>
-              Property management may be available depending on the property's
-              location, size, condition, and service needs. Brokerage and
-              management can be discussed separately.
+              Property management may be available depending on location,
+              size, condition, and service needs. Brokerage and management
+              can be discussed separately.
             </p>
           </details>
 
           <details>
             <summary>Can you help me sell a multifamily or investment property?</summary>
             <p>
-              Yes. AV Realty &amp; Management can help owners evaluate pricing,
-              preparation, positioning, tenant and lease considerations, and
-              marketing strategy for multifamily or rental properties.
+              Yes. We can help owners evaluate pricing, preparation,
+              positioning, tenant and lease considerations, and marketing
+              strategy for multifamily or rental properties.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do I need to have a property selected before contacting you?</summary>
+            <p>
+              No. You can reach out while defining your budget, target
+              locations, property type, and ownership goals. If you already
+              have a property in mind, include its address in your inquiry.
             </p>
           </details>
         </div>
@@ -1657,7 +1594,7 @@
   </main>
 
   <footer>
-    <div style="margin-bottom:10px; font-weight:700">
+    <div style="margin-bottom:10px;font-weight:700">
       AV Realty &amp; Management
     </div>
 
@@ -1666,109 +1603,111 @@
     </div>
 
     <div style="margin-bottom:15px">
-      <a href="tel:9782773435">(978) 277-3435</a>
+      <a href="tel:+19782773435">(978) 277-3435</a>
       <span aria-hidden="true"> · </span>
       <a href="mailto:anthony@avrealtymanagement.com">Email Us</a>
     </div>
 
     <div class="footer-resource-links" aria-label="Site resources">
-      <a href="north-shore-real-estate.html">Real Estate</a>
-      <a href="north-shore-property-management.html">Property Management</a>
-      <a href="north-shore-multifamily-real-estate.html">Multifamily Investing</a>
-      <a href="multifamily-guide.pdf" target="_blank" rel="noopener">Multifamily Guide</a>
-      <a href="rental-property-calculator.html">Rental Calculator</a>
-      <a href="free-rent-analysis.html">Free Rent Analysis</a>
-      <a href="north-shore-ma-apartments.html">Apartments</a>
-      <a href="about.html">About</a>
+      <a href="/north-shore-real-estate.html">Real Estate</a>
+      <a href="/north-shore-property-management.html">Property Management</a>
+      <a href="/rent-or-sell-north-shore.html">Rent or Sell?</a>
+      <a href="/multifamily-guide.pdf" target="_blank" rel="noopener">Multifamily Guide</a>
+      <a href="/rental-property-calculator.html">Rental Calculator</a>
+      <a href="/free-rent-analysis.html">Free Rent Analysis</a>
+      <a href="/north-shore-ma-apartments.html">Apartments</a>
+      <a href="/about.html">About</a>
     </div>
 
     <div class="copyright">
       &copy; 2026 AV Realty &amp; Management LLC. All rights reserved.
     </div>
 
-    <p>Equal Housing Opportunity</p>
+    <p style="margin-top:16px;">Equal Housing Opportunity</p>
 
     <div class="mobile-social-row">
       <span>Connect with AV Realty:</span>
-
       <div class="mobile-social-icons">
-        <a
-          href="https://www.instagram.com/av.realty/"
-          target="_blank"
-          rel="noopener"
-        >
-          Instagram
-        </a>
-
-        <a
-          href="https://www.facebook.com/avrealtymgmt"
-          target="_blank"
-          rel="noopener"
-        >
-          Facebook
-        </a>
-
-        <a
-          href="https://www.linkedin.com/company/av-realty-management-llc"
-          target="_blank"
-          rel="noopener"
-        >
-          LinkedIn
-        </a>
+        <a href="https://www.instagram.com/av.realty/"
+          target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/avrealtymgmt"
+          target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/av-realty-management-llc"
+          target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </footer>
 
   <div class="mobile-contact" role="navigation" aria-label="Quick contact">
-    <a href="tel:9782773435">Call Us</a>
+    <a href="tel:+19782773435">Call Us</a>
     <a href="#consultation">Discuss an Investment</a>
   </div>
 
   <script>
     (() => {
-      const menu = document.querySelector('.hamburger');
-      const links = document.getElementById('navLinks');
-      const mobile = window.matchMedia('(max-width:900px)');
+      const menu = document.querySelector(".hamburger");
+      const links = document.getElementById("navLinks");
+      const nav = document.querySelector(".site-nav");
+      const mobile = window.matchMedia("(max-width:900px)");
 
-      const setOpen = (open) => {
+      if (!menu || !links || !nav) return;
+
+      document.documentElement.classList.add("js");
+
+      const setOpen = open => {
         links.hidden = mobile.matches && !open;
-        menu.setAttribute('aria-expanded', String(open));
+        menu.setAttribute("aria-expanded", String(open));
         menu.setAttribute(
-          'aria-label',
-          open ? 'Close navigation menu' : 'Open navigation menu'
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu"
         );
       };
 
       setOpen(false);
 
-      menu.addEventListener('click', () => {
-        setOpen(menu.getAttribute('aria-expanded') !== 'true');
+      menu.addEventListener("click", () => {
+        setOpen(menu.getAttribute("aria-expanded") !== "true");
       });
 
-      links.addEventListener('click', (event) => {
-        if (event.target.closest('a') && mobile.matches) {
+      links.addEventListener("click", event => {
+        if (mobile.matches && event.target.closest("a")) {
           setOpen(false);
         }
       });
 
-      document.addEventListener('keydown', (event) => {
+      document.addEventListener("keydown", event => {
         if (
-          event.key === 'Escape' &&
-          menu.getAttribute('aria-expanded') === 'true'
+          event.key === "Escape" &&
+          menu.getAttribute("aria-expanded") === "true"
         ) {
           setOpen(false);
           menu.focus();
         }
       });
 
-      document.addEventListener('click', (event) => {
-        if (mobile.matches && !event.target.closest('nav')) {
+      document.addEventListener("click", event => {
+        if (mobile.matches && !nav.contains(event.target)) {
           setOpen(false);
         }
       });
 
+      nav.addEventListener("focusout", event => {
+        if (mobile.matches && !nav.contains(event.relatedTarget)) {
+          setOpen(false);
+        }
+      });
+
+      const resetMenu = () => {
+        if (mobile.matches && links.contains(document.activeElement)) {
+          menu.focus();
+        }
+        setOpen(false);
+      };
+
       if (mobile.addEventListener) {
-        mobile.addEventListener('change', () => setOpen(false));
+        mobile.addEventListener("change", resetMenu);
+      } else {
+        mobile.addListener(resetMenu);
       }
     })();
   </script>
