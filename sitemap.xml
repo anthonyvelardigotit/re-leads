@@ -4,70 +4,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core Website -->
+
   <url>
     <loc>https://avrealtymanagement.com/</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/about.html</loc>
   </url>
 
   <!-- Real Estate -->
+
   <url>
     <loc>https://avrealtymanagement.com/north-shore-real-estate.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/swampscott-real-estate.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/marblehead-real-estate.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/salem-real-estate.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/nahant-real-estate.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/north-shore-multifamily-real-estate.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/north-shore-real-estate-es.html</loc>
   </url>
 
   <!-- Property Management -->
+
   <url>
     <loc>https://avrealtymanagement.com/north-shore-property-management.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/swampscott-property-management.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/marblehead-property-management.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/salem-property-management.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/nahant-property-management.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/absentee-landlord-property-management.html</loc>
   </url>
 
   <!-- Owner & Buyer Resources -->
+
   <url>
     <loc>https://avrealtymanagement.com/rental-property-calculator.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/free-rent-analysis.html</loc>
   </url>
+
   <url>
     <loc>https://avrealtymanagement.com/calculator.html</loc>
   </url>
 
   <!-- Apartments -->
+
   <url>
     <loc>https://avrealtymanagement.com/north-shore-ma-apartments.html</loc>
+  </url>
+
+  <!-- Rent or Sell -->
+
+  <url>
+    <loc>https://avrealtymanagement.com/rent-or-sell-north-shore.html</loc>
   </url>
 
 </urlset>
