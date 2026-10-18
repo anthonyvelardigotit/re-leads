@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
 
-/* Page titles follow the current URL order in sitemap.xml. */
+/*
+  Styles for sitemap.xml.
+  Page titles follow the URL order in the XML file.
+*/
 
 :root {
   --navy: #07162f;
@@ -28,7 +31,7 @@ urlset {
   counter-reset: page;
 }
 
-/* Refined navy brand bar */
+/* Navy brand bar */
 
 urlset::before {
   content: "AV REALTY & MANAGEMENT";
@@ -69,7 +72,7 @@ url {
   counter-increment: page;
 }
 
-/* Main heading stays in normal flow to prevent overlap */
+/* Main heading */
 
 url:nth-of-type(1)::before {
   content: "Website directory.";
@@ -131,7 +134,7 @@ loc:hover {
   box-shadow: 0 6px 20px rgba(7, 22, 47, .045);
 }
 
-/* Optional last-updated dates */
+/* Optional page modification dates */
 
 lastmod {
   display: block;
@@ -149,7 +152,8 @@ lastmod::before {
 url:nth-of-type(3)::before,
 url:nth-of-type(10)::before,
 url:nth-of-type(16)::before,
-url:nth-of-type(19)::before {
+url:nth-of-type(19)::before,
+url:nth-of-type(20)::before {
   display: block;
   padding: 23px 0 14px;
   color: var(--blue);
@@ -175,7 +179,11 @@ url:nth-of-type(19)::before {
   content: "Find Your Rental";
 }
 
-/* Descriptive page titles */
+url:nth-of-type(20)::before {
+  content: "Explore Your Options";
+}
+
+/* Core website */
 
 url:nth-of-type(1) {
   --page-title: "Home";
@@ -184,6 +192,8 @@ url:nth-of-type(1) {
 url:nth-of-type(2) {
   --page-title: "About AV Realty & Management";
 }
+
+/* Real estate */
 
 url:nth-of-type(3) {
   --page-title: "North Shore Real Estate";
@@ -213,6 +223,8 @@ url:nth-of-type(9) {
   --page-title: "Servicios de bienes raíces en español";
 }
 
+/* Property management */
+
 url:nth-of-type(10) {
   --page-title: "North Shore Property Management";
 }
@@ -237,6 +249,8 @@ url:nth-of-type(15) {
   --page-title: "Out-of-State & Inherited Property Owners";
 }
 
+/* Owner and buyer resources */
+
 url:nth-of-type(16) {
   --page-title: "Rental Property Calculator";
 }
@@ -249,8 +263,16 @@ url:nth-of-type(18) {
   --page-title: "Mortgage Calculator";
 }
 
+/* Apartments */
+
 url:nth-of-type(19) {
   --page-title: "North Shore Apartments";
+}
+
+/* Rent or sell */
+
+url:nth-of-type(20) {
+  --page-title: "Rent or Sell Your North Shore Home";
 }
 
 /* Footer */
@@ -331,7 +353,8 @@ urlset::after {
   url:nth-of-type(3)::before,
   url:nth-of-type(10)::before,
   url:nth-of-type(16)::before,
-  url:nth-of-type(19)::before {
+  url:nth-of-type(19)::before,
+  url:nth-of-type(20)::before {
     font-size: .66rem;
     letter-spacing: .1em;
   }
