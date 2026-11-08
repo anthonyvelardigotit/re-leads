@@ -152,8 +152,9 @@ lastmod::before {
 url:nth-of-type(3)::before,
 url:nth-of-type(10)::before,
 url:nth-of-type(16)::before,
-url:nth-of-type(19)::before,
-url:nth-of-type(20)::before {
+url:nth-of-type(17)::before,
+url:nth-of-type(20)::before,
+url:nth-of-type(21)::before {
   display: block;
   padding: 23px 0 14px;
   color: var(--blue);
@@ -172,14 +173,18 @@ url:nth-of-type(10)::before {
 }
 
 url:nth-of-type(16)::before {
+  content: "Home Watch & Vacant Home Checks";
+}
+
+url:nth-of-type(17)::before {
   content: "Plan Your Next Move";
 }
 
-url:nth-of-type(19)::before {
+url:nth-of-type(20)::before {
   content: "Find Your Rental";
 }
 
-url:nth-of-type(20)::before {
+url:nth-of-type(21)::before {
   content: "Explore Your Options";
 }
 
@@ -249,29 +254,35 @@ url:nth-of-type(15) {
   --page-title: "Out-of-State & Inherited Property Owners";
 }
 
-/* Owner and buyer resources */
+/* Home watch */
 
 url:nth-of-type(16) {
+  --page-title: "Nahant Home Watch & Vacant Home Checks";
+}
+
+/* Owner and buyer resources */
+
+url:nth-of-type(17) {
   --page-title: "Rental Property Calculator";
 }
 
-url:nth-of-type(17) {
+url:nth-of-type(18) {
   --page-title: "Free Rent Analysis";
 }
 
-url:nth-of-type(18) {
+url:nth-of-type(19) {
   --page-title: "Mortgage Calculator";
 }
 
 /* Apartments */
 
-url:nth-of-type(19) {
+url:nth-of-type(20) {
   --page-title: "North Shore Apartments";
 }
 
 /* Rent or sell */
 
-url:nth-of-type(20) {
+url:nth-of-type(21) {
   --page-title: "Rent or Sell Your North Shore Home";
 }
 
@@ -353,8 +364,9 @@ urlset::after {
   url:nth-of-type(3)::before,
   url:nth-of-type(10)::before,
   url:nth-of-type(16)::before,
-  url:nth-of-type(19)::before,
-  url:nth-of-type(20)::before {
+  url:nth-of-type(17)::before,
+  url:nth-of-type(20)::before,
+  url:nth-of-type(21)::before {
     font-size: .66rem;
     letter-spacing: .1em;
   }
